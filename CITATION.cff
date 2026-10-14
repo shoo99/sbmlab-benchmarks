@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use these scripts or results, please cite this repository and the original datasets listed in README.md."
+title: "sbmlab-benchmarks: scripts and results behind the measured posts on sbmlab.com"
+type: software
+authors:
+  - family-names: "Kang"
+    given-names: "Byeongsoo"
+    affiliation: "SYSOFT"
+    orcid: "https://orcid.org/0009-0007-2324-2351"
+repository-code: "https://github.com/shoo99/sbmlab-benchmarks"
+url: "https://sbmlab.com/blog"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-14"
+keywords: [proteomics, bioinformatics, benchmark, MaxQuant, FragPipe, DIA-NN, reproducibility]

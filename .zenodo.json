@@ -1,0 +1,34 @@
+{
+  "title": "sbmlab-benchmarks: scripts and results behind the measured posts on sbmlab.com",
+  "description": "Scripts, settings and result tables behind the measured bioinformatics posts on sbmlab.com: proteomics known-ratio benchmarks on PRIDE PXD028735 (MaxQuant 2.8.1, FragPipe 24, DIA-NN 2.3.2), limma vs DEqMS, imputation, STRING enrichment background, biomarker data leakage, mRNA vs protein (Wang 2019), database APIs, DESeq2/edgeR/limma, Scanpy PBMC3k and BioMart orthologues. Raw data are not included; see README for sources.",
+  "creators": [
+    {
+      "name": "Kang, Byeongsoo",
+      "affiliation": "SYSOFT",
+      "orcid": "0009-0007-2324-2351"
+    }
+  ],
+  "upload_type": "software",
+  "license": "MIT",
+  "keywords": [
+    "proteomics",
+    "bioinformatics",
+    "benchmark",
+    "MaxQuant",
+    "FragPipe",
+    "DIA-NN",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://sbmlab.com/blog",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1038/s41597-022-01216-6",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}
