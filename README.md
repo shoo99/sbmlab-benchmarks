@@ -66,4 +66,4 @@ Found a mistake? Open an issue. These are single runs on one machine, so differe
 
 Kang, B. (2026). *sbmlab-benchmarks: scripts and results behind the measured posts on sbmlab.com*. Zenodo. https://doi.org/10.5281/zenodo.23355028
 
-This DOI always points to the latest version; v1.0.0 is https://doi.org/10.5281/zenodo.23355029. Please also cite the original datasets listed above.
+This DOI always points to the latest version (v1.0.1: https://doi.org/10.5281/zenodo.23355544; v1.0.0: https://doi.org/10.5281/zenodo.23355029). Please also cite the original datasets listed above.
