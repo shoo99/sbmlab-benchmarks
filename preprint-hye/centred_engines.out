@@ -1,0 +1,14 @@
+     engine species     n human_offset within_uncentred within_centred
+     <char>  <char> <int>        <num>            <num>          <num>
+1: MaxQuant   Human  2896        0.144             98.8           99.3
+2: MaxQuant   Yeast   907        0.144             92.3           96.9
+3: MaxQuant   Ecoli   132        0.144             81.1           82.6
+4: FragPipe   Human  4605        0.014             94.7           94.8
+5: FragPipe   Yeast  1817        0.014             88.3           88.6
+6: FragPipe   Ecoli   359        0.014             73.5           73.5
+7:   DIA-NN   Human  5477       -0.010             98.6           98.7
+8:   DIA-NN   Yeast  2374       -0.010             95.1           95.0
+9:   DIA-NN   Ecoli   446       -0.010             85.4           85.9
+fc_mq common-set offset 0.143 centred within: 99.4 97.1 82.4 
+fc_fp common-set offset 0.01 centred within: 99.7 99.3 97.7 
+fc_dn common-set offset -0.007 centred within: 100 99.4 97.7 

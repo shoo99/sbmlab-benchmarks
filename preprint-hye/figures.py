@@ -29,12 +29,17 @@ tab = {"MaxQuant": mq, "FragPipe": fp, "DIA-NN": dn}
 
 fig, axs = plt.subplots(2, 2, figsize=(7.2, 4.8)); axs = axs.ravel()
 x = np.arange(3); w = 0.26
+cen = pd.read_csv(Path(__file__).resolve().parent / "centred_engines.csv").set_index(["engine", "species"])
+HATCH = {"DIA-NN": "///"}
 for i, e in enumerate(ENG):
-    axs[0].bar(x + (i - 1) * w, [tab[e].loc[s, "n"] for s in SP], w, color=COL[e], label=e)
-    axs[1].bar(x + (i - 1) * w, [100 * tab[e].loc[s, "within_0.5"] for s in SP], w, color=COL[e])
-for a, t, yl in [(axs[0], "Proteins scored", "proteins"), (axs[1], "Within ±0.5 of truth, all scored", "% of proteins")]:
+    lab = e + (" (SWATH, other instrument)" if e == "DIA-NN" else "")
+    axs[0].bar(x + (i - 1) * w, [tab[e].loc[s, "n"] for s in SP], w, color=COL[e], label=lab, hatch=HATCH.get(e), edgecolor="white")
+    axs[1].bar(x + (i - 1) * w, [100 * tab[e].loc[s, "within_0.5"] for s in SP], w, color=COL[e], hatch=HATCH.get(e), edgecolor="white")
+    axs[1].scatter(x + (i - 1) * w, [cen.loc[(e, s), "within_centred"] for s in SP], s=12, color="k", zorder=3,
+                   )
+for a, t, yl in [(axs[0], "Proteins scored", "proteins"), (axs[1], "Within ±0.5 of truth, all scored\n(bars uncentred; dots centred on human median)", "% of proteins")]:
     a.set_xticks(x, [SPL[s] for s in SP]); a.set_title(t); a.set_ylabel(yl)
-axs[1].set_ylim(0, 100); axs[0].legend(frameon=False, loc="upper right", bbox_to_anchor=(1.0, 1.0))
+axs[1].set_ylim(0, 100); axs[0].set_ylim(0, 8600); axs[0].legend(frameon=False, loc="upper left", fontsize=6.5)
 pos = []; data = []; cols = []
 for j, s in enumerate(SP):
     sub = common[common["species"] == s]
@@ -46,7 +51,7 @@ for p, c in zip(bp["boxes"], cols): p.set_facecolor(c); p.set_alpha(0.8)
 axs[2].set_xticks([1, 5, 9], [f"{SPL[s]}\n(n={int((common['species'] == s).sum())})" for s in SP])
 axs[2].set_ylabel("log2(B/A)"); axs[2].set_title("The 3,866 proteins all three quantified\n(dashed line = true ratio)")
 mins = {"MaxQuant": 61.6, "FragPipe": 9.3 + 4.0, "DIA-NN": 377 + 11}
-axs[3].barh(ENG, [mins[e] for e in ENG], color=[COL[e] for e in ENG]); axs[3].set_xlim(0, 450)
+axs[3].barh(ENG, [mins[e] for e in ENG], color=[COL[e] for e in ENG], hatch=[HATCH.get(e, "") for e in ENG], edgecolor="white"); axs[3].set_xlim(0, 450)
 axs[3].set_xlabel("wall time, minutes"); axs[3].set_title("Run time (6 runs)")
 for e in ENG: axs[3].text(mins[e] + 6, e, f"{mins[e]:.0f} min", va="center", fontsize=7)
 for a, l in zip(axs, "abcd"): label(a, l)
@@ -137,11 +142,17 @@ fig.tight_layout(); fig.savefig(OUT / "fig4_statistics.png"); plt.close(fig)
 cnt = pd.read_csv(E / "string-background/counts.csv")
 cnt["total"] = cnt[["Process", "Component", "Function", "KEGG"]].sum(axis=1)
 r = cnt[cnt.list == "random"]
-fig, ax = plt.subplots(1, 1, figsize=(3.4, 2.3))
+fig, (ax, ax2) = plt.subplots(1, 2, figsize=(6.4, 2.5))
 g = r[r.background == "genome"]["total"].values; d = r[r.background == "detected"]["total"].values
 for gi, di in zip(g, d): ax.plot([0, 1], [gi, di], c="#BBBBBB", lw=0.6)
 ax.scatter(np.zeros_like(g), g, c="#C44E52", s=14); ax.scatter(np.ones_like(d), d, c="#4C72B0", s=14)
 ax.set_xticks([0, 1], ["whole genome\n(STRING default)", "detected proteins"]); ax.set_xlim(-0.4, 1.4)
-ax.set_ylabel("GO + KEGG terms at FDR < 0.05"); ax.set_title(f"20 random lists of 300 detected proteins\nmedian {np.median(g):.0f} vs {np.median(d):.0f}")
+ax.set_ylabel("GO + KEGG terms at FDR < 0.05"); ax.set_title(f"20 random lists (no signal)\nmedian {np.median(g):.0f} vs {np.median(d):.0f}")
+p = cnt[cnt.list == "planted"]; pg_ = p[p.background == "genome"]["total"].values; pd_ = p[p.background == "detected"]["total"].values
+for gi, di in zip(pg_, pd_): ax2.plot([0, 1], [gi, di], c="#BBBBBB", lw=0.6)
+ax2.scatter(np.zeros_like(pg_), pg_, c="#C44E52", s=14); ax2.scatter(np.ones_like(pd_), pd_, c="#4C72B0", s=14)
+ax2.set_xticks([0, 1], ["whole genome", "detected proteins"]); ax2.set_xlim(-0.4, 1.4)
+ax2.set_title("5 lists with 15 cholesterol-biosynthesis\nproteins planted (found in all 10 runs)")
+label(ax, "a"); label(ax2, "b")
 fig.tight_layout(); fig.savefig(OUT / "fig5_enrichment.png"); plt.close(fig)
 print("ok", sorted(p.name for p in OUT.iterdir()))

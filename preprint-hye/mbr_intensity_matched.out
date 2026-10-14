@@ -1,0 +1,43 @@
+    species    bin matched     n within_0.5
+     <char> <fctr>  <lgcl> <int>      <num>
+ 1:   Ecoli     Q1   FALSE    49      0.898
+ 2:   Ecoli     Q1    TRUE    69      0.710
+ 3:   Ecoli     Q2   FALSE    77      0.818
+ 4:   Ecoli     Q2    TRUE    41      0.707
+ 5:   Ecoli     Q3   FALSE    93      0.925
+ 6:   Ecoli     Q3    TRUE    24      0.792
+ 7:   Ecoli     Q4   FALSE   110      0.882
+ 8:   Ecoli     Q4    TRUE     8      1.000
+ 9:   Human     Q1   FALSE  2708      0.946
+10:   Human     Q1    TRUE  2076      0.888
+11:   Human     Q2   FALSE  3644      0.946
+12:   Human     Q2    TRUE  1139      0.886
+13:   Human     Q3   FALSE  4212      0.951
+14:   Human     Q3    TRUE   571      0.909
+15:   Human     Q4   FALSE  4646      0.955
+16:   Human     Q4    TRUE   137      0.934
+17:   Yeast     Q1   FALSE   570      0.911
+18:   Yeast     Q1    TRUE   604      0.876
+19:   Yeast     Q2   FALSE   859      0.924
+20:   Yeast     Q2    TRUE   314      0.901
+21:   Yeast     Q3   FALSE  1029      0.938
+22:   Yeast     Q3    TRUE   144      0.847
+23:   Yeast     Q4   FALSE  1140      0.946
+24:   Yeast     Q4    TRUE    34      0.824
+    species    bin matched     n within_0.5
+
+Share of matched peptides per intensity quartile:
+    species    bin matched_share
+     <char> <fctr>         <num>
+ 1:   Ecoli     Q1         0.585
+ 2:   Ecoli     Q2         0.347
+ 3:   Ecoli     Q3         0.205
+ 4:   Ecoli     Q4         0.068
+ 5:   Human     Q1         0.434
+ 6:   Human     Q2         0.238
+ 7:   Human     Q3         0.119
+ 8:   Human     Q4         0.029
+ 9:   Yeast     Q1         0.514
+10:   Yeast     Q2         0.268
+11:   Yeast     Q3         0.123
+12:   Yeast     Q4         0.029

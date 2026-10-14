@@ -1,6 +1,6 @@
 # DIA-NN 2.3.2 × PXD028735 HYE benchmark (2026-10-12/13)
 
-Data: PRIDE PXD028735 (Van Puyvelde et al., Sci Data 2022, CC BY 4.0) — **SCIEX TripleTOF 6600 SWATH** (the dataset has no Orbitrap DIA).
+Data: PRIDE PXD028735 (Van Puyvelde et al., Sci Data 2022, CC BY 4.0) — **SCIEX TripleTOF 6600+ SWATH** (99 variable windows). The dataset's Orbitrap DIA runs (AIF with staggered windows, GP-DIA) were not used.
 Same design as the MaxQuant/FragPipe posts: Condition_{A,B}_Sample_{Alpha,Beta,Gamma}_01 → 3 vs 3. Truth log2(B/A): human 0, yeast −1, E. coli +2.
 FASTA: same Swiss-Prot human+yeast+E. coli file as the FragPipe run (31,695 entries; fp-hye/db/hye_sp.fasta).
 Raw files (30.3 GB, 6 .wiff + 6 .wiff.scan) are not in this repository; download them from PRIDE. report.pg_matrix.tsv and the derived matrices are included.

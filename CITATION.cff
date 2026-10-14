@@ -10,7 +10,7 @@ authors:
 repository-code: "https://github.com/shoo99/sbmlab-benchmarks"
 url: "https://sbmlab.com/blog"
 license: MIT
-version: "1.0.1"
+version: "1.0.2"
 doi: "10.5281/zenodo.23355028"
 date-released: "2026-10-14"
 keywords: [proteomics, bioinformatics, benchmark, MaxQuant, FragPipe, DIA-NN, reproducibility]

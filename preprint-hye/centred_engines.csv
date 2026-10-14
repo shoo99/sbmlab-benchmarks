@@ -1,0 +1,10 @@
+engine,species,n,human_offset,within_uncentred,within_centred
+MaxQuant,Human,2896,0.144,98.8,99.3
+MaxQuant,Yeast,907,0.144,92.3,96.9
+MaxQuant,Ecoli,132,0.144,81.1,82.6
+FragPipe,Human,4605,0.014,94.7,94.8
+FragPipe,Yeast,1817,0.014,88.3,88.6
+FragPipe,Ecoli,359,0.014,73.5,73.5
+DIA-NN,Human,5477,-0.01,98.6,98.7
+DIA-NN,Yeast,2374,-0.01,95.1,95
+DIA-NN,Ecoli,446,-0.01,85.4,85.9
