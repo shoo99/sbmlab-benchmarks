@@ -1,7 +1,8 @@
 ## Score MaxQuant quantification against the known HYE mixing ratios (PXD028735, Van Puyvelde 2022)
 ## Condition A = Human 65 / Yeast 30 / E. coli 5 ; B = 65 / 15 / 20  ->  log2(B/A): human 0, yeast -1, E. coli +2
 suppressPackageStartupMessages(library(data.table))
-TXT <- "/home/sysoft/mq-hye/raw/combined/txt"
+args <- commandArgs(TRUE)
+TXT <- if (length(args)) args[1] else "/home/sysoft/mq-hye/results_mbr_on/txt"   # txt folder of the MBR-on MaxQuant run
 pg <- fread(file.path(TXT, "proteinGroups.txt"), sep = "\t", quote = "")
 A <- c("A_Alpha", "A_Beta", "A_Gamma"); B <- c("B_Alpha", "B_Beta", "B_Gamma")
 EXPECT <- c(Human = 0, Yeast = -1, Ecoli = 2)

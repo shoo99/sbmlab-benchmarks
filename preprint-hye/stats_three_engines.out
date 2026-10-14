@@ -1,0 +1,80 @@
+FragPipe contaminant groups removed: 7 
+DIA-NN contaminant groups removed: 4 
+                             engine   norm   test fc_min n_tested
+                             <char> <char> <char>  <num>    <int>
+ 1:            MaxQuant 2.8.1 (LFQ)   none      t    0.0     3532
+ 2:            MaxQuant 2.8.1 (LFQ)   none      t    0.5     3532
+ 3:            MaxQuant 2.8.1 (LFQ)   none  limma    0.0     3532
+ 4:            MaxQuant 2.8.1 (LFQ)   none  limma    0.5     3532
+ 5:            MaxQuant 2.8.1 (LFQ)   none  DEqMS    0.0     3532
+ 6:            MaxQuant 2.8.1 (LFQ)   none  DEqMS    0.5     3532
+ 7:            MaxQuant 2.8.1 (LFQ) median      t    0.0     3532
+ 8:            MaxQuant 2.8.1 (LFQ) median      t    0.5     3532
+ 9:            MaxQuant 2.8.1 (LFQ) median  limma    0.0     3532
+10:            MaxQuant 2.8.1 (LFQ) median  limma    0.5     3532
+11:            MaxQuant 2.8.1 (LFQ) median  DEqMS    0.0     3532
+12:            MaxQuant 2.8.1 (LFQ) median  DEqMS    0.5     3532
+13:            FragPipe 24 (MaxLFQ)   none      t    0.0     6226
+14:            FragPipe 24 (MaxLFQ)   none      t    0.5     6226
+15:            FragPipe 24 (MaxLFQ)   none  limma    0.0     6226
+16:            FragPipe 24 (MaxLFQ)   none  limma    0.5     6226
+17:            FragPipe 24 (MaxLFQ)   none  DEqMS    0.0     6226
+18:            FragPipe 24 (MaxLFQ)   none  DEqMS    0.5     6226
+19:            FragPipe 24 (MaxLFQ) median      t    0.0     6226
+20:            FragPipe 24 (MaxLFQ) median      t    0.5     6226
+21:            FragPipe 24 (MaxLFQ) median  limma    0.0     6226
+22:            FragPipe 24 (MaxLFQ) median  limma    0.5     6226
+23:            FragPipe 24 (MaxLFQ) median  DEqMS    0.0     6226
+24:            FragPipe 24 (MaxLFQ) median  DEqMS    0.5     6226
+25: DIA-NN 2.3.2 (pg_matrix, SWATH)   none      t    0.0     7747
+26: DIA-NN 2.3.2 (pg_matrix, SWATH)   none      t    0.5     7747
+27: DIA-NN 2.3.2 (pg_matrix, SWATH)   none  limma    0.0     7747
+28: DIA-NN 2.3.2 (pg_matrix, SWATH)   none  limma    0.5     7747
+29: DIA-NN 2.3.2 (pg_matrix, SWATH)   none  DEqMS    0.0     7747
+30: DIA-NN 2.3.2 (pg_matrix, SWATH)   none  DEqMS    0.5     7747
+31: DIA-NN 2.3.2 (pg_matrix, SWATH) median      t    0.0     7747
+32: DIA-NN 2.3.2 (pg_matrix, SWATH) median      t    0.5     7747
+33: DIA-NN 2.3.2 (pg_matrix, SWATH) median  limma    0.0     7747
+34: DIA-NN 2.3.2 (pg_matrix, SWATH) median  limma    0.5     7747
+35: DIA-NN 2.3.2 (pg_matrix, SWATH) median  DEqMS    0.0     7747
+36: DIA-NN 2.3.2 (pg_matrix, SWATH) median  DEqMS    0.5     7747
+                             engine   norm   test fc_min n_tested
+    human_median_lfc true_calls n_changed false_calls   FDP
+               <num>      <int>     <int>       <int> <num>
+ 1:            0.145        507       906          68  11.8
+ 2:            0.145        503       906           2   0.4
+ 3:            0.145        891       906         104  10.5
+ 4:            0.145        877       906          10   1.1
+ 5:            0.145        893       906         284  24.1
+ 6:            0.145        880       906          13   1.5
+ 7:            0.109        498       906          35   6.6
+ 8:            0.109        494       906           1   0.2
+ 9:            0.109        895       906          53   5.6
+10:            0.109        883       906           7   0.8
+11:            0.109        899       906         104  10.4
+12:            0.109        887       906           8   0.9
+13:            0.014        928      1905          15   1.6
+14:            0.014        927      1905           7   0.7
+15:            0.014       1629      1905          43   2.6
+16:            0.014       1625      1905          35   2.1
+17:            0.014       1628      1905          37   2.2
+18:            0.014       1627      1905          34   2.0
+19:            0.130        696      1905          44   5.9
+20:            0.130        694      1905           5   0.7
+21:            0.130       1574      1905         105   6.3
+22:            0.130       1564      1905          54   3.3
+23:            0.130       1567      1905         165   9.5
+24:            0.130       1565      1905          48   3.0
+25:           -0.010       2178      2485         106   4.6
+26:           -0.010       2169      2485           5   0.2
+27:           -0.010       2415      2485         167   6.5
+28:           -0.010       2399      2485          21   0.9
+29:           -0.010       2425      2485         188   7.2
+30:           -0.010       2409      2485          22   0.9
+31:            0.190       2234      2485        2695  54.7
+32:            0.190       2205      2485          32   1.4
+33:            0.190       2414      2485        3461  58.9
+34:            0.190       2365      2485          56   2.3
+35:            0.190       2421      2485        3439  58.7
+36:            0.190       2373      2485          62   2.5
+    human_median_lfc true_calls n_changed false_calls   FDP
