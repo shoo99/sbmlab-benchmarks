@@ -1,5 +1,7 @@
 # sbmlab-benchmarks
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23355028.svg)](https://doi.org/10.5281/zenodo.23355028)
+
 Scripts, settings and result tables behind the measured posts on [sbmlab.com](https://sbmlab.com/blog). Each folder is one post: the code I ran, the outputs it printed, and a README with versions and the traps I hit.
 
 Most proteomics folders use the same public three-species benchmark with known ratios, so every tool is scored against a right answer rather than against another tool.
@@ -53,3 +55,9 @@ A summary of all the tools, versions and timings is in [Best bioinformatics tool
 Code in this repository is MIT licensed ([LICENSE](LICENSE)). Result tables derived from the datasets above keep those datasets' licences; please cite the original papers.
 
 Found a mistake? Open an issue. These are single runs on one machine, so differences on your setup are expected and interesting.
+
+## How to cite
+
+Kang, B. (2026). *sbmlab-benchmarks: scripts and results behind the measured posts on sbmlab.com*. Zenodo. https://doi.org/10.5281/zenodo.23355028
+
+This DOI always points to the latest version; v1.0.0 is https://doi.org/10.5281/zenodo.23355029. Please also cite the original datasets listed above.
