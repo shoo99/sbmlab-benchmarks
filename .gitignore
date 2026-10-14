@@ -1,0 +1,9 @@
+*.raw
+*.wiff
+*.wiff.scan
+*.mzML
+*.xlsx
+.pybiomart.sqlite
+__pycache__/
+.Rhistory
+Rplots.pdf

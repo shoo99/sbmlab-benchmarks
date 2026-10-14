@@ -1,0 +1,12 @@
+genes 63677 samples 8 
+
+==== as written in the post: ~ condition (pairing ignored) ====  genes tested: DESeq2 16596, edgeR/voom 15926 | seconds: DESeq2 3.1, edgeR 1.2, voom 0.4
+FDR<0.05 & |log2FC|>=0: DESeq2 2782, edgeR 1952, voom 1878 | in all three 1811 | in any 2795 | all-three/any 65%
+FDR<0.05 & |log2FC|>=1: DESeq2 828, edgeR 661, voom 635 | in all three 594 | in any 858 | all-three/any 69%
+
+==== paired: ~ cell + condition ====  genes tested: DESeq2 16596, edgeR/voom 16860 | seconds: DESeq2 2.8, edgeR 2.5, voom 0.5
+FDR<0.05 & |log2FC|>=0: DESeq2 4099, edgeR 5130, voom 5170 | in all three 4055 | in any 5259 | all-three/any 77%
+FDR<0.05 & |log2FC|>=1: DESeq2 1000, edgeR 1169, voom 1155 | in all three 960 | in any 1215 | all-three/any 79%
+
+DESeq2 DEGs gained by modelling the cell line: 1414  lost: 97 
+[1] "Ubuntu 24.04.1 LTS"

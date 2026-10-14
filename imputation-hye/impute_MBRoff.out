@@ -1,0 +1,35 @@
+
+==== MBRoff | filter: >=2 of 3 in BOTH groups | proteins 3079 (human 2346, yeast 656, E. coli 77) | missing cells 2.8% ====
+method   | testable | E.coli median lfc | yeast median lfc | within ±0.5 H/Y/E | changed found | human FP | FDP
+none     |     3079 |              2.10 |            -0.98 | 100/ 97/ 74 % |   701 of   733 |       12 |  1.7%
+MinDet   |     3079 |              2.22 |            -1.00 |  97/ 93/ 70 % |   636 of   733 |       10 |  1.5%
+[1] 0.1793956
+MinProb  |     3079 |              2.22 |            -1.00 |  97/ 92/ 69 % |   638 of   733 |        8 |  1.2%
+Perseus  |     3079 |              2.23 |            -1.00 |  95/ 91/ 68 % |   618 of   733 |       10 |  1.6%
+QRILC    |     3079 |              2.23 |            -1.01 |  91/ 84/ 62 % |   586 of   733 |        6 |  1.0%
+Cluster size 3079 broken into 2180 899 
+Cluster size 2180 broken into 1421 759 
+Done cluster 1421 
+Done cluster 759 
+Done cluster 2180 
+Done cluster 899 
+kNN      |     3079 |              2.10 |            -0.98 | 100/ 97/ 74 % |   701 of   733 |        9 |  1.3%
+
+==== MBRoff | filter: >=2 of 3 in EITHER group | proteins 3843 (human 2680, yeast 932, E. coli 231) | missing cells 12.6% ====
+method   | testable | E.coli median lfc | yeast median lfc | within ±0.5 H/Y/E | changed found | human FP | FDP
+none     |     3079 |              2.10 |            -0.98 | 100/ 97/ 74 % |   701 of   733 |       12 |  1.7%
+MinDet   |     3843 |              2.03 |            -1.02 |  91/ 80/ 43 % |   854 of  1163 |       29 |  3.3%
+[1] 0.1818704
+MinProb  |     3843 |              2.05 |            -1.01 |  91/ 79/ 44 % |   855 of  1163 |       29 |  3.3%
+Perseus  |     3843 |              2.11 |            -1.04 |  87/ 76/ 45 % |   808 of  1163 |       30 |  3.6%
+QRILC    |     3843 |              2.47 |            -1.07 |  82/ 68/ 37 % |   775 of  1163 |       27 |  3.4%
+Cluster size 3843 broken into 2922 921 
+Cluster size 2922 broken into 1546 1376 
+Cluster size 1546 broken into 261 1285 
+Done cluster 261 
+Done cluster 1285 
+Done cluster 1546 
+Done cluster 1376 
+Done cluster 2922 
+Done cluster 921 
+kNN      |     3843 |              0.02 |            -0.91 |  98/ 75/ 28 % |   778 of  1163 |       30 |  3.7%

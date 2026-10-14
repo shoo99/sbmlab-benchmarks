@@ -1,0 +1,5 @@
+Ensembl 111: header ['Gene stable ID', 'Gene name', 'Mouse gene stable ID']... rows with mouse homolog 26,676; types {'ortholog_one2one': 16510, 'ortholog_one2many': 3224, 'ortholog_many2many': 6942}
+  one2one pairs 16,510; pig genes with a name 15,454
+Ensembl 116: header ['Gene stable ID', 'Gene name', 'Mouse gene stable ID']... rows with mouse homolog 26,314; types {'ortholog_one2one': 16529, 'ortholog_one2many': 2982, 'ortholog_many2many': 6803}
+  one2one pairs 16,529; pig genes with a name 15,538
+one2one pairs in both releases: 16,004; only 111 506; only 116 525

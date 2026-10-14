@@ -1,0 +1,9 @@
+train 143 AD 62 | test 54 AD 26
+real labels, proper: 0.913 | leaky: 0.889
+proteins selected on the training cohorts: FAM3C, NCAN, LDHA, SOD1, HPRT1, ALDOA, ENO2, SPP1.2, MAPT, MIF, PKM, PKM.1, GOT1, L1CAM, MAN2A2, YWHAG, YWHAZ, VASN, SMOC1, GDA
+shuffled labels, 50 permutations:
+      proper  leaky
+mean   0.482  0.753
+std    0.078  0.076
+min    0.322  0.519
+max    0.672  0.882

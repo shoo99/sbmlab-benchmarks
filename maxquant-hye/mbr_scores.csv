@@ -1,0 +1,10 @@
+species,group,n,median,IQR,within_0.5
+Ecoli,1-2 runs by matching,116,1.971,0.408,0.767
+Ecoli,3+ runs by matching,26,1.979,0.716,0.615
+Ecoli,all 6 by MS/MS,329,2.052,0.341,0.881
+Human,1-2 runs by matching,3078,-0.009,0.298,0.887
+Human,3+ runs by matching,845,-0.027,0.307,0.912
+Human,all 6 by MS/MS,15210,0.003,0.262,0.95
+Yeast,1-2 runs by matching,844,-0.978,0.348,0.868
+Yeast,3+ runs by matching,252,-0.951,0.374,0.909
+Yeast,all 6 by MS/MS,3598,-1.005,0.272,0.933

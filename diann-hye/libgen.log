@@ -1,0 +1,61 @@
+
+DIA-NN 2.3.2 Academia  (Data-Independent Acquisition by Neural Networks)
+Compiled on Jan 22 2026 10:50:24
+Current date and time: Mon Oct 12 17:24:31 2026
+CPU: GenuineIntel Intel(R) Core(TM) i9-14900K
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 32
+59Gb out of 127Gb RAM is free
+DIA-NN will carry out FASTA digest for in silico lib generation
+Deep learning will be used to generate a new in silico spectral library from peptides provided
+A spectral library will be generated
+In silico digest will involve cuts at K*,R*
+Maximum number of missed cleavages set to 1
+Min peptide length set to 7
+Max peptide length set to 30
+Min precursor charge set to 2
+Max precursor charge set to 4
+Min precursor m/z set to 300
+Max precursor m/z set to 1800
+Min fragment m/z set to 200
+Max fragment m/z set to 1800
+Cysteine carbamidomethylation enabled as a fixed modification
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+Thread number set to 24
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms
+The following variable modifications will be localised: UniMod:35 
+
+0 files will be processed
+[0:00] Loading FASTA C:\diann-hye\hye_sp.fasta
+[0:03] Processing FASTA
+[0:05] Assembling elution groups
+[0:10] 6370129 precursors generated
+[0:10] Gene names missing for some isoforms
+[0:10] Library contains 31635 proteins, and 30696 genes
+OMP: Warning #80: OMP_NUM_THREADS="0": value too small.
+OMP: Info #104: OMP_NUM_THREADS value "1" will be used.
+OMP: Warning #182: OMP_PROC_BIND: ignored because KMP_AFFINITY has been defined
+[0:15] Encoding peptides for spectra and RTs prediction
+[0:26] Predicting spectra and IMs
+[9:26] Predicting RTs
+[10:20] Decoding predicted spectra and IMs
+[10:24] Decoding RTs
+[10:25] Saving the library to C:\diann-hye\lib\hye.predicted.speclib
+[10:35] Initialising library
+
+The following warnings or errors (in alphabetic order) were detected at least the indicated number of times:
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms : 1
+Finished
+
+
+How to cite:
+using DIA-NN: Demichev et al, Nature Methods, 2020, https://www.nature.com/articles/s41592-019-0638-x
+analysing Scanning SWATH: Messner et al, Nature Biotechnology, 2021, https://www.nature.com/articles/s41587-021-00860-4
+analysing PTMs: Steger et al, Nature Communications, 2021, https://www.nature.com/articles/s41467-021-25454-1
+analysing dia-PASEF: Demichev et al, Nature Communications, 2022, https://www.nature.com/articles/s41467-022-31492-0
+analysing Slice-PASEF: Szyrwiel et al, biorxiv, 2022, https://doi.org/10.1101/2022.10.31.514544
+plexDIA / multiplexed DIA: Derks et al, Nature Biotechnology, 2023, https://www.nature.com/articles/s41587-022-01389-w
+CysQuant: Huang et al, Redox Biology, 2023, https://doi.org/10.1016/j.redox.2023.102908
+using QuantUMS: Kistner at al, biorxiv, 2023, https://doi.org/10.1101/2023.06.20.545604
+[10:49] Log saved to C:\diann-hye\lib\hye.log.txt

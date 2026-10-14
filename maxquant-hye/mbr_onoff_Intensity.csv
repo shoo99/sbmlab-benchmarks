@@ -1,0 +1,4 @@
+species,n_on,n_off,within_on,within_off,median_on,median_off,IQR_on,IQR_off
+Human,3603,3207,0.86,0.773,0.037,0.08,0.282,0.42
+Yeast,1250,966,0.743,0.588,-1.133,-1.329,0.445,0.701
+Ecoli,243,137,0.428,0.204,2.473,2.894,0.954,1.101

@@ -1,0 +1,7 @@
+UniProt    SODC_HUMAN Superoxide dismutase [Cu-Zn] | 154 aa
+Ensembl    ENSG00000142168 chr21:31659617-31668931 GRCh38
+RCSB PDB   157 entries, e.g. 1AZV, 1BA9, 1DSW
+AlphaFold  AF-P00441-F1 v6 | mean pLDDT 97.94
+STRING     CCS 0.999, SOD2 0.998, PARK7 0.996, CAT 0.985, BCL2 0.98
+Reactome   Platelet degranulation; Detoxification of Reactive Oxygen Species; Gene and protein expression by JAK-STAT signaling after Interleukin-12 stimulation
+ClinVar    397 records for SOD1

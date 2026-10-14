@@ -1,0 +1,16 @@
+import sys, numpy as np, pandas as pd, matplotlib
+matplotlib.use("Agg"); import matplotlib.pyplot as plt
+t = pd.read_excel(sys.argv[1], sheet_name="A. Protein vs mRNA correlation", header=None)
+tissues = t.iloc[1, 2:31].tolist(); j = tissues.index("Liver")
+m = t.iloc[2:, 2 + j].astype(float); p = t.iloc[2:, 31 + j].astype(float); ok = m.notna() & p.notna()
+g = pd.read_csv("per_gene.csv")["rho_across_tissues"].dropna()
+fig, ax = plt.subplots(1, 2, figsize=(11, 4.4))
+ax[0].scatter(m[ok], p[ok], s=3, alpha=0.25, color="#4C72B0")
+ax[0].set_xlabel("mRNA, log10 FPKM"); ax[0].set_ylabel("protein, log10 iBAQ")
+ax[0].set_title(f"Liver: {ok.sum():,} genes, Spearman 0.58\n(within one tissue, across genes)", fontsize=10)
+ax[1].hist(g, bins=40, color="#DD8452", edgecolor="white")
+ax[1].axvline(np.median(g), color="k", ls="--"); ax[1].text(np.median(g) + 0.02, ax[1].get_ylim()[1] * 0.9, f"median {np.median(g):.2f}", fontsize=9)
+ax[1].set_xlabel("Spearman, mRNA vs protein across 29 tissues"); ax[1].set_ylabel("genes")
+ax[1].set_title(f"Each gene across tissues ({len(g):,} genes)", fontsize=10)
+fig.suptitle("mRNA vs protein in healthy human tissues (data: Wang et al. 2019, Mol Syst Biol)", fontsize=11)
+fig.tight_layout(); fig.savefig(sys.argv[2], dpi=130); print("saved")

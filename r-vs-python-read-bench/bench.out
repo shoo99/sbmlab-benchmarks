@@ -1,0 +1,7 @@
+rows 271777 | groups 5521
+R data.table fread (16 threads): median 0.04 s
+R base read.delim + aggregate:   median 5.80 s
+groups pandas 5521 polars 5521
+pandas 3.0.6 read_csv: median 0.51 s
+polars 2.0.0 scan_csv (threads 32): median 0.16 s
+R version 4.3.3 (2024-02-29) data.table 1.16.2 

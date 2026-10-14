@@ -1,0 +1,14 @@
+UniProt       ok 5/5  median 2.88 s
+Ensembl       ok 1/5  median 14.25 s
+NCBI Gene     ok 5/5  median 0.24 s
+ClinVar       ok 5/5  median 0.24 s
+RCSB PDB      ok 5/5  median 0.40 s
+AlphaFold DB  ok 5/5  median 0.09 s
+InterPro      ok 5/5  median 1.03 s
+QuickGO       ok 5/5  median 1.03 s
+STRING        ok 5/5  median 0.66 s
+Reactome      ok 5/5  median 1.24 s
+KEGG          ok 4/5  median 0.28 s
+GEO           ok 5/5  median 0.25 s
+PRIDE         ok 5/5  median 6.59 s
+run at 2026-10-13T23:08+09:00

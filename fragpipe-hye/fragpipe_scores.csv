@@ -1,0 +1,7 @@
+quant,species,n,median,IQR,within_0.5
+Intensity,Human,4611,0.04,0.308,0.841
+Intensity,Yeast,1819,-1.102,0.465,0.725
+Intensity,Ecoli,360,2.237,1.042,0.447
+MaxLFQ Intensity,Human,4605,0.014,0.183,0.947
+MaxLFQ Intensity,Yeast,1817,-0.948,0.262,0.883
+MaxLFQ Intensity,Ecoli,359,1.875,0.494,0.735

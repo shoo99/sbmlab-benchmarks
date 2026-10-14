@@ -1,0 +1,17 @@
+proteins quantified by all three: 3866 
+   species     n within_MaxQuant within_FragPipe within_DIANN IQR_MaxQuant
+    <char> <int>           <num>           <num>        <num>        <num>
+1:   Human  2866           0.989           0.997        1.000        0.142
+2:   Yeast   869           0.924           0.993        0.994        0.193
+3:   Ecoli   131           0.809           0.977        0.977        0.265
+   IQR_FragPipe IQR_DIANN
+          <num>     <num>
+1:        0.139     0.044
+2:        0.163     0.092
+3:        0.173     0.102
+quantified only by DIA-NN: 1760 
+   species     n within
+    <char> <int>  <num>
+1:   Human   995  0.943
+2:   Yeast   636  0.871
+3:   Ecoli   129  0.674

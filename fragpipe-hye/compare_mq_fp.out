@@ -1,0 +1,19 @@
+proteins scoreable in both (matched on leading accession): 3877 
+   species     n within_mq within_fp IQR_mq IQR_fp med_mq med_fp
+    <char> <int>     <num>     <num>  <num>  <num>  <num>  <num>
+1:   Human  2872     0.989     0.997  0.142  0.140  0.143  0.010
+2:   Yeast   874     0.922     0.992  0.193  0.164 -0.795 -0.973
+3:   Ecoli   131     0.809     0.977  0.265  0.173  2.133  1.957
+scoreable only in FragPipe: 2905 
+   species     n within
+    <char> <int>  <num>
+1:   Yeast   944  0.783
+2:   Human  1733  0.866
+3:   Ecoli   228  0.596
+
+== centred on human median ==
+   species     n within_mq within_fp med_mq med_fp
+    <char> <int>     <num>     <num>  <num>  <num>
+1:   Human  2872     0.994     0.997  0.000  0.000
+2:   Yeast   874     0.969     0.992 -0.938 -0.983
+3:   Ecoli   131     0.824     0.977  1.990  1.947

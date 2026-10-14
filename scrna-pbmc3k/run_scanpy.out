@@ -1,0 +1,21 @@
+  sc.pl.umap(adata, color=["leiden_0.5", "CD3E", "MS4A1", "LYZ", "FCGR3A", "GNLY"], ncols=3, save="_pbmc3k.png", show=False)
+  sc.pl.dotplot(adata, markers, groupby="leiden_0.5", save="_pbmc3k_markers.png", show=False)
+raw: 2700 cells x 32738 genes
+after min_genes=200 / min_cells=3: 2700 x 13714
+genes/cell median 816 (max 3400); mt% median 2.03 (99th pct 5.9)
+fixed thresholds (genes<7500, mt<20%) keep: 2698 of 2700
+MAD thresholds (5 MAD counts/genes, 3 MAD mt%) keep: 2434 of 2700 | mt% cut at 3.65
+Seurat PBMC3k tutorial thresholds (200<genes<2500, mt<5%) keep: 2638
+cells removed by MAD but kept by fixed: 264 | removed by fixed but kept by MAD: 0
+scrublet predicted doublets: 32 of 2700 (1.2%)
+after MAD QC + doublet removal: 2407 cells
+PCA variance explained PC1-10: [10.199999809265137, 3.200000047683716, 2.299999952316284, 1.100000023841858, 0.699999988079071, 0.5, 0.4000000059604645, 0.4000000059604645, 0.30000001192092896, 0.30000001192092896]
+leiden resolution 0.5: 6 clusters
+leiden resolution 1.0: 8 clusters
+cluster 0 (n=304): CCL5, NKG7, B2M, CST7, CTSW
+cluster 1 (n=1065): LDHB, RPS12, RPS25, RPS6, RPS27
+cluster 2 (n=435): LYZ, S100A9, CST3, S100A8, TYROBP
+cluster 3 (n=146): GNLY, NKG7, GZMB, PRF1, CTSW
+cluster 4 (n=152): LST1, FCER1G, AIF1, COTL1, FCGR3A
+cluster 5 (n=305): CD74, HLA-DRA, CD79A, CD79B, HLA-DPB1
+timings (s): {'load+QC': 6.5, 'norm..cluster': 11.2, 'markers': 5.3} | peak RSS GB: 1.04

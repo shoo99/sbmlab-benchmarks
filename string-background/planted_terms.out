@@ -1,0 +1,37 @@
+Warning:  we couldn't map to STRING 0% of your identifiersdetected background, GO/KEGG FDR<0.05:
+   category                                   description number_of_genes
+     <char>                                        <char>           <int>
+1:  Process                   Sterol biosynthetic process              12
+2:  Process              Cholesterol biosynthetic process              11
+3:  Process                 Cholesterol metabolic process              13
+4:  Process                  Steroid biosynthetic process              13
+5:  Process                     Steroid metabolic process              16
+6:  Process               Isoprenoid biosynthetic process               7
+7:  Process Organic hydroxy compound biosynthetic process              13
+8:     KEGG               Terpenoid backbone biosynthesis               9
+9:     KEGG                          Steroid biosynthesis               6
+       fdr
+     <num>
+1: 0.00035
+2: 0.00041
+3: 0.00220
+4: 0.00370
+5: 0.00830
+6: 0.04440
+7: 0.04960
+8: 0.00025
+9: 0.00520
+genome background, GO/KEGG FDR<0.05: 110 ; of which mention sterol/cholesterol/lipid: 7 
+genome background: rank of first sterol/cholesterol term: 21 of 110 
+     rank  category                              description      fdr
+    <int>    <char>                                   <char>    <num>
+ 1:     1 Component                                  Cytosol 2.59e-17
+ 2:     2 Component       Intracellular anatomical structure 2.25e-16
+ 3:     3 Component                                Cytoplasm 6.67e-14
+ 4:     4 Component                  Intracellular organelle 1.57e-13
+ 5:     5 Component                                Organelle 3.12e-13
+ 6:     6 Component Intracellular membrane-bounded organelle 3.72e-13
+ 7:     7 Component               Membrane-bounded organelle 5.52e-13
+ 8:     8 Component            Intracellular organelle lumen 7.91e-12
+ 9:     9   Process               Cellular metabolic process 1.19e-10
+10:    10   Process                        Metabolic process 7.09e-10

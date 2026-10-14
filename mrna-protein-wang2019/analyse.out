@@ -1,0 +1,18 @@
+genes: 9870, tissues: 29
+
+Across genes, within each tissue:
+          n  spearman    r2  ratio_IQR_fold  ratio_90pct_fold
+min  6423.0      0.41  0.19           12.98            438.09
+50%  8536.0      0.52  0.29           15.63            741.95
+max  9283.0      0.58  0.37           19.25           1092.85
+  tissue    n  spearman   r2
+   Ovary 8123      0.41 0.19
+Pancreas 6423      0.45 0.23
+   Heart 7537      0.58 0.37
+   Liver 7481      0.58 0.36
+
+Across tissues, within each gene (9870 genes): median Spearman 0.35; > 0.5: 30%; < 0: 12%
+agreement with the paper's own per-gene column: Pearson 1.000
+negative & p<0.05: 38; negative & BH<0.05: 8; positive & p<0.05: 42%
+median rho by quartile of mRNA SD across tissues: [0.23, 0.29, 0.4, 0.54]
+liver, 7481 genes with both: protein span 4.77 log10, mRNA span 2.66 log10

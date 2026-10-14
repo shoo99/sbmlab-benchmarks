@@ -1,0 +1,23 @@
+	Command being timed: "fragpipe-24.0/bin/fragpipe --headless --workflow hye_lfq_mbr.workflow --manifest hye.fp-manifest --workdir work --config-tools-folder /home/sysoft/fp-hye/fptools --config-diann /home/sysoft/fp-hye/fragpipe-24.0/tools/diann/1.8.2_beta_8/linux/diann-1.8.1.8 --config-python /usr/bin/python3 --threads 16 --ram 48"
+	User time (seconds): 4105.90
+	System time (seconds): 208.82
+	Percent of CPU this job got: 772%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:18.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19979100
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 70
+	Minor (reclaiming a frame) page faults: 64323047
+	Voluntary context switches: 3316325
+	Involuntary context switches: 168645
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

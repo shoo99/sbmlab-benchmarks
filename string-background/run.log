@@ -1,0 +1,97 @@
+trying URL 'https://stringdb-downloads.org/download/protein.aliases.v12.0/9606.protein.aliases.v12.0.txt.gz'
+Content type 'application/octet-stream' length 19777800 bytes (18.9 MB)
+==================================================
+downloaded 18.9 MB
+
+trying URL 'https://stringdb-downloads.org/download/protein.info.v12.0/9606.protein.info.v12.0.txt.gz'
+Content type 'application/octet-stream' length 1970090 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+Warning:  we couldn't map to STRING 0% of your identifiersdetected human proteins mapped to STRING: 5686 
+trying URL 'https://stringdb-downloads.org/download/protein.links.v12.0/9606.protein.links.v12.0.txt.gz'
+Content type 'application/octet-stream' length 83164437 bytes (79.3 MB)
+==================================================
+downloaded 79.3 MB
+
+seed 1 genome: 302  detected: 0 
+seed 2 genome: 259  detected: 0 
+seed 3 genome: 143  detected: 0 
+seed 4 genome: 183  detected: 0 
+seed 5 genome: 220  detected: 0 
+seed 6 genome: 222  detected: 0 
+seed 7 genome: 255  detected: 0 
+seed 8 genome: 353  detected: 0 
+seed 9 genome: 236  detected: 0 
+seed 10 genome: 345  detected: 0 
+seed 11 genome: 259  detected: 0 
+seed 12 genome: 232  detected: 0 
+seed 13 genome: 221  detected: 0 
+seed 14 genome: 170  detected: 0 
+seed 15 genome: 237  detected: 0 
+seed 16 genome: 310  detected: 0 
+seed 17 genome: 439  detected: 0 
+seed 18 genome: 244  detected: 0 
+seed 19 genome: 231  detected: 0 
+seed 20 genome: 188  detected: 0 
+cholesterol-biosynthesis proteins detected: 17 
+       list  seed background Process Component Function  KEGG
+     <char> <int>     <char>   <int>     <int>    <int> <int>
+ 1:  random     1     genome      57        47       10     1
+ 2:  random     1   detected       0         0        0     0
+ 3:  random     2     genome      43        30        5     5
+ 4:  random     2   detected       0         0        0     0
+ 5:  random     3     genome      36        25       13     1
+ 6:  random     3   detected       0         0        0     0
+ 7:  random     4     genome      46        44        6     0
+ 8:  random     4   detected       0         0        0     0
+ 9:  random     5     genome      41        28       16     0
+10:  random     5   detected       0         0        0     0
+11:  random     6     genome      44        25        8     7
+12:  random     6   detected       0         0        0     0
+13:  random     7     genome      57        45       17     0
+14:  random     7   detected       0         0        0     0
+15:  random     8     genome      63        50        6     2
+16:  random     8   detected       0         0        0     0
+17:  random     9     genome      68        24       10     0
+18:  random     9   detected       0         0        0     0
+19:  random    10     genome      53        47       22     1
+20:  random    10   detected       0         0        0     0
+21:  random    11     genome      68        27        9     1
+22:  random    11   detected       0         0        0     0
+23:  random    12     genome      56        36       11     6
+24:  random    12   detected       0         0        0     0
+25:  random    13     genome      36        37       23     0
+26:  random    13   detected       0         0        0     0
+27:  random    14     genome      28        23        2    10
+28:  random    14   detected       0         0        0     0
+29:  random    15     genome      59        26       17     0
+30:  random    15   detected       0         0        0     0
+31:  random    16     genome      84        54       26     4
+32:  random    16   detected       0         0        0     0
+33:  random    17     genome      57        31       20    13
+34:  random    17   detected       0         0        0     0
+35:  random    18     genome      70        27       20     3
+36:  random    18   detected       0         0        0     0
+37:  random    19     genome      59        36        7     2
+38:  random    19   detected       0         0        0     0
+39:  random    20     genome      48        29        7     1
+40:  random    20   detected       0         0        0     0
+41: planted     1     genome      64        27        5    14
+42: planted     1   detected       7         0        0     2
+43: planted     2     genome     129        24       17    14
+44: planted     2   detected       8         0        0     2
+45: planted     3     genome      72        29       18     5
+46: planted     3   detected      11         0        0     2
+47: planted     4     genome     130        80       15     3
+48: planted     4   detected      12         0        0     2
+49: planted     5     genome      74        24        8     5
+50: planted     5   detected       8         0        0     2
+       list  seed background Process Component Function  KEGG
+    seed found_genome found_detected n_genome n_detected
+   <int>       <lgcl>         <lgcl>    <int>      <int>
+1:     1         TRUE           TRUE      348        119
+2:     2         TRUE           TRUE      708        110
+3:     3         TRUE           TRUE      368        123
+4:     4         TRUE           TRUE      583        127
+5:     5         TRUE           TRUE      377        116

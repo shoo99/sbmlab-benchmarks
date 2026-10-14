@@ -1,0 +1,70 @@
+
+DIA-NN 2.3.2 Academia  (Data-Independent Acquisition by Neural Networks)
+Compiled on Jan 22 2026 10:50:24
+Current date and time: Tue Oct 13 07:54:43 2026
+CPU: GenuineIntel Intel(R) Core(TM) i9-14900K
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 32
+60Gb out of 127Gb RAM is free
+Thread number set to 24
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+Cysteine carbamidomethylation enabled as a fixed modification
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+The spectral library (if generated) will retain the original spectra but will include empirically-aligned RTs
+Existing .quant files will be used
+DIA-NN will automatically optimise the mass accuracy for the first run of the experiment, use this mode for preliminary analyses only
+WARNING: combining reuse of .quant files with automatic optimisation of mass accuracies or scan window will lead to results that are different from those of the original analysis that produced the .quant files and is strongly not recommended
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms
+The following variable modifications will be localised: UniMod:35 
+
+6 files will be processed
+[0:00] Loading spectral library C:\diann-hye\lib\hye.predicted.speclib
+[0:03] Library annotated with sequence database(s): C:\diann-hye\hye_sp.fasta
+[0:03] Spectral library loaded: 31635 protein isoforms, 41965 protein groups and 6370129 precursors in 2411108 elution groups.
+[0:03] Loading protein annotations from FASTA C:\diann-hye\hye_sp.fasta
+[0:04] Annotating library proteins with information from the FASTA database
+[0:04] Gene names missing for some isoforms
+[0:04] Library contains 31635 proteins, and 30696 genes
+[0:07] Initialising library
+WARNING: it is strongly recommended to enable MBR when analysing with a large library, if this is a quantitative analysis
+[0:18] Cross-run analysis
+[0:18] Reading quantification information: 6 files
+[0:35] Quantifying peptides
+[2:24] Quantification parameters: 0.372722, 0.0348069, 2.73159, 0.011675, 0.0128417, 0.0123288, 0.159372, 0.18463, 0.172393, 0.013675, 0.0141613, 0.0138985, 0.122633, 0.14301, 0.133436, 0.0113863
+[2:43] Assembling protein groups
+[2:45] Quantifying proteins
+[2:45] Calculating q-values for protein and gene groups
+[2:47] Calculating global q-values for protein and gene groups
+[2:47] Protein groups with global q-value <= 0.01: 9093
+[2:50] Compressed report saved to C:\diann-hye\out_nombr\report.parquet. Use R 'arrow' or Python 'PyArrow' package to process
+[2:50] Site report saved to C:\diann-hye\out_nombr\report.site_report.parquet
+[2:50] Saving precursor levels matrix
+[2:50] Precursor levels matrix (1% precursor and protein group FDR) saved to C:\diann-hye\out_nombr\report.pr_matrix.tsv.
+[2:50] Saving protein group levels matrix
+[2:50] Protein groups matrix saved to C:\diann-hye\out_nombr\report.pg_matrix.tsv.
+[2:50] Saving gene group levels matrix
+[2:50] Gene groups matrix saved to C:\diann-hye\out_nombr\report.gg_matrix.tsv.
+[2:50] Saving unique genes levels matrix
+[2:50] Unique genes matrix saved to C:\diann-hye\out_nombr\report.unique_genes_matrix.tsv.
+[2:50] Manifest saved to C:\diann-hye\out_nombr\report.manifest.txt
+[2:50] Stats report saved to C:\diann-hye\out_nombr\report.stats.tsv
+
+The following warnings or errors (in alphabetic order) were detected at least the indicated number of times:
+WARNING: combining reuse of .quant files with automatic optimisation of mass accuracies or scan window will lead to results that are different from those of the original analysis that produced the .quant files and is strongly not recommended : 1
+WARNING: it is strongly recommended to enable MBR when analysing with a large library, if this is a quantitative analysis : 1
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms : 1
+Finished
+
+
+How to cite:
+using DIA-NN: Demichev et al, Nature Methods, 2020, https://www.nature.com/articles/s41592-019-0638-x
+analysing Scanning SWATH: Messner et al, Nature Biotechnology, 2021, https://www.nature.com/articles/s41587-021-00860-4
+analysing PTMs: Steger et al, Nature Communications, 2021, https://www.nature.com/articles/s41467-021-25454-1
+analysing dia-PASEF: Demichev et al, Nature Communications, 2022, https://www.nature.com/articles/s41467-022-31492-0
+analysing Slice-PASEF: Szyrwiel et al, biorxiv, 2022, https://doi.org/10.1101/2022.10.31.514544
+plexDIA / multiplexed DIA: Derks et al, Nature Biotechnology, 2023, https://www.nature.com/articles/s41587-022-01389-w
+CysQuant: Huang et al, Redox Biology, 2023, https://doi.org/10.1016/j.redox.2023.102908
+using QuantUMS: Kistner at al, biorxiv, 2023, https://doi.org/10.1101/2023.06.20.545604
+[2:50] Log saved to C:\diann-hye\out_nombr\report.log.txt
