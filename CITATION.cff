@@ -10,7 +10,18 @@ authors:
 repository-code: "https://github.com/shoo99/sbmlab-benchmarks"
 url: "https://sbmlab.com/blog"
 license: MIT
-version: "1.0.2"
+version: "1.0.3"
 doi: "10.5281/zenodo.23355028"
-date-released: "2026-10-14"
+date-released: "2026-10-15"
 keywords: [proteomics, bioinformatics, benchmark, MaxQuant, FragPipe, DIA-NN, reproducibility]
+references:
+  - type: article
+    title: "Scoring the downstream chain of small-n label-free proteomics against known ratios: search engine, match-between-runs, imputation, differential testing and enrichment background on a public three-species benchmark"
+    authors:
+      - family-names: "Kang"
+        given-names: "Byeongsoo"
+        orcid: "https://orcid.org/0009-0007-2324-2351"
+    journal: "Research Square"
+    doi: "10.21203/rs.3.rs-11370244/v1"
+    year: 2026
+    notes: "Preprint, not peer reviewed"

@@ -21,6 +21,12 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "10.21203/rs.3.rs-11370244/v1",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
       "identifier": "https://sbmlab.com/blog",
       "relation": "isDocumentedBy",
       "resource_type": "publication"

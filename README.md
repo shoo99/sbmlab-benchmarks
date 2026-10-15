@@ -27,6 +27,11 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 
 ### Preprint analyses
 
+The proteomics folders above are written up as a preprint:
+
+Kang, B. (2026). Scoring the downstream chain of small-n label-free proteomics against known ratios: search engine, match-between-runs, imputation, differential testing and enrichment background on a public three-species benchmark. *Research Square* (preprint, not peer reviewed). https://doi.org/10.21203/rs.3.rs-11370244/v1
+
+
 | Folder | What it adds |
 |---|---|
 | [preprint-hye](preprint-hye) | t-test / limma / DEqMS on the protein tables of all three engines (contaminants removed by accession), with and without an extra median normalisation; figure script for the preprint. Needs MaxQuant's `bin/conf/contaminants.fasta` copied next to the scripts as `contaminants_maxquant_2.8.1.fasta`; input paths at the top of each script point to the local MaxQuant, FragPipe and DIA-NN outputs |
@@ -66,4 +71,8 @@ Found a mistake? Open an issue. These are single runs on one machine, so differe
 
 Kang, B. (2026). *sbmlab-benchmarks: scripts and results behind the measured posts on sbmlab.com*. Zenodo. https://doi.org/10.5281/zenodo.23355028
 
-This DOI always points to the latest version (v1.0.1: https://doi.org/10.5281/zenodo.23355544; v1.0.0: https://doi.org/10.5281/zenodo.23355029). Please also cite the original datasets listed above.
+This DOI always points to the latest version (v1.0.2: https://doi.org/10.5281/zenodo.23356112; v1.0.1: https://doi.org/10.5281/zenodo.23355544; v1.0.0: https://doi.org/10.5281/zenodo.23355029). Please also cite the original datasets listed above.
+
+If you use the proteomics benchmark results, please cite the preprint as well:
+
+Kang, B. (2026). Scoring the downstream chain of small-n label-free proteomics against known ratios: search engine, match-between-runs, imputation, differential testing and enrichment background on a public three-species benchmark. *Research Square* (preprint, not peer reviewed). https://doi.org/10.21203/rs.3.rs-11370244/v1
