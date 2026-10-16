@@ -1,0 +1,86 @@
+== CV per protein and condition (3 replicates complete)
+                    engine species n_prot  n_cv complete_pct median_cv pct_lt10
+                    <char>  <char>  <int> <int>        <num>     <num>    <num>
+ 1:           MaxQuant LFQ   Human   3780  5523         73.1       7.9     62.2
+ 2:           MaxQuant LFQ   Yeast   1457  1815         62.3       7.9     61.1
+ 3:           MaxQuant LFQ   Ecoli    389   357         45.9      11.7     42.0
+ 4:           MaxQuant LFQ     All   5626  7695         68.4       8.1     61.0
+ 5: MaxQuant raw Intensity   Human   3780  6992         92.5      20.7     11.6
+ 6: MaxQuant raw Intensity   Yeast   1457  2463         84.5      20.8     11.6
+ 7: MaxQuant raw Intensity   Ecoli    389   547         70.3      24.5     10.1
+ 8: MaxQuant raw Intensity     All   5626 10002         88.9      20.9     11.5
+ 9:        FragPipe MaxLFQ   Human   5064  8914         88.0       9.5     52.4
+10:        FragPipe MaxLFQ   Yeast   2244  3559         79.3      10.8     47.1
+11:        FragPipe MaxLFQ   Ecoli    618   819         66.3      14.5     32.2
+12:        FragPipe MaxLFQ     All   7926 13292         83.9      10.1     49.7
+13:       DIA-NN pg_matrix   Human   5657 10742         94.9       3.6     81.2
+14:       DIA-NN pg_matrix   Yeast   2633  4636         88.0       6.0     69.5
+15:       DIA-NN pg_matrix   Ecoli    693  1024         73.9       6.8     66.6
+16:       DIA-NN pg_matrix     All   8983 16402         91.3       4.5     77.0
+    pct_lt20
+       <num>
+ 1:     93.7
+ 2:     91.1
+ 3:     77.3
+ 4:     92.3
+ 5:     47.3
+ 6:     47.0
+ 7:     36.6
+ 8:     46.6
+ 9:     82.1
+10:     78.1
+11:     67.5
+12:     80.1
+13:     94.9
+14:     91.6
+15:     89.3
+16:     93.6
+
+== Median CV by abundance quartile (condition A)
+                    engine quartile median_cv     n
+                    <char>   <char>     <num> <int>
+ 1:           MaxQuant LFQ       Q1       8.9   958
+ 2:           MaxQuant LFQ       Q2       7.0   957
+ 3:           MaxQuant LFQ       Q3       5.2   957
+ 4:           MaxQuant LFQ       Q4       4.1   957
+ 5: MaxQuant raw Intensity       Q1      29.4  1245
+ 6: MaxQuant raw Intensity       Q2      24.0  1244
+ 7: MaxQuant raw Intensity       Q3      19.9  1244
+ 8: MaxQuant raw Intensity       Q4      17.9  1244
+ 9:        FragPipe MaxLFQ       Q1      15.8  1657
+10:        FragPipe MaxLFQ       Q2       8.9  1656
+11:        FragPipe MaxLFQ       Q3       5.9  1656
+12:        FragPipe MaxLFQ       Q4       4.4  1657
+13:       DIA-NN pg_matrix       Q1      11.9  2055
+14:       DIA-NN pg_matrix       Q2       6.1  2055
+15:       DIA-NN pg_matrix       Q3       3.7  2054
+16:       DIA-NN pg_matrix       Q4       2.0  2055
+
+== Ratio accuracy by CV band (max CV of the two conditions)
+                    engine species     cv_band     n within_0.5_pct
+                    <char>  <char>      <char> <int>          <num>
+ 1:           MaxQuant LFQ   Human    both<20%  2363           99.9
+ 2:           MaxQuant LFQ   Human either>=20%   263           97.7
+ 3:           MaxQuant LFQ   Yeast    both<20%   689           98.5
+ 4:           MaxQuant LFQ   Yeast either>=20%   109           99.1
+ 5:           MaxQuant LFQ   Ecoli    both<20%    78           93.6
+ 6:           MaxQuant LFQ   Ecoli either>=20%    30           60.0
+ 7: MaxQuant raw Intensity   Human    both<20%   937           98.1
+ 8: MaxQuant raw Intensity   Human either>=20%  2432           85.6
+ 9: MaxQuant raw Intensity   Yeast    both<20%   314           91.1
+10: MaxQuant raw Intensity   Yeast either>=20%   799           73.0
+11: MaxQuant raw Intensity   Ecoli    both<20%    33           51.5
+12: MaxQuant raw Intensity   Ecoli either>=20%   154           44.2
+13:        FragPipe MaxLFQ   Human    both<20%  3214           99.2
+14:        FragPipe MaxLFQ   Human either>=20%  1107           90.7
+15:        FragPipe MaxLFQ   Yeast    both<20%  1103           97.3
+16:        FragPipe MaxLFQ   Yeast either>=20%   510           82.4
+17:        FragPipe MaxLFQ   Ecoli    both<20%   169           87.6
+18:        FragPipe MaxLFQ   Ecoli either>=20%   123           67.5
+19:       DIA-NN pg_matrix   Human    both<20%  4873           99.6
+20:       DIA-NN pg_matrix   Human either>=20%   389           95.1
+21:       DIA-NN pg_matrix   Yeast    both<20%  1888           98.1
+22:       DIA-NN pg_matrix   Yeast either>=20%   230           92.6
+23:       DIA-NN pg_matrix   Ecoli    both<20%   318           93.1
+24:       DIA-NN pg_matrix   Ecoli either>=20%    49           71.4
+                    engine species     cv_band     n within_0.5_pct

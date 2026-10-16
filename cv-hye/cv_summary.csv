@@ -1,0 +1,17 @@
+engine,species,n_prot,n_cv,complete_pct,median_cv,pct_lt10,pct_lt20
+MaxQuant LFQ,Human,3780,5523,73.1,7.9,62.2,93.7
+MaxQuant LFQ,Yeast,1457,1815,62.3,7.9,61.1,91.1
+MaxQuant LFQ,Ecoli,389,357,45.9,11.7,42,77.3
+MaxQuant LFQ,All,5626,7695,68.4,8.1,61,92.3
+MaxQuant raw Intensity,Human,3780,6992,92.5,20.7,11.6,47.3
+MaxQuant raw Intensity,Yeast,1457,2463,84.5,20.8,11.6,47
+MaxQuant raw Intensity,Ecoli,389,547,70.3,24.5,10.1,36.6
+MaxQuant raw Intensity,All,5626,10002,88.9,20.9,11.5,46.6
+FragPipe MaxLFQ,Human,5064,8914,88,9.5,52.4,82.1
+FragPipe MaxLFQ,Yeast,2244,3559,79.3,10.8,47.1,78.1
+FragPipe MaxLFQ,Ecoli,618,819,66.3,14.5,32.2,67.5
+FragPipe MaxLFQ,All,7926,13292,83.9,10.1,49.7,80.1
+DIA-NN pg_matrix,Human,5657,10742,94.9,3.6,81.2,94.9
+DIA-NN pg_matrix,Yeast,2633,4636,88,6,69.5,91.6
+DIA-NN pg_matrix,Ecoli,693,1024,73.9,6.8,66.6,89.3
+DIA-NN pg_matrix,All,8983,16402,91.3,4.5,77,93.6

@@ -1,0 +1,8 @@
+MaxQuant condition A: share of proteins with all 3 LFQ values, by raw-intensity quartile
+  Q1   Q2   Q3   Q4 
+11.9 73.4 96.8 98.5 
+median log10 raw intensity: complete = 8.2  incomplete = 7.1 
+
+raw Intensity in all 3 A runs: 4978 | of these, LFQ incomplete: 1148 | LFQ = 0 in all 3: 590 
+median min razor+unique peptides: LFQ-incomplete = 1  LFQ-complete = 5.5 
+median raw-Intensity CV (condition A): LFQ-incomplete = 31.1 % (n = 1148 )  LFQ-complete = 19.9 % (n = 3830 )
