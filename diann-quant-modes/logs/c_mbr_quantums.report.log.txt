@@ -1,0 +1,372 @@
+
+DIA-NN 2.3.2 Academia  (Data-Independent Acquisition by Neural Networks)
+Compiled on Jan 22 2026 10:50:24
+Current date and time: Fri Oct 16 21:03:01 2026
+CPU: GenuineIntel Intel(R) Core(TM) i9-14900K
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 32
+90Gb out of 127Gb RAM is free
+diann.exe --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Alpha_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Beta_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Gamma_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Alpha_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Beta_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Gamma_01.wiff --lib C:\diann-hye\lib\hye.predicted.speclib --fasta C:\diann-hye\hye_sp.fasta --threads 24 --verbose 1 --qvalue 0.01 --matrices --export-quant --rt-profiling --met-excision --cut K*,R* --missed-cleavages 1 --var-mods 1 --var-mod UniMod:35,15.994915,M --unimod4 --mass-acc 16 --mass-acc-ms1 13 --window 9 --reanalyse --out C:\diann-hye\c_mbr_quantums\report.parquet 
+
+Thread number set to 24
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+full quantification information will be exported in .parquet format
+The spectral library (if generated) will retain the original spectra but will include empirically-aligned RTs
+N-terminal methionine excision enabled
+In silico digest will involve cuts at K*,R*
+Maximum number of missed cleavages set to 1
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+Cysteine carbamidomethylation enabled as a fixed modification
+Scan window radius set to 9
+MBR enabled; .quant files will only be saved to disk during the first pass
+Mass accuracy will be fixed to 1.6e-05 (MS2) and 1.3e-05 (MS1)
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms
+The following variable modifications will be localised: UniMod:35 
+
+6 files will be processed
+[0:00] Loading spectral library C:\diann-hye\lib\hye.predicted.speclib
+[0:05] Library annotated with sequence database(s): C:\diann-hye\hye_sp.fasta
+[0:06] Spectral library loaded: 31635 protein isoforms, 41965 protein groups and 6370129 precursors in 2411108 elution groups.
+[0:06] Loading protein annotations from FASTA C:\diann-hye\hye_sp.fasta
+[0:07] Annotating library proteins with information from the FASTA database
+[0:07] Gene names missing for some isoforms
+[0:07] Library contains 31635 proteins, and 30696 genes
+[0:12] Initialising library
+
+First pass: generating a spectral library from DIA data
+
+[0:29] File #1/6
+[0:29] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Alpha_01.wiff
+[24:35] Pre-processing...
+[24:40] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 4816871 precursors in range
+[24:44] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[26:21] RT window set to 8.01196
+[26:21] Recommended MS1 mass accuracy setting: 14 ppm
+[27:14] Searching decoys
+[36:47] Main search
+[56:11] Removing low confidence identifications
+[57:24] Removing interfering precursors
+[57:43] Training neural networks on 211629 target and 154386 decoy PSMs
+[60:01] Training neural networks on 211629 target and 150838 decoy PSMs
+[62:13] IDs at 0.01 FDR: 88128
+[62:13] Precursors at 1% peptidoform FDR: 85000
+[62:14] Number of IDs at 0.01 FDR: 90682
+[62:14] Calculating protein q-values
+[62:15] Number of genes identified at 1% FDR: 8458 (precursor-level), 7643 (protein-level) (inference performed using proteotypic peptides only)
+[62:15] Quantification
+[62:17] Precursors with scored PTMs at 1% FDR: 190 out of 278 considered
+[62:17] Precursors with all scored PTM sites unoccupied at 1% FDR: 85546
+[62:17] Precursors with PTMs localised (when required) with > 90% confidence: 181 out of 190
+[62:19] Quantification information saved to C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Alpha_01.wiff.quant
+
+[62:20] File #2/6
+[62:20] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Beta_01.wiff
+[86:12] Pre-processing...
+[86:17] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 4816871 precursors in range
+[86:18] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[87:53] RT window set to 7.89341
+[87:53] Recommended MS1 mass accuracy setting: 14 ppm
+[88:44] Searching decoys
+[98:49] Main search
+[118:51] Removing low confidence identifications
+[120:12] Removing interfering precursors
+[120:51] Training neural networks on 246782 target and 193796 decoy PSMs
+[123:38] Training neural networks on 246782 target and 189007 decoy PSMs
+[126:20] IDs at 0.01 FDR: 85777
+[126:21] Precursors at 1% peptidoform FDR: 82307
+[126:22] Number of IDs at 0.01 FDR: 88484
+[126:22] Calculating protein q-values
+[126:23] Number of genes identified at 1% FDR: 8262 (precursor-level), 7542 (protein-level) (inference performed using proteotypic peptides only)
+[126:23] Quantification
+[126:25] Precursors with scored PTMs at 1% FDR: 218 out of 293 considered
+[126:25] Precursors with all scored PTM sites unoccupied at 1% FDR: 82810
+[126:25] Precursors with PTMs localised (when required) with > 90% confidence: 204 out of 218
+[126:27] Quantification information saved to C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Beta_01.wiff.quant
+
+[126:28] File #3/6
+[126:28] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Gamma_01.wiff
+[151:02] Pre-processing...
+[151:06] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 4816871 precursors in range
+[151:08] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[152:48] RT window set to 8.33996
+[152:48] Recommended MS1 mass accuracy setting: 13 ppm
+[153:42] Searching decoys
+[163:36] Main search
+[183:12] Removing low confidence identifications
+[184:26] Removing interfering precursors
+[184:47] Training neural networks on 203475 target and 149014 decoy PSMs
+[187:11] Training neural networks on 203475 target and 146140 decoy PSMs
+[189:31] IDs at 0.01 FDR: 85891
+[189:31] Precursors at 1% peptidoform FDR: 82767
+[189:32] Number of IDs at 0.01 FDR: 88369
+[189:32] Calculating protein q-values
+[189:33] Number of genes identified at 1% FDR: 8195 (precursor-level), 7421 (protein-level) (inference performed using proteotypic peptides only)
+[189:33] Quantification
+[189:35] Precursors with scored PTMs at 1% FDR: 265 out of 334 considered
+[189:35] Precursors with all scored PTM sites unoccupied at 1% FDR: 83224
+[189:35] Precursors with PTMs localised (when required) with > 90% confidence: 255 out of 265
+[189:38] Quantification information saved to C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Gamma_01.wiff.quant
+
+[189:38] File #4/6
+[189:38] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Alpha_01.wiff
+[217:23] Pre-processing...
+[217:28] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 4816871 precursors in range
+[217:29] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[219:08] RT window set to 7.97938
+[219:08] Recommended MS1 mass accuracy setting: 12 ppm
+[220:03] Searching decoys
+[229:40] Main search
+[248:44] Removing low confidence identifications
+[250:15] Removing interfering precursors
+[250:30] Training neural networks on 248808 target and 195313 decoy PSMs
+[253:30] Training neural networks on 248808 target and 190110 decoy PSMs
+[256:24] IDs at 0.01 FDR: 89671
+[256:24] Precursors at 1% peptidoform FDR: 85237
+[256:25] Number of IDs at 0.01 FDR: 92641
+[256:25] Calculating protein q-values
+[256:26] Number of genes identified at 1% FDR: 8487 (precursor-level), 7752 (protein-level) (inference performed using proteotypic peptides only)
+[256:26] Quantification
+[256:28] Precursors with scored PTMs at 1% FDR: 133 out of 193 considered
+[256:28] Precursors with all scored PTM sites unoccupied at 1% FDR: 85684
+[256:28] Precursors with PTMs localised (when required) with > 90% confidence: 120 out of 133
+[256:31] Quantification information saved to C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Alpha_01.wiff.quant
+
+[256:31] File #5/6
+[256:31] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Beta_01.wiff
+[282:11] Pre-processing...
+[282:16] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 4816871 precursors in range
+[282:17] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[283:54] RT window set to 8.6161
+[283:55] Recommended MS1 mass accuracy setting: 13 ppm
+[284:49] Searching decoys
+[294:38] Main search
+[314:07] Removing low confidence identifications
+[315:19] Removing interfering precursors
+[315:39] Training neural networks on 208096 target and 156328 decoy PSMs
+[318:08] Training neural networks on 208096 target and 152443 decoy PSMs
+[320:31] IDs at 0.01 FDR: 84268
+[320:32] Precursors at 1% peptidoform FDR: 80741
+[320:33] Number of IDs at 0.01 FDR: 86519
+[320:33] Calculating protein q-values
+[320:33] Number of genes identified at 1% FDR: 8063 (precursor-level), 7230 (protein-level) (inference performed using proteotypic peptides only)
+[320:33] Quantification
+[320:36] Precursors with scored PTMs at 1% FDR: 153 out of 236 considered
+[320:36] Precursors with all scored PTM sites unoccupied at 1% FDR: 81077
+[320:36] Precursors with PTMs localised (when required) with > 90% confidence: 138 out of 153
+[320:38] Quantification information saved to C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Beta_01.wiff.quant
+
+[320:38] File #6/6
+[320:38] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Gamma_01.wiff
+[346:25] Pre-processing...
+[346:30] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 4816871 precursors in range
+[346:31] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[348:08] RT window set to 7.83134
+[348:09] Recommended MS1 mass accuracy setting: 14 ppm
+[348:59] Searching decoys
+[358:52] Main search
+[378:30] Removing low confidence identifications
+[379:50] Removing interfering precursors
+[380:30] Training neural networks on 238265 target and 184504 decoy PSMs
+[383:23] Training neural networks on 238265 target and 180997 decoy PSMs
+[386:12] IDs at 0.01 FDR: 85676
+[386:13] Precursors at 1% peptidoform FDR: 82190
+[386:14] Number of IDs at 0.01 FDR: 87624
+[386:14] Calculating protein q-values
+[386:14] Number of genes identified at 1% FDR: 8218 (precursor-level), 7436 (protein-level) (inference performed using proteotypic peptides only)
+[386:14] Quantification
+[386:16] Precursors with scored PTMs at 1% FDR: 157 out of 229 considered
+[386:16] Precursors with all scored PTM sites unoccupied at 1% FDR: 82490
+[386:16] Precursors with PTMs localised (when required) with > 90% confidence: 145 out of 157
+[386:19] Quantification information saved to C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Gamma_01.wiff.quant
+
+[386:19] Cross-run analysis
+[386:19] Reading quantification information: 6 files
+[387:09] Quantifying peptides
+[388:00] Assembling protein groups
+[388:02] Quantifying proteins
+[388:03] Calculating q-values for protein and gene groups
+[388:05] Calculating global q-values for protein and gene groups
+[388:05] Protein groups with global q-value <= 0.01: 9073
+[388:14] Compressed report saved to C:\diann-hye\c_mbr_quantums\report-first-pass.parquet. Use R 'arrow' or Python 'PyArrow' package to process
+[388:14] Site report saved to C:\diann-hye\c_mbr_quantums\report-first-pass.site_report.parquet
+[388:14] Saving precursor levels matrix
+[388:15] Precursor levels matrix (1% precursor and protein group FDR) saved to C:\diann-hye\c_mbr_quantums\report-first-pass.pr_matrix.tsv.
+[388:15] Manifest saved to C:\diann-hye\c_mbr_quantums\report-first-pass.manifest.txt
+[388:15] Stats report saved to C:\diann-hye\c_mbr_quantums\report-first-pass.stats.tsv
+[388:15] Generating spectral library:
+[388:18] 111863 target and 1152 decoy precursors saved
+[388:18] Spectral library saved to C:\diann-hye\c_mbr_quantums\report-lib.parquet
+
+[388:18] Loading spectral library C:\diann-hye\c_mbr_quantums\report-lib.parquet
+[388:20] Spectral library loaded: 10584 protein isoforms, 10436 protein groups and 113015 precursors in 96848 elution groups.
+[388:20] Loading protein annotations from FASTA C:\diann-hye\hye_sp.fasta
+[388:21] Annotating library proteins with information from the FASTA database
+[388:21] Gene names missing for some isoforms
+[388:21] Library contains 10584 proteins, and 10256 genes
+[388:21] Initialising library
+[388:22] Saving the library to C:\diann-hye\c_mbr_quantums\report-lib.parquet.skyline.speclib
+
+
+Second pass: using the newly created spectral library to reanalyse the data
+
+[388:22] File #1/6
+[388:22] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Alpha_01.wiff
+[414:04] Pre-processing...
+[414:06] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 111863 precursors in range
+[414:06] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[414:08] RT window set to 2.52619
+[414:08] Recommended MS1 mass accuracy setting: 25 ppm
+[414:09] Searching decoys
+[414:15] Main search
+[414:26] Removing low confidence identifications
+[414:38] Removing interfering precursors
+[414:39] Training neural networks on 95056 target and 53304 decoy PSMs
+[415:32] Training neural networks on 95023 target and 55650 decoy PSMs
+[416:24] IDs at 0.01 FDR: 101102
+[416:25] Precursors at 1% peptidoform FDR: 97221
+[416:25] Number of IDs at 0.01 FDR: 101474
+[416:25] Calculating protein q-values
+[416:25] Number of genes identified at 1% FDR: 8646 (precursor-level), 8186 (protein-level) (inference performed using proteotypic peptides only)
+[416:25] Quantification
+[416:27] Precursors with scored PTMs at 1% FDR: 254 out of 260 considered
+[416:27] Precursors with all scored PTM sites unoccupied at 1% FDR: 97155
+[416:27] Precursors with PTMs localised (when required) with > 90% confidence: 238 out of 254
+
+[416:29] File #2/6
+[416:29] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Beta_01.wiff
+[442:31] Pre-processing...
+[442:33] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 111863 precursors in range
+[442:33] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[442:34] RT window set to 2.51538
+[442:34] Recommended MS1 mass accuracy setting: 24 ppm
+[442:36] Searching decoys
+[442:42] Main search
+[442:53] Removing low confidence identifications
+[443:03] Removing interfering precursors
+[443:05] Training neural networks on 94892 target and 53110 decoy PSMs
+[443:58] Training neural networks on 94855 target and 55405 decoy PSMs
+[444:50] IDs at 0.01 FDR: 99707
+[444:50] Precursors at 1% peptidoform FDR: 95555
+[444:51] Number of IDs at 0.01 FDR: 100090
+[444:51] Calculating protein q-values
+[444:51] Number of genes identified at 1% FDR: 8491 (precursor-level), 8130 (protein-level) (inference performed using proteotypic peptides only)
+[444:51] Quantification
+[444:53] Precursors with scored PTMs at 1% FDR: 254 out of 264 considered
+[444:53] Precursors with all scored PTM sites unoccupied at 1% FDR: 95479
+[444:53] Precursors with PTMs localised (when required) with > 90% confidence: 234 out of 254
+
+[444:55] File #3/6
+[444:55] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Gamma_01.wiff
+[470:59] Pre-processing...
+[471:01] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 111863 precursors in range
+[471:01] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[471:03] RT window set to 2.51998
+[471:03] Recommended MS1 mass accuracy setting: 24 ppm
+[471:04] Searching decoys
+[471:10] Main search
+[471:21] Removing low confidence identifications
+[471:31] Removing interfering precursors
+[471:32] Training neural networks on 94942 target and 53896 decoy PSMs
+[472:26] Training neural networks on 94909 target and 56155 decoy PSMs
+[473:18] IDs at 0.01 FDR: 100503
+[473:19] Precursors at 1% peptidoform FDR: 96630
+[473:19] Number of IDs at 0.01 FDR: 100727
+[473:19] Calculating protein q-values
+[473:19] Number of genes identified at 1% FDR: 8603 (precursor-level), 8147 (protein-level) (inference performed using proteotypic peptides only)
+[473:19] Quantification
+[473:21] Precursors with scored PTMs at 1% FDR: 259 out of 261 considered
+[473:21] Precursors with all scored PTM sites unoccupied at 1% FDR: 96475
+[473:21] Precursors with PTMs localised (when required) with > 90% confidence: 243 out of 259
+
+[473:23] File #4/6
+[473:23] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Alpha_01.wiff
+[498:37] Pre-processing...
+[498:39] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 111863 precursors in range
+[498:39] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[498:40] RT window set to 2.49678
+[498:40] Recommended MS1 mass accuracy setting: 23 ppm
+[498:42] Searching decoys
+[498:47] Main search
+[498:58] Removing low confidence identifications
+[499:09] Removing interfering precursors
+[499:11] Training neural networks on 95155 target and 52265 decoy PSMs
+[500:03] Training neural networks on 95123 target and 54864 decoy PSMs
+[500:56] IDs at 0.01 FDR: 101040
+[500:56] Precursors at 1% peptidoform FDR: 97609
+[500:57] Number of IDs at 0.01 FDR: 101560
+[500:57] Calculating protein q-values
+[500:57] Number of genes identified at 1% FDR: 8629 (precursor-level), 8249 (protein-level) (inference performed using proteotypic peptides only)
+[500:57] Quantification
+[500:59] Precursors with scored PTMs at 1% FDR: 248 out of 256 considered
+[500:59] Precursors with all scored PTM sites unoccupied at 1% FDR: 97635
+[500:59] Precursors with PTMs localised (when required) with > 90% confidence: 228 out of 248
+
+[501:01] File #5/6
+[501:01] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Beta_01.wiff
+[526:29] Pre-processing...
+[526:31] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 111863 precursors in range
+[526:31] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[526:32] RT window set to 2.51727
+[526:32] Recommended MS1 mass accuracy setting: 25 ppm
+[526:34] Searching decoys
+[526:39] Main search
+[526:51] Removing low confidence identifications
+[527:00] Removing interfering precursors
+[527:02] Training neural networks on 94973 target and 54485 decoy PSMs
+[527:56] Training neural networks on 94942 target and 56694 decoy PSMs
+[528:49] IDs at 0.01 FDR: 99244
+[528:49] Precursors at 1% peptidoform FDR: 94767
+[528:49] Number of IDs at 0.01 FDR: 99771
+[528:49] Calculating protein q-values
+[528:49] Number of genes identified at 1% FDR: 8473 (precursor-level), 8182 (protein-level) (inference performed using proteotypic peptides only)
+[528:49] Quantification
+[528:51] Precursors with scored PTMs at 1% FDR: 242 out of 255 considered
+[528:51] Precursors with all scored PTM sites unoccupied at 1% FDR: 94800
+[528:51] Precursors with PTMs localised (when required) with > 90% confidence: 227 out of 242
+
+[528:53] File #6/6
+[528:53] Loading run C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Gamma_01.wiff
+[554:11] Pre-processing...
+[554:13] 1895 MS1 and 187605 MS2 scans in 1895 (inferred) and 1895 (encoded) cycles, 111863 precursors in range
+[554:13] Calibrating with mass accuracies 24 (MS1), 25 (MS2)
+[554:14] RT window set to 2.5193
+[554:14] Recommended MS1 mass accuracy setting: 25 ppm
+[554:16] Searching decoys
+[554:22] Main search
+[554:33] Removing low confidence identifications
+[554:44] Removing interfering precursors
+[554:46] Training neural networks on 94990 target and 52436 decoy PSMs
+[555:39] Training neural networks on 94953 target and 54924 decoy PSMs
+[556:30] IDs at 0.01 FDR: 100038
+[556:31] Precursors at 1% peptidoform FDR: 95969
+[556:31] Number of IDs at 0.01 FDR: 100352
+[556:31] Calculating protein q-values
+[556:31] Number of genes identified at 1% FDR: 8564 (precursor-level), 8190 (protein-level) (inference performed using proteotypic peptides only)
+[556:31] Quantification
+[556:33] Precursors with scored PTMs at 1% FDR: 244 out of 256 considered
+[556:33] Precursors with all scored PTM sites unoccupied at 1% FDR: 95894
+[556:33] Precursors with PTMs localised (when required) with > 90% confidence: 229 out of 244
+
+[556:35] Cross-run analysis
+[556:35] Reading quantification information: 6 files
+[556:38] Quantifying peptides
+[559:05] Quantification parameters: 0.386346, 0.0441006, 2.90987, 0.0117377, 0.0127097, 0.0122425, 0.153067, 0.160111, 0.150796, 0.0136057, 0.0144899, 0.0142299, 0.120576, 0.121353, 0.120882, 0.0110467
+[559:29] Quantifying proteins
+[559:29] Calculating q-values for protein and gene groups
+[559:30] Calculating global q-values for protein and gene groups
+[559:30] Protein groups with global q-value <= 0.01: 8789
+[559:40] Compressed report saved to C:\diann-hye\c_mbr_quantums\report.parquet. Use R 'arrow' or Python 'PyArrow' package to process
+[559:40] Site report saved to C:\diann-hye\c_mbr_quantums\report.site_report.parquet
+[559:40] Saving precursor levels matrix
+[559:41] Precursor levels matrix (1% precursor and protein group FDR) saved to C:\diann-hye\c_mbr_quantums\report.pr_matrix.tsv.
+[559:41] Saving protein group levels matrix
+[559:41] Protein groups matrix saved to C:\diann-hye\c_mbr_quantums\report.pg_matrix.tsv.
+[559:41] Saving gene group levels matrix
+[559:41] Gene groups matrix saved to C:\diann-hye\c_mbr_quantums\report.gg_matrix.tsv.
+[559:41] Saving unique genes levels matrix
+[559:41] Unique genes matrix saved to C:\diann-hye\c_mbr_quantums\report.unique_genes_matrix.tsv.
+[559:41] Manifest saved to C:\diann-hye\c_mbr_quantums\report.manifest.txt
+[559:41] Stats report saved to C:\diann-hye\c_mbr_quantums\report.stats.tsv
+

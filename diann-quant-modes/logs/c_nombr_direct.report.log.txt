@@ -1,0 +1,59 @@
+
+DIA-NN 2.3.2 Academia  (Data-Independent Acquisition by Neural Networks)
+Compiled on Jan 22 2026 10:50:24
+Current date and time: Sat Oct 17 06:31:13 2026
+CPU: GenuineIntel Intel(R) Core(TM) i9-14900K
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 32
+86Gb out of 127Gb RAM is free
+diann.exe --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Alpha_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Beta_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Gamma_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Alpha_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Beta_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Gamma_01.wiff --lib C:\diann-hye\lib\hye.predicted.speclib --fasta C:\diann-hye\hye_sp.fasta --threads 24 --verbose 1 --qvalue 0.01 --matrices --export-quant --rt-profiling --met-excision --cut K*,R* --missed-cleavages 1 --var-mods 1 --var-mod UniMod:35,15.994915,M --unimod4 --mass-acc 16 --mass-acc-ms1 13 --window 9 --use-quant --direct-quant --out C:\diann-hye\c_nombr_direct\report.parquet 
+
+Thread number set to 24
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+full quantification information will be exported in .parquet format
+The spectral library (if generated) will retain the original spectra but will include empirically-aligned RTs
+N-terminal methionine excision enabled
+In silico digest will involve cuts at K*,R*
+Maximum number of missed cleavages set to 1
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+Cysteine carbamidomethylation enabled as a fixed modification
+Scan window radius set to 9
+Existing .quant files will be used
+Legacy (direct) quantification mode
+Mass accuracy will be fixed to 1.6e-05 (MS2) and 1.3e-05 (MS1)
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms
+The following variable modifications will be localised: UniMod:35 
+
+6 files will be processed
+[0:00] Loading spectral library C:\diann-hye\lib\hye.predicted.speclib
+[0:05] Library annotated with sequence database(s): C:\diann-hye\hye_sp.fasta
+[0:06] Spectral library loaded: 31635 protein isoforms, 41965 protein groups and 6370129 precursors in 2411108 elution groups.
+[0:06] Loading protein annotations from FASTA C:\diann-hye\hye_sp.fasta
+[0:07] Annotating library proteins with information from the FASTA database
+[0:07] Gene names missing for some isoforms
+[0:07] Library contains 31635 proteins, and 30696 genes
+[0:13] Initialising library
+WARNING: it is strongly recommended to enable MBR when analysing with a large library, if this is a quantitative analysis
+[0:29] Cross-run analysis
+[0:29] Reading quantification information: 6 files
+[0:53] Quantifying peptides
+[1:43] Assembling protein groups
+[1:45] Quantifying proteins
+[1:45] Calculating q-values for protein and gene groups
+[1:47] Calculating global q-values for protein and gene groups
+[1:47] Protein groups with global q-value <= 0.01: 9073
+[1:57] Compressed report saved to C:\diann-hye\c_nombr_direct\report.parquet. Use R 'arrow' or Python 'PyArrow' package to process
+[1:57] Site report saved to C:\diann-hye\c_nombr_direct\report.site_report.parquet
+[1:57] Saving precursor levels matrix
+[1:58] Precursor levels matrix (1% precursor and protein group FDR) saved to C:\diann-hye\c_nombr_direct\report.pr_matrix.tsv.
+[1:58] Saving protein group levels matrix
+[1:58] Protein groups matrix saved to C:\diann-hye\c_nombr_direct\report.pg_matrix.tsv.
+[1:58] Saving gene group levels matrix
+[1:58] Gene groups matrix saved to C:\diann-hye\c_nombr_direct\report.gg_matrix.tsv.
+[1:58] Saving unique genes levels matrix
+[1:58] Unique genes matrix saved to C:\diann-hye\c_nombr_direct\report.unique_genes_matrix.tsv.
+[1:58] Manifest saved to C:\diann-hye\c_nombr_direct\report.manifest.txt
+[1:58] Stats report saved to C:\diann-hye\c_nombr_direct\report.stats.tsv
+

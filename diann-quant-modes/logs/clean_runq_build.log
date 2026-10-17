@@ -1,0 +1,7 @@
+quantums_precision kept precursor rows 528974 | non-missing cells in DIA-NN pr_matrix 513461
+quantums_precision pg_matrix rows 8987 | precursor rows 528974 | precursor-sum proteins 9522
+quantums_accuracy kept precursor rows 528974 | non-missing cells in DIA-NN pr_matrix 513461
+quantums_accuracy pg_matrix rows 8987 | precursor rows 528974 | precursor-sum proteins 9522
+legacy_direct kept precursor rows 528974 | non-missing cells in DIA-NN pr_matrix 513461
+legacy_direct pg_matrix rows 9010 | precursor rows 528974 | precursor-sum proteins 9522
+fragment rows 5985609 | proteins 9522 | ions 1455693

@@ -1,0 +1,84 @@
+                                                 route                      set     sp     n median_log2   iqr within
+                                                <char>                   <char> <char> <int>       <num> <num>  <num>
+ 1:                               Fragment MaxLFQ (iq)                  MBR off  Ecoli   303       2.030 0.355   87.5
+ 2:                               Fragment MaxLFQ (iq) MBR on: also without MBR  Ecoli   302       1.955 0.380   87.4
+ 3:                               Fragment MaxLFQ (iq)    MBR on: only with MBR  Ecoli   142       1.313 0.573   33.1
+ 4:                                 Fragment directLFQ                  MBR off  Ecoli   303       2.086 0.248   90.8
+ 5:                                 Fragment directLFQ MBR on: also without MBR  Ecoli   302       2.076 0.295   93.0
+ 6:                                 Fragment directLFQ    MBR on: only with MBR  Ecoli   144       1.445 0.544   45.1
+ 7:                   Legacy direct MaxLFQ (pg_matrix)                  MBR off  Ecoli   298       2.094 0.201   91.6
+ 8:                   Legacy direct MaxLFQ (pg_matrix) MBR on: also without MBR  Ecoli   297       2.058 0.166   96.6
+ 9:                   Legacy direct MaxLFQ (pg_matrix)    MBR on: only with MBR  Ecoli   149       1.656 0.565   62.4
+10:                Precursor sum (QuantUMS precursors)                  MBR off  Ecoli   303       2.816 1.175   34.3
+11:                Precursor sum (QuantUMS precursors) MBR on: also without MBR  Ecoli   302       2.419 0.744   53.6
+12:                Precursor sum (QuantUMS precursors)    MBR on: only with MBR  Ecoli   144       3.078 1.753   25.7
+13: Precursor sum, precursors in all 6 runs (QuantUMS)                  MBR off  Ecoli   235       2.127 0.196   93.2
+14: Precursor sum, precursors in all 6 runs (QuantUMS) MBR on: also without MBR  Ecoli   234       2.111 0.184   92.7
+15: Precursor sum, precursors in all 6 runs (QuantUMS)    MBR on: only with MBR  Ecoli   115       2.069 0.515   80.9
+16:                 QuantUMS high-accuracy (pg_matrix)                  MBR off  Ecoli   298       2.106 0.194   90.3
+17:                 QuantUMS high-accuracy (pg_matrix) MBR on: also without MBR  Ecoli   297       2.093 0.192   95.3
+18:                 QuantUMS high-accuracy (pg_matrix)    MBR on: only with MBR  Ecoli   146       1.746 0.501   70.5
+19:        QuantUMS high-precision (default pg_matrix)                  MBR off  Ecoli   298       2.110 0.202   89.6
+20:        QuantUMS high-precision (default pg_matrix) MBR on: also without MBR  Ecoli   297       2.097 0.186   94.6
+21:        QuantUMS high-precision (default pg_matrix)    MBR on: only with MBR  Ecoli   146       1.786 0.485   74.0
+22:                               Fragment MaxLFQ (iq)                  MBR off  Human  5161      -0.019 0.082   98.8
+23:                               Fragment MaxLFQ (iq) MBR on: also without MBR  Human  5153      -0.015 0.077   99.6
+24:                               Fragment MaxLFQ (iq)    MBR on: only with MBR  Human   328      -0.056 0.348   93.9
+25:                                 Fragment directLFQ                  MBR off  Human  5118      -0.018 0.102   98.0
+26:                                 Fragment directLFQ MBR on: also without MBR  Human  5111      -0.013 0.090   99.2
+27:                                 Fragment directLFQ    MBR on: only with MBR  Human   368      -0.053 0.420   87.5
+28:                   Legacy direct MaxLFQ (pg_matrix)                  MBR off  Human  5114      -0.004 0.071   98.9
+29:                   Legacy direct MaxLFQ (pg_matrix) MBR on: also without MBR  Human  5109      -0.012 0.067   99.5
+30:                   Legacy direct MaxLFQ (pg_matrix)    MBR on: only with MBR  Human   374      -0.041 0.319   93.0
+31:                Precursor sum (QuantUMS precursors)                  MBR off  Human  5162       0.015 0.258   80.5
+32:                Precursor sum (QuantUMS precursors) MBR on: also without MBR  Human  5154       0.002 0.149   88.9
+33:                Precursor sum (QuantUMS precursors)    MBR on: only with MBR  Human   329       0.045 0.875   53.2
+34: Precursor sum, precursors in all 6 runs (QuantUMS)                  MBR off  Human  4414      -0.009 0.094   99.0
+35: Precursor sum, precursors in all 6 runs (QuantUMS) MBR on: also without MBR  Human  4413      -0.006 0.083   99.5
+36: Precursor sum, precursors in all 6 runs (QuantUMS)    MBR on: only with MBR  Human   739      -0.035 0.349   92.2
+37:                 QuantUMS high-accuracy (pg_matrix)                  MBR off  Human  5100      -0.001 0.080   98.8
+38:                 QuantUMS high-accuracy (pg_matrix) MBR on: also without MBR  Human  5093      -0.005 0.076   99.3
+39:                 QuantUMS high-accuracy (pg_matrix)    MBR on: only with MBR  Human   378      -0.023 0.385   87.0
+40:        QuantUMS high-precision (default pg_matrix)                  MBR off  Human  5100      -0.007 0.080   98.8
+41:        QuantUMS high-precision (default pg_matrix) MBR on: also without MBR  Human  5093      -0.002 0.075   99.4
+42:        QuantUMS high-precision (default pg_matrix)    MBR on: only with MBR  Human   378      -0.009 0.386   87.6
+43:                               Fragment MaxLFQ (iq)                  MBR off  Yeast  1963      -0.996 0.257   95.1
+44:                               Fragment MaxLFQ (iq) MBR on: also without MBR  Yeast  1962      -0.965 0.253   96.1
+45:                               Fragment MaxLFQ (iq)    MBR on: only with MBR  Yeast   396      -0.684 0.396   73.5
+46:                                 Fragment directLFQ                  MBR off  Yeast  1954      -1.051 0.219   95.2
+47:                                 Fragment directLFQ MBR on: also without MBR  Yeast  1953      -1.037 0.183   97.1
+48:                                 Fragment directLFQ    MBR on: only with MBR  Yeast   411      -0.821 0.412   79.6
+49:                   Legacy direct MaxLFQ (pg_matrix)                  MBR off  Yeast  1927      -1.046 0.129   97.5
+50:                   Legacy direct MaxLFQ (pg_matrix) MBR on: also without MBR  Yeast  1926      -1.046 0.123   98.9
+51:                   Legacy direct MaxLFQ (pg_matrix)    MBR on: only with MBR  Yeast   439      -0.898 0.315   88.8
+52:                Precursor sum (QuantUMS precursors)                  MBR off  Yeast  1963      -1.378 0.864   54.2
+53:                Precursor sum (QuantUMS precursors) MBR on: also without MBR  Yeast  1962      -1.173 0.404   75.2
+54:                Precursor sum (QuantUMS precursors)    MBR on: only with MBR  Yeast   403      -1.542 1.388   38.0
+55: Precursor sum, precursors in all 6 runs (QuantUMS)                  MBR off  Yeast  1520      -1.086 0.165   96.8
+56: Precursor sum, precursors in all 6 runs (QuantUMS) MBR on: also without MBR  Yeast  1517      -1.065 0.138   97.8
+57: Precursor sum, precursors in all 6 runs (QuantUMS)    MBR on: only with MBR  Yeast   546      -1.023 0.403   88.5
+58:                 QuantUMS high-accuracy (pg_matrix)                  MBR off  Yeast  1922      -1.060 0.171   95.9
+59:                 QuantUMS high-accuracy (pg_matrix) MBR on: also without MBR  Yeast  1921      -1.065 0.134   97.9
+60:                 QuantUMS high-accuracy (pg_matrix)    MBR on: only with MBR  Yeast   436      -0.943 0.405   85.3
+61:        QuantUMS high-precision (default pg_matrix)                  MBR off  Yeast  1922      -1.068 0.171   96.0
+62:        QuantUMS high-precision (default pg_matrix) MBR on: also without MBR  Yeast  1921      -1.068 0.133   97.9
+63:        QuantUMS high-precision (default pg_matrix)    MBR on: only with MBR  Yeast   436      -0.951 0.402   84.9
+                                                 route                      set     sp     n median_log2   iqr within
+
+== E. coli proteins QuantUMS default only quantified with MBR (n = 146 ), split by precursor completeness, every route
+                   subset                                              route     n median_log2 within
+                   <char>                                             <char> <int>       <num>  <num>
+ 1:   complete precursors        QuantUMS high-precision (default pg_matrix)    64       1.908   82.8
+ 2:   complete precursors                 QuantUMS high-accuracy (pg_matrix)    64       1.885   79.7
+ 3:   complete precursors                   Legacy direct MaxLFQ (pg_matrix)    64       1.823   78.1
+ 4:   complete precursors                Precursor sum (QuantUMS precursors)    64       3.051   26.6
+ 5:   complete precursors Precursor sum, precursors in all 6 runs (QuantUMS)    64       2.015   81.2
+ 6:   complete precursors                               Fragment MaxLFQ (iq)    64       1.480   46.9
+ 7:   complete precursors                                 Fragment directLFQ    64       1.589   60.9
+ 8: incomplete precursors        QuantUMS high-precision (default pg_matrix)    82       1.625   67.1
+ 9: incomplete precursors                 QuantUMS high-accuracy (pg_matrix)    82       1.610   63.4
+10: incomplete precursors                   Legacy direct MaxLFQ (pg_matrix)    82       1.541   52.4
+11: incomplete precursors                Precursor sum (QuantUMS precursors)    82       3.316   24.4
+12: incomplete precursors Precursor sum, precursors in all 6 runs (QuantUMS)     0          NA    NaN
+13: incomplete precursors                               Fragment MaxLFQ (iq)    80       1.203   23.8
+14: incomplete precursors                                 Fragment directLFQ    82       1.344   35.4

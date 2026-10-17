@@ -1,0 +1,59 @@
+proteins scoreable by every route: 8257 
+
+== Each route, all proteins it can score
+                                                 route species     n median_log2   iqr within_uncentred within_centred median_cv
+                                                <char>  <char> <int>       <num> <num>            <num>          <num>     <num>
+ 1:        QuantUMS high-precision (default pg_matrix)   Human  5471      -0.002 0.084             98.6           98.5       3.6
+ 2:        QuantUMS high-precision (default pg_matrix)   Yeast  2357      -1.057 0.164             95.5           95.5       5.9
+ 3:        QuantUMS high-precision (default pg_matrix)   Ecoli   443       2.050 0.343             87.8           87.6       5.7
+ 4:                 QuantUMS high-accuracy (pg_matrix)   Human  5471      -0.006 0.083             98.4           98.5       3.5
+ 5:                 QuantUMS high-accuracy (pg_matrix)   Yeast  2357      -1.057 0.170             95.6           95.6       5.9
+ 6:                 QuantUMS high-accuracy (pg_matrix)   Ecoli   443       2.037 0.339             87.1           87.4       5.7
+ 7:                   Legacy direct MaxLFQ (pg_matrix)   Human  5483      -0.012 0.072             99.1           99.2       3.2
+ 8:                   Legacy direct MaxLFQ (pg_matrix)   Yeast  2365      -1.035 0.157             97.0           96.9       5.4
+ 9:                   Legacy direct MaxLFQ (pg_matrix)   Ecoli   446       2.001 0.334             85.2           85.4       5.2
+10:                Precursor sum (QuantUMS precursors)   Human  5483       0.002 0.163             86.7           86.8       7.1
+11:                Precursor sum (QuantUMS precursors)   Yeast  2365      -1.195 0.521             68.9           68.8      10.4
+12:                Precursor sum (QuantUMS precursors)   Ecoli   446       2.569 1.062             44.6           44.6       9.0
+13:                  Precursor sum (legacy precursors)   Human  5483      -0.003 0.111             93.6           93.6       4.7
+14:                  Precursor sum (legacy precursors)   Yeast  2365      -1.169 0.386             76.5           76.7       7.5
+15:                  Precursor sum (legacy precursors)   Ecoli   446       2.442 0.812             50.9           50.7       6.6
+16: Precursor sum, precursors in all 6 runs (QuantUMS)   Human  5152      -0.007 0.104             98.4           98.4       4.6
+17: Precursor sum, precursors in all 6 runs (QuantUMS)   Yeast  2063      -1.060 0.179             95.3           95.3       6.7
+18: Precursor sum, precursors in all 6 runs (QuantUMS)   Ecoli   349       2.104 0.261             88.8           89.1       6.4
+19:                               Fragment MaxLFQ (iq)   Human  5481      -0.015 0.083             99.3           99.3       3.4
+20:                               Fragment MaxLFQ (iq)   Yeast  2358      -0.935 0.303             92.3           91.3       5.7
+21:                               Fragment MaxLFQ (iq)   Ecoli   444       1.803 0.639             70.0           70.3       5.9
+22:                                 Fragment directLFQ   Human  5479      -0.013 0.098             98.4           98.6       4.3
+23:                                 Fragment directLFQ   Yeast  2364      -1.020 0.242             94.1           93.7       7.0
+24:                                 Fragment directLFQ   Ecoli   446       1.940 0.597             77.6           77.8       7.2
+                                                 route species     n median_log2   iqr within_uncentred within_centred median_cv
+
+== Same proteins for every route (n = 8257 )
+                                                 route species     n median_log2   iqr within_uncentred within_centred median_cv
+                                                <char>  <char> <int>       <num> <num>            <num>          <num>     <num>
+ 1:        QuantUMS high-precision (default pg_matrix)   Human  5467      -0.002 0.083             98.6           98.6       3.6
+ 2:        QuantUMS high-precision (default pg_matrix)   Yeast  2349      -1.058 0.164             95.5           95.5       5.9
+ 3:        QuantUMS high-precision (default pg_matrix)   Ecoli   441       2.051 0.326             88.0           87.8       5.7
+ 4:                 QuantUMS high-accuracy (pg_matrix)   Human  5467      -0.006 0.083             98.5           98.6       3.5
+ 5:                 QuantUMS high-accuracy (pg_matrix)   Yeast  2349      -1.057 0.169             95.6           95.7       5.9
+ 6:                 QuantUMS high-accuracy (pg_matrix)   Ecoli   441       2.037 0.337             87.3           87.5       5.7
+ 7:                   Legacy direct MaxLFQ (pg_matrix)   Human  5467      -0.012 0.072             99.2           99.3       3.2
+ 8:                   Legacy direct MaxLFQ (pg_matrix)   Yeast  2349      -1.036 0.156             97.1           97.0       5.4
+ 9:                   Legacy direct MaxLFQ (pg_matrix)   Ecoli   441       2.006 0.316             85.9           86.2       5.2
+10:                Precursor sum (QuantUMS precursors)   Human  5467       0.002 0.162             86.9           87.0       7.1
+11:                Precursor sum (QuantUMS precursors)   Yeast  2349      -1.196 0.518             69.1           69.0      10.2
+12:                Precursor sum (QuantUMS precursors)   Ecoli   441       2.567 1.060             45.1           45.1       8.9
+13:                  Precursor sum (legacy precursors)   Human  5467      -0.003 0.110             93.8           93.8       4.7
+14:                  Precursor sum (legacy precursors)   Yeast  2349      -1.170 0.386             76.6           76.8       7.5
+15:                  Precursor sum (legacy precursors)   Ecoli   441       2.445 0.805             51.2           51.0       6.6
+16: Precursor sum, precursors in all 6 runs (QuantUMS)   Human  5151      -0.007 0.104             98.4           98.4       4.6
+17: Precursor sum, precursors in all 6 runs (QuantUMS)   Yeast  2061      -1.060 0.179             95.3           95.3       6.7
+18: Precursor sum, precursors in all 6 runs (QuantUMS)   Ecoli   349       2.104 0.261             88.8           89.1       6.4
+19:                               Fragment MaxLFQ (iq)   Human  5467      -0.015 0.082             99.3           99.3       3.4
+20:                               Fragment MaxLFQ (iq)   Yeast  2349      -0.936 0.301             92.4           91.5       5.7
+21:                               Fragment MaxLFQ (iq)   Ecoli   441       1.805 0.633             70.5           70.7       5.9
+22:                                 Fragment directLFQ   Human  5467      -0.013 0.098             98.4           98.6       4.3
+23:                                 Fragment directLFQ   Yeast  2349      -1.020 0.240             94.4           94.0       7.0
+24:                                 Fragment directLFQ   Ecoli   441       1.944 0.565             78.5           78.7       7.2
+                                                 route species     n median_log2   iqr within_uncentred within_centred median_cv

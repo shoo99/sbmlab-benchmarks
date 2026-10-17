@@ -1,0 +1,6 @@
+fragments_long.tsv
+fragments_wide.aq_reformat.tsv
+fragments_wide.aq_reformat.tsv.ion_intensities.tsv
+clean/*/fragments_long.tsv
+clean/*/fragments_wide.aq_reformat.tsv
+clean/*/fragments_wide.aq_reformat.tsv.ion_intensities.tsv

@@ -1,0 +1,25 @@
+route,species,n,median_log2,iqr,within_uncentred,within_centred,median_cv
+QuantUMS high-precision (default pg_matrix),Human,5073,-0.007,0.08,98.9,99,3.7
+QuantUMS high-precision (default pg_matrix),Yeast,1918,-1.068,0.17,96.1,96.2,5.8
+QuantUMS high-precision (default pg_matrix),Ecoli,298,2.11,0.202,89.6,89.6,5.1
+QuantUMS high-accuracy (pg_matrix),Human,5073,-0.001,0.079,99,99,3.5
+QuantUMS high-accuracy (pg_matrix),Yeast,1918,-1.06,0.169,96.1,96.1,5.4
+QuantUMS high-accuracy (pg_matrix),Ecoli,298,2.106,0.194,90.3,90.3,5
+Legacy direct MaxLFQ (pg_matrix),Human,5073,-0.004,0.07,99.1,99.2,3.2
+Legacy direct MaxLFQ (pg_matrix),Yeast,1918,-1.046,0.129,97.7,97.7,4.9
+Legacy direct MaxLFQ (pg_matrix),Ecoli,298,2.094,0.201,91.6,91.6,4.3
+Precursor sum (QuantUMS precursors),Human,5073,0.015,0.252,81.4,81.6,9.8
+Precursor sum (QuantUMS precursors),Yeast,1918,-1.373,0.84,54.8,54,12.7
+Precursor sum (QuantUMS precursors),Ecoli,298,2.795,1.157,34.9,34.6,8.7
+Precursor sum (legacy precursors),Human,5073,0.023,0.184,88.1,88.3,7.5
+Precursor sum (legacy precursors),Yeast,1918,-1.342,0.708,58.5,57.2,10.4
+Precursor sum (legacy precursors),Ecoli,298,2.703,1.044,37.2,38.3,6.3
+"Precursor sum, precursors in all 6 runs (QuantUMS)",Human,4413,-0.009,0.094,99,99,4.4
+"Precursor sum, precursors in all 6 runs (QuantUMS)",Yeast,1519,-1.086,0.165,96.8,96.8,5.9
+"Precursor sum, precursors in all 6 runs (QuantUMS)",Ecoli,234,2.128,0.196,93.6,93.2,5.6
+Fragment MaxLFQ (iq),Human,5073,-0.019,0.08,99.1,99.2,3.7
+Fragment MaxLFQ (iq),Yeast,1918,-1,0.249,95.7,94.8,6
+Fragment MaxLFQ (iq),Ecoli,298,2.033,0.35,88.3,88.9,5.4
+Fragment directLFQ,Human,5073,-0.018,0.101,98.2,98.3,4.5
+Fragment directLFQ,Yeast,1918,-1.053,0.21,95.7,95.5,7
+Fragment directLFQ,Ecoli,298,2.089,0.237,91.3,91.3,6.3

@@ -1,0 +1,15 @@
+subset,route,n,median_log2,within
+complete precursors,QuantUMS high-precision (default pg_matrix),64,1.908,82.8
+complete precursors,QuantUMS high-accuracy (pg_matrix),64,1.885,79.7
+complete precursors,Legacy direct MaxLFQ (pg_matrix),64,1.823,78.1
+complete precursors,Precursor sum (QuantUMS precursors),64,3.051,26.6
+complete precursors,"Precursor sum, precursors in all 6 runs (QuantUMS)",64,2.015,81.2
+complete precursors,Fragment MaxLFQ (iq),64,1.48,46.9
+complete precursors,Fragment directLFQ,64,1.589,60.9
+incomplete precursors,QuantUMS high-precision (default pg_matrix),82,1.625,67.1
+incomplete precursors,QuantUMS high-accuracy (pg_matrix),82,1.61,63.4
+incomplete precursors,Legacy direct MaxLFQ (pg_matrix),82,1.541,52.4
+incomplete precursors,Precursor sum (QuantUMS precursors),82,3.316,24.4
+incomplete precursors,"Precursor sum, precursors in all 6 runs (QuantUMS)",0,,
+incomplete precursors,Fragment MaxLFQ (iq),80,1.203,23.8
+incomplete precursors,Fragment directLFQ,82,1.344,35.4

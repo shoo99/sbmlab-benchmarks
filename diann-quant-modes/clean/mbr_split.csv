@@ -1,0 +1,64 @@
+route,set,sp,n,median_log2,iqr,within
+QuantUMS high-precision (default pg_matrix),MBR off,Human,5100,-0.007,0.08,98.8
+QuantUMS high-precision (default pg_matrix),MBR off,Yeast,1922,-1.068,0.171,96
+QuantUMS high-precision (default pg_matrix),MBR off,Ecoli,298,2.11,0.202,89.6
+QuantUMS high-precision (default pg_matrix),MBR on: also without MBR,Human,5093,-0.002,0.075,99.4
+QuantUMS high-precision (default pg_matrix),MBR on: also without MBR,Yeast,1921,-1.068,0.133,97.9
+QuantUMS high-precision (default pg_matrix),MBR on: also without MBR,Ecoli,297,2.097,0.186,94.6
+QuantUMS high-precision (default pg_matrix),MBR on: only with MBR,Human,378,-0.009,0.386,87.6
+QuantUMS high-precision (default pg_matrix),MBR on: only with MBR,Yeast,436,-0.951,0.402,84.9
+QuantUMS high-precision (default pg_matrix),MBR on: only with MBR,Ecoli,146,1.786,0.485,74
+QuantUMS high-accuracy (pg_matrix),MBR off,Human,5100,-0.001,0.08,98.8
+QuantUMS high-accuracy (pg_matrix),MBR off,Yeast,1922,-1.06,0.171,95.9
+QuantUMS high-accuracy (pg_matrix),MBR off,Ecoli,298,2.106,0.194,90.3
+QuantUMS high-accuracy (pg_matrix),MBR on: also without MBR,Human,5093,-0.005,0.076,99.3
+QuantUMS high-accuracy (pg_matrix),MBR on: also without MBR,Yeast,1921,-1.065,0.134,97.9
+QuantUMS high-accuracy (pg_matrix),MBR on: also without MBR,Ecoli,297,2.093,0.192,95.3
+QuantUMS high-accuracy (pg_matrix),MBR on: only with MBR,Human,378,-0.023,0.385,87
+QuantUMS high-accuracy (pg_matrix),MBR on: only with MBR,Yeast,436,-0.943,0.405,85.3
+QuantUMS high-accuracy (pg_matrix),MBR on: only with MBR,Ecoli,146,1.746,0.501,70.5
+Legacy direct MaxLFQ (pg_matrix),MBR off,Human,5114,-0.004,0.071,98.9
+Legacy direct MaxLFQ (pg_matrix),MBR off,Yeast,1927,-1.046,0.129,97.5
+Legacy direct MaxLFQ (pg_matrix),MBR off,Ecoli,298,2.094,0.201,91.6
+Legacy direct MaxLFQ (pg_matrix),MBR on: also without MBR,Human,5109,-0.012,0.067,99.5
+Legacy direct MaxLFQ (pg_matrix),MBR on: also without MBR,Yeast,1926,-1.046,0.123,98.9
+Legacy direct MaxLFQ (pg_matrix),MBR on: also without MBR,Ecoli,297,2.058,0.166,96.6
+Legacy direct MaxLFQ (pg_matrix),MBR on: only with MBR,Human,374,-0.041,0.319,93
+Legacy direct MaxLFQ (pg_matrix),MBR on: only with MBR,Yeast,439,-0.898,0.315,88.8
+Legacy direct MaxLFQ (pg_matrix),MBR on: only with MBR,Ecoli,149,1.656,0.565,62.4
+Precursor sum (QuantUMS precursors),MBR off,Human,5162,0.015,0.258,80.5
+Precursor sum (QuantUMS precursors),MBR off,Yeast,1963,-1.378,0.864,54.2
+Precursor sum (QuantUMS precursors),MBR off,Ecoli,303,2.816,1.175,34.3
+Precursor sum (QuantUMS precursors),MBR on: also without MBR,Human,5154,0.002,0.149,88.9
+Precursor sum (QuantUMS precursors),MBR on: also without MBR,Yeast,1962,-1.173,0.404,75.2
+Precursor sum (QuantUMS precursors),MBR on: also without MBR,Ecoli,302,2.419,0.744,53.6
+Precursor sum (QuantUMS precursors),MBR on: only with MBR,Human,329,0.045,0.875,53.2
+Precursor sum (QuantUMS precursors),MBR on: only with MBR,Yeast,403,-1.542,1.388,38
+Precursor sum (QuantUMS precursors),MBR on: only with MBR,Ecoli,144,3.078,1.753,25.7
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR off,Human,4414,-0.009,0.094,99
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR off,Yeast,1520,-1.086,0.165,96.8
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR off,Ecoli,235,2.127,0.196,93.2
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR on: also without MBR,Human,4413,-0.006,0.083,99.5
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR on: also without MBR,Yeast,1517,-1.065,0.138,97.8
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR on: also without MBR,Ecoli,234,2.111,0.184,92.7
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR on: only with MBR,Human,739,-0.035,0.349,92.2
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR on: only with MBR,Yeast,546,-1.023,0.403,88.5
+"Precursor sum, precursors in all 6 runs (QuantUMS)",MBR on: only with MBR,Ecoli,115,2.069,0.515,80.9
+Fragment MaxLFQ (iq),MBR off,Human,5161,-0.019,0.082,98.8
+Fragment MaxLFQ (iq),MBR off,Yeast,1963,-0.996,0.257,95.1
+Fragment MaxLFQ (iq),MBR off,Ecoli,303,2.03,0.355,87.5
+Fragment MaxLFQ (iq),MBR on: also without MBR,Human,5153,-0.015,0.077,99.6
+Fragment MaxLFQ (iq),MBR on: also without MBR,Yeast,1962,-0.965,0.253,96.1
+Fragment MaxLFQ (iq),MBR on: also without MBR,Ecoli,302,1.955,0.38,87.4
+Fragment MaxLFQ (iq),MBR on: only with MBR,Human,328,-0.056,0.348,93.9
+Fragment MaxLFQ (iq),MBR on: only with MBR,Yeast,396,-0.684,0.396,73.5
+Fragment MaxLFQ (iq),MBR on: only with MBR,Ecoli,142,1.313,0.573,33.1
+Fragment directLFQ,MBR off,Human,5118,-0.018,0.102,98
+Fragment directLFQ,MBR off,Yeast,1954,-1.051,0.219,95.2
+Fragment directLFQ,MBR off,Ecoli,303,2.086,0.248,90.8
+Fragment directLFQ,MBR on: also without MBR,Human,5111,-0.013,0.09,99.2
+Fragment directLFQ,MBR on: also without MBR,Yeast,1953,-1.037,0.183,97.1
+Fragment directLFQ,MBR on: also without MBR,Ecoli,302,2.076,0.295,93
+Fragment directLFQ,MBR on: only with MBR,Human,368,-0.053,0.42,87.5
+Fragment directLFQ,MBR on: only with MBR,Yeast,411,-0.821,0.412,79.6
+Fragment directLFQ,MBR on: only with MBR,Ecoli,144,1.445,0.544,45.1
