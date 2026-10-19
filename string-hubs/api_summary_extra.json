@@ -1,0 +1,16 @@
+{
+ "detected_median_pubs": 113.0,
+ "all_string_median_pubs": 54.0,
+ "random_top3_hub_median_pubs_400": 340.0,
+ "planted_chol_top10_400": {
+  "median": 4.0,
+  "min": 0,
+  "max": 7
+ },
+ "random_top3_hub_median_pubs_700": 344.0,
+ "planted_chol_top10_700": {
+  "median": 9.0,
+  "min": 8,
+  "max": 10
+ }
+}

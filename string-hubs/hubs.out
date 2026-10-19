@@ -1,0 +1,489 @@
+{
+ "n_pairs_total": 5413027,
+ "recompute_check": {
+  "exact": 86.4,
+  "within_1": 100.0,
+  "within_5": 100.0,
+  "max_abs_diff": 1
+ },
+ "pairs_by_threshold": {
+  "150": 5413027,
+  "400": 1076224,
+  "700": 282864,
+  "900": 125344
+ },
+ "pairs_by_threshold_no_textmining": {
+  "150": 2131201,
+  "400": 680472,
+  "700": 204623,
+  "900": 106437
+ },
+ "channels": {
+  "400": {
+   "n": 1076224,
+   "has_channel_pct": {
+    "neighborhood": 4.0,
+    "fusion": 0.5,
+    "cooccurence": 2.1,
+    "coexpression": 67.0,
+    "experimental": 55.4,
+    "database": 23.7,
+    "textmining": 79.6
+   },
+   "textmining_only_pct": 8.8,
+   "below_threshold_without_textmining_pct": 36.8,
+   "has_experimental_or_database_pct": 69.5
+  },
+  "700": {
+   "n": 282864,
+   "has_channel_pct": {
+    "neighborhood": 5.0,
+    "fusion": 0.8,
+    "cooccurence": 4.0,
+    "coexpression": 74.8,
+    "experimental": 69.0,
+    "database": 42.4,
+    "textmining": 87.5
+   },
+   "textmining_only_pct": 3.2,
+   "below_threshold_without_textmining_pct": 27.7,
+   "has_experimental_or_database_pct": 86.4
+  },
+  "900": {
+   "n": 125344,
+   "has_channel_pct": {
+    "neighborhood": 5.5,
+    "fusion": 1.1,
+    "cooccurence": 6.7,
+    "coexpression": 77.8,
+    "experimental": 74.7,
+    "database": 62.8,
+    "textmining": 91.8
+   },
+   "textmining_only_pct": 0.5,
+   "below_threshold_without_textmining_pct": 15.1,
+   "has_experimental_or_database_pct": 96.0
+  }
+ },
+ "mapping": {
+  "proteins": 19699,
+  "mapped_to_geneid": 19315
+ },
+ "spearman_degree_pubs": {
+  "deg400": 0.752,
+  "deg700": 0.685,
+  "deg400_notm": 0.645,
+  "deg700_notm": 0.597
+ },
+ "top_hubs": {
+  "deg400": {
+   "median_pubs": 762.0,
+   "median_pubs_pct": 96.8,
+   "top10": [
+    [
+     "TRIM67",
+     4802,
+     17.0
+    ],
+    [
+     "ZRANB1",
+     4071,
+     53.0
+    ],
+    [
+     "PLEKHA4",
+     2945,
+     20.0
+    ],
+    [
+     "VIRMA",
+     2841,
+     142.0
+    ],
+    [
+     "TP53",
+     2396,
+     20405.0
+    ],
+    [
+     "MAPT",
+     2218,
+     4825.0
+    ],
+    [
+     "AGO2",
+     2057,
+     1121.0
+    ],
+    [
+     "H4C6",
+     2034,
+     147.0
+    ],
+    [
+     "UBE2H",
+     1951,
+     93.0
+    ],
+    [
+     "GAPDH",
+     1947,
+     649.0
+    ]
+   ]
+  },
+  "deg700": {
+   "median_pubs": 352.5,
+   "median_pubs_pct": 91.6,
+   "top10": [
+    [
+     "TP53",
+     872,
+     20405.0
+    ],
+    [
+     "H4C6",
+     715,
+     147.0
+    ],
+    [
+     "RPS27A",
+     710,
+     340.0
+    ],
+    [
+     "MAPT",
+     616,
+     4825.0
+    ],
+    [
+     "ACTB",
+     612,
+     820.0
+    ],
+    [
+     "UBC",
+     580,
+     1386.0
+    ],
+    [
+     "ANLN",
+     571,
+     171.0
+    ],
+    [
+     "UBA52",
+     562,
+     212.0
+    ],
+    [
+     "RPL3",
+     495,
+     437.0
+    ],
+    [
+     "CTNNB1",
+     489,
+     8542.0
+    ]
+   ]
+  },
+  "deg700_notm": {
+   "median_pubs": 309.0,
+   "median_pubs_pct": 90.0,
+   "top10": [
+    [
+     "RPS27A",
+     696,
+     340.0
+    ],
+    [
+     "H4C6",
+     654,
+     147.0
+    ],
+    [
+     "MAPT",
+     566,
+     4825.0
+    ],
+    [
+     "UBC",
+     556,
+     1386.0
+    ],
+    [
+     "TP53",
+     554,
+     20405.0
+    ],
+    [
+     "UBA52",
+     553,
+     212.0
+    ],
+    [
+     "ANLN",
+     537,
+     171.0
+    ],
+    [
+     "RPL3",
+     464,
+     437.0
+    ],
+    [
+     "ACTB",
+     422,
+     820.0
+    ],
+    [
+     "BRD4",
+     416,
+     1816.0
+    ]
+   ]
+  }
+ },
+ "all_proteins_median_pubs": 54.0,
+ "ess_n": {
+  "essential": 680,
+  "nonessential": 898
+ },
+ "auc_essential": {
+  "pubs": 0.889,
+  "deg400": 0.935,
+  "deg700": 0.944,
+  "deg400_notm": 0.95,
+  "deg700_notm": 0.951
+ },
+ "median_by_ess": {
+  "pubs": {
+   "essential": 167.5,
+   "nonessential": 19.0
+  },
+  "deg700": {
+   "essential": 87.0,
+   "nonessential": 6.0
+  },
+  "deg700_notm": {
+   "essential": 73.0,
+   "nonessential": 2.0
+  }
+ },
+ "logit_essential": {
+  "deg700": {
+   "coef_degree": 3.005,
+   "p_degree": 8.85404601445253e-54,
+   "coef_pubs": 0.668,
+   "p_pubs": 5.827441456673746e-08
+  },
+  "deg700_notm": {
+   "coef_degree": 2.9,
+   "p_degree": 8.801050738478036e-62,
+   "coef_pubs": 1.02,
+   "p_pubs": 2.4997715508259446e-17
+  }
+ },
+ "within_pub_tertile": {
+  "low": {
+   "n_ess": 9,
+   "n_non": 517,
+   "auc_deg700": 0.858,
+   "auc_deg700_notm": 0.834
+  },
+  "mid": {
+   "n_ess": 247,
+   "n_non": 279,
+   "auc_deg700": 0.859,
+   "auc_deg700_notm": 0.886
+  },
+  "high": {
+   "n_ess": 424,
+   "n_non": 102,
+   "auc_deg700": 0.922,
+   "auc_deg700_notm": 0.965
+  }
+ },
+ "hpa_broadly_expressed_genes": 9087,
+ "broad_n": {
+  "essential": 665,
+  "other": 8252
+ },
+ "broad_auc_essential": {
+  "pubs": 0.714,
+  "deg400": 0.814,
+  "deg700": 0.826,
+  "deg400_notm": 0.818,
+  "deg700_notm": 0.819
+ },
+ "broad_median": {
+  "pubs": {
+   "essential": 171.0,
+   "other": 75.0
+  },
+  "deg700": {
+   "essential": 88.0,
+   "other": 18.0
+  },
+  "deg700_notm": {
+   "essential": 73.0,
+   "other": 11.0
+  }
+ },
+ "broad_logit": {
+  "deg700": {
+   "coef_degree": 1.675,
+   "p_degree": 6.107576796392151e-119,
+   "coef_pubs": -0.151,
+   "p_pubs": 0.002503733407368368
+  },
+  "deg700_notm": {
+   "coef_degree": 1.44,
+   "p_degree": 4.01529148535358e-113,
+   "coef_pubs": 0.011,
+   "p_pubs": 0.8176828089805404
+  }
+ },
+ "broad_within_pub_tertile": {
+  "low": {
+   "n_ess": 57,
+   "n_other": 2916,
+   "auc_deg700": 0.801,
+   "auc_deg700_notm": 0.756
+  },
+  "mid": {
+   "n_ess": 195,
+   "n_other": 2777,
+   "auc_deg700": 0.778,
+   "auc_deg700_notm": 0.765
+  },
+  "high": {
+   "n_ess": 413,
+   "n_other": 2559,
+   "auc_deg700": 0.774,
+   "auc_deg700_notm": 0.774
+  }
+ },
+ "experimental_only_edges_ge400": {
+  "n": 72871,
+  "pct_of_ge400": 6.8,
+  "top_scores": {
+   "457": 32091,
+   "456": 7557,
+   "800": 2059,
+   "632": 1677,
+   "459": 643
+  }
+ },
+ "single_experiment_hubs": {
+  "TRIM67": {
+   "edges_ge400": 4802,
+   "edges_ge700": 9,
+   "experimental_is_457_pct": 97.2,
+   "pubs": 17.0
+  },
+  "ZRANB1": {
+   "edges_ge400": 4071,
+   "edges_ge700": 160,
+   "experimental_is_457_pct": 93.5,
+   "pubs": 53.0
+  },
+  "PLEKHA4": {
+   "edges_ge400": 2945,
+   "edges_ge700": 7,
+   "experimental_is_457_pct": 85.6,
+   "pubs": 20.0
+  },
+  "TP53": {
+   "edges_ge400": 2396,
+   "edges_ge700": 872,
+   "experimental_is_457_pct": 9.3,
+   "pubs": 20405.0
+  }
+ },
+ "exp457": {
+  "pairs": 120470,
+  "proteins": 13770,
+  "proteins_ge100": 264,
+  "proteins_ge500": 49,
+  "top10_share_pct": 9.6,
+  "top": [
+   [
+    "TRIM67",
+    4667
+   ],
+   [
+    "ZRANB1",
+    3808
+   ],
+   [
+    "VIRMA",
+    2665
+   ],
+   [
+    "PLEKHA4",
+    2520
+   ],
+   [
+    "UBE2H",
+    1788
+   ],
+   [
+    "CDC123",
+    1782
+   ],
+   [
+    "KIF14",
+    1583
+   ],
+   [
+    "TIPARP",
+    1487
+   ],
+   [
+    "HNRNPL",
+    1432
+   ],
+   [
+    "AGO2",
+    1372
+   ],
+   [
+    "CIT",
+    1302
+   ],
+   [
+    "NR2C2",
+    1230
+   ]
+  ]
+ },
+ "need_tm_with_other_evidence_pct_ge400": 28.0,
+ "broad_within_pub_tertile_auc_pubs": {
+  "low": 0.646,
+  "mid": 0.584,
+  "high": 0.542
+ },
+ "broad_auc_expression": 0.729,
+ "broad_within_expr_quintile_auc_deg700": {
+  "0": 0.784,
+  "1": 0.776,
+  "2": 0.781,
+  "3": 0.792,
+  "4": 0.765
+ },
+ "broad_logit_with_expr": {
+  "degree": 1.496,
+  "pubs": -0.204,
+  "expr": 0.289
+ },
+ "detected_vs_all": {
+  "detected_broad_pct": 92.0,
+  "all_broad_pct": 45.4,
+  "detected_median_mean_ntpm": 35.87578772802653,
+  "all_median_mean_ntpm": 8.325373134328357
+ },
+ "hpa_zip_member_date": "2023-05-24",
+ "hpa_n_cell_lines": 1206
+}
