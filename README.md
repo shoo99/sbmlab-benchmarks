@@ -10,6 +10,12 @@ Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM,
 
 ## Posts and folders
 
+### Statistics: synthetic data with a known answer
+
+| Folder | Post | What it shows |
+|---|---|---|
+| [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share |
+
 ### Proteomics: known-ratio benchmark (PRIDE PXD028735)
 
 Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true log2(B/A) is 0 / −1 / +2. Three runs per condition.

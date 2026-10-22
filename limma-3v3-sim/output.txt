@@ -1,0 +1,23 @@
+== 1. Smallest attainable two-sided Mann-Whitney p (no ties)
+n=3 per group: 20 splits, min p = 0.1000
+n=4 per group: 70 splits, min p = 0.0286
+n=5 per group: 252 splits, min p = 0.0079
+
+== 2. Power of a two-sided two-sample t-test, alpha 0.05, n = 3 per group
+d = 1: power 0.157
+d = 2: power 0.463
+d = 3: power 0.783
+d = 1: n per group for 80% power = 16.71
+d = 1.5: n per group for 80% power = 8.06
+
+== 3. Synthetic experiment with a known answer
+                          selected false true false_share_pct
+p<0.05, t-test                46.1  18.0 28.1              39
+p<0.05, limma                 51.2  19.0 32.2              37
+p<0.05 & >=2-fold, t-test     33.3   5.9 27.5              18
+p<0.05 & >=2-fold, limma      42.1  10.8 31.3              26
+BH 5%, t-test                  6.9   0.4  6.5               6
+BH 5%, limma                  16.1   0.9 15.1               6
+
+Expected false hits at p<0.05 if the test were exact: 360 nulls x 0.05 = 18.0
+[1] "R version 4.3.3 (2024-02-29)"
