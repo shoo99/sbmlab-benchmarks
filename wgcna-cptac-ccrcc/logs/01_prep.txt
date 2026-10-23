@@ -1,0 +1,16 @@
+CPTAC proteome: 11710 110  NA frac total: 0.2211335 
+clinical rows matched: 110 
+
+  G1   G2   G3   G4 <NA> 
+   7   51   41   11    0 
+all clinical rows grade table:
+
+  G1   G2   G3   G4 <NA> 
+  13  102   63   22   22 
+TJ tumours: 100  proteins: 6865  NA frac: 0.2315499  zeros: 0 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   5.80   14.91   15.53   15.68   16.29   23.75  158959 
+shared: 6566  shared & <=10% missing both: 3392  CPTAC-only <=10%: 7462 
+overlap top3000 shared vs CPTAC-only: 1269 
+NA frac in X: 0.001693939 
+variant B (zeros as values) n: 5679  overlap with A: 1645 

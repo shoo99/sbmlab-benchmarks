@@ -1,0 +1,5 @@
+variant B  G3-4: 52  G1-2: 58  nME: 12 
+     top50_inside top50_fulldata_sel top50_inside_binarysel  PC15 ME_all
+mean        0.740              0.804                  0.737 0.719  0.728
+sd          0.013              0.006                  0.014 0.022  0.018
+in-sample (no CV) AUC of full-data top50 score: 0.812 

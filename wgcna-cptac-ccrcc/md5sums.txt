@@ -1,0 +1,3 @@
+e62772c91274b6d4229657c2fb567a51  data/HS_CPTAC_CCRCC_proteome_Tumor.cct
+f308853390add9cc21f431223cce40cd  data/HS_CPTAC_CCRCC_CLI.tsi
+20cfe7b57a2a60514b59f959b1f7c5cd  data/tjrcc/matrix_protein.csv

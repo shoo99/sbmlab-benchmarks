@@ -49,6 +49,7 @@ Kang, B. (2026). Scoring the downstream chain of small-n label-free proteomics a
 
 | Folder | Post | Data | What it shows |
 |---|---|---|---|
+| [wgcna-cptac-ccrcc](wgcna-cptac-ccrcc) | [Does WGCNA really work?](https://sbmlab.com/blog/does-wgcna-really-work-public-proteomics-end-to-end) | CPTAC ccRCC proteome (110 tumours) + TJ-RCC | Independent re-run of the post's numbers: 15 modules, 7 linked to grade at p < 0.05 but only 2 beat size-matched random sets; the strongest tracks endothelial markers (r 0.91) and drops from −0.46 to −0.21 after adjustment |
 | [biomarker-leakage](biomarker-leakage) | [Data leakage with shuffled labels](https://sbmlab.com/blog/biomarker-discovery-data-leakage-shuffled-labels-auc-2026) | Bader et al. 2020 CSF proteome | Labels shuffled, proteins chosen before cross-validation: mean AUC 0.73. Done properly: 0.51 |
 | [mrna-protein-wang2019](mrna-protein-wang2019) | [Proteomics vs genomics: mRNA vs protein](https://sbmlab.com/blog/proteomics-vs-genomics-differences) | Wang et al. 2019, 29 human tissues | mRNA explains ~29% of protein variation within a tissue; a gene's mRNA and protein track each other across tissues with median Spearman 0.35 |
 | [bioinfo-db-check](bioinfo-db-check) | [13 bioinformatics databases, tested](https://sbmlab.com/blog/top-10-bioinformatics-databases-every-researcher-should-know) | Live public APIs | One protein (SOD1) through 13 APIs: what each returns, speed, failures, release, licence |
