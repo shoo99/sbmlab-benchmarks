@@ -2,6 +2,42 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23355028.svg)](https://doi.org/10.5281/zenodo.23355028)
 
+## In 30 seconds
+
+![Share of human, yeast and E. coli proteins within 0.5 log2 of the true ratio for MaxQuant, FragPipe and DIA-NN, and their median replicate CV](docs/known-ratio-summary.png)
+
+- MaxQuant 2.8.1 and FragPipe 24 searched the same six Orbitrap runs of a public human / yeast / *E. coli* mixture with known ratios (PRIDE PXD028735). On the 3,866 proteins all three engines quantified, 80.9% of *E. coli* proteins were within ±0.5 log2 of the true 4:1 ratio with MaxQuant LFQ and 97.7% with FragPipe.
+- DIA-NN 2.3.2 ran on SWATH runs of the same samples from a different instrument (TripleTOF 6600+), so it is not a like-for-like engine test. It reported the most protein groups (8,987), and 85.4% of the 446 *E. coli* proteins it scored were within ±0.5.
+- Median replicate CV: DIA-NN 4.5%, MaxQuant LFQ 8.1%, FragPipe 10.1%. MaxQuant raw Intensity, without LFQ normalisation: 20.9%.
+
+Figure: A scores every protein an engine quantified in at least 2 of 3 runs per condition, so the counts differ (*E. coli*: 132 MaxQuant, 359 FragPipe, 446 DIA-NN). FragPipe scores many more low-abundance proteins, which is why its own-list share is lower than in B. B uses only the 3,866 proteins all three quantified. Numbers come from `maxquant-hye/quant_scores.csv`, `fragpipe-hye/fragpipe_scores.csv`, `diann-hye/diann_scores.csv` (A), `diann-hye/common_3866.csv` (B) and `cv-hye/cv_summary.csv` (C). `python docs/make_summary_figure.py` redraws it from those files (needs matplotlib).
+
+### Reproduce one result in 10 minutes
+
+The DIA-NN search itself took 6 h 17 min, but its protein matrix is in the repository, so the scoring step runs from bundled files. You need R and the `data.table` package; nothing is downloaded.
+
+```bash
+git clone https://github.com/shoo99/sbmlab-benchmarks
+cd sbmlab-benchmarks/diann-hye
+Rscript score_diann.R
+```
+
+It takes about a second (1.1 s here, R 4.3.3, data.table 1.16.2). Its first line should be:
+
+```
+pg_matrix (MBR, DIA-NN default filter): 8987 protein groups, 0 species-ambiguous, 95.0% cells with a value; human median -0.010
+```
+
+and the *E. coli* row of the results table (n, median log2 ratio, IQR, share within ±0.5) should be:
+
+```
+3: pg_matrix (MBR, DIA-NN default filter)   Ecoli   446  2.039 0.339      0.854
+```
+
+The full printout should match `score_diann.out` line for line; the script also rewrites `diann_scores.csv` with the same values. To start from the raw files instead, see [diann-hye/README.md](diann-hye/README.md) (30 GB from PRIDE).
+
+## About
+
 Scripts, settings and result tables behind the measured posts on [sbmlab.com](https://sbmlab.com/blog). Each folder is one post: the code I ran, the outputs it printed, and a README with versions and the traps I hit.
 
 Most proteomics folders use the same public three-species benchmark with known ratios, so every tool is scored against a right answer rather than against another tool.
@@ -27,7 +63,7 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 | [diann-hye](diann-hye) | [DIA-NN on a known-answer benchmark](https://sbmlab.com/blog/diann-vs-maxquant-fragpipe-known-ratio-benchmark-2026) | DIA-NN 2.3.2 on the SWATH runs of the same samples (a different instrument): 8,987 protein groups; within ±0.5 98.6 / 95.1 / 85.4%. 6 h 17 min, ~3.5 h of it reading `.wiff` files |
 | [limma-deqms-hye](limma-deqms-hye) | [limma vs DEqMS at small n](https://sbmlab.com/blog/limma-vs-deqms-proteomics-small-n-when-to-use-which-2026) | Unchanged human proteins called at adj. p < 0.05: t-test 68, limma 104, DEqMS 284 (an LFQ normalisation offset). With \|log2FC\| ≥ 0.5: 2 / 10 / 13 |
 | [imputation-hye](imputation-hye) | [Imputation methods scored](https://sbmlab.com/blog/missing-values-proteomics-imputation-methods-compared) | Five imputation methods plus none. With a strict filter, imputation barely mattered. With a loose one it found more changes, doubled the false discoveries, and kNN erased a real 4-fold increase |
-| [cv-hye](cv-hye) | [Replicate CV in three engines](https://sbmlab.com/blog/proteomics-cv-replicates-maxquant-fragpipe-diann-measured-2026) | Median replicate CV: DIA-NN 4.5%, MaxQuant LFQ 8.1%, FragPipe 10.1%, MaxQuant raw Intensity 20.9%. MaxLFQ left 1,148 proteins measured in all 3 runs without 3 LFQ values; low CV predicted correct E. coli ratios (20–34 points) |
+| [cv-hye](cv-hye) | [Replicate CV in three engines](https://sbmlab.com/blog/proteomics-cv-replicates-maxquant-fragpipe-diann-measured-2026) | Median replicate CV: DIA-NN 4.5%, MaxQuant LFQ 8.1%, FragPipe 10.1%, MaxQuant raw Intensity 20.9%. MaxQuant LFQ left 1,148 proteins with raw intensity in all 3 condition-A runs without 3 LFQ values; low CV predicted correct E. coli ratios (20–34 points higher for MaxQuant LFQ, FragPipe and DIA-NN; 7 points for MaxQuant raw Intensity) |
 | [diann-quant-modes](diann-quant-modes) | [DIA-NN quantification modes on known ratios](https://sbmlab.com/blog/diann-quantums-vs-legacy-maxlfq-fragment-quantification-known-ratios-2026) | QuantUMS, high-accuracy, legacy MaxLFQ, fragment-level MaxLFQ/directLFQ and precursor sums on the same SWATH runs, MBR off and on. MBR off: *E. coli* within ±0.5 89.6–91.6% for DIA-NN's own modes. On *E. coli* proteins only quantified with MBR: QuantUMS 74.0%, legacy 62.4%, fragment routes 33–45% |
 | [string-hubs](string-hubs) | [STRING confidence score and hub proteins, measured](https://sbmlab.com/blog/string-confidence-score-hub-proteins-measured-2026) | STRING 12.5 human: score formula reproduced for all 5.4M pairs; 37% of links at 0.4 need text mining; top hub at 0.4 (TRIM67) has 17 PubMed records; partners predict core-essential genes beyond papers and expression (AUC 0.83 vs 0.71); random detected lists 'significantly connected' 20/20 with genome background, 0/20 with detected background |
 | [de-pipeline-check](de-pipeline-check) | [Differential expression in R](https://sbmlab.com/blog/differential-expression-proteomics-complete-r-pipeline) | Every R block of the post, run on the benchmark table (except the symbol-based enrichGO block) |
@@ -81,7 +117,7 @@ Found a mistake? Open an issue. These are single runs on one machine, so differe
 
 Kang, B. (2026). *sbmlab-benchmarks: scripts and results behind the measured posts on sbmlab.com*. Zenodo. https://doi.org/10.5281/zenodo.23355028
 
-This DOI always points to the latest version (v1.0.2: https://doi.org/10.5281/zenodo.23356112; v1.0.1: https://doi.org/10.5281/zenodo.23355544; v1.0.0: https://doi.org/10.5281/zenodo.23355029). Please also cite the original datasets listed above.
+This DOI always points to the latest version (v1.0.3: https://doi.org/10.5281/zenodo.23384376; v1.0.2: https://doi.org/10.5281/zenodo.23356112; v1.0.1: https://doi.org/10.5281/zenodo.23355544; v1.0.0: https://doi.org/10.5281/zenodo.23355029). Please also cite the original datasets listed above.
 
 If you use the proteomics benchmark results, please cite the preprint as well:
 
