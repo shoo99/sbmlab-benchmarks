@@ -1,0 +1,14 @@
+common quantified: 8097  only 2.3.2: 200  only 2.7.0: 615 
+Human common n=5353  within0.5 2.3.2=0.990 2.7.0=0.992  median -0.010 / -0.007  IQR 0.080 / 0.079
+   Human only-2.7.0 n=221 within0.5=0.860 median -0.034  median intA 5.76 (common 9.76)
+Yeast common n=2305  within0.5 2.3.2=0.959 2.7.0=0.972  median -1.068 / -1.064  IQR 0.174 / 0.159
+   Yeast only-2.7.0 n=228 within0.5=0.746 median -0.851  median intA 6.36 (common 9.67)
+Ecoli common n=439  within0.5 2.3.2=0.861 2.7.0=0.872  median 2.044 / 1.987  IQR 0.324 / 0.379
+   Ecoli only-2.7.0 n=166 within0.5=0.482 median 1.482  median intA 5.85 (common 8.26)
+
+only-2.7.0 groups already present in the 2.3.2 matrix:
+       in_2.3.2_matrix
+species FALSE TRUE
+  Ecoli    10  156
+  Human   130   91
+  Yeast    84  144

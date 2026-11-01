@@ -1,0 +1,73 @@
+
+DIA-NN 2.7.0 Academia  (Data-Independent Acquisition by Neural Networks)
+Compiled on Sep 15 2026 21:29:05
+Current date and time: Sat Oct 31 21:48:05 2026
+CPU: GenuineIntel Intel(R) Core(TM) i9-14900K
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 32
+82Gb out of 127Gb RAM is free
+Thread number set to 24
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+Cysteine carbamidomethylation enabled as a fixed modification
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+MBR enabled; .quant files will only be saved to disk during the first pass
+The spectral library (if generated) will retain the original spectra but will include empirically-aligned RTs
+ERROR: cannot find Clearcore2.Data.AnalystDataProvider.dll, please copy .dll files as described in https://github.com/vdemichev/DiaNN?tab=readme-ov-file#raw-data-formats. Wiff files will be skipped.
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms
+The following variable modifications will be localised: UniMod:35 
+WARNING: MBR turned off, at least two files are required
+
+0 files will be processed
+[0:00] Loading spectral library C:\diann-hye\v270\lib\hye.predicted.speclib
+[0:05] Library annotated with sequence database(s): C:\diann-hye\hye_sp.fasta
+[0:06] Spectral library loaded: 31635 protein isoforms, 41965 protein groups and 6370129 precursors in 2411108 elution groups (targets and decoys).
+[0:06] Loading protein annotations from FASTA C:\diann-hye\hye_sp.fasta
+[0:07] Annotating library proteins with information from the FASTA database
+[0:07] Gene names missing for some isoforms
+[0:07] Library contains 31635 proteins, and 30696 genes
+[0:12] Initialising library
+[2:34] 6370129 precursors saved
+[2:34] Spectral library saved to C:\diann-hye\v270\out\report-lib.parquet
+
+The following warnings or errors (in alphabetic order) were detected at least the indicated number of times:
+ERROR: cannot find Clearcore2.Data.AnalystDataProvider.dll, please copy .dll files as described in https://github.com/vdemichev/DiaNN?tab=readme-ov-file#raw-data-formats. Wiff files will be skipped. : 1
+WARNING: MBR turned off, at least two files are required : 1
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms : 1
+Finished
+
+
+Key publications:
+using DIA-NN: Demichev et al, Nature Methods, 2020, https://www.nature.com/articles/s41592-019-0638-x
+using QuantUMS: Grossmann et al, Nature Biotechnology, 2026, https://www.nature.com/articles/s41587-026-03131-2
+analysing PTMs: Steger et al, Nature Communications, 2021, https://www.nature.com/articles/s41467-021-25454-1
+analysing dia-PASEF: Demichev et al, Nature Communications, 2022, https://www.nature.com/articles/s41467-022-31492-0
+analysing Slice-PASEF: Szyrwiel et al, biorxiv, 2025, https://www.biorxiv.org/content/10.1101/2022.10.31.514544v3
+plexDIA / multiplexed DIA: Derks et al, Nature Biotechnology, 2023, https://www.nature.com/articles/s41587-022-01389-w
+CysQuant: Huang et al, Redox Biology, 2023, https://doi.org/10.1016/j.redox.2023.102908
+analysing scanning quadrupole non-TIMS data: Messner et al, Nature Biotechnology, 2021, https://www.nature.com/articles/s41587-021-00860-4
+[2:34] Log saved to C:\diann-hye\v270\out\report-lib.log.txt
+	Command being timed: "/mnt/c/DIA-NN/2.7.0/diann.exe --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Alpha_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Beta_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_A_Sample_Gamma_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Alpha_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Beta_01.wiff --f C:\diann-hye\raw\LFQ_TTOF6600_SWATH_Condition_B_Sample_Gamma_01.wiff --lib C:\diann-hye\v270\lib\hye.predicted.speclib --fasta C:\diann-hye\hye_sp.fasta --out C:\diann-hye\v270\out\report.parquet --temp C:\diann-hye\v270\quant --threads 24 --verbose 1 --qvalue 0.01 --matrices --unimod4 --var-mods 1 --var-mod UniMod:35,15.994915,M --reanalyse --rt-profiling"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 0%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:35.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 236
+	Voluntary context switches: 148
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

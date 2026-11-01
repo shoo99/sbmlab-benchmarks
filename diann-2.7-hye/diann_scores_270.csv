@@ -1,0 +1,7 @@
+set,species,n,median,IQR,within_0.5,within_0.5_centred
+"pg_matrix (MBR, DIA-NN default filter)",Human,5574,-0.007,0.082,0.987,0.987
+"pg_matrix (MBR, DIA-NN default filter)",Yeast,2533,-1.058,0.18,0.952,0.951
+"pg_matrix (MBR, DIA-NN default filter)",Ecoli,605,1.905,0.53,0.765,0.767
+"MBR pass, Q<=0.01 & PG.Q<=0.01",Human,5582,-0.007,0.082,0.986,0.986
+"MBR pass, Q<=0.01 & PG.Q<=0.01",Yeast,2510,-1.059,0.177,0.956,0.956
+"MBR pass, Q<=0.01 & PG.Q<=0.01",Ecoli,604,1.905,0.534,0.765,0.767

@@ -1,0 +1,81 @@
+
+DIA-NN 2.7.0 Academia  (Data-Independent Acquisition by Neural Networks)
+Compiled on Sep 15 2026 21:29:05
+Current date and time: Sat Oct 31 21:34:46 2026
+CPU: GenuineIntel Intel(R) Core(TM) i9-14900K
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 32
+83Gb out of 127Gb RAM is free
+DIA-NN will carry out FASTA digest for in silico lib generation
+Deep learning will be used to generate a new in silico spectral library from peptides provided
+A spectral library will be generated
+In silico digest will involve cuts at K*,R*
+Maximum number of missed cleavages set to 1
+Min peptide length set to 7
+Max peptide length set to 30
+Min precursor charge set to 2
+Max precursor charge set to 4
+Min precursor m/z set to 300
+Max precursor m/z set to 1800
+Min fragment m/z set to 200
+Max fragment m/z set to 1800
+Cysteine carbamidomethylation enabled as a fixed modification
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+Thread number set to 24
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms
+The following variable modifications will be localised: UniMod:35 
+
+0 files will be processed
+[0:00] Loading FASTA C:\diann-hye\hye_sp.fasta
+[0:04] Processing FASTA
+[0:08] Assembling elution groups
+[0:16] 6370129 precursors generated
+[0:16] Gene names missing for some isoforms
+[0:16] Library contains 31635 proteins, and 30696 genes
+[0:22] Encoding peptides for spectra and RTs prediction
+[0:31] Predicting spectra and IMs
+[11:37] Predicting RTs
+[12:46] Decoding predicted spectra and IMs
+[12:53] Decoding RTs
+[12:54] Saving the library to C:\diann-hye\v270\lib\hye.predicted.speclib
+[13:02] Initialising library
+
+The following warnings or errors (in alphabetic order) were detected at least the indicated number of times:
+WARNING: peptidoform scoring enabled because variable modifications have been declared; to disable, use --no-peptidoforms : 1
+Finished
+
+
+Key publications:
+using DIA-NN: Demichev et al, Nature Methods, 2020, https://www.nature.com/articles/s41592-019-0638-x
+using QuantUMS: Grossmann et al, Nature Biotechnology, 2026, https://www.nature.com/articles/s41587-026-03131-2
+analysing PTMs: Steger et al, Nature Communications, 2021, https://www.nature.com/articles/s41467-021-25454-1
+analysing dia-PASEF: Demichev et al, Nature Communications, 2022, https://www.nature.com/articles/s41467-022-31492-0
+analysing Slice-PASEF: Szyrwiel et al, biorxiv, 2025, https://www.biorxiv.org/content/10.1101/2022.10.31.514544v3
+plexDIA / multiplexed DIA: Derks et al, Nature Biotechnology, 2023, https://www.nature.com/articles/s41587-022-01389-w
+CysQuant: Huang et al, Redox Biology, 2023, https://doi.org/10.1016/j.redox.2023.102908
+analysing scanning quadrupole non-TIMS data: Messner et al, Nature Biotechnology, 2021, https://www.nature.com/articles/s41587-021-00860-4
+[13:17] Log saved to C:\diann-hye\v270\lib\hye.log.txt
+	Command being timed: "/mnt/c/DIA-NN/2.7.0/diann.exe --fasta C:\diann-hye\hye_sp.fasta --fasta-search --predictor --gen-spec-lib --out-lib C:\diann-hye\v270\lib\hye.parquet --cut K*,R* --missed-cleavages 1 --min-pep-len 7 --max-pep-len 30 --min-pr-charge 2 --max-pr-charge 4 --min-pr-mz 300 --max-pr-mz 1800 --min-fr-mz 200 --max-fr-mz 1800 --unimod4 --var-mods 1 --var-mod UniMod:35,15.994915,M --threads 24 --verbose 1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 0%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:19.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 468
+	Voluntary context switches: 178
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
