@@ -34,8 +34,9 @@ res <- data.frame(species = info$species, lfc = lfc, single = single,
                   p_t = tt, adj_t = p.adjust(tt, "BH"), adj_limma = lim$adj.P.Val, adj_deqms = dq$sca.adj.pva)
 score <- function(adj, fcmin) {
   call <- adj < 0.05 & abs(res$lfc) >= fcmin
-  tp <- sum(call & res$species != "Human"); fp <- sum(call & res$species == "Human")
-  pos <- sum(res$species != "Human")
+  ## true = right direction (yeast down, E. coli up); human and wrong-direction calls are false (none were wrong-direction here)
+  right <- call & ((res$species == "Yeast" & res$lfc < 0) | (res$species == "Ecoli" & res$lfc > 0))
+  tp <- sum(right); fp <- sum(call & !right); pos <- sum(res$species != "Human")
   sprintf("called %4d | true (yeast+E.coli) %4d of %4d (%.0f%%) | false (human) %3d | FDP %.1f%% | single-peptide among calls %d",
           sum(call), tp, pos, 100 * tp / pos, fp, 100 * fp / max(sum(call), 1), sum(call & res$single))
 }
@@ -46,4 +47,9 @@ for (fcmin in c(0, 0.5)) {
   cat("DEqMS     :", score(res$adj_deqms, fcmin), "\n")
 }
 cat("\nsingle-peptide proteins tested:", sum(res$single), "\n")
+## human calls: the LFQ normalisation offset (human median log2FC) and the direction of the false calls
+h <- res$species == "Human"
+cat("human median log2FC:", round(median(res$lfc[h]), 3), " IQR:", round(quantile(res$lfc[h], c(.25, .75)), 3), "\n")
+for (k in c("adj_t", "adj_limma", "adj_deqms")) { cl <- h & res[[k]] < 0.05
+  cat(k, "human calls", sum(cl), " median |lfc|", round(median(abs(res$lfc[cl])), 2), " share with lfc>0:", round(mean(res$lfc[cl] > 0), 2), "\n") }
 fwrite(res, "limma_deqms_hye_results.csv")

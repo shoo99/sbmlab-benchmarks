@@ -276,7 +276,7 @@
      157.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 124.0
   },
   {
    "seed": 3,
@@ -532,7 +532,7 @@
      258.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 113.0
   },
   {
    "seed": 5,
@@ -660,7 +660,7 @@
      124.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 116.0
   },
   {
    "seed": 6,
@@ -916,7 +916,7 @@
      74.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 108.0
   },
   {
    "seed": 8,
@@ -1300,7 +1300,7 @@
      231.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 102.0
   },
   {
    "seed": 11,
@@ -1684,7 +1684,7 @@
      136.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 120.0
   },
   {
    "seed": 14,
@@ -1940,7 +1940,7 @@
      244.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 123.5
   },
   {
    "seed": 16,
@@ -2324,7 +2324,7 @@
      177.0
     ]
    ],
-   "median_pubs_list": NaN
+   "median_pubs_list": 116.0
   },
   {
    "seed": 19,
@@ -2842,7 +2842,7 @@
     ]
    ],
    "chol_in_top10_700": 10,
-   "median_pubs_list": NaN
+   "median_pubs_list": 103.0
   },
   {
    "seed": 3,
@@ -2972,7 +2972,7 @@
     ]
    ],
    "chol_in_top10_700": 8,
-   "median_pubs_list": NaN
+   "median_pubs_list": 110.0
   },
   {
    "seed": 4,
@@ -3395,7 +3395,7 @@
     [
      "MT-CYB",
      18,
-     NaN
+     null
     ],
     [
      "HMGCS1",
@@ -3492,7 +3492,7 @@
     ]
    ],
    "chol_in_top10_700": 9,
-   "median_pubs_list": NaN
+   "median_pubs_list": 117.0
   },
   {
    "seed": 8,
@@ -3882,7 +3882,7 @@
     ]
    ],
    "chol_in_top10_700": 10,
-   "median_pubs_list": NaN
+   "median_pubs_list": 117.0
   },
   {
    "seed": 11,
@@ -4272,7 +4272,7 @@
     ]
    ],
    "chol_in_top10_700": 10,
-   "median_pubs_list": NaN
+   "median_pubs_list": 107.0
   },
   {
    "seed": 14,
@@ -4532,7 +4532,7 @@
     ]
    ],
    "chol_in_top10_700": 10,
-   "median_pubs_list": NaN
+   "median_pubs_list": 98.0
   },
   {
    "seed": 16,
@@ -5277,6 +5277,6 @@
    ]
   },
   "random_top3_hub_median_pubs_400": 340.0,
-  "random_list_median_pubs": NaN
+  "random_list_median_pubs": 115.75
  }
 }

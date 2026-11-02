@@ -17,6 +17,7 @@ set.seed(1); R <- 500; P <- 400; T <- 40; n <- 3
 grp <- factor(rep(c("A", "B"), each=n)); design <- model.matrix(~grp)
 rules <- c("p<0.05, t-test", "p<0.05, limma", "p<0.05 & >=2-fold, t-test", "p<0.05 & >=2-fold, limma", "BH 5%, t-test", "BH 5%, limma")
 acc <- matrix(0, 6, 3, dimnames=list(rules, c("selected", "false", "true")))
+fdp <- setNames(numeric(6), rules)   # per-repetition false/selected (0 when nothing is selected), summed
 for (r in 1:R) {
   sd <- rlnorm(P, log(0.5), 0.6)
   eff <- c(rep(c(1.5, -1.5), length.out=T), rep(0, P - T)); truth <- eff != 0
@@ -26,9 +27,14 @@ for (r in 1:R) {
   pl <- eBayes(lmFit(X, design))$p.value[, 2]
   sets <- list(pt < 0.05, pl < 0.05, pt < 0.05 & abs(lfc) >= 1, pl < 0.05 & abs(lfc) >= 1,
                p.adjust(pt, "BH") < 0.05, p.adjust(pl, "BH") < 0.05)
-  for (k in 1:6) acc[k, ] <- acc[k, ] + c(sum(sets[[k]]), sum(sets[[k]] & !truth), sum(sets[[k]] & truth))
+  for (k in 1:6) {
+    acc[k, ] <- acc[k, ] + c(sum(sets[[k]]), sum(sets[[k]] & !truth), sum(sets[[k]] & truth))
+    fdp[k] <- fdp[k] + if (any(sets[[k]])) sum(sets[[k]] & !truth) / sum(sets[[k]]) else 0
+  }
 }
 acc <- acc / R
-print(cbind(round(acc, 1), false_share_pct=round(100 * acc[, 2] / acc[, 1])))
+## false_share_pct pools all repetitions (total false / total selected). mean_FDP_pct averages false/selected per
+## repetition, the quantity BH controls (at 5% here); the two differ because repetitions select different numbers.
+print(cbind(round(acc, 1), false_share_pct=round(100 * acc[, 2] / acc[, 1]), mean_FDP_pct=round(100 * fdp / R, 1)))
 cat(sprintf("\nExpected false hits at p<0.05 if the test were exact: %d nulls x 0.05 = %.1f\n", P - T, (P - T) * 0.05))
 sessionInfo()$R.version$version.string

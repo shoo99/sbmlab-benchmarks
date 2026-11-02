@@ -3,3 +3,5 @@
 Same code as the sbmlab post (minus lfcShrink), run with ~condition (as written) and ~cell + condition (paired).
 FDR<0.05: ~condition 2,782/1,952/1,878 (all three 1,811, 65% of union); ~cell+condition 4,099/5,130/5,170 (4,055, 77%).
 |log2FC|≥1: 828/661/635 (594, 69%) and 1,000/1,169/1,155 (960, 79%). Pairing: DESeq2 +1,414 / −97. Each tool 0.4–3.1 s.
+
+Note (2026-11-02): `airway_three.out` comes from a slightly earlier version of the script. The current script also prints the cell × condition table (line 9) and a "pairwise overlap" line per cutoff (lines 37–38); neither is in the `.out`. Every number above is in the `.out` and is unaffected.

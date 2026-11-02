@@ -34,7 +34,7 @@ and the *E. coli* row of the results table (n, median log2 ratio, IQR, share wit
 3: pg_matrix (MBR, DIA-NN default filter)   Ecoli   446  2.039 0.339      0.854
 ```
 
-The full printout should match `score_diann.out` line for line; the script also rewrites `diann_scores.csv` with the same values. To start from the raw files instead, see [diann-hye/README.md](diann-hye/README.md) (30 GB from PRIDE).
+The full printout should match `score_diann.out` line for line (with data.table ≥ 1.15; older versions print the same numbers without the `<char>`/`<int>` column-type row under each header); the script also rewrites `diann_scores.csv` with the same values. To start from the raw files instead, see [diann-hye/README.md](diann-hye/README.md) (30 GB from PRIDE).
 
 ## About
 
@@ -50,7 +50,7 @@ Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM,
 
 | Folder | Post | What it shows |
 |---|---|---|
-| [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share |
+| [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share (pooled over runs; mean per-run FDP 4.2 vs 5.2%) |
 
 ### Proteomics: known-ratio benchmark (PRIDE PXD028735)
 
@@ -69,7 +69,7 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 | [string-hubs](string-hubs) | [STRING confidence score and hub proteins, measured](https://sbmlab.com/blog/string-confidence-score-hub-proteins-measured-2026) | STRING 12.5 human: score formula reproduced for all 5.4M pairs; 37% of links at 0.4 need text mining; top hub at 0.4 (TRIM67) has 17 PubMed records; partners predict core-essential genes beyond papers and expression (AUC 0.83 vs 0.71); random detected lists 'significantly connected' 20/20 with genome background, 0/20 with detected background |
 | [de-pipeline-check](de-pipeline-check) | [Differential expression in R](https://sbmlab.com/blog/differential-expression-proteomics-complete-r-pipeline) | Every R block of the post, run on the benchmark table (except the symbol-based enrichGO block) |
 | [string-background](string-background) | [STRING enrichment background test](https://sbmlab.com/blog/string-enrichment-background-random-proteins-test-2026) | Random lists of detected proteins: median 103 "significant" GO/KEGG terms with STRING's default whole-genome background, 0 with the detected proteins as background |
-| [r-vs-python-read-bench](r-vs-python-read-bench) | [R vs Python for bioinformatics](https://sbmlab.com/blog/r-vs-python-bioinformatics-guide-2026) | Reading and summarising a 146 MB MaxQuant `evidence.txt`: data.table 0.04 s, polars 0.16 s, pandas 0.51 s, base R 5.8 s |
+| [r-vs-python-read-bench](r-vs-python-read-bench) | [R vs Python for bioinformatics](https://sbmlab.com/blog/r-vs-python-bioinformatics-guide-2026) | Reading and summarising a 146 MB MaxQuant `evidence.txt`: data.table 0.04 s, polars 0.16 s, pandas 0.51 s, base R 5.8 s (base R read every column; the others read only the 4 they need) |
 
 ### Preprint analyses
 
@@ -80,7 +80,9 @@ Kang, B. (2026). Scoring the downstream chain of small-n label-free proteomics a
 
 | Folder | What it adds |
 |---|---|
-| [preprint-hye](preprint-hye) | t-test / limma / DEqMS on the protein tables of all three engines (contaminants removed by accession), with and without an extra median normalisation; figure script for the preprint. Needs MaxQuant's `bin/conf/contaminants.fasta` copied next to the scripts as `contaminants_maxquant_2.8.1.fasta`; input paths at the top of each script point to the local MaxQuant, FragPipe and DIA-NN outputs |
+| [preprint-hye](preprint-hye) | t-test / limma / DEqMS on the protein tables of all three engines (contaminants removed by accession), with and without an extra median normalisation; figure script for the preprint. Needs MaxQuant's `bin/conf/contaminants.fasta` copied next to the scripts as `contaminants_maxquant_2.8.1.fasta` (accessions are matched exactly, so an entry with an isoform suffix such as `-1` does not remove the canonical FragPipe/DIA-NN accession); input paths at the top of each script point to the local MaxQuant, FragPipe and DIA-NN outputs |
+
+`preprint-hye/fig/fig3_imputation.png` was redrawn on 2026-11-02. Panels a–b now count wrong-direction calls as false (see [imputation-hye](imputation-hye/README.md)), and panel c shows n per box. The preprint v1 shows the earlier version.
 
 ### Other measured posts
 

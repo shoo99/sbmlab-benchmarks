@@ -5,8 +5,10 @@ pg <- fread("../../diann-2.7-hye/report.pg_matrix.tsv", sep = "\t")
 runs <- grep("Condition_", names(pg), value = TRUE)
 runs <- c(grep("Condition_A", runs, value = TRUE), grep("Condition_B", runs, value = TRUE))   # A first = "Control"
 data <- as.data.frame(pg[, ..runs]); rownames(data) <- pg$Protein.Group
-species <- setNames(ifelse(grepl("_HUMAN", pg$Protein.Names), "Human", ifelse(grepl("_YEAST", pg$Protein.Names), "Yeast",
-                    ifelse(grepl("_ECOLI", pg$Protein.Names), "Ecoli", NA))), pg$Protein.Group)
+## species must be unambiguous (same rule as the other folders): a group naming two species is NA, not Human
+sp_of <- function(n) { s <- unique(regmatches(n, gregexpr("_(HUMAN|YEAST|ECOLI)\\b", n))[[1]])
+  s <- c(`_HUMAN` = "Human", `_YEAST` = "Yeast", `_ECOLI` = "Ecoli")[s]; if (length(s) == 1) s else NA_character_ }
+species <- setNames(vapply(pg$Protein.Names, sp_of, "", USE.NAMES = FALSE), pg$Protein.Group)
 
 ## ---- post code: Complete Minimal Pipeline (unchanged except the input) ----
 data[data == 0] <- NA
@@ -27,11 +29,13 @@ cat(sprintf("%d significant (%d up, %d down) out of %d tested\n",
 
 score <- function(r, label) {
   r$species <- species[rownames(r)]
-  sig <- r$sig; fp <- sig & r$species == "Human"
-  wrongdir <- sig & ((r$species == "Yeast" & r$logFC > 0) | (r$species == "Ecoli" & r$logFC < 0))
+  sig <- r$sig; H <- r$species %in% "Human"; Y <- r$species %in% "Yeast"; E <- r$species %in% "Ecoli"
+  fp <- sig & H
+  wrongdir <- sig & ((Y & r$logFC > 0) | (E & r$logFC < 0))
+  ## false share = (human calls + wrong-direction calls) / calls
   cat(sprintf("%s: tested %d | called %d | human (false) %d | yeast down %d/%d | E. coli up %d/%d | wrong direction %d | false share %.1f%%\n",
-      label, nrow(r), sum(sig), sum(fp), sum(sig & r$species == "Yeast" & r$logFC < 0), sum(r$species == "Yeast"),
-      sum(sig & r$species == "Ecoli" & r$logFC > 0), sum(r$species == "Ecoli"), sum(wrongdir), 100 * (sum(fp) + sum(wrongdir)) / max(1, sum(sig))))
+      label, nrow(r), sum(sig), sum(fp), sum(sig & Y & r$logFC < 0), sum(Y),
+      sum(sig & E & r$logFC > 0), sum(E), sum(wrongdir), 100 * (sum(fp) + sum(wrongdir)) / max(1, sum(sig))))
 }
 score(res, "minimal pipeline (no filter)")
 cat("Note: yeast truth is -1, so a |logFC| > 1 cutoff sits exactly at the true yeast change.\n")

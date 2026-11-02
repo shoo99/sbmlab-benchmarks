@@ -1,0 +1,25 @@
+data   | filter | method  | printed found / FP / FDP | offsets        | correct dir   | wrong dir | human FP | FDP (human + wrong dir)
+MBRon  | BOTH   | none    |   958 /  13 /  1.3%      | +0.144..+0.144 |   958 of 1039 |         0 |       13 |  1.3%
+MBRon  | BOTH   | MinDet  |   918 /  11 /  1.2%      | +0.146..+0.146 |   918 of 1039 |         0 |       11 |  1.2%
+MBRon  | BOTH   | MinProb |   923 /  11 /  1.2%      | +0.145..+0.145 |   923 of 1039 |         0 |       11 |  1.2%
+MBRon  | BOTH   | Perseus |   903 /   9 /  1.0%      | +0.150..+0.150 |   903 of 1039 |         0 |        9 |  1.0%
+MBRon  | BOTH   | QRILC   |   868 /   9 /  1.0%      | +0.150..+0.150 |   868 of 1039 |         0 |        9 |  1.0%
+MBRon  | BOTH   | kNN     |   959 /  11 /  1.1%      | +0.143..+0.143 |   959 of 1039 |         0 |       11 |  1.1%
+MBRon  | EITHER | none    |   958 /  13 /  1.3%      | +0.144..+0.144 |   958 of 1039 |         0 |       13 |  1.3%
+MBRon  | EITHER | MinDet  |  1102 /  26 /  2.3%      | +0.151..+0.151 |  1100 of 1415 |         2 |       26 |  2.5%
+MBRon  | EITHER | MinProb |  1098 /  30 /  2.7%      | +0.149..+0.149 |  1096 of 1415 |         2 |       30 |  2.8%
+MBRon  | EITHER | Perseus |  1052 /  31 /  2.9%      | -0.640..+0.152 |  1052 of 1415 |         0 |       31 |  2.9%
+MBRon  | EITHER | QRILC   |  1026 /  28 /  2.7%      | +0.154..+0.154 |  1026 of 1415 |         0 |       28 |  2.7%
+MBRon  | EITHER | kNN     |   977 /  29 /  2.9%      | +0.138..+0.138 |   961 of 1415 |        16 |       29 |  4.5%
+MBRoff | BOTH   | none    |   701 /  12 /  1.7%      | +0.151..+0.151 |   701 of  733 |         0 |       12 |  1.7%
+MBRoff | BOTH   | MinDet  |   636 /  10 /  1.5%      | +0.158..+0.158 |   636 of  733 |         0 |       10 |  1.5%
+MBRoff | BOTH   | MinProb |   638 /   8 /  1.2%      | +0.157..+0.157 |   638 of  733 |         0 |        8 |  1.2%
+MBRoff | BOTH   | Perseus |   618 /  10 /  1.6%      | +0.157..+0.157 |   618 of  733 |         0 |       10 |  1.6%
+MBRoff | BOTH   | QRILC   |   586 /   6 /  1.0%      | +0.158..+0.158 |   586 of  733 |         0 |        6 |  1.0%
+MBRoff | BOTH   | kNN     |   701 /   9 /  1.3%      | +0.151..+0.151 |   701 of  733 |         0 |        9 |  1.3%
+MBRoff | EITHER | none    |   701 /  12 /  1.7%      | +0.151..+0.151 |   701 of  733 |         0 |       12 |  1.7%
+MBRoff | EITHER | MinDet  |   854 /  29 /  3.3%      | +0.163..+0.163 |   853 of 1163 |         1 |       29 |  3.4%
+MBRoff | EITHER | MinProb |   855 /  29 /  3.3%      | +0.163..+0.163 |   854 of 1163 |         1 |       29 |  3.4%
+MBRoff | EITHER | Perseus |   808 /  30 /  3.6%      | +0.162..+0.162 |   807 of 1163 |         1 |       30 |  3.7%
+MBRoff | EITHER | QRILC   |   775 /  27 /  3.4%      | +0.166..+0.166 |   775 of 1163 |         0 |       27 |  3.4%
+MBRoff | EITHER | kNN     |   778 /  30 /  3.7%      | +0.147..+0.147 |   755 of 1163 |        23 |       30 |  6.6%

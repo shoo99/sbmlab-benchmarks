@@ -1,7 +1,10 @@
 ## Protein-level: MBR on vs off, same six runs and settings. Scored against log2(B/A) = 0 / -1 / +2.
 suppressPackageStartupMessages(library(data.table))
-ON  <- "/home/sysoft/mq-hye/results_mbr_on/txt/proteinGroups.txt"
-OFF <- "/home/sysoft/mq-hye/raw/combined/txt/proteinGroups.txt"
+## Usage: Rscript compare_mbr_onoff.R [MBR-on proteinGroups.txt] [MBR-off proteinGroups.txt] [output folder]
+args <- commandArgs(TRUE)
+ON  <- if (length(args) >= 1) args[1] else "/home/sysoft/mq-hye/results_mbr_on/txt/proteinGroups.txt"
+OFF <- if (length(args) >= 2) args[2] else "/home/sysoft/mq-hye/raw/combined/txt/proteinGroups.txt"
+OUT <- if (length(args) >= 3) args[3] else "."
 A <- c("A_Alpha", "A_Beta", "A_Gamma"); B <- c("B_Alpha", "B_Beta", "B_Gamma")
 EXPECT <- c(Human = 0, Yeast = -1, Ecoli = 2)
 
@@ -41,14 +44,18 @@ for (p in c("LFQ intensity", "Intensity")) {
   ## proteins that are scoreable only with MBR on: are they accurate?
   only_on <- so[ok & !(pid %in% sf$pid[sf$ok]) & !is.na(species)]
   cat("scoreable only with MBR on:", nrow(only_on), "\n")
-  print(only_on[, .(n = .N, within_0.5 = round(mean(abs(fc - EXPECT[species]) <= 0.5), 3)), by = species])
-  fwrite(res, sprintf("/home/sysoft/mq-hye/analysis/mbr_onoff_%s.csv", gsub(" ", "_", p)))
+  oo <- only_on[, .(n = .N, within_0.5 = round(mean(abs(fc - EXPECT[species]) <= 0.5), 3)), by = species]
+  print(oo)
+  fwrite(res, file.path(OUT, sprintf("mbr_onoff_%s.csv", gsub(" ", "_", p))))
+  fwrite(oo, file.path(OUT, sprintf("mbr_onoff_only_on_%s.csv", gsub(" ", "_", p))))
 }
 
 ## same proteins, both runs: does MBR change the accuracy of proteins quantified either way?
 so <- score(on, "LFQ intensity"); sf <- score(off, "LFQ intensity")
 both <- merge(so[ok & !is.na(species)], sf[ok & !is.na(species)], by = c("pid", "species"), suffixes = c("_on", "_off"))
 cat("\n== LFQ, proteins scoreable in BOTH runs ==\n")
-print(both[, .(n = .N, within_on = round(mean(abs(fc_on - EXPECT[species]) <= 0.5), 3),
-               within_off = round(mean(abs(fc_off - EXPECT[species]) <= 0.5), 3),
-               IQR_on = round(IQR(fc_on), 3), IQR_off = round(IQR(fc_off), 3)), by = species])
+same <- both[, .(n = .N, within_on = round(mean(abs(fc_on - EXPECT[species]) <= 0.5), 3),
+                 within_off = round(mean(abs(fc_off - EXPECT[species]) <= 0.5), 3),
+                 IQR_on = round(IQR(fc_on), 3), IQR_off = round(IQR(fc_off), 3)), by = species]
+print(same)
+fwrite(same, file.path(OUT, "mbr_onoff_same_proteins.csv"))   # read by preprint-hye/figures.py (Fig 2b) when present

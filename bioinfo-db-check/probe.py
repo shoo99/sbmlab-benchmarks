@@ -3,6 +3,7 @@ Each endpoint is called N times, 1 s apart; we record HTTP status and wall-clock
 import json, time, statistics, urllib.request, urllib.parse, csv, datetime, sys
 
 N = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+TAG = f"_{sys.argv[2]}" if len(sys.argv) > 2 else ""   # e.g. run1 -> probe_run1.csv / .json
 UA = {"User-Agent": "sbmlab-db-check/1.0 (blog benchmark; contact via sbmlab.com)"}
 PDB_Q = {"query": {"type": "terminal", "service": "text", "parameters": {
     "attribute": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession",
@@ -47,8 +48,8 @@ for name, m, url, body in E:
     print(f"{name:13s} ok {len(ok)}/{N}  median {statistics.median([r['seconds'] for r in ok]) if ok else float('nan'):.2f} s", flush=True)
 
 stamp = datetime.datetime.now().astimezone().isoformat(timespec="minutes")
-with open("probe.csv", "w", newline="") as f:
+with open(f"probe{TAG}.csv", "w", newline="") as f:
     w = csv.DictWriter(f, ["db", "try", "status", "seconds"]); w.writeheader(); w.writerows(rows)
 json.dump({k: {"body": v[0].decode("utf8", "replace"), "headers": {h: v[1][h] for h in v[1] if h.lower().startswith(("x-", "content-type", "last-modified"))}} for k, v in last.items()},
-          open("probe.json", "w"), indent=1)
+          open(f"probe{TAG}.json", "w"), indent=1)
 print("run at", stamp)

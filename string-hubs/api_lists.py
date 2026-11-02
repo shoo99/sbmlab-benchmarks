@@ -28,6 +28,11 @@ sid2name = dict(zip(info.sid, info.preferred_name))
 
 deg = pd.read_csv("degree_table.tsv.gz", sep="\t")
 pubs = dict(zip(deg.sid, deg.pubs))
+
+def npubs(sid):
+    """PubMed records of a STRING protein, or None when it has no NCBI GeneID (unknown, as in hubs.py; never NaN)."""
+    v = pubs.get(sid)
+    return None if v is None or v != v else float(v)
 L = pd.read_csv(f"{D}/9606.protein.links.detailed.v12.5.txt.gz", sep=" ", usecols=["protein1", "protein2", "combined_score"])
 L = L[L.protein1 < L.protein2]
 detset = set(det)
@@ -50,7 +55,7 @@ def local_hubs(ids, score):
     s = set(ids)
     e = L[(L.combined_score >= score) & L.protein1.isin(s) & L.protein2.isin(s)]
     d = pd.concat([e.protein1, e.protein2]).value_counts()
-    return [(sid2name[k], int(v), pubs.get(k)) for k, v in d.head(10).items()]
+    return [(sid2name[k], int(v), npubs(k)) for k, v in d.head(10).items()]
 
 res = {"n_detected_genes": int(len(genes)), "n_detected_string": len(det), "n_chol_detected": len(chol),
        "chol_detected": [sid2name[c] for c in chol], "random": [], "planted": []}
@@ -70,7 +75,9 @@ for kind in ("random", "planted"):
             if kind == "planted":
                 cs = {sid2name[c] for c in chol}
                 row[f"chol_in_top10_{score}"] = sum(1 for n, _, _ in h if n in cs)
-        row["median_pubs_list"] = float(np.median([pubs.get(i, 0) or 0 for i in ids]))
+        ## proteins without a GeneID are skipped (until 2026-11-02 `pubs.get(i, 0) or 0` let their NaN through,
+        ## which made 14 of the 40 list medians NaN; repair_pubs.py fixed the bundled api_results.json)
+        row["median_pubs_list"] = float(np.median([p for p in map(npubs, ids) if p is not None]))
         res[kind].append(row)
         print(kind, seed, {k: v for k, v in row.items() if k.startswith("s")}, row.get("chol_in_top10_400"), row.get("chol_in_top10_700"), flush=True)
 
@@ -82,5 +89,5 @@ res["summary"]["planted_chol_in_top10"] = {s: [r[f"chol_in_top10_{s}"] for r in 
 hp = [h[2] for r in res["random"] for h in r["hubs400"][:3] if h[2] is not None]
 res["summary"]["random_top3_hub_median_pubs_400"] = float(np.median(hp))
 res["summary"]["random_list_median_pubs"] = float(np.median([r["median_pubs_list"] for r in res["random"]]))
-json.dump(res, open("api_results.json", "w"), indent=1)
+json.dump(res, open("api_results.json", "w"), indent=1, allow_nan=False)
 print(json.dumps(res["summary"], indent=1))

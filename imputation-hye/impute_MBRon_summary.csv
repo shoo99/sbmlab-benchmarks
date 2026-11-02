@@ -1,0 +1,13 @@
+data,filter,method,testable,correct,of,human_fp,wrong_dir,calls,fdp
+MBRon,>=2 of 3 in BOTH groups,none,3935,958,1039,13,0,971,1.3
+MBRon,>=2 of 3 in BOTH groups,MinDet,3935,918,1039,11,0,929,1.2
+MBRon,>=2 of 3 in BOTH groups,MinProb,3935,923,1039,11,0,934,1.2
+MBRon,>=2 of 3 in BOTH groups,Perseus,3935,903,1039,9,0,912,1.0
+MBRon,>=2 of 3 in BOTH groups,QRILC,3935,868,1039,9,0,877,1.0
+MBRon,>=2 of 3 in BOTH groups,kNN,3935,959,1039,11,0,970,1.1
+MBRon,>=2 of 3 in EITHER group,none,3935,958,1039,13,0,971,1.3
+MBRon,>=2 of 3 in EITHER group,MinDet,4534,1100,1415,26,2,1128,2.5
+MBRon,>=2 of 3 in EITHER group,MinProb,4534,1096,1415,30,2,1128,2.8
+MBRon,>=2 of 3 in EITHER group,Perseus,4534,1052,1415,31,0,1083,2.9
+MBRon,>=2 of 3 in EITHER group,QRILC,4534,1026,1415,28,0,1054,2.7
+MBRon,>=2 of 3 in EITHER group,kNN,4534,961,1415,29,16,1006,4.5

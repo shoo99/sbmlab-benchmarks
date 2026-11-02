@@ -3,6 +3,7 @@
 suppressPackageStartupMessages(library(data.table))
 args <- commandArgs(TRUE)
 TXT <- if (length(args)) args[1] else "/home/sysoft/mq-hye/results_mbr_on/txt"   # txt folder of the MBR-on MaxQuant run
+OUT <- if (length(args) > 1) args[2] else "."                                    # where quant_scores.csv goes
 pg <- fread(file.path(TXT, "proteinGroups.txt"), sep = "\t", quote = "")
 A <- c("A_Alpha", "A_Beta", "A_Gamma"); B <- c("B_Alpha", "B_Beta", "B_Gamma")
 EXPECT <- c(Human = 0, Yeast = -1, Ecoli = 2)
@@ -49,7 +50,7 @@ score <- function(prefix, min_valid = 2) {
 }
 res <- rbind(score("Intensity"), score("iBAQ"), score("LFQ intensity"))
 print(res)
-fwrite(res, "/home/sysoft/mq-hye/analysis/quant_scores.csv")
+fwrite(res, file.path(OUT, "quant_scores.csv"))
 
 ## completeness per quant type (all three species, quantified in >=2 of 3 per condition)
 for (p in c("Intensity", "iBAQ", "LFQ intensity")) {
