@@ -1,0 +1,49 @@
+name: checks
+
+# Repository checks: catalog and file hygiene, and re-runs of the scripts that need only files in this repository.
+# Run the same locally with `python3 ci/lint.py` and `bash ci/reproduce.sh` (see CONTRIBUTING.md).
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    name: Catalog, JSON, syntax, output paths
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 ci/lint.py
+
+  reproduce-r:
+    name: Re-run R scripts on bundled files
+    runs-on: ubuntu-24.04
+    # Plain Ubuntu 24.04 packages: R 4.3.3 and limma 3.58.1, the versions the bundled outputs were made with
+    container: ubuntu:24.04
+    steps:
+      - name: Install R, data.table, limma and git
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq --no-install-recommends r-base-core r-cran-data.table r-bioc-limma git ca-certificates
+      - uses: actions/checkout@v4
+      # actions/checkout marks the workspace as safe only in its own step's HOME; in a container job, git in later steps
+      # then refuses the checkout because another user owns it ("dubious ownership"), so mark it again here
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - run: bash ci/reproduce.sh r
+
+  reproduce-python:
+    name: Re-run Python scripts on bundled files
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install --quiet numpy pandas matplotlib
+      - run: bash ci/reproduce.sh python
