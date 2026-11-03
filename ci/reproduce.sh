@@ -3,7 +3,7 @@
 # results. Runs in a temporary copy of the tracked files, so the working tree is never changed.
 #
 # Usage: bash ci/reproduce.sh [r|python|all|pipelines]     (default all = r + python)
-#   r          needs R with data.table and limma (CI: Ubuntu 24.04 packages, R 4.3.3, limma 3.58.1)
+#   r          needs R with data.table, limma, sva and bladderbatch (CI: Ubuntu 24.04 packages, R 4.3.3, limma 3.58.1)
 #   python     needs Python with numpy, pandas and matplotlib
 #   pipelines  end-to-end tests on synthetic data; needs salmon, kallisto, STAR, subread, RSEM, R with data.table
 #
@@ -73,6 +73,8 @@ if [ "$GROUP" = r ] || [ "$GROUP" = all ]; then
   check_out de-pipeline-check/diann270 "Rscript diann_limma.R" diann_limma.out
   same_file de-pipeline-check/diann270/limma_results_filtered.csv
   check_out limma-3v3-sim "Rscript three_vs_three.R" output.txt
+  check_out batch-correction-unbalanced "Rscript batch_study.R" batch_study.out
+  same_file batch-correction-unbalanced/scores.csv
   run_ok common "Rscript tests/test_known_ratio.R"
 fi
 
@@ -83,6 +85,7 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   same_file string-hubs/api_summary_extra.json
   run_ok docs "MPLBACKEND=Agg python3 make_summary_figure.py"
   run_ok preprint-hye "MPLBACKEND=Agg python3 figures.py"
+  run_ok batch-correction-unbalanced "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
 fi
 

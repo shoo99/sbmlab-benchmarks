@@ -51,6 +51,7 @@ Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM,
 
 | Folder | Post | What it shows |
 |---|---|---|
+| [batch-correction-unbalanced](batch-correction-unbalanced) | Issue [#8](https://github.com/shoo99/sbmlab-benchmarks/issues/8) (no post yet) | Unbalanced batches, simulated null and bladderbatch fake labels. Share of null genes with p < 0.05 at 11:1 imbalance: ComBat with group protected 0.29, `removeBatchEffect` 0.28, batch in the limma model 0.05; BH 5% calls 61–62% false after protected correction vs 4% with batch in the model |
 | [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share (pooled over runs; mean per-run FDP 4.2 vs 5.2%) |
 
 ### Proteomics: known-ratio benchmark (PRIDE PXD028735)
@@ -110,7 +111,7 @@ A summary of all the tools, versions and timings is in [Best bioinformatics tool
 - [`catalog.csv`](catalog.csv) lists every folder with its area, data, what it is scored against, tools and versions, the post, and whether CI re-runs it.
 - Every pull request and every push to `main` runs [`checks`](.github/workflows/checks.yml):
   - `ci/lint.py` checks the catalog, strict JSON, Python and shell syntax, and that no script writes to an absolute path.
-  - `ci/reproduce.sh` re-runs the scripts that need only files in this repository on R 4.3.3 / limma 3.58.1 and Python, and compares their output with the bundled files. These are the DIA-NN scoring, the DIA-NN 2.7.0 limma check, the 3 vs 3 simulation and the STRING summary.
+  - `ci/reproduce.sh` re-runs the scripts that need only files in this repository on R 4.3.3 / limma 3.58.1 and Python, and compares their output with the bundled files. These are the DIA-NN scoring, the DIA-NN 2.7.0 limma check, the 3 vs 3 simulation, the batch-correction study and the STRING summary.
 - [`common/`](common/README.md) holds the shared scoring code in R and Python. Its tests re-create the bundled DIA-NN score tables exactly.
 - A separate CI job runs pipeline tests on synthetic data with a known answer (`ci/reproduce.sh pipelines`).
 - To add a folder, start from [`docs/template/`](docs/template) and follow [CONTRIBUTING.md](CONTRIBUTING.md).
