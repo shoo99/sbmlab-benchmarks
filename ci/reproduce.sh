@@ -14,7 +14,12 @@ GROUP=${1:-all}
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
-(cd "$ROOT" && git ls-files -z | xargs -0 cp --parents -t "$WORK")
+if ! (cd "$ROOT" && git ls-files -z) > "$WORK/.tracked" || [ ! -s "$WORK/.tracked" ]; then
+  echo "Cannot list the tracked files with git ls-files (see the git message above)."
+  echo "In a container, add the checkout as a safe directory: git config --global --add safe.directory \"\$PWD\""
+  exit 1
+fi
+(cd "$ROOT" && xargs -0 cp --parents -t "$WORK" < "$WORK/.tracked") || { echo "Copying the tracked files failed."; exit 1; }
 fail=0
 
 norm() { sed -E '/^[[:space:]]*(<[a-z0-9]+>[[:space:]]*)+$/d; /^\[1\] "R version/d; s/[[:space:]]+/ /g; s/^ //; s/ $//' "$1"; }
@@ -49,7 +54,7 @@ run_ok() {
 
 if [ "$GROUP" = r ] || [ "$GROUP" = all ]; then
   echo "== R syntax"
-  if (cd "$ROOT" && git ls-files -z '*.R' | xargs -0 Rscript -e 'for (f in commandArgs(TRUE)) invisible(parse(f))'); then
+  if (cd "$WORK" && tr '\0' '\n' < .tracked | grep '\.R$' | tr '\n' '\0' | xargs -0 Rscript -e 'for (f in commandArgs(TRUE)) invisible(parse(f))'); then
     echo "ok   all .R files parse"
   else
     fail=1

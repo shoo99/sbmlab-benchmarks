@@ -32,6 +32,9 @@ jobs:
           apt-get update -qq
           apt-get install -y -qq --no-install-recommends r-base-core r-cran-data.table r-bioc-limma git ca-certificates
       - uses: actions/checkout@v4
+      # actions/checkout marks the workspace as safe only in its own step's HOME; in a container job, git in later steps
+      # then refuses the checkout because another user owns it ("dubious ownership"), so mark it again here
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: bash ci/reproduce.sh r
 
   reproduce-python:
