@@ -1,6 +1,7 @@
 # sbmlab-benchmarks
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23355028.svg)](https://doi.org/10.5281/zenodo.23355028)
+[![checks](https://github.com/shoo99/sbmlab-benchmarks/actions/workflows/checks.yml/badge.svg)](https://github.com/shoo99/sbmlab-benchmarks/actions/workflows/checks.yml)
 
 ## In 30 seconds
 
@@ -97,6 +98,14 @@ Kang, B. (2026). Scoring the downstream chain of small-n label-free proteomics a
 | [biomart-pig-mouse](biomart-pig-mouse) | [BioMart pig ↔ mouse orthologues](https://sbmlab.com/blog/biomart-pig-mouse-ortholog-mapping-tutorial-2026) | Ensembl 111 and 116 | 1:1 orthologue tables, and why biomaRt failed where a plain martservice query worked |
 
 A summary of all the tools, versions and timings is in [Best bioinformatics tools in 2026, installed and timed](https://sbmlab.com/blog/best-bioinformatics-tools-2026).
+
+## Catalog and checks
+
+- [`catalog.csv`](catalog.csv) lists every folder with its area, data, what it is scored against, tools and versions, the post, and whether CI re-runs it.
+- Every pull request and every push to `main` runs [`checks`](.github/workflows/checks.yml):
+  - `ci/lint.py` checks the catalog, strict JSON, Python and shell syntax, and that no script writes to an absolute path.
+  - `ci/reproduce.sh` re-runs the scripts that need only files in this repository on R 4.3.3 / limma 3.58.1 and Python, and compares their output with the bundled files. These are the DIA-NN scoring, the DIA-NN 2.7.0 limma check, the 3 vs 3 simulation and the STRING summary.
+- To add a folder, start from [`docs/template/`](docs/template) and follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What is not here
 
