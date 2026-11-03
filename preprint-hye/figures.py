@@ -60,7 +60,14 @@ fig.tight_layout(h_pad=2.5); fig.savefig(OUT / "fig1_engines.png"); plt.close(fi
 # ---------- Figure 2: MBR ----------
 pep = pd.read_csv(E / "maxquant-hye/mbr_scores.csv")
 onoff = pd.read_csv(E / "maxquant-hye/mbr_onoff_LFQ_intensity.csv").set_index("species")
-same = {"Human": (99.5, 99.1), "Yeast": (97.7, 95.0), "Ecoli": (94.8, 62.3)}  # maxquant-hye/README (compare_mbr_onoff.R)
+## same proteins scored with MBR on and off: compare_mbr_onoff.R writes this table since 2026-11-02; the bundled run
+## predates that, so fall back to its printout as quoted in maxquant-hye/README.md
+f_same = E / "maxquant-hye/mbr_onoff_same_proteins.csv"
+if f_same.exists():
+    t = pd.read_csv(f_same).set_index("species")
+    same = {s: (100 * t.loc[s, "within_on"], 100 * t.loc[s, "within_off"]) for s in SP}
+else:
+    same = {"Human": (99.5, 99.1), "Yeast": (97.7, 95.0), "Ecoli": (94.8, 62.3)}
 dno = pd.read_csv(E / "diann-hye/diann_scores.csv")
 fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.7))
 grp = ["all 6 by MS/MS", "1-2 runs by matching", "3+ runs by matching"]; gl = ["all 6 MS/MS", "1–2 matched", "3+ matched"]
@@ -84,19 +91,11 @@ for a, l in zip(axs, "abc"): label(a, l)
 fig.tight_layout(); fig.savefig(OUT / "fig2_mbr.png"); plt.close(fig)
 
 # ---------- Figure 3: imputation ----------
-def parse(p):
-    rows = []; data = filt = None
-    for line in open(p):
-        if line.startswith("===="):
-            data = line.split("|")[0].replace("=", "").strip(); filt = "strict" if "BOTH" in line else "loose"
-        elif "|" in line and not line.startswith("method"):
-            f = [c.strip() for c in line.split("|")]
-            found, of = f[5].split(" of ")
-            rows.append(dict(data=data, filter=filt, method=f[0], ecoli_med=float(f[2]), found=int(found), of=int(of),
-                             fp=int(f[6]), fdp=float(f[7].rstrip("%"))))
-    return pd.DataFrame(rows)
-imp = pd.concat([parse(E / "imputation-hye/impute_MBRon.out"), parse(E / "imputation-hye/impute_MBRoff.out")])
-imp["recall"] = 100 * imp["found"] / imp["of"]
+## direction-aware counts: a yeast call must go down and an E. coli call up; wrong-direction calls count as false.
+## impute_<tag>_summary.csv comes from impute_bench.R (fixed 2026-11-02) or, for the bundled run, direction_rescore.py.
+imp = pd.concat([pd.read_csv(E / f"imputation-hye/impute_{t}_summary.csv") for t in ("MBRon", "MBRoff")])
+imp["filter"] = np.where(imp["filter"].str.contains("BOTH"), "strict", "loose")
+imp["recall"] = 100 * imp["correct"] / imp["of"]
 MC = {"none": "#000000", "MinDet": "#1b9e77", "MinProb": "#d95f02", "Perseus": "#7570b3", "QRILC": "#e7298a", "kNN": "#a6761d"}
 fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.9), gridspec_kw={"width_ratios": [1, 1, 1.4]})
 for a, d in zip(axs[:2], ["MBRon", "MBRoff"]):
@@ -113,7 +112,8 @@ meths = ["none", "MinDet", "MinProb", "Perseus", "QRILC", "kNN"]
 vals = [sub[sub.method == m]["lfc_c"].dropna().values for m in meths]
 bp = axs[2].boxplot(vals, showfliers=False, patch_artist=True, medianprops={"color": "k"})
 for p, m in zip(bp["boxes"], meths): p.set_facecolor(MC[m]); p.set_alpha(0.6)
-axs[2].axhline(2, ls="--", c="k", lw=0.7); axs[2].set_xticks(range(1, 7), meths, rotation=30)
+## "none" cannot score proteins with < 2 values in either group, so its box holds fewer (easier) proteins: show n
+axs[2].axhline(2, ls="--", c="k", lw=0.7); axs[2].set_xticks(range(1, 7), [f"{m}\nn={len(v)}" for m, v in zip(meths, vals)], fontsize=6.5)
 axs[2].set_ylabel("E. coli log2(B/A), centred"); axs[2].set_title("MBR off, loose filter\nE. coli proteins (truth +2)")
 for a, l in zip(axs, "abc"): label(a, l)
 fig.tight_layout(rect=(0, 0.08, 1, 1)); fig.savefig(OUT / "fig3_imputation.png"); plt.close(fig)

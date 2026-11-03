@@ -27,8 +27,8 @@ score <- function(filter_name, keep) {
   x0 <- m[keep, ]; s0 <- sp[keep]
   cat(sprintf("\n==== %s | filter: %s | proteins %d (human %d, yeast %d, E. coli %d) | missing cells %.1f%% ====\n",
       tag, filter_name, nrow(x0), sum(s0=="Human"), sum(s0=="Yeast"), sum(s0=="Ecoli"), 100*mean(is.na(x0))))
-  cat("method   | testable | E.coli median lfc | yeast median lfc | within ±0.5 H/Y/E | changed found | human FP | FDP\n")
-  out <- list()
+  cat("method   | testable | E.coli median lfc | yeast median lfc | within ±0.5 H/Y/E | changed found | human FP | wrong dir | FDP\n")
+  out <- list(); summ <- list()
   for (nm in names(methods)) {
     set.seed(1); x <- methods[[nm]](x0)
     ok <- rowSums(!is.na(x[, 1:3])) >= 2 & rowSums(!is.na(x[, 4:6])) >= 2
@@ -38,16 +38,24 @@ score <- function(filter_name, keep) {
     within <- sapply(c("Human","Yeast","Ecoli"), function(k) mean(abs(lfc_c[s == k] - truth[k]) <= 0.5))
     fit <- eBayes(lmFit(x, design)); tt <- topTable(fit, coef = 2, number = Inf, sort.by = "none")
     call <- tt$adj.P.Val < 0.05 & abs(tt$logFC) >= 0.5
-    found <- sum(call & s != "Human"); fp <- sum(call & s == "Human")
-    cat(sprintf("%-8s | %8d | %17.2f | %16.2f | %3.0f/%3.0f/%3.0f %% | %5d of %5d | %8d | %4.1f%%\n", nm, nrow(x),
+    ## a call is a true find only in the right direction (yeast down, E. coli up); human calls and wrong-direction calls are false.
+    ## (Before 2026-11-02 every non-human call counted as found and wrong-direction calls were left out of the FDP;
+    ##  direction_rescore.py re-scores the outputs of that version.)
+    right <- call & ((s == "Yeast" & tt$logFC < 0) | (s == "Ecoli" & tt$logFC > 0))
+    fp <- sum(call & s == "Human"); wrong <- sum(call & s != "Human" & !right)
+    fdp <- 100 * (fp + wrong) / max(sum(call), 1)
+    cat(sprintf("%-8s | %8d | %17.2f | %16.2f | %3.0f/%3.0f/%3.0f %% | %5d of %5d | %8d | %9d | %4.1f%%\n", nm, nrow(x),
         median(lfc_c[s=="Ecoli"]), median(lfc_c[s=="Yeast"]), 100*within["Human"], 100*within["Yeast"], 100*within["Ecoli"],
-        found, sum(s != "Human"), fp, 100 * fp / max(sum(call), 1)))
-    out[[nm]] <- data.table(method = nm, filter = filter_name, data = tag, species = s, lfc_c = lfc_c, adjp = tt$adj.P.Val)
+        sum(right), sum(s != "Human"), fp, wrong, fdp))
+    out[[nm]] <- data.table(method = nm, filter = filter_name, data = tag, species = s, lfc_c = lfc_c, logFC = tt$logFC, adjp = tt$adj.P.Val)
+    summ[[nm]] <- data.table(data = tag, filter = filter_name, method = nm, testable = nrow(x), correct = sum(right),
+                             of = sum(s != "Human"), human_fp = fp, wrong_dir = wrong, calls = sum(call), fdp = round(fdp, 1))
   }
-  rbindlist(out)
+  list(rows = rbindlist(out), summary = rbindlist(summ))
 }
 both <- rowSums(!is.na(m[, 1:3])) >= 2 & rowSums(!is.na(m[, 4:6])) >= 2
 either <- rowSums(!is.na(m[, 1:3])) >= 2 | rowSums(!is.na(m[, 4:6])) >= 2
 r1 <- score(">=2 of 3 in BOTH groups", both)
 r2 <- score(">=2 of 3 in EITHER group", either)
-fwrite(rbind(r1, r2), sprintf("impute_%s.csv.gz", tag))
+fwrite(rbind(r1$rows, r2$rows), sprintf("impute_%s.csv.gz", tag))
+fwrite(rbind(r1$summary, r2$summary), sprintf("impute_%s_summary.csv", tag))

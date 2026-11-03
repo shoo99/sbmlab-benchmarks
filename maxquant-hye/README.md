@@ -24,3 +24,9 @@ Findings (written up in the sbmlab.com post linked from the top-level README):
 MBR off rerun (2026-10-07 12:38→13:30, 52.0 min): LFQ scoreable human/yeast/E. coli 2,346/656/77 (on 2,896/907/132);
 same-protein within ±0.5 on vs off: 99.5/99.1 · 97.7/95.0 · 94.8/62.3 %; MBR-only proteins 860 (96/78/62 %).
 Intensity within ±0.5 on/off: 86/77 · 74/59 · 43/20 %. Script compare_mbr_onoff.R → mbr_onoff_*.csv
+
+## Running the scripts
+
+- `Rscript score_quant.R [txt dir] [out dir]`, `Rscript score_mbr.R [txt dir] [out dir] [fasta dir]` and `Rscript compare_mbr_onoff.R [MBR-on proteinGroups.txt] [MBR-off proteinGroups.txt] [out dir]`. Outputs go to the out dir, by default the current folder. Before 2026-11-02 the scripts always wrote to `/home/sysoft/mq-hye/analysis/`, even when given another input folder.
+- `compare_mbr_onoff.R` now also saves the two tables it used to only print: `mbr_onoff_same_proteins.csv` (the "same-protein" line above) and `mbr_onoff_only_on_<quant>.csv` (MBR-only proteins). Both were written on 2026-11-03 by re-running the script on the raw MaxQuant output; the two existing `mbr_onoff_<quant>.csv` files came out byte for byte identical, and the same-protein values match the printout above. `preprint-hye/figures.py` uses them for Fig 2b.
+- Peptide species in `score_mbr.R` comes from the `Leading razor protein` only. A peptide shared between species is scored against its razor protein's species, not dropped. The protein-level scripts instead require all proteins in a group to come from one species. How many peptides map to more than one species was not counted.

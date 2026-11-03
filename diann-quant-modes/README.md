@@ -9,6 +9,7 @@ Truth log2(B/A): human 0, yeast −1, *E. coli* +2. DIA-NN 2.3.2, library predic
 
 `logs/clean_rerun.sh` (log: `logs/clean_rerun.log`; DIA-NN logs: `logs/c_*.report.log.txt`). Mass accuracies and scan window fixed
 (`--mass-acc 16 --mass-acc-ms1 13 --window 9`), `--export-quant` for fragment intensities.
+The "exit 0" at the end of each run in `logs/clean_rerun.log` is meaningless: the script read `$?` after `$(date)` had reset it (fixed 2026-11-02). Each run's own log, `logs/c_*.report.log.txt`, ends with "Stats report saved".
 
 | Run | Flags | Wall time |
 |---|---|---|
@@ -27,9 +28,11 @@ Truth log2(B/A): human 0, yeast −1, *E. coli* +2. DIA-NN 2.3.2, library predic
 | `mbr_split.R` | MBR off vs on, split by proteins also quantified without MBR / only with MBR; MBR-added *E. coli* split by precursor completeness. Output `clean/mbr_split.out` and CSVs |
 | `figure.py` | `clean/ecoli_routes.png` |
 
+`score_modes.R`, `mbr_split.R` and `figure.py` also need MaxQuant 2.8.1's `bin/conf/contaminants.fasta` (path at the top of each script; not in this repository). They drop every protein group that contains one of its accessions, matched exactly as written in the FASTA header, so an entry with an isoform suffix (`-1`) does not match the canonical accession DIA-NN reports. Without contaminant removal, clean/nombr scores 4 more human proteins (QuantUMS default: 5,104 vs 5,100); *E. coli* is unchanged.
+
 The fragment tables (`fragments_long.tsv`, `fragments_wide.aq_reformat.tsv`, `*.ion_intensities.tsv`; hundreds of MB) are not committed; `build_inputs.py` recreates them from DIA-NN's `report.parquet`.
 
-Files in the top level of this folder (`pg_*.tsv`, `score_modes.out`, `scores_*.csv`, `directlfq.log`) are from a first exploratory rerun with automatic mass accuracy and the run-specific filter (`build_inputs.py first`). The blog post uses the `clean/` results.
+Files in the top level of this folder (`pg_*.tsv`, `score_modes.out`, `scores_*.csv`, `directlfq.log`) are from a first exploratory rerun with automatic mass accuracy and the run-specific filter (`build_inputs.py first`). The blog post uses the `clean/` results. They were built before `build_inputs.py` started writing `pg_precsum6_*.tsv`, so the top-level `score_modes.out` has no "precursors in all 6 runs" row. Re-running `build_inputs.py first` and `score_modes.R` would add it.
 
 ## Main results (*E. coli*, within ±0.5 of truth)
 

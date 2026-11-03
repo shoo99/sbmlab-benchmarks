@@ -4,7 +4,7 @@ Inputs (downloaded 2026-10-19 into /home/sysoft/data/string125, not in git):
   9606.protein.links.detailed.v12.5.txt.gz, 9606.protein.info.v12.5.txt.gz (stringdb-downloads.org)
   gene2pubmed.gz, Homo_sapiens.gene_info.gz (NCBI)
   CEGv2.txt, NEGv1.txt (Hart et al. 2017, hart-lab/bagel)
-  rna_celline.tsv.zip (Human Protein Atlas cell line RNA, file dated 2025-11-05)
+  rna_celline.tsv.zip (Human Protein Atlas cell line RNA; data file inside the zip dated 2023-05-24, see hubs.out)
 Combined score recomputed with STRING's published procedure (FAQ / combine_subscores.v2.py): remove prior 0.041 from
 each channel, combine as 1 - prod(1 - s), add the prior back once. 'No text mining' = same with the textmining channel set to 0.
 Outputs: hubs_results.json, degree_table.tsv.gz

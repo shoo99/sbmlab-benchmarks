@@ -5,12 +5,17 @@ import urllib.request, urllib.parse, csv, io, collections, sys
 HOSTS = {"111": "https://jan2024.archive.ensembl.org", "116": "https://jun2026.archive.ensembl.org"}
 ATTR = ["ensembl_gene_id", "external_gene_name", "mmusculus_homolog_ensembl_gene",
         "mmusculus_homolog_associated_gene_name", "mmusculus_homolog_orthology_type"]
-xml = ('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="1" uniqueRows="1">'
+xml = ('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="1" uniqueRows="1" completionStamp="1">'
        '<Dataset name="sscrofa_gene_ensembl" interface="default">' + "".join(f'<Attribute name="{a}"/>' for a in ATTR) + '</Dataset></Query>')
 res = {}
 for rel, host in HOSTS.items():
     url = host + "/biomart/martservice?query=" + urllib.parse.quote(xml)
     txt = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "sbmlab-check"}), timeout=600).read().decode()
+    ## BioMart can cut a result short or answer "Query ERROR ..." with HTTP 200; completionStamp="1" makes it end a complete
+    ## result with "[success]" (check added 2026-11-02, so a failed query stops here instead of writing a short table)
+    if not txt.rstrip("\n").endswith("[success]"):
+        sys.exit(f"Ensembl {rel}: BioMart result incomplete or an error (no [success] stamp): {txt[:300]!r}")
+    txt = txt.rstrip("\n")[: -len("[success]")]
     rows = list(csv.reader(io.StringIO(txt), delimiter="\t"))
     hdr, rows = rows[0], [r for r in rows[1:] if len(r) == len(ATTR) and r[2]]
     types = collections.Counter(r[4] for r in rows)

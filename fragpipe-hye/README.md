@@ -9,7 +9,7 @@ Pitfalls hit:
 
 Run: workflow = LFQ-MBR defaults (+db path, 16 threads); FASTA = same UniProt SP human/yeast/E. coli +
 Philosopher contaminants + rev_ decoys (63,482). Workflow file: hye_lfq_mbr.workflow; manifest: hye.fp-manifest. The full run log is not included.
-Score: Rscript score_fragpipe.R [workdir] → fragpipe_scores.csv (same rules as MaxQuant scoring).
+Score: Rscript score_fragpipe.R [workdir] [out dir] → fragpipe_scores.csv in the out dir, default the current folder (same rules as MaxQuant scoring; before 2026-11-02 it wrote to workdir/..).
 
 RESULT (2026-10-07 15:49→15:59): ALL JOBS DONE IN 8.9 MINUTES (MSFragger 3.4, MSBooster 1.4, Percolator 1.2, IonQuant 1.6) · peak RSS 20 GB.
 combined_protein.tsv 7,937 groups (human 5,069 · yeast 2,244 · E. coli 618). Scored MaxLFQ (≥2/3 per condition):
@@ -17,3 +17,4 @@ human/yeast/E. coli n 4,605/1,817/359, within ±0.5 94.7/88.3/73.5 %. Intensity:
 Same 3,877 proteins as MaxQuant LFQ: within ±0.5 MaxQuant 98.9/92.2/80.9 vs FragPipe 99.7/99.2/97.7 %;
 centred on human median 99.4/96.9/82.4 vs 99.7/99.2/97.7. FragPipe-only scoreable 2,905 (86.6/78.3/59.6 %).
 Note: Philosopher --contam entries carry no contam_ prefix here (0 flagged) — contaminants not removed for FragPipe.
+Note on `compare_mq_fp.R` (the 3,877-protein comparison): species comes from the FragPipe `Protein` column alone, taking the first match in the order HUMAN, YEAST, ECOLI. `Indistinguishable Proteins` is not checked, and neither is the MaxQuant group's species. `score_fragpipe.R` instead requires one species across both columns. At most 6 FragPipe groups (7,937 − 7,931) lack a single species, so at most 6 of the 3,877 can differ.

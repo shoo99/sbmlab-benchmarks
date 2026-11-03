@@ -3,6 +3,7 @@
 suppressPackageStartupMessages(library(data.table))
 args <- commandArgs(TRUE)
 WORK <- if (length(args)) args[1] else "/home/sysoft/fp-hye/work"
+OUT  <- if (length(args) > 1) args[2] else "."   # where fragpipe_scores.csv goes (was WORK/..)
 cp <- fread(file.path(WORK, "combined_protein.tsv"), sep = "\t", quote = "")
 A <- c("A_Alpha", "A_Beta", "A_Gamma"); B <- c("B_Alpha", "B_Beta", "B_Gamma")
 EXPECT <- c(Human = 0, Yeast = -1, Ecoli = 2)
@@ -34,7 +35,7 @@ score <- function(suffix) {
 }
 res <- rbind(score("Intensity"), score("MaxLFQ Intensity"))
 print(res)
-fwrite(res, file.path(WORK, "..", "fragpipe_scores.csv"))
+fwrite(res, file.path(OUT, "fragpipe_scores.csv"))
 for (s in c("Intensity", "MaxLFQ Intensity")) {
   m <- as.matrix(cp[!is.na(species), paste(c(A, B), s), with = FALSE]); m[m == 0] <- NA
   cat(sprintf("%-17s cells with a value: %.1f%%\n", s, 100 * mean(!is.na(m))))

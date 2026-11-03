@@ -2,13 +2,16 @@
 suppressPackageStartupMessages(library(data.table))
 args <- commandArgs(TRUE)
 TXT <- if (length(args)) args[1] else "/home/sysoft/mq-hye/results_mbr_on/txt"   # txt folder of the MBR-on MaxQuant run
+OUT <- if (length(args) > 1) args[2] else "."                                    # where mbr_scores.csv goes
+FASTA <- if (length(args) > 2) args[3] else "/home/sysoft/mq-hye/fasta"          # folder with the three uniprot_sp_*.fasta
 pep <- fread(file.path(TXT, "peptides.txt"), sep = "\t", quote = "")
 A <- c("A_Alpha", "A_Beta", "A_Gamma"); B <- c("B_Alpha", "B_Beta", "B_Gamma")
 EXPECT <- c(Human = 0, Yeast = -1, Ecoli = 2)
 
-## accession -> species from the three FASTA files
+## accession -> species from the three FASTA files. A peptide takes the species of its leading razor protein;
+## the other proteins in `Proteins` are not checked (see README).
 acc2sp <- rbindlist(lapply(c(Human = "human_9606", Yeast = "yeast_559292", Ecoli = "ecoli_83333"), function(f) {
-  h <- grep("^>", readLines(Sys.glob(sprintf("/home/sysoft/mq-hye/fasta/uniprot_sp_%s.fasta", f))), value = TRUE)
+  h <- grep("^>", readLines(Sys.glob(file.path(FASTA, sprintf("uniprot_sp_%s.fasta", f)))), value = TRUE)
   data.table(acc = sub("^>[^|]*\\|([^|]+)\\|.*", "\\1", h))
 }), idcol = "species")
 pep <- pep[!(Decoy %in% "+") & !(`Potential contaminant` %in% "+")]
@@ -34,4 +37,4 @@ res <- rbindlist(lapply(names(EXPECT), function(s) rbindlist(lapply(unique(grp),
              IQR = round(IQR(x), 3), within_0.5 = round(mean(abs(x - e) <= 0.5), 3))
 }))))
 setorder(res, species, group); print(res)
-fwrite(res, "/home/sysoft/mq-hye/analysis/mbr_scores.csv")
+fwrite(res, file.path(OUT, "mbr_scores.csv"))
