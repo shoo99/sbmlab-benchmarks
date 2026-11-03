@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-NOT_ANALYSES = {"docs", "ci"}                     # top-level folders that are not analysis folders
+NOT_ANALYSES = {"docs", "ci", "common"}           # top-level folders that are not analysis folders
 COLUMNS = ["folder", "area", "data", "truth", "tools", "post", "ci"]
 CI_VALUES = {"reproduce", "smoke", "no"}
 SCORES_HEADER = ["folder", "dataset", "tool", "version", "setting", "subset", "metric", "value", "n"]

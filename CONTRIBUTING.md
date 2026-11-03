@@ -34,6 +34,10 @@ Each folder answers one measured question, usually for one post. The rules below
   - Use `cd <dir> || exit 1`.
   - Capture an exit status in the same command: `rc=0; tool ... || rc=$?`. `$(date)` resets `$?`, so `echo "$(date) exit $?"` always prints 0.
 
+## Shared scoring code
+
+Use [`common/`](common/README.md) (`known_ratio.R`, `known_ratio.py`) for log2 ratios, group scores within a tolerance of the truth, centring, direction-aware call outcomes and `scores.csv` rows, instead of copying these functions into the folder. Its tests reproduce the bundled DIA-NN score tables exactly, so these functions implement the rules below. If a folder needs a rule `common/` lacks, add it there with a test.
+
 ## Scoring rules for the HYE benchmark (PXD028735)
 
 Folders that score on the human / yeast / *E. coli* mixture use the same rules unless their README says otherwise:
@@ -76,7 +80,7 @@ One row per analysis folder (not `docs` or `ci`):
 | `data` | data set and source |
 | `truth` | what the result is scored against, or `none (...)` with what is measured instead |
 | `tools` | main tools with versions, separated by `;` |
-| `post` | the post (or preprint) link |
+| `post` | the post (or preprint) link; the tracking issue until the post exists |
 | `ci` | `reproduce` (re-run and compared in CI), `smoke` (run in CI, output not compared) or `no` (needs data or services outside the repository) |
 
 ## Checks
@@ -91,6 +95,8 @@ One row per analysis folder (not `docs` or `ci`):
   - every `scores.csv` has the standard header
 - `bash ci/reproduce.sh r` runs on Ubuntu 24.04 packages: R 4.3.3 and limma 3.58.1, the versions the bundled outputs were made with. It checks that every `.R` file parses, then re-runs the R scripts that need only repository files and compares their output with the bundled files.
 - `bash ci/reproduce.sh python` does the same for the Python scripts.
+- Both groups also run the `common/` tests.
+- `bash ci/reproduce.sh pipelines` runs pipeline tests on synthetic data with a known answer (`rnaseq-quant-seqc/test/test_pipeline.sh`) in a separate job that installs the quantifiers.
 
 Re-runs happen in a temporary copy, so they never touch the working tree. Printouts are compared after normalising whitespace and dropping data.table's column-type row, which only data.table ≥ 1.15 prints. Tables must match byte for byte.
 

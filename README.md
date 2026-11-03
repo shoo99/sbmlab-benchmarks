@@ -72,6 +72,12 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 | [string-background](string-background) | [STRING enrichment background test](https://sbmlab.com/blog/string-enrichment-background-random-proteins-test-2026) | Random lists of detected proteins: median 103 "significant" GO/KEGG terms with STRING's default whole-genome background, 0 with the detected proteins as background |
 | [r-vs-python-read-bench](r-vs-python-read-bench) | [R vs Python for bioinformatics](https://sbmlab.com/blog/r-vs-python-bioinformatics-guide-2026) | Reading and summarising a 146 MB MaxQuant `evidence.txt`: data.table 0.04 s, polars 0.16 s, pandas 0.51 s, base R 5.8 s (base R read every column; the others read only the 4 they need) |
 
+### Transcriptomics: known-ratio benchmark (SEQC/MAQC, in progress)
+
+| Folder | Status | What it measures |
+|---|---|---|
+| [rnaseq-quant-seqc](rnaseq-quant-seqc) | Pipeline and scoring tested on synthetic data in CI; SEQC run pending ([#4](https://github.com/shoo99/sbmlab-benchmarks/issues/4)) | Salmon, kallisto, STAR + featureCounts and RSEM against ERCC Mix 1 / Mix 2 ratios, titration order and a mixture model on samples A, B, C = 3A:1B and D = 1A:3B |
+
 ### Preprint analyses
 
 The proteomics folders above are written up as a preprint:
@@ -105,6 +111,8 @@ A summary of all the tools, versions and timings is in [Best bioinformatics tool
 - Every pull request and every push to `main` runs [`checks`](.github/workflows/checks.yml):
   - `ci/lint.py` checks the catalog, strict JSON, Python and shell syntax, and that no script writes to an absolute path.
   - `ci/reproduce.sh` re-runs the scripts that need only files in this repository on R 4.3.3 / limma 3.58.1 and Python, and compares their output with the bundled files. These are the DIA-NN scoring, the DIA-NN 2.7.0 limma check, the 3 vs 3 simulation and the STRING summary.
+- [`common/`](common/README.md) holds the shared scoring code in R and Python. Its tests re-create the bundled DIA-NN score tables exactly.
+- A separate CI job runs pipeline tests on synthetic data with a known answer (`ci/reproduce.sh pipelines`).
 - To add a folder, start from [`docs/template/`](docs/template) and follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What is not here

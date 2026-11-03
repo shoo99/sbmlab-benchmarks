@@ -2,9 +2,10 @@
 # Re-runs the scripts that need only files in this repository and compares what they produce with the bundled
 # results. Runs in a temporary copy of the tracked files, so the working tree is never changed.
 #
-# Usage: bash ci/reproduce.sh [r|python|all]     (default all)
-#   r       needs R with data.table and limma (CI: Ubuntu 24.04 packages, R 4.3.3, limma 3.58.1)
-#   python  needs Python with numpy, pandas and matplotlib
+# Usage: bash ci/reproduce.sh [r|python|all|pipelines]     (default all = r + python)
+#   r          needs R with data.table and limma (CI: Ubuntu 24.04 packages, R 4.3.3, limma 3.58.1)
+#   python     needs Python with numpy, pandas and matplotlib
+#   pipelines  end-to-end tests on synthetic data; needs salmon, kallisto, STAR, subread, RSEM, R with data.table
 #
 # Printouts (.out) are compared after normalising whitespace and dropping data.table's column-type row
 # (<char> <int> ..., printed by data.table >= 1.15 only) and the "R version" line; tables are compared byte for byte.
@@ -72,6 +73,7 @@ if [ "$GROUP" = r ] || [ "$GROUP" = all ]; then
   check_out de-pipeline-check/diann270 "Rscript diann_limma.R" diann_limma.out
   same_file de-pipeline-check/diann270/limma_results_filtered.csv
   check_out limma-3v3-sim "Rscript three_vs_three.R" output.txt
+  run_ok common "Rscript tests/test_known_ratio.R"
 fi
 
 if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
@@ -81,6 +83,12 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   same_file string-hubs/api_summary_extra.json
   run_ok docs "MPLBACKEND=Agg python3 make_summary_figure.py"
   run_ok preprint-hye "MPLBACKEND=Agg python3 figures.py"
+  run_ok common "python3 tests/test_known_ratio.py"
+fi
+
+if [ "$GROUP" = pipelines ]; then
+  echo "== Pipelines on synthetic data with a known answer"
+  run_ok rnaseq-quant-seqc "bash test/test_pipeline.sh 4"
 fi
 
 if [ "$fail" -ne 0 ]; then echo; echo "Some checks failed."; exit 1; fi

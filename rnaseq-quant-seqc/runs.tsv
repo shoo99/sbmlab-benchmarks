@@ -1,0 +1,4 @@
+# Runs to download (tab-separated). One row per sequencing run; runs of the same sample and replicate (lanes) are
+# concatenated by download.sh. Fill in from ./list_runs.sh, e.g. the four replicates of A, B, C and D from one site.
+# sample = A (UHRR + ERCC Mix 1), B (HBRR + ERCC Mix 2), C (3 A : 1 B), D (1 A : 3 B)
+sample	replicate	run_accession
