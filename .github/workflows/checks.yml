@@ -16,7 +16,7 @@ jobs:
     name: Catalog, JSON, syntax, output paths
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: python3 ci/lint.py
 
   reproduce-r:
@@ -31,7 +31,7 @@ jobs:
         run: |
           apt-get update -qq
           apt-get install -y -qq --no-install-recommends r-base-core r-cran-data.table r-bioc-limma r-bioc-sva r-bioc-bladderbatch git ca-certificates
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       # actions/checkout marks the workspace as safe only in its own step's HOME; in a container job, git in later steps
       # then refuses the checkout because another user owns it ("dubious ownership"), so mark it again here
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -41,8 +41,8 @@ jobs:
     name: Re-run Python scripts on bundled files
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
       - run: python -m pip install --quiet numpy pandas matplotlib
@@ -59,6 +59,21 @@ jobs:
         run: |
           apt-get update -qq
           apt-get install -y -qq --no-install-recommends salmon kallisto rna-star subread rsem r-base-core r-cran-data.table python3 git ca-certificates
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: bash ci/reproduce.sh pipelines
+
+  microbiome:
+    name: Microbiome DA study (pinned conda environment)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Create the conda environment from the lock file
+        # (the runner context is not available in job-level env, so the prefix is set here from $RUNNER_TEMP)
+        run: |
+          export MAMBA_ROOT_PREFIX="$RUNNER_TEMP/mamba-root"
+          curl -fsSL -o "$RUNNER_TEMP/micromamba.tar.bz2" https://conda.anaconda.org/conda-forge/linux-64/micromamba-2.10.0-0.tar.bz2
+          mkdir -p "$RUNNER_TEMP/mm"
+          tar -xjf "$RUNNER_TEMP/micromamba.tar.bz2" -C "$RUNNER_TEMP/mm" bin/micromamba
+          "$RUNNER_TEMP/mm/bin/micromamba" create -y -q -p "$RUNNER_TEMP/da-env" --file microbiome-da-methods/conda-linux-64.lock
+      - run: DA_RSCRIPT="$RUNNER_TEMP/da-env/bin/Rscript" DA_CORES=4 bash ci/reproduce.sh microbiome

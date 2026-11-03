@@ -1,0 +1,7 @@
+# Keep the GitHub Actions used in .github/workflows up to date (monthly pull requests from Dependabot).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

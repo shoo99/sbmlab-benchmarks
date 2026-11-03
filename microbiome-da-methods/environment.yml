@@ -1,0 +1,18 @@
+# Human-readable list of the main packages. CI and the bundled results use the exact lock file
+# conda-linux-64.lock (all 392 packages with checksums):
+#   micromamba create -p ./env --file conda-linux-64.lock
+# On other platforms, create from this file instead (dependency builds may differ):
+#   micromamba create -p ./env -f environment.yml
+name: microbiome-da
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.5.3
+  - bioconductor-aldex2=1.42.0
+  - bioconductor-ancombc=2.14.0
+  - bioconductor-maaslin2=1.22.0
+  - r-microbiomestat=1.4
+  - bioconductor-deseq2=1.50.2
+  - bioconductor-edger=4.8.2
+  - bioconductor-limma=3.66.0

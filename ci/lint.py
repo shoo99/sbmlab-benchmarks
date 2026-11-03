@@ -9,6 +9,10 @@ Run by .github/workflows/checks.yml (job "static"); run locally with `python3 ci
 5. No script writes to an absolute path. Outputs belong next to the script; inputs may live anywhere.
    ALLOW lists the exceptions and why.
 6. Every scores.csv has the standard header (see CONTRIBUTING.md).
+7. catalog.csv has no TODO left (ci/new_folder.py writes TODO placeholders).
+8. Workflows use no ${{ runner.* }} expressions: GitHub rejects them in job-level env, which invalidates the whole
+   file (no job runs at all). Use the shell variables ($RUNNER_TEMP, ...) inside steps instead.
+9. CITATION.cff's version is the latest version the README lists ("latest version (vX.Y.Z: ...").
 """
 import ast
 import csv
@@ -56,6 +60,9 @@ def check_catalog(files):
             errors.append(f"catalog.csv: {r['folder']}: empty {', '.join(empty)}")
         if r["ci"] not in CI_VALUES:
             errors.append(f"catalog.csv: {r['folder']}: ci must be one of {', '.join(sorted(CI_VALUES))}")
+        todo = [c for c in COLUMNS if (r[c] or "").strip().upper().startswith("TODO")]
+        if todo:
+            errors.append(f"catalog.csv: {r['folder']}: fill in {', '.join(todo)} (still TODO)")
         if not r["post"].startswith("https://"):
             errors.append(f"catalog.csv: {r['folder']}: post must be a https:// link")
         run = re.search(rf"^\s*(check_out|run_ok|same_file)\s+{re.escape(r['folder'])}[/\s]", reproduce, re.M)
@@ -91,6 +98,10 @@ def check_files(files):
             for n, line in enumerate(path.read_text().splitlines(), 1):
                 if writes.search(line) and ABSOLUTE.search(line):
                     errors.append(f"{f}:{n}: writes to an absolute path; write next to the script or take the path as an argument")
+        if f.startswith(".github/workflows/") and f.endswith((".yml", ".yaml")):
+            for n, line in enumerate(path.read_text().splitlines(), 1):
+                if re.search(r"\$\{\{\s*runner\.", line):
+                    errors.append(f"{f}:{n}: ${{{{ runner.* }}}} expression; use $RUNNER_TEMP etc. inside a step instead")
         if Path(f).name == "scores.csv":
             with open(path, newline="") as fh:
                 header = next(csv.reader(fh), [])
@@ -98,7 +109,16 @@ def check_files(files):
                 errors.append(f"{f}: header must be {','.join(SCORES_HEADER)}")
 
 
+def check_citation():
+    readme = (ROOT / "README.md").read_text()
+    latest = re.search(r"latest version \(v(\d+\.\d+\.\d+)", readme)
+    cff = re.search(r'^version:\s*"?([0-9.]+)"?', (ROOT / "CITATION.cff").read_text(), re.M)
+    if latest and cff and latest.group(1) != cff.group(1):
+        errors.append(f"CITATION.cff: version {cff.group(1)}, but README lists v{latest.group(1)} as the latest version")
+
+
 files = git_files()
+check_citation()
 check_catalog(files)
 check_files(files)
 if errors:

@@ -1,0 +1,43 @@
+Template: smokers (left throat), 68 samples with >= 1,000 reads, 222 OTUs present in >= 10%; 63 OTUs eligible to change (>= 50%); bloom OTU otu174 (12.4% of reads)
+Each repetition: 20 + 20 samples drawn at random; OTUs in < 4 samples dropped; 20 repetitions per scenario, 4 cores
+
+== null (mean over 20 repetitions; 187 OTUs tested per repetition)
+                 p05 calls any_false
+ALDEx2         0.006  0.00      0.00
+ANCOM-BC2      0.324 23.50      1.00
+ANCOM-BC2 + SS 0.324  0.00      0.00
+MaAsLin2       0.047  0.05      0.05
+LinDA          0.047  0.15      0.10
+DESeq2         0.042  0.50      0.30
+Wilcoxon CLR   0.055  0.00      0.00
+Wilcoxon TSS   0.052  0.05      0.05
+   p05 = share of OTUs with p < 0.05 (expected 0.05); calls = significant OTUs per repetition (all false);
+   any_false = share of repetitions with at least one call (adjusted p < 0.05 keeps it <= 0.05 under the null)
+
+== planted (mean over 20 repetitions; 185 OTUs tested per repetition)
+               power   fdp calls false wrong   p05
+ALDEx2         0.020 0.000  0.30  0.00  0.00 0.006
+ANCOM-BC2      0.560 0.748 36.40 27.95  0.05 0.331
+ANCOM-BC2 + SS 0.017 0.000  0.25  0.00  0.00 0.331
+MaAsLin2       0.083 0.070  1.40  0.15  0.00 0.057
+LinDA          0.087 0.024  1.40  0.10  0.00 0.055
+DESeq2         0.333 0.110  6.05  1.05  0.00 0.045
+Wilcoxon CLR   0.100 0.054  2.60  1.10  0.00 0.084
+Wilcoxon TSS   0.083 0.017  1.30  0.05  0.00 0.068
+   power = changed OTUs called in the right direction; fdp = (false + wrong-direction calls) / calls (target 0.05);
+   false = unchanged OTUs called per repetition; wrong = changed OTUs called in the wrong direction; p05 = unchanged OTUs with p < 0.05
+
+== bloom (mean over 20 repetitions; 179 OTUs tested per repetition)
+               power   fdp calls false wrong   p05
+ALDEx2         0.053 0.000  0.85  0.00  0.00 0.006
+ANCOM-BC2      0.462 0.758 31.10 23.65  0.05 0.337
+ANCOM-BC2 + SS 0.031 0.000  0.50  0.00  0.00 0.337
+MaAsLin2       0.212 0.138  4.25  0.85  0.00 0.077
+LinDA          0.181 0.127  3.65  0.75  0.00 0.065
+DESeq2         0.306 0.099  5.65  0.75  0.00 0.040
+Wilcoxon CLR   0.181 0.351  9.60  6.70  0.00 0.228
+Wilcoxon TSS   0.200 0.141  4.10  0.90  0.00 0.085
+   power = changed OTUs called in the right direction; fdp = (false + wrong-direction calls) / calls (target 0.05);
+   false = unchanged OTUs called per repetition; wrong = changed OTUs called in the wrong direction; p05 = unchanged OTUs with p < 0.05
+
+R version 4.5.3 (2026-03-11) | ALDEx2 1.42.0 | ANCOMBC 2.14.0 | Maaslin2 1.22.0 | MicrobiomeStat 1.4 | DESeq2 1.50.2
