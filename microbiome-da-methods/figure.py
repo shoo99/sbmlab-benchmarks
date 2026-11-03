@@ -25,6 +25,9 @@ y = range(len(METHODS))
 axs[0].barh(y, [value("null", "share_p_below_0.05", m) for m in METHODS], color="#777777")
 axs[0].axvline(0.05, color="k", lw=0.8, ls="--")
 axs[0].set_title("a  Nothing changed: share of OTUs with p < 0.05", fontsize=9)
+if "ANCOM-BC2 + SS" in METHODS:
+    i = METHODS.index("ANCOM-BC2 + SS")
+    axs[0].text(0.02, i, "same p-values as ANCOM-BC2;\nthe filter only removes calls", va="center", fontsize=6.5, color="white")
 for ax, metric, title, ref in [(axs[1], "fdp", "b  False discovery proportion of calls", 0.05),
                                (axs[2], "power", "c  Changed OTUs found (right direction)", None)]:
     h = 0.38
@@ -32,6 +35,10 @@ for ax, metric, title, ref in [(axs[1], "fdp", "b  False discovery proportion of
     ax.barh([i + h / 2 for i in y], [value("bloom", metric, m) for m in METHODS], h, color="#DD8452", label="same + top OTU 8-fold (bloom)")
     if ref is not None:
         ax.axvline(ref, color="k", lw=0.8, ls="--")
+    if metric == "fdp":       # FDP from few calls is noisy: show the calls per repetition next to each bar
+        for i, m in enumerate(METHODS):
+            for dy, sc in ((-h / 2, "planted"), (h / 2, "bloom")):
+                ax.text(value(sc, metric, m) + 0.01, i + dy, f"{value(sc, 'calls_per_rep', m):.1f} calls/rep", va="center", fontsize=6)
     ax.set_title(title, fontsize=9)
 for ax in axs:
     ax.set_yticks(list(y), METHODS if ax is axs[0] else [""] * len(METHODS), fontsize=8)

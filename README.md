@@ -73,6 +73,12 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 | [string-background](string-background) | [STRING enrichment background test](https://sbmlab.com/blog/string-enrichment-background-random-proteins-test-2026) | Random lists of detected proteins: median 103 "significant" GO/KEGG terms with STRING's default whole-genome background, 0 with the detected proteins as background |
 | [r-vs-python-read-bench](r-vs-python-read-bench) | [R vs Python for bioinformatics](https://sbmlab.com/blog/r-vs-python-bioinformatics-guide-2026) | Reading and summarising a 146 MB MaxQuant `evidence.txt`: data.table 0.04 s, polars 0.16 s, pandas 0.51 s, base R 5.8 s (base R read every column; the others read only the 4 they need) |
 
+### Microbiome: differential abundance with planted changes
+
+| Folder | Post | What it shows |
+|---|---|---|
+| [microbiome-da-methods](microbiome-da-methods) | Issue [#18](https://github.com/shoo99/sbmlab-benchmarks/issues/18) (no post yet) | smokers 16S counts, 20 vs 20, changes planted on the absolute scale. Null: ANCOM-BC2's q-values give 23.5 false calls per repetition (32% of OTUs p < 0.05), all removed by its own sensitivity filter, which also removes nearly all true calls; MaAsLin2, LinDA, DESeq2 and Wilcoxon are calibrated (4.2–5.5%). Planted: DESeq2 finds 33% at FDP 0.11, others 2–10%. A bloom of the top OTU sends Wilcoxon-on-CLR to FDP 0.35 |
+
 ### Transcriptomics: known-ratio benchmark (SEQC/MAQC, in progress)
 
 | Folder | Status | What it measures |
