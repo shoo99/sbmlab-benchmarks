@@ -30,7 +30,8 @@ rows <- list()
 for (tool in names(tool_names)) {
   f <- file.path(IN, sprintf("genes_%s.tsv.gz", tool))
   if (!file.exists(f)) next
-  x <- fread(f)
+  ## base R gzfile(): fread() would need the R.utils package to read .gz
+  x <- as.data.table(utils::read.delim(gzfile(f), check.names = FALSE, colClasses = c(gene_id = "character")))
   smp <- setdiff(names(x), "gene_id")
   cols <- lapply(c(A = "A", B = "B", C = "C", D = "D"), function(s) grep(sprintf("^%s_", s), smp, value = TRUE))
   m <- as.matrix(x[, ..smp])
