@@ -12,6 +12,8 @@ chart.py → sbmlab public/images/blog/imputation-hye-ecoli.png. msImpute instal
 
 The version that produced the bundled `impute_<tag>.out` and `.csv.gz` counted every non-human call as found, including yeast called up and E. coli called down, and left those calls out of the FDP. `impute_bench.R` now scores by direction and also writes `impute_<tag>_summary.csv`. The raw MaxQuant tables are not in the repository, so the bundled outputs were not re-run. Instead, `direction_rescore.py` re-scores them: it recovers each method's human-median offset from the printed counts, and checks that the result is unique and that the `none` offset matches `maxquant-hye/quant_scores.csv` (+0.144). It writes `impute_<tag>_summary.csv` and `direction_rescore.out`.
 
+**Re-run on the raw data (2026-11-03).** The fixed `impute_bench.R` was then re-run on the MaxQuant 2.8.1 tables (`~/mq-hye/...`). All 24 summary rows came out identical to the re-scored ones, and the centred log2FC and adj.P of all 50,215 / 40,768 rows match the previous `.csv.gz`. The bundled `impute_<tag>.out`, `.csv.gz` (now with a `logFC` column) and `_summary.csv` are from that re-run. `direction_rescore.py` and `direction_rescore.out` are kept as the record of the re-score; the script reads the outputs of the old version, which are in the git history before this change.
+
 With the strict filter (≥2 of 3 in both groups), no method had a wrong-direction call, so those rows are unchanged. With the loose filter (≥2 of 3 in either group):
 
 | Data | Method | Found (before → after) | FDP (before → after) |
