@@ -82,7 +82,7 @@ run_methods <- function(cnt, grp, seed) {
                        fixed_effects = "group", standardize = FALSE, plot_heatmap = FALSE, plot_scatter = FALSE, cores = 1))$results
   ld <- quiet(linda(feature.dat = cnt, meta.dat = meta, formula = "~group", feature.dat.type = "count", prev.filter = 0,
                     alpha = 0.05, verbose = FALSE))$output$groupB
-  dds <- DESeqDataSetFromMatrix(round(cnt), meta, ~group)
+  dds <- quiet(DESeqDataSetFromMatrix(round(cnt), meta, ~group))         # it messages "converting counts to integer mode"
   dds <- estimateSizeFactors(dds, type = "poscounts")
   ds <- as.data.frame(results(quiet(DESeq(dds, quiet = TRUE)), name = "group_B_vs_A"))
   wil <- function(x) {
