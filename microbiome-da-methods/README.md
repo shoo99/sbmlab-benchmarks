@@ -40,7 +40,7 @@ All tools run in a conda environment pinned in `conda-linux-64.lock` (392 packag
 | Method | Settings | Call |
 |---|---|---|
 | ALDEx2 | `aldex(test = "t", mc.samples = 128, denom = "all", effect = TRUE)` | Welch BH < 0.05 |
-| ANCOM-BC2 | `ancombc2(fix_formula = "group", p_adj_method = "BH")` (package default is Holm) | q < 0.05 (`diff`) |
+| ANCOM-BC2 | `ancombc2(fix_formula = "group", p_adj_method = "BH", prv_cut = 0, lib_cut = 0, struc_zero = FALSE, neg_lb = FALSE)` (package default adjustment is Holm; `prv_cut = 0` turns off its own 10% prevalence filter because the shared filter, present in at least 4 of 40 samples, is applied before every method) | q < 0.05 (`diff`) |
 | ANCOM-BC2 + SS | same run | q < 0.05 and passed the pseudo-count sensitivity check (`diff_robust`) |
 | MaAsLin2 | TSS normalisation, LOG transform, LM | q < 0.05 (package default is 0.25) |
 | LinDA | `linda(feature.dat.type = "count")` | padj < 0.05 |
