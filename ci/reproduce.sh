@@ -89,6 +89,10 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok batch-correction-unbalanced "MPLBACKEND=Agg python3 figure.py"
   run_ok microbiome-da-methods "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
+  run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
+  same_file docs/catalog.md
+  same_file docs/scores_summary.csv
+  same_file docs/scores_summary.md
 fi
 
 if [ "$GROUP" = microbiome ]; then
