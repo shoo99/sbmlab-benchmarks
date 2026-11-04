@@ -16,6 +16,9 @@
    release changes: none
    documented example broken (HTTP 200 but changed content): none
    failed calls: Ensembl 2026-11-04 error:timeout
+   version request failed: none
+   version request needed a retry: none
+   release source answered but no release read: none
 
 == bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls
    database      calls  uptime  median s   p95 s

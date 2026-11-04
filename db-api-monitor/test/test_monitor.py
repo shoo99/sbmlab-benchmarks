@@ -23,6 +23,7 @@ import monitor  # noqa: E402
 
 MARK = "BODYMARKER-must-not-be-stored"
 state = {"run": 1}
+hits = {}
 
 
 def responses():
@@ -40,11 +41,17 @@ def responses():
         "/interpro-root": (200, {"databases": {"interpro": {"version": "105.0"}}}, {}),
         "/quickgo": (200, {"numberOfHits": 300}, {}),
         "/string": (200, [{"preferredName_A": "SOD1", "x": MARK}], {}),
-        "/string-version": (200, [{"string_version": "12.5"}], {}),
+        # run 1: the STRING version request fails once and succeeds on the retry
+        "/string-version": ((503, {"e": 1}, {}) if not r2 and hits.get("/string-version", 0) == 1
+                            else (200, [{"string_version": "12.5"}], {})),
         "/reactome": (200, [{"stId": "R-HSA-1"}], {}),
-        "/reactome-version": (200, "97", {}),
+        # run 2: Reactome's version request answers 200 with nothing readable (a parser problem)
+        "/reactome-version": (200, "" if r2 else "97", {}),
         "/kegg": (200, "hsa:6647\tpath:hsa04213\n", {}),
-        "/kegg-info": (200, "pathway          Release 116.0+/10-13, Oct 26\n", {}),
+        # run 1: KEGG's info request fails on both tries (a path or server problem); run 2: the real format
+        "/kegg-info": ((403, {"e": 1}, {}) if not r2 else
+                       (200, "pathway          KEGG Pathway Database\npath             Release 118.0+/04-08, Apr 26\n"
+                             "                 Kanehisa Laboratories\n                 585 entries\n", {})),
         "/geo": (200, {"esearchresult": {"count": "30"}}, {}),
         "/pride": (200, [{"accession": "PXD000001"}], {}) if r2 else (500, {"error": MARK}, {}),
     }
@@ -52,6 +59,7 @@ def responses():
 
 class Handler(http.server.BaseHTTPRequestHandler):
     def _answer(self):
+        hits[self.path] = hits.get(self.path, 0) + 1
         status, body, headers = responses()[self.path]
         data = body.encode() if isinstance(body, str) else json.dumps(body).encode()
         self.send_response(status)
@@ -97,9 +105,19 @@ with tempfile.TemporaryDirectory() as tmp:
     r2 = {r["db"]: r for r in rows[13:]}
     checks.append(("26 rows, header written once", len(rows) == 26 and open(out).read().count("date_utc") == 1))
     want = {"UniProt": "2026_04", "Ensembl": "116", "AlphaFold DB": "6", "InterPro": "105.0", "STRING": "12.5",
-            "Reactome": "97", "KEGG": "116.0+", "NCBI Gene": "", "PRIDE": ""}
+            "Reactome": "97", "KEGG": "", "NCBI Gene": "", "PRIDE": ""}
     for db, rel in want.items():
         checks.append((f"run 1 {db}: release '{rel}'", r1[db]["release"] == rel))
+    checks.append(("run 1 release_status: header / body / version request status",
+                   (r1["UniProt"]["release_status"], r1["AlphaFold DB"]["release_status"], r1["Ensembl"]["release_status"],
+                    r1["NCBI Gene"]["release_status"]) == ("header", "body", "200", "")))
+    checks.append(("run 1 STRING: version request failed once, retry succeeded (503>200)",
+                   r1["STRING"]["release_status"] == "503>200"))
+    checks.append(("run 1 KEGG: version request failed twice (403>403), release empty",
+                   r1["KEGG"]["release_status"] == "403>403" and r1["KEGG"]["release"] == ""))
+    checks.append(("run 2 KEGG: real info format parsed as 118.0+", r2["KEGG"]["release"] == "118.0+"))
+    checks.append(("run 2 Reactome: answered 200 but nothing readable", r2["Reactome"]["release_status"] == "200"
+                   and r2["Reactome"]["release"] == ""))
     checks.append(("run 1: twelve APIs HTTP 200 with the example intact",
                    sum(r["status"] == "200" and r["example_ok"] == "1" for r in r1.values()) == 12))
     checks.append(("run 1 PRIDE: status 500, example_ok 0", r1["PRIDE"]["status"] == "500" and r1["PRIDE"]["example_ok"] == "0"))
@@ -113,13 +131,18 @@ with tempfile.TemporaryDirectory() as tmp:
     status, sec, _, _ = monitor.call("GET", f"http://127.0.0.1:{port}/uniprot", None, timeout=2)
     checks.append((f"unreachable host recorded as error:connection ({status})", status == "error:connection"))
 
-    subprocess.run([sys.executable, str(HERE / "summarize.py"), str(out), str(t)], check=True, capture_output=True)
+    summ = subprocess.run([sys.executable, str(HERE / "summarize.py"), str(out), str(t)], check=True, capture_output=True,
+                          text=True).stdout
+    checks.append(("summary lists the failed KEGG version request", "version request failed: KEGG" in summ))
+    checks.append(("summary lists the STRING retry", "needed a retry: STRING" in summ))
+    checks.append(("summary lists Reactome as answered but not read", "no release read: Reactome" in summ))
     sc = list(csv.DictReader(open(t / "scores.csv")))
     v = lambda db, metric: next(float(r["value"]) for r in sc if r["tool"] == db and r["metric"] == metric
                                 and r["dataset"].startswith("weekly"))
     checks.append(("summary: PRIDE uptime 0.5", v("PRIDE", "uptime_share") == 0.5))
     checks.append(("summary: UniProt example_ok share 0.5, one release change",
                    v("UniProt", "example_ok_share") == 0.5 and v("UniProt", "release_changes") == 1))
+    checks.append(("summary: KEGG release seen once, no change counted", v("KEGG", "release_changes") == 0))
     checks.append(("summary: Ensembl uptime 1, no release change",
                    v("Ensembl", "uptime_share") == 1 and v("Ensembl", "release_changes") == 0))
     checks.append(("summary: reference rows from bioinfo-db-check present",
