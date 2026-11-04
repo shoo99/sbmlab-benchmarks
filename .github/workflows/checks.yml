@@ -16,7 +16,7 @@ jobs:
     name: Catalog, JSON, syntax, output paths
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - run: python3 ci/lint.py
 
   reproduce-r:
@@ -32,7 +32,7 @@ jobs:
           apt-get update -qq
           apt-get install -y -qq --no-install-recommends r-base-core r-cran-data.table r-bioc-limma r-bioc-sva r-bioc-bladderbatch \
             r-cran-survival r-cran-maxstat r-bioc-edger r-bioc-deseq2 git ca-certificates
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       # actions/checkout marks the workspace as safe only in its own step's HOME; in a container job, git in later steps
       # then refuses the checkout because another user owns it ("dubious ownership"), so mark it again here
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -42,7 +42,7 @@ jobs:
     name: Re-run Python scripts on bundled files
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
@@ -60,6 +60,6 @@ jobs:
         run: |
           apt-get update -qq
           apt-get install -y -qq --no-install-recommends salmon kallisto rna-star subread rsem r-base-core r-cran-data.table python3 git ca-certificates
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: bash ci/reproduce.sh pipelines
