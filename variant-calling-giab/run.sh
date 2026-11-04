@@ -4,7 +4,8 @@
 #
 # Usage: bash run.sh [step ...]     steps: prepare bcftools gatk deepvariant happy   (default: all, in that order)
 #   env: VC_BIN     bin folder with samtools, bcftools, gatk, rtg      (conda env from envs/vc.yml)
-#        DV_BIN     bin folder with run_deepvariant                     (conda env from envs/deepvariant.yml)
+#        DV_RUN     command that runs DeepVariant's run_deepvariant (default: the official Docker image,
+#                   docker run google/deepvariant:1.10.0 with data/ and work/ mounted at the same paths)
 #        HAPPY_BIN  bin folder with hap.py and rtg                      (conda env from envs/happy.yml)
 #        THREADS    (default 4)   DATA (default data)   WORK (default work)   COVERAGE (default 35; e.g. 15 downsamples)
 # Writes: $WORK/<caller>.vcf.gz (not tracked), happy/<caller>_<coverage>x.extended.csv (trimmed, tracked),
@@ -13,10 +14,10 @@
 set -euo pipefail
 cd "$(dirname "$0")" || exit 1
 THREADS=${THREADS:-4}; DATA=${DATA:-data}; WORK=${WORK:-work}; COV=${COVERAGE:-35}
-VC_BIN=${VC_BIN:-}; DV_BIN=${DV_BIN:-}; HAPPY_BIN=${HAPPY_BIN:-}
+VC_BIN=${VC_BIN:-}; HAPPY_BIN=${HAPPY_BIN:-}
 tool() { if [ -n "$2" ]; then echo "$2/$1"; else echo "$1"; fi; }
 SAMTOOLS=$(tool samtools "$VC_BIN"); BCFTOOLS=$(tool bcftools "$VC_BIN"); GATK=$(tool gatk "$VC_BIN"); RTG=$(tool rtg "$VC_BIN")
-DV=$(tool run_deepvariant "$DV_BIN"); HAPPY=$(tool hap.py "$HAPPY_BIN")
+HAPPY=$(tool hap.py "$HAPPY_BIN")
 REF=$DATA/GRCh38_no_alt.fasta; REGION=chr20
 STEPS=("$@"); [ ${#STEPS[@]} -eq 0 ] && STEPS=(prepare bcftools gatk deepvariant happy)
 mkdir -p "$WORK" happy
@@ -104,10 +105,14 @@ SH
     "$BCFTOOLS" concat -a -Oz -o "$out" "$WORK/gatk_snp.f.vcf.gz" "$WORK/gatk_indel.f.vcf.gz" && "$BCFTOOLS" index -t -f "$out"
     ;;
   deepvariant)
-    # DeepVariant WGS model, THREADS shards; RefCall records carry FILTER RefCall, so hap.py's PASS rows are its calls
+    # DeepVariant 1.10.0, WGS model (with its small model for easy sites), THREADS shards, via the official Docker
+    # image unless DV_RUN names another way to call run_deepvariant (e.g. singularity exec ... run_deepvariant).
+    # RefCall records carry FILTER RefCall, so hap.py's PASS rows are its calls.
     B=$(bam); out="$WORK/deepvariant_${COV}x.vcf.gz"
-    timed deepvariant "$DV" --model_type=WGS --ref="$REF" --reads="$B" --regions=$REGION --output_vcf="$out" \
-      --num_shards="$THREADS" --intermediate_results_dir="$WORK/dv_tmp_${COV}x"
+    D=$(cd "$DATA" && pwd -P); W=$(cd "$WORK" && pwd -P)
+    DV_RUN=${DV_RUN:-docker run --rm -v "$D:$D" -v "$W:$W" -w "$W" google/deepvariant:1.10.0 /opt/deepvariant/bin/run_deepvariant}
+    timed deepvariant bash -c "$DV_RUN --model_type=WGS --ref='$D/$(basename "$REF")' --reads='$(cd "$(dirname "$B")" && pwd -P)/$(basename "$B")' \
+      --regions=$REGION --output_vcf='$W/$(basename "$out")' --num_shards=$THREADS --intermediate_results_dir='$W/dv_tmp_${COV}x'"
     ;;
   happy)
     # hap.py with the vcfeval engine against the chr20 truth, in the benchmark regions, with the GIAB strata
