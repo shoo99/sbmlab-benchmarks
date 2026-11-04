@@ -3,8 +3,8 @@
 # results. Runs in a temporary copy of the tracked files, so the working tree is never changed.
 #
 # Usage: bash ci/reproduce.sh [r|python|all|pipelines|microbiome]     (default all = r + python)
-#   r          needs R with data.table, limma, sva, bladderbatch, survival and maxstat (CI: Ubuntu 24.04 packages,
-#              R 4.3.3, limma 3.58.1)
+#   r          needs R with data.table, limma, sva, bladderbatch, survival, maxstat, edgeR and DESeq2 (CI: Ubuntu 24.04
+#              packages, R 4.3.3, limma 3.58.1)
 #   python     needs Python with numpy, pandas and matplotlib
 #   pipelines  end-to-end tests on synthetic data; needs salmon, kallisto, STAR, subread, RSEM, R with data.table
 #   microbiome re-runs microbiome-da-methods in its pinned conda environment; set DA_RSCRIPT to that env's Rscript
@@ -82,6 +82,11 @@ if [ "$GROUP" = r ] || [ "$GROUP" = all ]; then
   check_out random-signatures-tcga "Rscript score.R" score.out
   same_file random-signatures-tcga/scores.csv
   run_ok random-signatures-tcga "Rscript test/test_synthetic.R"     # tcga_signatures.R on synthetic data, known answers
+  check_out scrna-pseudobulk-de "OPENBLAS_NUM_THREADS=1 Rscript sim_study.R" sim_study.out
+  same_file scrna-pseudobulk-de/sim_scores.csv
+  check_out scrna-pseudobulk-de "Rscript score.R" score.out
+  same_file scrna-pseudobulk-de/scores.csv
+  run_ok scrna-pseudobulk-de "Rscript test/test_kang_format.R"     # kang_study.R on synthetic data in the GEO layout
   run_ok common "Rscript tests/test_known_ratio.R"
 fi
 
@@ -95,6 +100,7 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok batch-correction-unbalanced "MPLBACKEND=Agg python3 figure.py"
   run_ok microbiome-da-methods "MPLBACKEND=Agg python3 figure.py"
   run_ok random-signatures-tcga "MPLBACKEND=Agg python3 figure.py"
+  run_ok scrna-pseudobulk-de "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
   same_file docs/catalog.md

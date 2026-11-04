@@ -8,3 +8,4 @@ __pycache__/
 .Rhistory
 Rplots.pdf
 random-signatures-tcga/data/
+scrna-pseudobulk-de/data/

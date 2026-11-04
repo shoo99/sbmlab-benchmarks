@@ -80,6 +80,12 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 |---|---|---|
 | [microbiome-da-methods](microbiome-da-methods) | Issue [#18](https://github.com/shoo99/sbmlab-benchmarks/issues/18) (no post yet) | smokers 16S counts, 20 vs 20, changes planted on the absolute scale. Null: ANCOM-BC2's q-values give 23.5 false calls per repetition (32% of OTUs p < 0.05), all removed by its own sensitivity filter, which also removes nearly all true calls; MaAsLin2, LinDA, DESeq2 and Wilcoxon are calibrated (4.2–5.5%). Planted: DESeq2 finds 33% at FDP 0.11, others 2–10%. A bloom of the top OTU sends Wilcoxon-on-CLR to FDP 0.35 |
 
+### Single-cell: known-answer benchmarks (real-data runs in progress)
+
+| Folder | Status | What it shows |
+|---|---|---|
+| [scrna-pseudobulk-de](scrna-pseudobulk-de) | Simulation done; Kang 2018 run pending (issue [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6)) | 8 simulated donors, 4 vs 4, no real difference: cell-level Wilcoxon and t-test give p < 0.05 for 47% of genes (720 false BH calls per repetition); pseudobulk edgeR, DESeq2 and limma-voom 4.9–5.3% and none. With 10% of genes 2-fold, 78% of cell-level calls are false vs 4–6% for pseudobulk |
+
 ### Transcriptomics: known-ratio benchmark (SEQC/MAQC, in progress)
 
 | Folder | Status | What it measures |

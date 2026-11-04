@@ -25,13 +25,13 @@ jobs:
     # Plain Ubuntu 24.04 packages: R 4.3.3 and limma 3.58.1, the versions the bundled outputs were made with
     container: ubuntu:24.04
     steps:
-      - name: Install R, data.table, limma, sva, bladderbatch, survival, maxstat and git
+      - name: Install R, data.table, limma, sva, bladderbatch, survival, maxstat, edgeR, DESeq2 and git
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           apt-get update -qq
           apt-get install -y -qq --no-install-recommends r-base-core r-cran-data.table r-bioc-limma r-bioc-sva r-bioc-bladderbatch \
-            r-cran-survival r-cran-maxstat git ca-certificates
+            r-cran-survival r-cran-maxstat r-bioc-edger r-bioc-deseq2 git ca-certificates
       - uses: actions/checkout@v5
       # actions/checkout marks the workspace as safe only in its own step's HOME; in a container job, git in later steps
       # then refuses the checkout because another user owns it ("dubious ownership"), so mark it again here
