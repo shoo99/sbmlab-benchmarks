@@ -83,7 +83,7 @@ DBL_RSCRIPT=./env/bin/Rscript DBL_PYTHON=./env/bin/python3 bash run.sh
     - the truth `prepare.R` derives equals the generator's labels
     - all seven tools reach AUPRC of at least twice the doublet share
     - scDblFinder and Scrublet find at least half the visible doublets at the expected rate
-  - CI runs this test in a job that builds the environment from the lock file.
+  - CI runs this test in its own workflow, [`doublets`](../.github/workflows/doublets.yml), which builds the environment from the lock file. It runs when `scrna-doublets/` or `ci/reproduce.sh` change, once a week, and on demand.
 
 ## Results
 

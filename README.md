@@ -131,8 +131,8 @@ A summary of all the tools, versions and timings is in [Best bioinformatics tool
 - [`common/`](common/README.md) holds the shared scoring code in R and Python. Its tests re-create the bundled DIA-NN score tables exactly.
 - Three more CI jobs:
   - pipeline tests on synthetic data with a known answer (`ci/reproduce.sh pipelines`)
-  - the microbiome study, re-run in its pinned conda environment (`ci/reproduce.sh microbiome`)
-  - the doublet pipeline on synthetic data, in its pinned conda environment (`ci/reproduce.sh doublets`)
+  - the microbiome study, re-run in its pinned conda environment (`ci/reproduce.sh microbiome`). It takes 15-20 minutes, so it is a separate workflow, [`microbiome`](.github/workflows/microbiome.yml), that runs only when `microbiome-da-methods/`, `common/` or `ci/reproduce.sh` change, once a week, and on demand.
+  - the doublet pipeline on synthetic data, in its pinned conda environment (`ci/reproduce.sh doublets`). It is a separate workflow too, [`doublets`](.github/workflows/doublets.yml), that runs only when `scrna-doublets/` or `ci/reproduce.sh` change, once a week, and on demand.
 - To add a folder, run `python3 ci/new_folder.py <folder> --area <area> --post <url>`. It copies [`docs/template/`](docs/template) and adds a catalog row. Then follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What is not here

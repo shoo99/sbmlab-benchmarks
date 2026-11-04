@@ -1,0 +1,39 @@
+name: doublets
+
+# The doublet pipeline test (scrna-doublets/) needs its own conda environment (R with scDblFinder, scds, Seurat and
+# DoubletFinder; Python with Scrublet) and about 5 minutes, so it runs only when its inputs change, plus once a week
+# and on demand. The other checks are in checks.yml.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scrna-doublets/**"
+      - "ci/reproduce.sh"
+      - ".github/workflows/doublets.yml"
+  pull_request:
+    paths:
+      - "scrna-doublets/**"
+      - "ci/reproduce.sh"
+      - ".github/workflows/doublets.yml"
+  schedule:
+    - cron: "41 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  doublets:
+    name: Doublet pipeline on synthetic data (pinned conda environment)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Create the conda environment from the lock file
+        # (the runner context is not available in job-level env, so the prefix is set here from $RUNNER_TEMP)
+        run: |
+          export MAMBA_ROOT_PREFIX="$RUNNER_TEMP/mamba-root"
+          curl -fsSL -o "$RUNNER_TEMP/micromamba.tar.bz2" https://conda.anaconda.org/conda-forge/linux-64/micromamba-2.10.0-0.tar.bz2
+          mkdir -p "$RUNNER_TEMP/mm"
+          tar -xjf "$RUNNER_TEMP/micromamba.tar.bz2" -C "$RUNNER_TEMP/mm" bin/micromamba
+          "$RUNNER_TEMP/mm/bin/micromamba" create -y -q -p "$RUNNER_TEMP/dbl-env" --file scrna-doublets/conda-linux-64.lock
+      - run: DBL_RSCRIPT="$RUNNER_TEMP/dbl-env/bin/Rscript" DBL_PYTHON="$RUNNER_TEMP/dbl-env/bin/python3" bash ci/reproduce.sh doublets
