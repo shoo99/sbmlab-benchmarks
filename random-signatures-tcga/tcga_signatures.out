@@ -1,0 +1,31 @@
+== BRCA: 1081 patients, 145 PFI events (13%), stage known for 1057 (I:181 II:611 III:245 IV:20); 17655 expressed genes
+   proliferation score from 11 of 11 genes; 10510 genes with |r| < 0.2 (proliferation-free pool), median |r| of all genes 0.16
+   random 50-gene sets, observed labels, share p < 0.05:
+                 cox               median            opt_naive 
+               0.162                0.082                0.561 
+       opt_corrected       cox_adj_prolif cox_adj_prolif_stage 
+               0.075                0.104                0.071 
+== KIRC: 529 patients, 159 PFI events (30%), stage known for 526 (I:265 II:57 III:123 IV:81); 17659 expressed genes
+   proliferation score from 11 of 11 genes; 11605 genes with |r| < 0.2 (proliferation-free pool), median |r| of all genes 0.14
+   random 50-gene sets, observed labels, share p < 0.05:
+                 cox               median            opt_naive 
+               0.565                0.388                0.872 
+       opt_corrected       cox_adj_prolif cox_adj_prolif_stage 
+               0.597                0.165                0.070 
+== LUAD: 502 patients, 206 PFI events (41%), stage known for 494 (I:269 II:120 III:80 IV:25); 17763 expressed genes
+   proliferation score from 11 of 11 genes; 10363 genes with |r| < 0.2 (proliferation-free pool), median |r| of all genes 0.17
+   random 50-gene sets, observed labels, share p < 0.05:
+                 cox               median            opt_naive 
+               0.150                0.056                0.517 
+       opt_corrected       cox_adj_prolif cox_adj_prolif_stage 
+               0.061                0.089                0.044 
+== COAD: 278 patients, 81 PFI events (29%), stage known for 268 (I:44 II:107 III:79 IV:38); 17458 expressed genes
+   proliferation score from 11 of 11 genes; 10148 genes with |r| < 0.2 (proliferation-free pool), median |r| of all genes 0.17
+   random 50-gene sets, observed labels, share p < 0.05:
+                 cox               median            opt_naive 
+               0.193                0.102                0.687 
+       opt_corrected       cox_adj_prolif cox_adj_prolif_stage 
+               0.095                0.170                0.099 
+
+wrote tcga_pvalues.csv: 17608 rows (BRCA, KIRC, LUAD, COAD)
+R version 4.3.3 (2024-02-29) | survival 3.5.8 | maxstat 0.7.25 | data.table 1.14.10

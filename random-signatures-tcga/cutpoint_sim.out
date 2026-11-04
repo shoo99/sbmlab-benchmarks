@@ -1,0 +1,12 @@
+== Share of 1000 repetitions with p < 0.05 (null: false positives, expected 0.05; otherwise power)
+   cox = Cox, continuous score; median = median split; opt_naive / opt_corrected = optimal cut-point, naive /
+   corrected p; hr_*: median hazard ratio of high vs low, folded to >= 1 (truth under the null: 1)
+
+    n  scenario events   cox median opt_naive opt_corrected hr_median hr_optimal
+  100      null   0.37 0.044  0.060     0.439         0.032      1.26       2.13
+  300      null   0.37 0.048  0.044     0.457         0.044      1.14       1.56
+ 1000      null   0.37 0.040  0.052     0.486         0.036      1.08       1.28
+  300    linear   0.37 0.649  0.457     0.895         0.474      1.43       1.94
+  300 threshold   0.42 0.748  0.523     0.986         0.827      1.44       2.16
+
+R version 4.3.3 (2024-02-29) | survival 3.5.8; maxstat 0.7.25

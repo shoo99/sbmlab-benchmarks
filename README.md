@@ -52,6 +52,7 @@ Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM,
 | Folder | Post | What it shows |
 |---|---|---|
 | [batch-correction-unbalanced](batch-correction-unbalanced) | Issue [#8](https://github.com/shoo99/sbmlab-benchmarks/issues/8) (no post yet) | Unbalanced batches, simulated null and bladderbatch fake labels. Share of null genes with p < 0.05 at 11:1 imbalance: ComBat with group protected 0.29, `removeBatchEffect` 0.28, batch in the limma model 0.05; BH 5% calls 61–62% false after protected correction vs 4% with batch in the model |
+| [random-signatures-tcga](random-signatures-tcga) | Issue [#11](https://github.com/shoo99/sbmlab-benchmarks/issues/11) (no post yet) | Simulated null marker: optimal cut-point with its naive log-rank p gives p < 0.05 in 44–49% of repetitions (corrected p 3–4%). TCGA PFI: random 50-gene sets reach Cox p < 0.05 in 57% (KIRC), 19% (COAD), 16% (BRCA), 15% (LUAD); 4–10% after adjusting for proliferation and stage |
 | [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share (pooled over runs; mean per-run FDP 4.2 vs 5.2%) |
 
 ### Proteomics: known-ratio benchmark (PRIDE PXD028735)

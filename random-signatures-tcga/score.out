@@ -1,0 +1,62 @@
+Share of signatures (random sets) or permutations (fixed signatures) with p < 0.05;
+p for the fixed signatures on the observed labels. Under permuted labels the expected share is 0.05.
+cox = Cox, continuous score; median = median split; opt_naive / opt_corrected = optimal cut-point, naive /
+corrected p; cox_adj_* = Cox adjusted for proliferation (and stage). NA: not applicable.
+
+== TCGA BRCA, PFI: 1081 patients, 145 events 
+-- share with p < 0.05
+                                               signatures   labels   cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+                          random 50-gene sets (1000 sets) observed 0.162  0.082     0.561         0.075          0.104                0.071
+                          random 50-gene sets (1000 sets) permuted 0.044  0.043     0.450         0.036          0.036                0.042
+      random 50-gene sets, proliferation-free (1000 sets) observed 0.101  0.071     0.518         0.056          0.084                0.036
+      random 50-gene sets, proliferation-free (1000 sets) permuted 0.053  0.043     0.455         0.044          0.055                0.057
+       proliferation (PAM50, 11 genes) (200 permutations) permuted 0.050  0.080     0.455         0.030             NA                   NA
+ top 50 proliferation-correlated genes (200 permutations) permuted 0.045  0.050     0.465         0.040          0.055                0.065
+-- p-value of the fixed signatures, observed labels
+                             signature   cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+       proliferation (PAM50, 11 genes) 0.031 0.0098    0.0037         0.073             NA                   NA
+ top 50 proliferation-correlated genes 0.019 0.0450    0.0023         0.045           0.17                 0.31
+
+== TCGA KIRC, PFI: 529 patients, 159 events 
+-- share with p < 0.05
+                                               signatures   labels   cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+                          random 50-gene sets (1000 sets) observed 0.565  0.388     0.872         0.597          0.165                0.070
+                          random 50-gene sets (1000 sets) permuted 0.058  0.045     0.461         0.035          0.058                0.057
+      random 50-gene sets, proliferation-free (1000 sets) observed 0.242  0.185     0.765         0.255          0.116                0.095
+      random 50-gene sets, proliferation-free (1000 sets) permuted 0.066  0.051     0.465         0.045          0.063                0.060
+       proliferation (PAM50, 11 genes) (200 permutations) permuted 0.040  0.050     0.430         0.035             NA                   NA
+ top 50 proliferation-correlated genes (200 permutations) permuted 0.085  0.060     0.470         0.075          0.060                0.060
+-- p-value of the fixed signatures, observed labels
+                             signature     cox  median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+       proliferation (PAM50, 11 genes) 4.4e-17 3.0e-07   6.3e-22       2.1e-14             NA                   NA
+ top 50 proliferation-correlated genes 1.8e-15 9.1e-06   2.1e-20       6.7e-13           0.26                 0.29
+
+== TCGA LUAD, PFI: 502 patients, 206 events 
+-- share with p < 0.05
+                                               signatures   labels   cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+                          random 50-gene sets (1000 sets) observed 0.150  0.056     0.517         0.061          0.089                0.044
+                          random 50-gene sets (1000 sets) permuted 0.054  0.053     0.470         0.042          0.051                0.051
+      random 50-gene sets, proliferation-free (1000 sets) observed 0.042  0.041     0.434         0.032          0.049                0.025
+      random 50-gene sets, proliferation-free (1000 sets) permuted 0.066  0.045     0.490         0.033          0.064                0.066
+       proliferation (PAM50, 11 genes) (200 permutations) permuted 0.020  0.035     0.490         0.015             NA                   NA
+ top 50 proliferation-correlated genes (200 permutations) permuted 0.060  0.025     0.450         0.030          0.040                0.060
+-- p-value of the fixed signatures, observed labels
+                             signature    cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+       proliferation (PAM50, 11 genes) 0.0026  0.007   0.00120        0.0450             NA                   NA
+ top 50 proliferation-correlated genes 0.0024  0.013   0.00025        0.0047           0.74                 0.65
+
+== TCGA COAD, PFI: 278 patients, 81 events 
+-- share with p < 0.05
+                                               signatures   labels   cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+                          random 50-gene sets (1000 sets) observed 0.193  0.102     0.687         0.095          0.170                0.099
+                          random 50-gene sets (1000 sets) permuted 0.054  0.055     0.465         0.046          0.060                0.062
+      random 50-gene sets, proliferation-free (1000 sets) observed 0.123  0.080     0.533         0.060          0.104                0.046
+      random 50-gene sets, proliferation-free (1000 sets) permuted 0.058  0.053     0.462         0.037          0.056                0.061
+       proliferation (PAM50, 11 genes) (200 permutations) permuted 0.040  0.020     0.385         0.020             NA                   NA
+ top 50 proliferation-correlated genes (200 permutations) permuted 0.035  0.065     0.450         0.030          0.035                0.050
+-- p-value of the fixed signatures, observed labels
+                             signature  cox median opt_naive opt_corrected cox_adj_prolif cox_adj_prolif_stage
+       proliferation (PAM50, 11 genes) 0.49   0.22     0.026          0.34             NA                   NA
+ top 50 proliferation-correlated genes 0.50   0.23     0.026          0.38           0.98                 0.88
+
+R version 4.3.3 (2024-02-29)

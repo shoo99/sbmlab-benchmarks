@@ -2,8 +2,9 @@
 # Re-runs the scripts that need only files in this repository and compares what they produce with the bundled
 # results. Runs in a temporary copy of the tracked files, so the working tree is never changed.
 #
-# Usage: bash ci/reproduce.sh [r|python|all|pipelines]     (default all = r + python)
-#   r          needs R with data.table, limma, sva and bladderbatch (CI: Ubuntu 24.04 packages, R 4.3.3, limma 3.58.1)
+# Usage: bash ci/reproduce.sh [r|python|all|pipelines|microbiome]     (default all = r + python)
+#   r          needs R with data.table, limma, sva, bladderbatch, survival and maxstat (CI: Ubuntu 24.04 packages,
+#              R 4.3.3, limma 3.58.1)
 #   python     needs Python with numpy, pandas and matplotlib
 #   pipelines  end-to-end tests on synthetic data; needs salmon, kallisto, STAR, subread, RSEM, R with data.table
 #   microbiome re-runs microbiome-da-methods in its pinned conda environment; set DA_RSCRIPT to that env's Rscript
@@ -76,6 +77,11 @@ if [ "$GROUP" = r ] || [ "$GROUP" = all ]; then
   check_out limma-3v3-sim "Rscript three_vs_three.R" output.txt
   check_out batch-correction-unbalanced "Rscript batch_study.R" batch_study.out
   same_file batch-correction-unbalanced/scores.csv
+  check_out random-signatures-tcga "OPENBLAS_NUM_THREADS=1 Rscript cutpoint_sim.R" cutpoint_sim.out
+  same_file random-signatures-tcga/sim_scores.csv
+  check_out random-signatures-tcga "Rscript score.R" score.out
+  same_file random-signatures-tcga/scores.csv
+  run_ok random-signatures-tcga "Rscript test/test_synthetic.R"     # tcga_signatures.R on synthetic data, known answers
   run_ok common "Rscript tests/test_known_ratio.R"
 fi
 
@@ -88,6 +94,7 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok preprint-hye "MPLBACKEND=Agg python3 figures.py"
   run_ok batch-correction-unbalanced "MPLBACKEND=Agg python3 figure.py"
   run_ok microbiome-da-methods "MPLBACKEND=Agg python3 figure.py"
+  run_ok random-signatures-tcga "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
   same_file docs/catalog.md
