@@ -14,7 +14,7 @@ Each folder answers one measured question, usually for one post. The rules below
 1. Pick a name of the form `<topic>-<dataset>`, lowercase with hyphens (for example `rnaseq-quant-seqc`). Don't rename a folder once a post, the preprint or a Zenodo release links to it; GitHub does not redirect moved folders.
 2. Run `python3 ci/new_folder.py <folder> --area <area> --post <url>` (use the tracking issue as the post until there is one). It copies `docs/template/README.md` and `run.sh` into the folder and adds a `catalog.csv` row whose data, truth and tools say TODO. `ci/lint.py` rejects TODO, so fill those cells in (columns below).
 3. If any script in the folder can re-run from files in the repository alone, add it to `ci/reproduce.sh` and set `ci` to `reproduce`.
-4. If the tools are not Ubuntu 24.04 packages, pin a conda environment in the folder: an explicit `conda-linux-64.lock` from `micromamba env export --explicit --md5`, plus a short `environment.yml`. Give CI its own job that builds the environment from the lock file, as `microbiome-da-methods` does.
+4. If the tools are not Ubuntu 24.04 packages, pin a conda environment in the folder: an explicit `conda-linux-64.lock` from `micromamba env export --explicit --md5`, plus a short `environment.yml`. Give CI its own job that builds the environment from the lock file, as `microbiome-da-methods` and `scrna-doublets` do.
 5. Run `python3 docs/make_summaries.py` to refresh `docs/catalog.md` and `docs/scores_summary.*`, then `python3 ci/lint.py` (and `bash ci/reproduce.sh` if you added re-runs) before opening the pull request.
 
 ## What goes in, and what stays out
@@ -102,6 +102,7 @@ One row per analysis folder (not `docs` or `ci`):
 - Both groups also run the `common/` tests. The Python group also regenerates `docs/catalog.md` and `docs/scores_summary.*` and requires them to match the committed files.
 - `bash ci/reproduce.sh pipelines` runs pipeline tests on synthetic data with a known answer (`rnaseq-quant-seqc/test/test_pipeline.sh`) in a separate job that installs the quantifiers.
 - `bash ci/reproduce.sh microbiome` re-runs `microbiome-da-methods` in the conda environment built from its lock file, in a job of its own.
+- `bash ci/reproduce.sh doublets` runs the `scrna-doublets` pipeline on synthetic data in the conda environment built from its lock file, in its own workflow (`.github/workflows/doublets.yml`), which runs only when `scrna-doublets/` or `ci/reproduce.sh` change, plus weekly and on demand.
 - Dependabot (`.github/dependabot.yml`) opens a pull request once a month when a GitHub Action used in the workflow has a newer version.
 
 Re-runs happen in a temporary copy, so they never touch the working tree. Printouts are compared after normalising whitespace and dropping data.table's column-type row, which only data.table ≥ 1.15 prints. Tables must match byte for byte.

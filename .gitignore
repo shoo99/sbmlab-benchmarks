@@ -7,3 +7,9 @@
 __pycache__/
 .Rhistory
 Rplots.pdf
+random-signatures-tcga/data/
+scrna-pseudobulk-de/data/
+scrna-doublets/data/
+scrna-doublets/work/
+entrapment-fdr-hye/db/
+entrapment-fdr-hye/searches/

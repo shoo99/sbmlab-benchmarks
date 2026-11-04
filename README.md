@@ -52,6 +52,7 @@ Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM,
 | Folder | Post | What it shows |
 |---|---|---|
 | [batch-correction-unbalanced](batch-correction-unbalanced) | Issue [#8](https://github.com/shoo99/sbmlab-benchmarks/issues/8) (no post yet) | Unbalanced batches, simulated null and bladderbatch fake labels. Share of null genes with p < 0.05 at 11:1 imbalance: ComBat with group protected 0.29, `removeBatchEffect` 0.28, batch in the limma model 0.05; BH 5% calls 61–62% false after protected correction vs 4% with batch in the model |
+| [random-signatures-tcga](random-signatures-tcga) | Issue [#11](https://github.com/shoo99/sbmlab-benchmarks/issues/11) (no post yet) | Simulated null marker: optimal cut-point with its naive log-rank p gives p < 0.05 in 44–49% of repetitions (corrected p 3–4%). TCGA PFI: random 50-gene sets reach Cox p < 0.05 in 57% (KIRC), 19% (COAD), 16% (BRCA), 15% (LUAD); 4–10% after adjusting for proliferation and stage |
 | [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share (pooled over runs; mean per-run FDP 4.2 vs 5.2%) |
 
 ### Proteomics: known-ratio benchmark (PRIDE PXD028735)
@@ -60,6 +61,7 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 
 | Folder | Post | What it shows |
 |---|---|---|
+| [entrapment-fdr-hye](entrapment-fdr-hye) | Scripts tested on synthetic data in CI; workstation searches pending (issue [#5](https://github.com/shoo99/sbmlab-benchmarks/issues/5)) | True FDR at nominal 1% for MaxQuant, FragPipe and DIA-NN, MBR off and on, from hits on an added entrapment proteome (Arabidopsis or shuffled targets): FDP lower bound and combined estimate per precursor, peptide and protein |
 | [maxquant-hye](maxquant-hye) | [MaxQuant 2.8 scored on known ratios](https://sbmlab.com/blog/maxquant-2-8-proteingroups-lfq-ibaq-mbr-scored-known-ratios-2026) | LFQ within ±0.5 of truth for 99 / 92 / 81% of human / yeast / *E. coli* proteins (raw intensity: 86 / 74 / 43%). Match-between-runs filled ~10% of peptide values; it made proteins quantified anyway more accurate, while proteins quantified only thanks to MBR were less reliable. The decoy column is now `Decoy`, not `Reverse` |
 | [fragpipe-hye](fragpipe-hye) | [FragPipe vs MaxQuant](https://sbmlab.com/blog/fragpipe-vs-maxquant-2026-speed-benchmark) | Same 6 runs: 8.9 min by FragPipe's own timer (9.3 min wall clock in `time.log`, plus about 4 min raw → mzML in `convert.log`) vs 61.6 min. On the 3,877 proteins both quantified, within ±0.5: FragPipe 99.7 / 99.2 / 97.7% vs MaxQuant 98.9 / 92.2 / 80.9% |
 | [diann-hye](diann-hye) | [DIA-NN on a known-answer benchmark](https://sbmlab.com/blog/diann-vs-maxquant-fragpipe-known-ratio-benchmark-2026) | DIA-NN 2.3.2 on the SWATH runs of the same samples (a different instrument): 8,987 protein groups; within ±0.5 98.6 / 95.1 / 85.4%. 6 h 17 min, ~3.5 h of it reading `.wiff` files |
@@ -78,6 +80,13 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 | Folder | Post | What it shows |
 |---|---|---|
 | [microbiome-da-methods](microbiome-da-methods) | Issue [#18](https://github.com/shoo99/sbmlab-benchmarks/issues/18) (no post yet) | smokers 16S counts, 20 vs 20, changes planted on the absolute scale. Null: ANCOM-BC2's q-values give 23.5 false calls per repetition (32% of OTUs p < 0.05), all removed by its own sensitivity filter, which also removes nearly all true calls; MaAsLin2, LinDA, DESeq2 and Wilcoxon are calibrated (4.2–5.5%). Planted: DESeq2 finds 33% at FDP 0.11, others 2–10%. A bloom of the top OTU sends Wilcoxon-on-CLR to FDP 0.35 |
+
+### Single-cell: known-answer benchmarks (real-data runs in progress)
+
+| Folder | Status | What it shows |
+|---|---|---|
+| [scrna-doublets](scrna-doublets) | Pipeline tested on synthetic data in CI; workstation run pending (issue [#7](https://github.com/shoo99/sbmlab-benchmarks/issues/7)) | scDblFinder, scds, DoubletFinder and Scrublet against demuxlet doublets between donors (Kang 2018) and human + mouse doublets (10x hgmm_12k): AUPRC, recall and precision at the expected rate |
+| [scrna-pseudobulk-de](scrna-pseudobulk-de) | Simulation done; Kang 2018 run pending (issue [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6)) | 8 simulated donors, 4 vs 4, no real difference: cell-level Wilcoxon and t-test give p < 0.05 for 47% of genes (720 false BH calls per repetition); pseudobulk edgeR, DESeq2 and limma-voom 4.9–5.3% and none. With 10% of genes 2-fold, 78% of cell-level calls are false vs 4–6% for pseudobulk |
 
 ### Transcriptomics: known-ratio benchmark (SEQC/MAQC, in progress)
 
@@ -118,11 +127,12 @@ A summary of all the tools, versions and timings is in [Best bioinformatics tool
 - [`docs/scores_summary.md`](docs/scores_summary.md) collects every folder's `scores.csv` in one place; the rows are also in [`docs/scores_summary.csv`](docs/scores_summary.csv). Both pages are generated by `docs/make_summaries.py`, and CI checks that they are current.
 - Every pull request and every push to `main` runs [`checks`](.github/workflows/checks.yml):
   - `ci/lint.py` checks the catalog, strict JSON, Python and shell syntax, and that no script writes to an absolute path. It also checks the workflow and the citation metadata.
-  - `ci/reproduce.sh` re-runs the scripts that need only files in this repository on R 4.3.3 / limma 3.58.1 and Python, and compares their output with the bundled files. These are the DIA-NN scoring, the DIA-NN 2.7.0 limma check, the 3 vs 3 simulation, the batch-correction study and the STRING summary.
+  - `ci/reproduce.sh` re-runs the scripts that need only files in this repository on R 4.3.3 / limma 3.58.1 and Python, and compares their output with the bundled files. These are the DIA-NN scoring, the DIA-NN 2.7.0 limma check, the 3 vs 3 simulation, the batch-correction study, the cut-point simulation and TCGA scoring, the pseudobulk simulation and the STRING summary. The workstation scripts of `random-signatures-tcga`, `scrna-pseudobulk-de` and `entrapment-fdr-hye` are also run on synthetic data in the formats of the real inputs.
 - [`common/`](common/README.md) holds the shared scoring code in R and Python. Its tests re-create the bundled DIA-NN score tables exactly.
-- Two more CI jobs:
+- Three more CI jobs:
   - pipeline tests on synthetic data with a known answer (`ci/reproduce.sh pipelines`)
   - the microbiome study, re-run in its pinned conda environment (`ci/reproduce.sh microbiome`). It takes 15-20 minutes, so it is a separate workflow, [`microbiome`](.github/workflows/microbiome.yml), that runs only when `microbiome-da-methods/`, `common/` or `ci/reproduce.sh` change, once a week, and on demand.
+  - the doublet pipeline on synthetic data, in its pinned conda environment (`ci/reproduce.sh doublets`). It is a separate workflow too, [`doublets`](.github/workflows/doublets.yml), that runs only when `scrna-doublets/` or `ci/reproduce.sh` change, once a week, and on demand.
 - To add a folder, run `python3 ci/new_folder.py <folder> --area <area> --post <url>`. It copies [`docs/template/`](docs/template) and adds a catalog row. Then follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What is not here

@@ -1,0 +1,7 @@
+search	engine	version	mbr	result	baseline	entrapment
+DIA-NN library-free, MBR off	diann	DIA-NN 2.3.0	off	searches/diann_mbr_off/report.parquet	searches/diann_target_only_mbr_off/report.parquet	db/entrapment_info.json
+DIA-NN library-free, MBR on	diann	DIA-NN 2.3.0	on	searches/diann_mbr_on/report.parquet	searches/diann_target_only_mbr_on/report.parquet	db/entrapment_info.json
+MaxQuant, MBR off	maxquant	MaxQuant 2.8.1.0	off	searches/mq_mbr_off/combined/txt	searches/mq_target_only_mbr_off/combined/txt	db/entrapment_info.json
+MaxQuant, MBR on	maxquant	MaxQuant 2.8.1.0	on	searches/mq_mbr_on/combined/txt	searches/mq_target_only_mbr_on/combined/txt	db/entrapment_info.json
+FragPipe LFQ-MBR, MBR off	fragpipe	FragPipe 24.0	off	searches/fp_mbr_off	searches/fp_target_only_mbr_off	db/entrapment_info.json
+FragPipe LFQ-MBR, MBR on	fragpipe	FragPipe 24.0	on	searches/fp_mbr_on	searches/fp_target_only_mbr_on	db/entrapment_info.json

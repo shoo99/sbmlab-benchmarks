@@ -1,0 +1,27 @@
+== 8 donors (4 vs 4), 100-400 cells each, 2000 genes before filtering, 10 repetitions per setting
+   p05: share of unchanged genes with p < 0.05 (expected 0.05); disc / false: BH 5% discoveries / false ones per
+   repetition; power and fdp: share of changed genes found, false share of the discoveries (BH 5%)
+
+                                setting                  method genes   p05  disc false power   fdp
+                    null, donor SD 0.25        Wilcoxon (cells)  1822 0.471 719.8 719.8    NA 1.000
+                    null, donor SD 0.25          t-test (cells)  1822 0.465 710.7 710.7    NA 1.000
+                    null, donor SD 0.25   edgeR QL (pseudobulk)  1822 0.052   0.0   0.0    NA 0.000
+                    null, donor SD 0.25     DESeq2 (pseudobulk)  1822 0.053   0.0   0.0    NA 0.000
+                    null, donor SD 0.25 limma-voom (pseudobulk)  1822 0.049   0.0   0.0    NA 0.000
+   planted 2-fold in 10%, donor SD 0.25        Wilcoxon (cells)  1820 0.455 817.6 641.6 0.975 0.784
+   planted 2-fold in 10%, donor SD 0.25          t-test (cells)  1820 0.451 807.2 631.3 0.975 0.782
+   planted 2-fold in 10%, donor SD 0.25   edgeR QL (pseudobulk)  1820 0.051 132.1   6.1 0.698 0.046
+   planted 2-fold in 10%, donor SD 0.25     DESeq2 (pseudobulk)  1820 0.051 134.9   8.3 0.701 0.061
+   planted 2-fold in 10%, donor SD 0.25 limma-voom (pseudobulk)  1820 0.049 131.3   5.7 0.696 0.043
+                  null, no donor effect        Wilcoxon (cells)  1822 0.051   0.1   0.1    NA 0.100
+                  null, no donor effect          t-test (cells)  1822 0.050   0.0   0.0    NA 0.000
+                  null, no donor effect   edgeR QL (pseudobulk)  1822 0.048   0.0   0.0    NA 0.000
+                  null, no donor effect     DESeq2 (pseudobulk)  1822 0.014   0.0   0.0    NA 0.000
+                  null, no donor effect limma-voom (pseudobulk)  1822 0.048   0.1   0.1    NA 0.100
+ planted 2-fold in 10%, no donor effect        Wilcoxon (cells)  1820 0.073 200.6  22.4 0.988 0.101
+ planted 2-fold in 10%, no donor effect          t-test (cells)  1820 0.066 196.4  18.1 0.988 0.087
+ planted 2-fold in 10%, no donor effect   edgeR QL (pseudobulk)  1820 0.047 186.1   7.7 0.989 0.041
+ planted 2-fold in 10%, no donor effect     DESeq2 (pseudobulk)  1820 0.015 173.7   1.3 0.955 0.007
+ planted 2-fold in 10%, no donor effect limma-voom (pseudobulk)  1820 0.047 187.4   8.2 0.993 0.044
+
+R version 4.3.3 (2024-02-29) | edgeR 4.0.16; DESeq2 1.42.0; limma 3.58.1; R 4.3.3 (Wilcoxon rank-sum, Welch t)

@@ -2,11 +2,14 @@
 # Re-runs the scripts that need only files in this repository and compares what they produce with the bundled
 # results. Runs in a temporary copy of the tracked files, so the working tree is never changed.
 #
-# Usage: bash ci/reproduce.sh [r|python|all|pipelines]     (default all = r + python)
-#   r          needs R with data.table, limma, sva and bladderbatch (CI: Ubuntu 24.04 packages, R 4.3.3, limma 3.58.1)
+# Usage: bash ci/reproduce.sh [r|python|all|pipelines|microbiome|doublets]     (default all = r + python)
+#   r          needs R with data.table, limma, sva, bladderbatch, survival, maxstat, edgeR and DESeq2 (CI: Ubuntu 24.04
+#              packages, R 4.3.3, limma 3.58.1)
 #   python     needs Python with numpy, pandas and matplotlib
 #   pipelines  end-to-end tests on synthetic data; needs salmon, kallisto, STAR, subread, RSEM, R with data.table
 #   microbiome re-runs microbiome-da-methods in its pinned conda environment; set DA_RSCRIPT to that env's Rscript
+#   doublets   the scrna-doublets pipeline on synthetic data in its pinned conda environment; set DBL_RSCRIPT and
+#              DBL_PYTHON to that env's Rscript and python3
 #
 # Printouts (.out) are compared after normalising whitespace and dropping data.table's column-type row
 # (<char> <int> ..., printed by data.table >= 1.15 only) and the "R version" line; tables are compared byte for byte.
@@ -76,6 +79,16 @@ if [ "$GROUP" = r ] || [ "$GROUP" = all ]; then
   check_out limma-3v3-sim "Rscript three_vs_three.R" output.txt
   check_out batch-correction-unbalanced "Rscript batch_study.R" batch_study.out
   same_file batch-correction-unbalanced/scores.csv
+  check_out random-signatures-tcga "OPENBLAS_NUM_THREADS=1 Rscript cutpoint_sim.R" cutpoint_sim.out
+  same_file random-signatures-tcga/sim_scores.csv
+  check_out random-signatures-tcga "Rscript score.R" score.out
+  same_file random-signatures-tcga/scores.csv
+  run_ok random-signatures-tcga "Rscript test/test_synthetic.R"     # tcga_signatures.R on synthetic data, known answers
+  check_out scrna-pseudobulk-de "OPENBLAS_NUM_THREADS=1 Rscript sim_study.R" sim_study.out
+  same_file scrna-pseudobulk-de/sim_scores.csv
+  check_out scrna-pseudobulk-de "Rscript score.R" score.out
+  same_file scrna-pseudobulk-de/scores.csv
+  run_ok scrna-pseudobulk-de "Rscript test/test_kang_format.R"     # kang_study.R on synthetic data in the GEO layout
   run_ok common "Rscript tests/test_known_ratio.R"
 fi
 
@@ -88,7 +101,10 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok preprint-hye "MPLBACKEND=Agg python3 figures.py"
   run_ok batch-correction-unbalanced "MPLBACKEND=Agg python3 figure.py"
   run_ok microbiome-da-methods "MPLBACKEND=Agg python3 figure.py"
+  run_ok random-signatures-tcga "MPLBACKEND=Agg python3 figure.py"
+  run_ok scrna-pseudobulk-de "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
+  run_ok entrapment-fdr-hye "python3 test/test_synthetic.py"    # entrapment database, extraction and FDP estimates
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
   same_file docs/catalog.md
   same_file docs/scores_summary.csv
@@ -101,6 +117,11 @@ if [ "$GROUP" = microbiome ]; then
   "$RS" -e 'cat(R.version.string, "| ANCOMBC", format(packageVersion("ANCOMBC")), "| ALDEx2", format(packageVersion("ALDEx2")), "\n")'
   check_out microbiome-da-methods "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \"$RS\" da_study.R" da_study.out
   same_file microbiome-da-methods/scores.csv
+fi
+
+if [ "$GROUP" = doublets ]; then
+  echo "== Doublet pipeline on synthetic data in its pinned conda environment (scrna-doublets/conda-linux-64.lock)"
+  run_ok scrna-doublets "bash test/test_pipeline.sh"
 fi
 
 if [ "$GROUP" = pipelines ]; then
