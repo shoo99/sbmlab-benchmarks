@@ -63,17 +63,3 @@ jobs:
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: bash ci/reproduce.sh pipelines
 
-  microbiome:
-    name: Microbiome DA study (pinned conda environment)
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v5
-      - name: Create the conda environment from the lock file
-        # (the runner context is not available in job-level env, so the prefix is set here from $RUNNER_TEMP)
-        run: |
-          export MAMBA_ROOT_PREFIX="$RUNNER_TEMP/mamba-root"
-          curl -fsSL -o "$RUNNER_TEMP/micromamba.tar.bz2" https://conda.anaconda.org/conda-forge/linux-64/micromamba-2.10.0-0.tar.bz2
-          mkdir -p "$RUNNER_TEMP/mm"
-          tar -xjf "$RUNNER_TEMP/micromamba.tar.bz2" -C "$RUNNER_TEMP/mm" bin/micromamba
-          "$RUNNER_TEMP/mm/bin/micromamba" create -y -q -p "$RUNNER_TEMP/da-env" --file microbiome-da-methods/conda-linux-64.lock
-      - run: DA_RSCRIPT="$RUNNER_TEMP/da-env/bin/Rscript" DA_CORES=4 bash ci/reproduce.sh microbiome

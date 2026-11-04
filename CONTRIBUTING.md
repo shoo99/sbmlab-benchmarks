@@ -98,6 +98,7 @@ One row per analysis folder (not `docs` or `ci`):
   - the `CITATION.cff` version is the latest version listed in the README
 - `bash ci/reproduce.sh r` runs on Ubuntu 24.04 packages: R 4.3.3 and limma 3.58.1, the versions the bundled outputs were made with. It checks that every `.R` file parses, then re-runs the R scripts that need only repository files and compares their output with the bundled files.
 - `bash ci/reproduce.sh python` does the same for the Python scripts.
+- `.github/workflows/microbiome.yml` re-runs the microbiome study (`bash ci/reproduce.sh microbiome`) in its pinned conda environment. It takes 15-20 minutes, so it runs only when `microbiome-da-methods/`, `common/`, `ci/reproduce.sh` or the workflow itself change, plus weekly and on demand. A new folder with a heavy environment should get its own workflow the same way.
 - Both groups also run the `common/` tests. The Python group also regenerates `docs/catalog.md` and `docs/scores_summary.*` and requires them to match the committed files.
 - `bash ci/reproduce.sh pipelines` runs pipeline tests on synthetic data with a known answer (`rnaseq-quant-seqc/test/test_pipeline.sh`) in a separate job that installs the quantifiers.
 - `bash ci/reproduce.sh microbiome` re-runs `microbiome-da-methods` in the conda environment built from its lock file, in a job of its own.
