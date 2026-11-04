@@ -1,24 +1,24 @@
-== weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-04 (1 run)
+== weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-04 (2 runs)
    database      runs  uptime  example  median s   p95 s  release (changes)
-   UniProt          1   1.000    1.000      2.68    2.68  2026_03 (0)
-   Ensembl          1   0.000    0.000         -       -  not reported
-   NCBI Gene        1   1.000    1.000      0.04    0.04  not reported
-   ClinVar          1   1.000    1.000      0.04    0.04  not reported
-   RCSB PDB         1   1.000    1.000      0.06    0.06  not reported
-   AlphaFold DB     1   1.000    1.000      0.26    0.26  6 (0)
-   InterPro         1   1.000    1.000      0.78    0.78  110.0 (0)
-   QuickGO          1   1.000    1.000      0.32    0.32  not reported
-   STRING           1   1.000    1.000      0.28    0.28  12.5 (0)
-   Reactome         1   1.000    1.000      0.85    0.85  98 (0)
-   KEGG             1   1.000    1.000      1.12    1.12  not reported
-   GEO              1   1.000    1.000      0.05    0.05  not reported
-   PRIDE            1   1.000    1.000      1.02    1.02  not reported
+   UniProt          2   1.000    1.000      9.71   16.74  2026_03 (0)
+   Ensembl          2   0.000    0.000         -       -  not reported
+   NCBI Gene        2   1.000    1.000      0.10    0.15  not reported
+   ClinVar          2   1.000    1.000      0.07    0.09  not reported
+   RCSB PDB         2   1.000    1.000      0.12    0.18  not reported
+   AlphaFold DB     2   1.000    1.000      0.30    0.35  6 (0)
+   InterPro         2   1.000    1.000      0.97    1.16  110.0 (0)
+   QuickGO          2   1.000    1.000      0.42    0.51  not reported
+   STRING           2   1.000    1.000      0.33    0.38  12.5 (0)
+   Reactome         2   1.000    1.000      0.93    1.01  98 (0)
+   KEGG             2   1.000    1.000      1.01    1.12  not reported
+   GEO              2   1.000    1.000      0.16    0.27  not reported
+   PRIDE            2   1.000    1.000      1.34    1.67  not reported
    release changes: none
    documented example broken (HTTP 200 but changed content): none
-   failed calls: Ensembl 2026-11-04 error:timeout
+   failed calls: Ensembl 2026-11-04 error:timeout; Ensembl 2026-11-04 503
    version request failed: none
    version request needed a retry: none
-   release source answered but no release read: none
+   release source answered but no release read: KEGG 2026-11-04 (200)
 
 == bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls
    database      calls  uptime  median s   p95 s
