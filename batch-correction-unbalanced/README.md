@@ -1,6 +1,6 @@
 # Batch correction with unbalanced designs: false confidence after ComBat (2026-11-03)
 
-Tracking issue: [#8](https://github.com/shoo99/sbmlab-benchmarks/issues/8). No post yet.
+Tracking issue: [#8](https://github.com/shoo99/sbmlab-benchmarks/issues/8). Post: [Correct Batch Effects, Then Test?](https://sbmlab.com/blog/batch-correction-combat-unbalanced-design-false-positives) (한국어판: [배치 보정하고 검정하면](https://sbmlab.com/blog/batch-correction-combat-unbalanced-design-false-positives-ko)).
 
 A common workflow corrects batch effects first, with ComBat or `removeBatchEffect` protecting the group variable, and then tests the "clean" data. When groups are spread unevenly over batches, this creates false significance. Nygaard et al. (2016, *Biostatistics* 17:29–39) showed the problem; here it is measured.
 
@@ -102,7 +102,7 @@ What the numbers say:
 
 - limma's own help page for `removeBatchEffect` says it is not intended to be used before linear modelling, and that batch should go into the model instead. The protected `removeBatchEffect` → `lmFit` route measured here is exactly that misuse.
 - ComBat prints progress messages to the console; `batch_study.R` silences them so that the printout stays comparable in CI.
-- **Uncertainty.** With 40 repetitions, a share of repetitions has a 95% interval of about ±0.07. The 0.10 for batch in the model at 6:6 is 4 of 40, not a failure of BH. bladderbatch probes are correlated and the per-repetition counts are heavy-tailed, so read the trend over p rather than single cells. The dip between p = 0.7 and 0.8 for the correction methods comes from how the small batches (4 and 5 arrays) round to whole samples.
+- **Uncertainty.** With 40 repetitions, a share of repetitions has a 95% interval of about ±0.07. The 0.10 for batch in the model at 6:6 is 4 of 40, not a failure of BH. bladderbatch probes are correlated and the per-repetition counts are heavy-tailed, so read the trend over p rather than single cells. The correction methods dip between p = 0.7 and 0.8, and batch in the model reaches 0.067 at p = 0.7. An earlier version of this README said the dip came from rounding the small batches (4 and 5 arrays) to whole samples; a check during the post review found that the rounded designs grow steadily more confounded (R² of group on batch 0.16 at p = 0.7, 0.33 at p = 0.8), so rounding does not explain it. The cause was not tested; with 30 repetitions of correlated probes it is probably noise (corrected 2026-11-04).
 
 ## Not included
 
