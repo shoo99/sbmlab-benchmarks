@@ -1,0 +1,21 @@
+# Human-readable list of the main packages. CI uses the exact lock file conda-linux-64.lock
+# (all 368 packages with checksums):
+#   micromamba create -p ./env --file conda-linux-64.lock
+# On other platforms, create from this file instead (dependency builds may differ):
+#   micromamba create -p ./env -f environment.yml
+name: scrna-doublets
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.5.3
+  - bioconductor-scdblfinder=1.24.10
+  - bioconductor-scds=1.26.1
+  - r-doubletfinder=2.0.6
+  - r-seurat=5.5.1
+  - r-data.table
+  - python=3.12
+  - scrublet=0.2.3
+  - numpy
+  - scipy
+  - pandas

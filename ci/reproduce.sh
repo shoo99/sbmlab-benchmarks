@@ -2,12 +2,14 @@
 # Re-runs the scripts that need only files in this repository and compares what they produce with the bundled
 # results. Runs in a temporary copy of the tracked files, so the working tree is never changed.
 #
-# Usage: bash ci/reproduce.sh [r|python|all|pipelines|microbiome]     (default all = r + python)
+# Usage: bash ci/reproduce.sh [r|python|all|pipelines|microbiome|doublets]     (default all = r + python)
 #   r          needs R with data.table, limma, sva, bladderbatch, survival, maxstat, edgeR and DESeq2 (CI: Ubuntu 24.04
 #              packages, R 4.3.3, limma 3.58.1)
 #   python     needs Python with numpy, pandas and matplotlib
 #   pipelines  end-to-end tests on synthetic data; needs salmon, kallisto, STAR, subread, RSEM, R with data.table
 #   microbiome re-runs microbiome-da-methods in its pinned conda environment; set DA_RSCRIPT to that env's Rscript
+#   doublets   the scrna-doublets pipeline on synthetic data in its pinned conda environment; set DBL_RSCRIPT and
+#              DBL_PYTHON to that env's Rscript and python3
 #
 # Printouts (.out) are compared after normalising whitespace and dropping data.table's column-type row
 # (<char> <int> ..., printed by data.table >= 1.15 only) and the "R version" line; tables are compared byte for byte.
@@ -114,6 +116,11 @@ if [ "$GROUP" = microbiome ]; then
   "$RS" -e 'cat(R.version.string, "| ANCOMBC", format(packageVersion("ANCOMBC")), "| ALDEx2", format(packageVersion("ALDEx2")), "\n")'
   check_out microbiome-da-methods "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \"$RS\" da_study.R" da_study.out
   same_file microbiome-da-methods/scores.csv
+fi
+
+if [ "$GROUP" = doublets ]; then
+  echo "== Doublet pipeline on synthetic data in its pinned conda environment (scrna-doublets/conda-linux-64.lock)"
+  run_ok scrna-doublets "bash test/test_pipeline.sh"
 fi
 
 if [ "$GROUP" = pipelines ]; then

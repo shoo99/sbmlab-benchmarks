@@ -9,3 +9,5 @@ __pycache__/
 Rplots.pdf
 random-signatures-tcga/data/
 scrna-pseudobulk-de/data/
+scrna-doublets/data/
+scrna-doublets/work/
