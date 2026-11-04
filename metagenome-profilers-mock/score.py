@@ -29,9 +29,9 @@ FOLDER = "metagenome-profilers-mock"
 COLUMNS = ["folder", "dataset", "tool", "version", "setting", "subset", "metric", "value", "n"]
 LABEL = {"D6300": "ZymoBIOMICS D6300 (even), ERR2984773, MiSeq 2x151",
          "D6310": "ZymoBIOMICS D6310 (log distribution), ERR2935805, HiSeq 2x101"}
-TOOLS = {"k2_standard_08gb": ("Kraken2 + Bracken, standard-8 (no fungi)", "Kraken2 2.1 / Bracken 3; DB 2024-09-04"),
-         "k2_pluspf_08gb": ("Kraken2 + Bracken, PlusPF-8 (with fungi)", "Kraken2 2.1 / Bracken 3; DB 2024-09-04"),
-         "k2_standard": ("Kraken2 + Bracken, standard (uncapped)", "Kraken2 2.1 / Bracken 3; DB 2024-09-04"),
+TOOLS = {"k2_standard_08gb": ("Kraken2 + Bracken, standard-8 (no fungi)", "Kraken2 2.17.2 / Bracken 3.0.1; DB 2024-09-04"),
+         "k2_pluspf_08gb": ("Kraken2 + Bracken, PlusPF-8 (with fungi)", "Kraken2 2.17.2 / Bracken 3.0.1; DB 2024-09-04"),
+         "k2_standard": ("Kraken2 + Bracken, standard (uncapped)", "Kraken2 2.17.2 / Bracken 3.0.1; DB 2024-09-04"),
          "metaphlan": ("MetaPhlAn 4", "see README"), "motus": ("mOTUs 3", "see README"), "sylph": ("sylph, GTDB r220", "see README")}
 THRESHOLDS = [("any reads", 0.0), (">= 0.01 %", 0.01), (">= 0.1 %", 0.1)]
 

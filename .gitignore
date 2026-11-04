@@ -15,6 +15,6 @@ entrapment-fdr-hye/db/
 entrapment-fdr-hye/searches/
 variant-calling-giab/data
 variant-calling-giab/work
-metagenome-profilers-mock/data/
-metagenome-profilers-mock/db/
-metagenome-profilers-mock/work/
+metagenome-profilers-mock/data
+metagenome-profilers-mock/db
+metagenome-profilers-mock/work
