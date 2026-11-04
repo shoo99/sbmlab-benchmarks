@@ -52,21 +52,24 @@ for k, t in enumerate(tl):
            w * 0.92, color=colour[t], label=t)
 for i, s in enumerate(sp):
     ax.plot([i - 0.45, i + 0.45], [truth["D6300"][s]] * 2, color=INK, lw=1.2)
-ax.set_xticks(range(len(sp)), [s.replace(" ", "\n", 1) for s in sp], fontsize=6.5)
+ax.set_xticks(range(len(sp)), [s.split()[0][0] + ". " + s.split()[1] for s in sp], fontsize=7, rotation=25, ha="right")
 style(ax, "a  D6300 even: estimated % per species (black line: true genomic-DNA %)", "estimated % of reads")
 ax.legend(fontsize=7, frameon=False, loc="upper right")
 ax = axs[1]
 floor = 1e-5
-for t in tools:
+shift = {t: 10 ** (0.08 * (k - (len(tools) - 1) / 2)) for k, t in enumerate(tools)}   # small horizontal offsets
+markers = ["o", "D", "s", "^", "v", "P"]
+for k, t in enumerate(tools):
     xs, ys = [], []
     for s, tv in truth["D6310"].items():
         e = est("ZymoBIOMICS D6310", t, s)
         if e is None:
             continue
-        xs.append(tv)
+        xs.append(tv * shift[t])
         ys.append(max(e, floor))
     if xs:
-        ax.scatter(xs, ys, s=34, color=colour[t], edgecolor="white", linewidth=0.8, zorder=3, label=t)
+        ax.scatter(xs, ys, s=34, marker=markers[k % len(markers)], color=colour[t], edgecolor="white", linewidth=0.8,
+                   zorder=3, label=t)
 lims = [floor, 200]
 ax.plot(lims, lims, color=INK, lw=0.8, ls="--")
 ax.axhline(floor, color=GRID, lw=0.8)
@@ -75,7 +78,8 @@ ax.set_yscale("log")
 ax.set_xlim(5e-5, 200)
 ax.set_ylim(floor / 2, 200)
 ax.set_xlabel("true genomic-DNA %", fontsize=8, color=MUTED)
-style(ax, f"b  D6310 log: estimated vs true (bottom line: not detected)", "estimated % (log)")
+style(ax, "b  D6310 log: estimated vs true (bottom line: not detected)", "estimated % (log)")
+ax.legend(fontsize=6.5, frameon=False, loc="upper left")
 ax = axs[2]
 sets = [("ZymoBIOMICS D6300", "D6300"), ("ZymoBIOMICS D6310", "D6310")]
 w = 0.8 / max(len(tools), 1)

@@ -1,0 +1,47 @@
+== ZymoBIOMICS D6300 (even), ERR2984773, MiSeq 2x151
+
+   profile                                          L1 strict     BC FP spp  P/R any reads  P/R >= 0.01 %  P/R >= 0.1 % 
+   Kraken2 + Bracken, PlusPF-8 (with fungi)       22.6   44.8  0.113    242  0.04/1.00      0.34/1.00      0.71/1.00    
+                                                largest false positives: Xanthomonas euvesicatoria 1.18 %; Shigella flexneri 0.42 %; Listeria innocua 0.31 %
+   Kraken2 + Bracken, standard-8 (no fungi)       24.3   47.1  0.122    243  0.03/0.80      0.29/0.80      0.67/0.80    
+                                                largest false positives: Xanthomonas euvesicatoria 0.98 %; Shigella flexneri 0.45 %; Listeria innocua 0.35 %
+
+   species                              true %  Kraken2 + Bracken, Plu  Kraken2 + Bracken, sta
+   Pseudomonas aeruginosa                   12                 14.9143                 15.3045
+   Escherichia coli                         12                  7.6231                  7.8083
+   Salmonella enterica                      12                 17.7242                 18.2610
+   Limosilactobacillus fermentum            12                 10.6866                 10.9435
+   Enterococcus faecalis                    12                 11.4792                 11.8274
+   Staphylococcus aureus                    12                 10.2514                 10.5188
+   Listeria monocytogenes                   12                 10.6673                 10.9405
+   Bacillus subtilis                        12                 11.4848                 11.8066
+   Saccharomyces cerevisiae                  2                  1.2084                  0.0000
+   Cryptococcus neoformans                   2                  1.3079                  0.0000
+
+== ZymoBIOMICS D6310 (log distribution), ERR2935805, HiSeq 2x101
+
+   profile                                          L1 strict     BC FP spp  P/R any reads  P/R >= 0.01 %  P/R >= 0.1 %   detect.limit
+   Kraken2 + Bracken, PlusPF-8 (with fungi)       10.3   11.8  0.052    238  0.04/1.00      0.38/0.60      0.56/0.50      8.9e-05 %
+                                                largest false positives: Listeria innocua 2.58 %; Xanthomonas euvesicatoria 0.51 %; Listeria sp. LM90SB2 0.11 %
+   Kraken2 + Bracken, standard-8 (no fungi)       11.8   13.3  0.059    256  0.03/0.80      0.33/0.50      0.50/0.40      8.9e-05 %
+                                                largest false positives: Listeria innocua 3.23 %; Xanthomonas euvesicatoria 0.47 %; Listeria sp. LM90SB2 0.15 %
+
+   species                              true %  Kraken2 + Bracken, Plu  Kraken2 + Bracken, sta
+   Listeria monocytogenes                 89.1                 84.5145                 84.2720
+   Pseudomonas aeruginosa                  8.9                 10.4136                 10.4838
+   Bacillus subtilis                      0.89                  0.7697                  0.7726
+   Saccharomyces cerevisiae               0.89                  0.4803                  0.0000
+   Escherichia coli                      0.089                  0.0523                  0.0543
+   Salmonella enterica                   0.089                  0.1245                  0.1241
+   Limosilactobacillus fermentum        0.0089                  0.0081                  0.0081
+   Enterococcus faecalis               0.00089                  0.0025                  0.0024
+   Cryptococcus neoformans             0.00089                  0.0004                  0.0000
+   Staphylococcus aureus               8.9e-05                  0.0012                  0.0015
+
+== run time (4 threads; peak RSS of the largest process; reads streamed from the .sra)
+   D6300  kraken2 (k2_standard_08gb)       wall     47 s   CPU     148 s   peak RSS   7897 MB
+   D6310  kraken2 (k2_standard_08gb)       wall    178 s   CPU     514 s   peak RSS   7968 MB
+   D6300  kraken2 (k2_pluspf_08gb)         wall     52 s   CPU     160 s   peak RSS   8320 MB
+   D6310  kraken2 (k2_pluspf_08gb)         wall    178 s   CPU     512 s   peak RSS   8237 MB
+
+wrote scores.csv (98 rows)

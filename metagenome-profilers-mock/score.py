@@ -1,13 +1,17 @@
 """Scores the taxonomic profiles in results/ against the ZymoBIOMICS theoretical compositions (truth.tsv); issue #15.
 
 Inputs per data set (D6300 even, D6310 log distribution) and profiler:
-  results/<set>_<db>.bracken + .kreport   Kraken2 + Bracken (fraction_total_reads at species level; classified share)
+  results/<set>_<db>.bracken + .kreport   Kraken2 + Bracken (new_est_reads at species level, as a share of all species
+                                          reads; fraction_total_reads is rounded to 5 decimals, too coarse below 0.001 %)
   results/<set>_<tool>.profile.tsv        other profilers, converted by run.sh to: taxid, species, percent
 Truth: genomic-DNA composition from the Zymo product sheets (D6300: 8 bacteria at 12%, 2 yeasts at 2%; D6310: 89.1% down
 to 0.000089%). Read-based profiles estimate DNA (read) fractions, so this is the composition they should report.
-Species are matched by NCBI taxid, else by name (Lactobacillus fermentum = Limosilactobacillus fermentum).
+Species are matched by NCBI taxid, else by name (Lactobacillus fermentum = Limosilactobacillus fermentum). Zymo's
+Bacillus strain, NRRL B-354 (= ATCC 6633), is now classified by NCBI as Bacillus spizizenii (taxid 96241), so that
+species counts as the mock's "Bacillus subtilis"; l1_distance_strict repeats L1 without this synonym.
 Metrics per data set and profile:
   l1_distance            sum over all species of |estimated % - true %| (0 = perfect, 200 = disjoint)
+  l1_distance_strict     the same, with Bacillus spizizenii counted as a false positive (names as on the product sheet)
   bray_curtis            l1 / 200
   precision / recall     species called present at three thresholds: any reads reported (Bracken >= 10 reads),
                          >= 0.01 %, >= 0.1 %; a call outside the 10 species is a false positive
@@ -34,6 +38,8 @@ TOOLS = {"k2_standard_08gb": ("Kraken2 + Bracken, standard-8 (no fungi)", "Krake
          "k2_standard": ("Kraken2 + Bracken, standard (uncapped)", "Kraken2 2.17.2 / Bracken 3.0.1; DB 2024-09-04"),
          "metaphlan": ("MetaPhlAn 4", "see README"), "motus": ("mOTUs 3", "see README"), "sylph": ("sylph, GTDB r220", "see README")}
 THRESHOLDS = [("any reads", 0.0), (">= 0.01 %", 0.01), (">= 0.1 %", 0.1)]
+SYNONYM_TAXIDS = {"96241": "1423"}               # Bacillus spizizenii (strain NRRL B-354 = ATCC 6633) -> mock Bacillus
+SYNONYM_NAMES = {"bacillus spizizenii": "bacillus subtilis"}
 
 
 def norm(name):
@@ -52,7 +58,7 @@ def load(path):
     rows = []
     if path.suffix == ".bracken":
         for r in csv.DictReader(open(path), delimiter="\t"):
-            rows.append((r["taxonomy_id"], r["name"], 100 * float(r["fraction_total_reads"])))
+            rows.append((r["taxonomy_id"], r["name"], float(r["new_est_reads"])))
     else:
         for r in csv.DictReader(open(path), delimiter="\t"):
             rows.append((r["taxid"], r["species"], float(r["percent"])))
@@ -83,23 +89,28 @@ for ds in ("D6300", "D6310"):
         continue
     dataset = LABEL[ds]
     print(f"== {dataset}\n")
-    head = f"   {'profile':<44} {'L1':>6} {'BC':>6} {'FP spp':>6}  " + "  ".join(f"P/R {t_[0]:<9}" for t_ in THRESHOLDS)
+    head = f"   {'profile':<44} {'L1':>6} {'strict':>6} {'BC':>6} {'FP spp':>6}  " + "  ".join(f"P/R {t_[0]:<9}" for t_ in THRESHOLDS)
     print(head + ("  detect.limit" if ds == "D6310" else ""))
     est_table = {}
     for f in ds_files:
         key = f.name[len(ds) + 1:].replace(".bracken", "").replace(".profile.tsv", "")
         label, version = TOOLS.get(key, (key, ""))
         prof = load(f)
-        est = {sp: 0.0 for sp in true_pct}
-        others = {}
-        for taxid, name, p in prof:
-            sp = tax_to_sp.get(taxid) or name_to_sp.get(norm(name))
-            if sp:
-                est[sp] += p
-            else:
-                others[name] = others.get(name, 0) + p
-        l1 = sum(abs(est[s] - true_pct[s]) for s in true_pct) + sum(others.values())
-        m = {"l1_distance": round(l1, 3), "bray_curtis": round(l1 / 200, 4),
+        def assign(synonyms):
+            est = {sp: 0.0 for sp in true_pct}
+            others = {}
+            for taxid, name, p in prof:
+                t_ = SYNONYM_TAXIDS.get(taxid, taxid) if synonyms else taxid
+                n_ = SYNONYM_NAMES.get(norm(name), norm(name)) if synonyms else norm(name)
+                sp = tax_to_sp.get(t_) or name_to_sp.get(n_)
+                if sp:
+                    est[sp] += p
+                else:
+                    others[name] = others.get(name, 0) + p
+            return est, others, sum(abs(est[s] - true_pct[s]) for s in true_pct) + sum(others.values())
+        est, others, l1 = assign(True)
+        l1_strict = assign(False)[2]
+        m = {"l1_distance": round(l1, 3), "l1_distance_strict": round(l1_strict, 3), "bray_curtis": round(l1 / 200, 4),
              "false_positive_species": sum(1 for p in others.values() if p > 0)}
         pr = []
         for tname, thr in THRESHOLDS:
@@ -128,7 +139,7 @@ for ds in ("D6300", "D6310"):
             rows.append([FOLDER, dataset, label, version, "species level", s, "estimated_percent", round(est[s], 5), 1])
         est_table[label] = est
         dl = f"  {m['detection_limit_percent']:g} %" if ds == "D6310" and m.get("detection_limit_percent") else ""
-        print(f"   {label:<44} {l1:>6.1f} {l1 / 200:>6.3f} {m['false_positive_species']:>6}  " + "  ".join(pr) + dl)
+        print(f"   {label:<44} {l1:>6.1f} {l1_strict:>6.1f} {l1 / 200:>6.3f} {m['false_positive_species']:>6}  " + "  ".join(pr) + dl)
         top = sorted(others.items(), key=lambda x: -x[1])[:3]
         print(f"   {'':<44} largest false positives: " + "; ".join(f"{n} {p:.2f} %" for n, p in top))
     print(f"\n   {'species':<32} {'true %':>10}  " + "  ".join(f"{k[:22]:>22}" for k in est_table))
