@@ -13,3 +13,5 @@ scrna-doublets/data/
 scrna-doublets/work/
 entrapment-fdr-hye/db/
 entrapment-fdr-hye/searches/
+variant-calling-giab/data
+variant-calling-giab/work
