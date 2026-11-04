@@ -1,0 +1,45 @@
+name: db-api-monitor
+
+# Weekly light check of 13 public bioinformatics database APIs (issue #9). monitor.py calls each API once and records
+# status, latency, reported release and whether the documented example still works, never response bodies. The new
+# rows are appended to db-api-monitor/checks.csv, the summary and the generated index pages are refreshed, and the
+# result is committed to main by github-actions[bot]. Also runs on demand.
+on:
+  schedule:
+    - cron: "29 2 * * 3"          # Wednesdays 02:29 UTC (11:29 KST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: db-api-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Check the APIs and commit the new rows
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check the APIs
+        env:
+          MONITOR_RUNNER: github-actions ubuntu-24.04
+        run: python3 db-api-monitor/monitor.py "$RUNNER_TEMP/new_rows.csv"
+      - name: Append, summarise and commit to main
+        # On a rejected push (main moved), start again from the new main, so generated files are never merged by hand
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            tail -n +2 "$RUNNER_TEMP/new_rows.csv" >> db-api-monitor/checks.csv
+            python3 db-api-monitor/summarize.py > db-api-monitor/summarize.out
+            python3 docs/make_summaries.py
+            git add db-api-monitor/checks.csv db-api-monitor/scores.csv db-api-monitor/summarize.out docs/catalog.md docs/scores_summary.csv docs/scores_summary.md
+            git commit -q -m "db-api-monitor: weekly check $(date -u +%F)"
+            if git push -q origin HEAD:main; then echo "pushed on attempt $attempt"; exit 0; fi
+            sleep $((attempt * 10))
+          done
+          echo "could not push the new rows to main after 3 attempts"; exit 1

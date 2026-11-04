@@ -103,6 +103,9 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok microbiome-da-methods "MPLBACKEND=Agg python3 figure.py"
   run_ok random-signatures-tcga "MPLBACKEND=Agg python3 figure.py"
   run_ok scrna-pseudobulk-de "MPLBACKEND=Agg python3 figure.py"
+  check_out db-api-monitor "python3 summarize.py" summarize.out
+  same_file db-api-monitor/scores.csv
+  run_ok db-api-monitor "python3 test/test_monitor.py"       # monitor.py against a local server
   run_ok common "python3 tests/test_known_ratio.py"
   run_ok entrapment-fdr-hye "python3 test/test_synthetic.py"    # entrapment database, extraction and FDP estimates
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
