@@ -104,6 +104,7 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok random-signatures-tcga "MPLBACKEND=Agg python3 figure.py"
   run_ok scrna-pseudobulk-de "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
+  run_ok entrapment-fdr-hye "python3 test/test_synthetic.py"    # entrapment database, extraction and FDP estimates
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
   same_file docs/catalog.md
   same_file docs/scores_summary.csv
