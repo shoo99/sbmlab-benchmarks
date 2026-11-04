@@ -112,6 +112,10 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   check_out variant-calling-giab "python3 score.py" score.out
   same_file variant-calling-giab/scores.csv
   run_ok variant-calling-giab "MPLBACKEND=Agg python3 figure.py"
+  check_out go-release-drift "python3 score.py" score.out
+  same_file go-release-drift/scores.csv
+  run_ok go-release-drift "MPLBACKEND=Agg python3 figure.py"
+  run_ok go-release-drift "python3 test/test_go_ora.py"       # OBO/GAF readers, propagation, hypergeometric tail, BH
   run_ok common "python3 tests/test_known_ratio.py"
   run_ok entrapment-fdr-hye "python3 test/test_synthetic.py"    # entrapment database, extraction and FDP estimates
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
