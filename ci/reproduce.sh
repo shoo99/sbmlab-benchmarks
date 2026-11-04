@@ -112,6 +112,9 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   check_out variant-calling-giab "python3 score.py" score.out
   same_file variant-calling-giab/scores.csv
   run_ok variant-calling-giab "MPLBACKEND=Agg python3 figure.py"
+  check_out multiome-integration-pairing "python3 score.py" score.out
+  same_file multiome-integration-pairing/scores.csv
+  run_ok multiome-integration-pairing "MPLBACKEND=Agg python3 figure.py"
   check_out go-release-drift "python3 score.py" score.out
   same_file go-release-drift/scores.csv
   run_ok go-release-drift "MPLBACKEND=Agg python3 figure.py"

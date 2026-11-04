@@ -20,5 +20,4 @@ metagenome-profilers-mock/db
 metagenome-profilers-mock/work
 multiome-integration-pairing/data
 multiome-integration-pairing/work
-multiome-integration-pairing/run_glue.out
 go-release-drift/data

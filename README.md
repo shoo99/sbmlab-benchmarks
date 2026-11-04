@@ -94,6 +94,7 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 |---|---|---|
 | [scrna-doublets](scrna-doublets) | Pipeline tested on synthetic data in CI; workstation run pending (issue [#7](https://github.com/shoo99/sbmlab-benchmarks/issues/7)) | scDblFinder, scds, DoubletFinder and Scrublet against demuxlet doublets between donors (Kang 2018) and human + mouse doublets (10x hgmm_12k): AUPRC, recall and precision at the expected rate |
 | [scrna-pseudobulk-de](scrna-pseudobulk-de) | Simulation done; Kang 2018 run pending (issue [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6)) | 8 simulated donors, 4 vs 4, no real difference: cell-level Wilcoxon and t-test give p < 0.05 for 47% of genes (720 false BH calls per repetition); pseudobulk edgeR, DESeq2 and limma-voom 4.9–5.3% and none. With 10% of genes 2-fold, 78% of cell-level calls are false vs 4–6% for pseudobulk |
+| [multiome-integration-pairing](multiome-integration-pairing) | Done (issue [#16](https://github.com/shoo99/sbmlab-benchmarks/issues/16)); LIGER not run | 10x PBMC 10k Multiome with the RNA-ATAC pairing hidden: FOSCTTM 0.035 for GLUE, 0.062 for Seurat CCA, 0.119 for a naive gene-activity baseline; the true nucleus is the nearest for only 1.9% (GLUE); label transfer 0.94 vs 0.92, but the baseline reaches 0.83 overall while labelling no pDCs |
 
 ### Transcriptomics: known-ratio benchmark (SEQC/MAQC, in progress)
 

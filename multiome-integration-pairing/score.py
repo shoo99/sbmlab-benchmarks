@@ -5,7 +5,10 @@ Each results file has one row per nucleus: its RNA cell type (true_type), the ty
 own RNA profile; foscttm_rna: the reverse). Metrics per method:
   foscttm                mean over both directions (0 = every true match is the nearest; 0.5 = random)
   foscttm_atac_to_rna, foscttm_rna_to_atac
+  nearest_is_true_match  share of ATAC profiles whose nearest RNA profile is their own nucleus (FOSCTTM 0)
+  true_match_in_top_1pct share of ATAC profiles whose own RNA profile is among the nearest 1% (FOSCTTM < 0.01)
   label_accuracy         share of ATAC profiles given their nucleus's RNA cell type
+  label_accuracy_balanced  the mean of the per-type accuracies (each cell type counts once)
   errors_within_lineage  share of the label errors that stay within a lineage (T/NK, B, monocytes, dendritic cells),
                          e.g. CD4 T taken for CD8 T; the rest cross lineages
   per cell type: label accuracy and FOSCTTM
@@ -23,13 +26,14 @@ COLUMNS = ["folder", "dataset", "tool", "version", "setting", "subset", "metric"
 DATASET = "10x PBMC granulocyte-sorted 10k Multiome (RNA and ATAC of the same nuclei, pairing hidden)"
 METHODS = {"naive_baseline": ("naive baseline (gene activity + joint PCA)", "R 4.3.3; irlba 2.3.5.1"),
            "seurat_cca": ("Seurat CCA (label transfer, co-embedding)", "Seurat 5.0.1"),
-           "glue": ("GLUE", "scglue 0.5.2"), "liger": ("LIGER / UINMF", "rliger")}
+           "glue": ("GLUE", "scglue 0.5.2; torch 2.14.1"), "liger": ("LIGER / UINMF", "rliger")}
 LINEAGE = {"CD4 T": "T/NK", "CD8 T": "T/NK", "NK": "T/NK", "B": "B", "CD14 Mono": "monocytes",
            "CD16 Mono": "monocytes", "cDC": "dendritic cells", "pDC": "dendritic cells"}
 
 rows = []
 print(f"== {DATASET}\n")
-print(f"   {'method':<44} {'FOSCTTM':>8} {'ATAC>RNA':>9} {'RNA>ATAC':>9} {'labels':>7} {'errors in lineage':>18}")
+print(f"   {'method':<44} {'FOSCTTM':>8} {'ATAC>RNA':>9} {'RNA>ATAC':>9} {'nearest':>8} {'top 1%':>7} {'labels':>7} "
+      f"{'balanced':>9} {'errors in lineage':>18}")
 per_type = {}
 for f in sorted(res.glob("*.tsv"), key=lambda p: list(METHODS).index(p.stem) if p.stem in METHODS else 99):
     label, version = METHODS.get(f.stem, (f.stem, ""))
@@ -40,13 +44,18 @@ for f in sorted(res.glob("*.tsv"), key=lambda p: list(METHODS).index(p.stem) if 
     ok = [r["true_type"] == r["predicted_type"] for r in d]
     err = [r for r in d if r["true_type"] != r["predicted_type"]]
     within = sum(LINEAGE.get(r["true_type"]) == LINEAGE.get(r["predicted_type"]) for r in err)
+    types = sorted({r["true_type"] for r in d})
+    balanced = sum(sum(r["predicted_type"] == t for r in d if r["true_type"] == t) /
+                   sum(r["true_type"] == t for r in d) for t in types) / len(types)
     m = {"foscttm": (sum(fa) + sum(fr)) / (2 * n), "foscttm_atac_to_rna": sum(fa) / n, "foscttm_rna_to_atac": sum(fr) / n,
-         "label_accuracy": sum(ok) / n, "errors_within_lineage": within / len(err) if err else 0.0}
+         "nearest_is_true_match": sum(x == 0 for x in fa) / n, "true_match_in_top_1pct": sum(x < 0.01 for x in fa) / n,
+         "label_accuracy": sum(ok) / n, "label_accuracy_balanced": balanced,
+         "errors_within_lineage": within / len(err) if err else 0.0}
     for metric, v in m.items():
         rows.append([FOLDER, DATASET, label, version, "unpaired (pairing hidden)", "all nuclei", metric, round(v, 4), n])
     print(f"   {label:<44} {m['foscttm']:>8.4f} {m['foscttm_atac_to_rna']:>9.4f} {m['foscttm_rna_to_atac']:>9.4f} "
-          f"{m['label_accuracy']:>7.3f} {m['errors_within_lineage']:>18.3f}")
-    types = sorted({r["true_type"] for r in d})
+          f"{m['nearest_is_true_match']:>8.3f} {m['true_match_in_top_1pct']:>7.3f} {m['label_accuracy']:>7.3f} "
+          f"{m['label_accuracy_balanced']:>9.3f} {m['errors_within_lineage']:>18.3f}")
     per_type[label] = {}
     for t in types:
         sub = [r for r in d if r["true_type"] == t]

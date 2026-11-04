@@ -1,0 +1,19 @@
+== 10x PBMC granulocyte-sorted 10k Multiome (RNA and ATAC of the same nuclei, pairing hidden)
+
+   method                                        FOSCTTM  ATAC>RNA  RNA>ATAC  nearest  top 1%  labels  balanced  errors in lineage
+   naive baseline (gene activity + joint PCA)     0.1193    0.1271    0.1114    0.003   0.191   0.832     0.576              0.638
+   Seurat CCA (label transfer, co-embedding)      0.0620    0.0800    0.0439    0.004   0.255   0.916     0.859              0.666
+   GLUE                                           0.0349    0.0353    0.0345    0.019   0.430   0.935     0.876              0.794
+
+   per cell type: label accuracy / FOSCTTM
+   type        nuclei  naive baseline (gene activ  Seurat CCA (label transfer                        GLUE
+   B              962         0.899 / 0.0660              0.925 / 0.0444              0.982 / 0.0149     
+   CD14 Mono     3180         0.920 / 0.1443              0.954 / 0.0716              0.993 / 0.0420     
+   CD16 Mono      476         0.013 / 0.1973              0.571 / 0.0792              0.660 / 0.0151     
+   CD4 T         3188         0.958 / 0.1038              0.974 / 0.0620              0.959 / 0.0408     
+   CD8 T         1931         0.830 / 0.1045              0.869 / 0.0609              0.866 / 0.0439     
+   NK            1208         0.729 / 0.0823              0.902 / 0.0471              0.960 / 0.0176     
+   cDC            229         0.258 / 0.1903              0.734 / 0.0672              0.590 / 0.0135     
+   pDC            111         0.000 / 0.4886              0.946 / 0.0380              1.000 / 0.0035     
+
+wrote scores.csv (72 rows)

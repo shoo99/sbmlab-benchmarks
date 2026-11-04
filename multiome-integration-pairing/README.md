@@ -4,7 +4,15 @@ Tracking issue: [#16](https://github.com/shoo99/sbmlab-benchmarks/issues/16). No
 
 Methods that integrate single-cell RNA and ATAC from different cells are usually judged by how well the cell types mix. A 10x Multiome run measures both modalities in the same nuclei, so the right answer is known for every ATAC profile: it is the RNA profile with the same barcode. Here the pairing is hidden from each method and used only to score it.
 
-TODO_GLUE_FINDINGS
+Three methods were scored: a naive gene-activity baseline, Seurat's CCA label transfer, and GLUE. LIGER could not be installed in the cloud environment.
+
+- **GLUE pairs the modalities best.** FOSCTTM (0 = every true match is the nearest; 0.5 = random) is 0.035 for GLUE, 0.062 for Seurat CCA and 0.119 for the naive baseline.
+- **The exact nucleus is still rarely the nearest.** GLUE puts the ATAC profile's own RNA profile first for 1.9% of nuclei, and within the nearest 1% for 43%. Seurat gets 0.4% and 26%. The integrations line up cell states, not individual cells.
+- **Label transfer is close between Seurat and GLUE.** Accuracy is 0.916 for Seurat and 0.935 for GLUE. Balanced over cell types, it is 0.859 and 0.876.
+- **Overall accuracy hides the rare types.**
+  - The naive baseline reaches 0.832 overall while labelling 0 of 111 pDCs and 6 of 476 CD16 monocytes correctly. Its balanced accuracy is 0.576.
+  - GLUE gives only 59% of cDCs their type, against 73% for Seurat: 40% are taken for CD14 monocytes. For CD16 monocytes GLUE does better (66% vs 57%).
+- **Most errors stay within a lineage.** For GLUE, 79% of the label errors stay within a lineage, for example CD8 T taken for CD4 T or NK. The share is 67% for Seurat and 64% for the baseline.
 
 ## Data
 
@@ -39,7 +47,7 @@ The per-cluster scores are in `seurat_methods.out`.
 |---|---|---|
 | Naive baseline | R 4.3.3, irlba 2.3.5.1 | ATAC gene activity (peak counts in the gene body plus 2 kb upstream, strand-aware) and RNA on the shared variable genes, each z-scored within its modality; one PCA (30 PCs) of both |
 | Seurat CCA | Seurat 5.0.1 | `FindTransferAnchors(reduction = "cca")` from RNA to gene activity; `TransferData` for labels, weighted by the ATAC LSI (TF-IDF + SVD of peaks, dims 2–30); co-embedding as in Seurat's ATAC vignette (RNA imputed for the ATAC cells, merged, one PCA) |
-| GLUE | scglue 0.5.2, torch TODO_TORCH (CPU) | the scglue tutorial: RNA counts with 2,000 Seurat-v3 variable genes and 100 PCs; ATAC LSI with 100 components; an RNA-anchored guidance graph from gene body + promoter to peaks; negative-binomial likelihoods; pretraining, then fine-tuning with the discriminator and balancing weights; random seed 0 |
+| GLUE | scglue 0.5.2, torch 2.14.1 (CPU) | the scglue tutorial: RNA counts with 2,000 Seurat-v3 variable genes and 100 PCs; ATAC LSI with 100 components; an RNA-anchored guidance graph from gene body + promoter to peaks; negative-binomial likelihoods; pretraining, then fine-tuning with the discriminator and balancing weights; random seed 0 |
 | LIGER / UINMF | not run | `rliger` is not on conda, and CRAN is not reachable from the cloud environment |
 
 - **Hidden pairing**: GLUE gets the ATAC cells under new names (`atac-0` …), so it cannot pair them by barcode. The R methods see the barcodes only as row names and never use them to match cells.
@@ -88,18 +96,45 @@ python3 score.py > score.out && python3 figure.py
   - With pynndescent 0.7.0, the balancing step fails: scanpy 1.11.5 calls `getnnz`, which the returned sparse array no longer has.
   - Each training stage is saved under `work/glue`, and a rerun resumes from the last saved stage.
   - The run here was resumed once, after pretraining, when the balancing step failed. Pretraining does not use pynndescent, igraph or leidenalg, the packages that changed in between. `run_glue.out` has both parts.
-  - Run time: TODO_GLUE_TIME on 4 CPU threads.
+  - Run time: 78 minutes on 4 CPU threads, with a peak of 6.9 GB of memory. The first run (setup and pretraining) took 36 minutes, and the resumed run (setup, balancing and fine-tuning) took 42.
 - **CI**: re-runs `score.py` from the bundled `results/` and compares `scores.csv` and `score.out` byte for byte. It also runs `figure.py`.
 
 ## Results
 
 ![FOSCTTM and label-transfer accuracy per method and cell type](multiome_integration_pairing.png)
 
-TODO_GLUE_RESULTS
+**All 11,285 nuclei**:
+
+| Method | FOSCTTM | ATAC → RNA | RNA → ATAC | True match nearest | True match in nearest 1% | Label accuracy | Balanced | Errors within lineage |
+|---|---|---|---|---|---|---|---|---|
+| Naive baseline | 0.119 | 0.127 | 0.111 | 0.3% | 19.1% | 0.832 | 0.576 | 64% |
+| Seurat CCA | 0.062 | 0.080 | 0.044 | 0.4% | 25.5% | 0.916 | 0.859 | 67% |
+| GLUE | 0.035 | 0.035 | 0.035 | 1.9% | 43.0% | 0.935 | 0.876 | 79% |
+
+**Per cell type** (label accuracy / FOSCTTM):
+
+| Type | Nuclei | Naive baseline | Seurat CCA | GLUE |
+|---|---|---|---|---|
+| CD14 monocytes | 3,180 | 0.920 / 0.144 | 0.954 / 0.072 | 0.993 / 0.042 |
+| CD16 monocytes | 476 | 0.013 / 0.197 | 0.571 / 0.079 | 0.660 / 0.015 |
+| cDC | 229 | 0.258 / 0.190 | 0.734 / 0.067 | 0.590 / 0.014 |
+| pDC | 111 | 0.000 / 0.489 | 0.946 / 0.038 | 1.000 / 0.004 |
+| B | 962 | 0.899 / 0.066 | 0.925 / 0.044 | 0.982 / 0.015 |
+| CD4 T | 3,188 | 0.958 / 0.104 | 0.974 / 0.062 | 0.959 / 0.041 |
+| CD8 T | 1,931 | 0.830 / 0.105 | 0.869 / 0.061 | 0.866 / 0.044 |
+| NK | 1,208 | 0.729 / 0.082 | 0.902 / 0.047 | 0.960 / 0.018 |
+
+**Run time** (4 CPU threads):
+- **R methods**: preparation, cell types, the baseline and Seurat CCA together took 7.4 minutes, with a peak of 10.1 GB.
+- **GLUE**: 78 minutes in all, with a peak of 6.9 GB. Early stopping kept epoch 52 of pretraining and epoch 62 of fine-tuning.
 
 ## Traps
 
-TODO_GLUE_TRAPS
+- **Report balanced or per-type accuracy.** The naive baseline gets 83% of all nuclei right while labelling no pDCs correctly. Large types (CD4 T, CD14 monocytes) carry the overall number.
+- **Good mixing is not pairing.** GLUE transfers 93.5% of the labels correctly, yet the nearest RNA profile is the right nucleus for only 1.9% of ATAC profiles. Do not treat the nearest neighbour across modalities as the same cell, for example to link peaks to genes cell by cell.
+- **Report FOSCTTM in both directions.** Seurat's co-embedding is asymmetric (0.080 ATAC → RNA vs 0.044 RNA → ATAC); GLUE's is not.
+- **The label truth is itself an RNA clustering.** The CD4/CD8 T and CD14/CD16 monocyte boundaries are fuzzy in the RNA data too, so some "within-lineage errors" may be ambiguous cells rather than integration failures.
+- **The GLUE stack is fragile.** The bioconda package cannot run. The pip package does not install the Leiden clustering it needs, and pynndescent 0.7.0 breaks its balancing step through scanpy. Pin the environment and record it (`run_glue.out` lists the versions).
 
 ## Files
 
