@@ -103,6 +103,7 @@ One row per analysis folder (not `docs` or `ci`):
 - `bash ci/reproduce.sh pipelines` runs pipeline tests on synthetic data with a known answer (`rnaseq-quant-seqc/test/test_pipeline.sh`) in a separate job that installs the quantifiers.
 - `bash ci/reproduce.sh microbiome` re-runs `microbiome-da-methods` in the conda environment built from its lock file, in a job of its own.
 - `bash ci/reproduce.sh doublets` runs the `scrna-doublets` pipeline on synthetic data in the conda environment built from its lock file, in its own workflow (`.github/workflows/doublets.yml`), which runs only when `scrna-doublets/` or `ci/reproduce.sh` change, plus weekly and on demand.
+- `.github/workflows/db-api-monitor.yml` is a weekly data collection, not a check: it appends API results to `db-api-monitor/checks.csv`, refreshes its summary and the generated pages, and commits them to `main` as `github-actions[bot]`. Do not edit `checks.csv` by hand.
 - Dependabot (`.github/dependabot.yml`) opens a pull request once a month when a GitHub Action used in the workflow has a newer version.
 
 Re-runs happen in a temporary copy, so they never touch the working tree. Printouts are compared after normalising whitespace and dropping data.table's column-type row, which only data.table ≥ 1.15 prints. Tables must match byte for byte.

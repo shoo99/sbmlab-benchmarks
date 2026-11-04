@@ -1,0 +1,19 @@
+== no weekly checks yet (checks.csv has no rows); only the local reference below
+
+== bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls
+   database      calls  uptime  median s   p95 s
+   UniProt          10   1.000      3.30    4.89
+   Ensembl          10   0.600      8.07   15.00
+   NCBI Gene        10   1.000      0.24    1.11
+   ClinVar          10   1.000      0.24    0.63
+   RCSB PDB         10   1.000      0.40    1.13
+   AlphaFold DB     10   1.000      0.09    0.81
+   InterPro         10   1.000      1.05    3.44
+   QuickGO          10   1.000      1.05    2.32
+   STRING           10   1.000      0.70    1.19
+   Reactome         10   1.000      1.25    2.64
+   KEGG             10   0.900      0.28    0.65
+   GEO              10   1.000      0.25    0.64
+   PRIDE            10   1.000      7.26   12.61
+
+wrote scores.csv (39 rows)
