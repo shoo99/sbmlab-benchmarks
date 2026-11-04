@@ -98,6 +98,10 @@ else:
     for k, a in adatas.items():
         a.obsm["X_pretrain"] = pretrain.encode_data(k, a)
     scglue.data.estimate_balancing_weight(rna, atac, use_rep="X_pretrain", key_added="balancing_weight")
+    for k, a in adatas.items():
+        w = a.obs["balancing_weight"].to_numpy()
+        assert np.isfinite(w).all(), f"balancing weights of {k} are not finite"
+        print(f"   balancing weights, {k}: min {w.min():.3f}, median {np.median(w):.3f}, max {w.max():.3f}", flush=True)
     for a in adatas.values():
         scglue.data.get_dataset_config(a)["use_dsc_weight"] = "balancing_weight"
         del a.obsm["X_pretrain"]
