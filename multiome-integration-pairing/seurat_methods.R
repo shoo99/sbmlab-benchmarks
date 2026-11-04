@@ -126,12 +126,12 @@ utils::write.table(data.frame(barcode = colnames(rna), cell_type = ct), file.pat
 ## ---- scoring helpers
 foscttm <- function(A, R) {   # rows: cells in the same order (true pairs); returns per-cell FOSCTTM both ways
   n <- nrow(A); fa <- fr <- numeric(n); na <- rowSums(A^2); nr <- rowSums(R^2)
-  dtrue <- na + nr - 2 * rowSums(A * R)
   for (s in split(seq_len(n), ceiling(seq_len(n) / 1000))) {
+    self <- cbind(seq_along(s), s)       # the true pair's distance from the same matrix, so rounding cannot count it as closer
     d <- outer(na[s], nr, "+") - 2 * A[s, , drop = FALSE] %*% t(R)                   # ATAC cells s vs all RNA
-    fa[s] <- (rowSums(d < dtrue[s]) ) / (n - 1)
+    fa[s] <- rowSums(d < d[self]) / (n - 1)
     d2 <- outer(nr[s], na, "+") - 2 * R[s, , drop = FALSE] %*% t(A)                  # RNA cells s vs all ATAC
-    fr[s] <- (rowSums(d2 < dtrue[s])) / (n - 1)
+    fr[s] <- rowSums(d2 < d2[self]) / (n - 1)
   }
   list(atac = fa, rna = fr)
 }

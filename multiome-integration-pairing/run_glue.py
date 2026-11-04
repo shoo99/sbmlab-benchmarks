@@ -119,15 +119,15 @@ print(f"   trained in {time.time() - t0:.0f} s; embedding {R.shape[1]} dimension
 def foscttm(A, R):
     """Per-cell FOSCTTM both ways; row i of A and of R are the same nucleus."""
     na, nr = (A ** 2).sum(1), (R ** 2).sum(1)
-    dtrue = na + nr - 2 * (A * R).sum(1)
     n = len(A)
     fa, fr = np.empty(n), np.empty(n)
     for s in range(0, n, 1000):
         e = min(n, s + 1000)
+        rows, cols = np.arange(e - s), np.arange(s, e)  # the true pair's distance from the same matrix, so rounding cannot count it as closer
         d = na[s:e, None] + nr[None, :] - 2 * A[s:e] @ R.T
-        fa[s:e] = (d < dtrue[s:e, None]).sum(1) / (n - 1)
+        fa[s:e] = (d < d[rows, cols][:, None]).sum(1) / (n - 1)
         d2 = nr[s:e, None] + na[None, :] - 2 * R[s:e] @ A.T
-        fr[s:e] = (d2 < dtrue[s:e, None]).sum(1) / (n - 1)
+        fr[s:e] = (d2 < d2[rows, cols][:, None]).sum(1) / (n - 1)
     return fa, fr
 
 
@@ -153,4 +153,6 @@ print(f"   glue: FOSCTTM {np.mean(np.r_[fa, fr]):.4f} (ATAC->RNA {fa.mean():.4f}
       f"label accuracy {np.mean(pred == true):.3f}; total {time.time() - t0:.0f} s")
 from importlib.metadata import version  # noqa: E402
 print(f"Python {sys.version.split()[0]} | scglue {version('scglue')} | torch {torch.__version__} | "
-      f"scanpy {version('scanpy')} | numpy {np.__version__}")
+      f"scanpy {version('scanpy')} | numpy {np.__version__} | anndata {version('anndata')} | "
+      f"pynndescent {version('pynndescent')} | scikit-learn {version('scikit-learn')} | networkx {version('networkx')} | "
+      f"igraph {version('igraph')} | leidenalg {version('leidenalg')}")

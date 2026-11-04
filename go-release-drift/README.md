@@ -2,17 +2,18 @@
 
 Tracking issue: [#19](https://github.com/shoo99/sbmlab-benchmarks/issues/19). No post yet.
 
-Wadi et al. (2016, *Nature Methods*) warned that outdated annotations change enrichment results. How much do they change for gene lists that stay exactly the same? Unchanged lists were run through the same over-representation analysis (ORA) against four Gene Ontology releases, from January 2016 to October 2025, with the identifiers and the background held fixed.
+Wadi et al. (2016, *Nature Methods*) warned that outdated annotations change enrichment results. How much do they change for gene lists that stay exactly the same? Unchanged lists were run through the same over-representation analysis (ORA) against four Gene Ontology releases, from January 2016 to October 2025, with the identifiers and each list's universe held fixed. The background is the part of that universe annotated in each release, so its size and the number of tested terms change a little from release to release (Method, step 5).
 
 - **Planted answers survive.** Each planted list holds 15 cholesterol-biosynthesis proteins among 300. "Cholesterol biosynthetic process" was found in all 5 lists in every release and under both evidence settings, at rank 1–5.
 - **Random lists stay clean.** The 20 random lists gave no terms, except one list in the 2020 release, which gave 2 DNA-replication terms at FDR 0.024–0.027. They were not significant in 2016, 2023 or 2025.
-- **The real list drifts a lot.** The dexamethasone-up list from the airway data set shares only 21% of its significant terms between 2016 and 2025 (Jaccard 0.21), or 6% without electronic annotations. The down list shares 36%.
+- **The real list drifts a lot.** The dexamethasone-up list from the airway data set has a Jaccard overlap of only 0.21 between its 2016 and 2025 significant terms: 26 shared, out of 65 and 84. Of the 65 terms of 2016, 26 (40%) are still significant in 2025. Without electronic annotations the overlap is 0.06 (2 shared, out of 14 and 25). The down list has a Jaccard overlap of 0.36. These overlaps are for one list at one cutoff (FDR < 0.05). Part of the change is terms crossing the cutoff.
 - **The expected biology depends on the release.** Dexamethasone is a glucocorticoid. "Response to glucocorticoid" is significant for the up list from 2020 on (FDR 0.005–0.027). It is not significant in 2016 (FDR 0.21, rank 285).
   - The hybrid run moves it only to FDR 0.19, so the 2016 annotations, not the 2016 ontology, are what miss it.
   - Without electronic (IEA) annotations it is never found (FDR 0.86–1.0).
 - **Annotations moved more than the ontology** (all evidence codes).
-  - Reading the 2016 annotations through the 2025 ontology keeps 56–83% of the significant terms (Jaccard).
-  - Changing the annotations at a fixed ontology keeps 25–58%.
+  - Reading the 2016 annotations through the 2025 ontology gives a Jaccard overlap of 0.56–0.83 with the 2016 significant terms.
+  - Changing the annotations at a fixed ontology gives 0.25–0.58.
+  - This holds for the significant terms. Per protein, the two steps change about equally (mean Jaccard 0.63 for 2016 → hybrid, 0.61 for hybrid → 2025), so the claim is about what reaches the results, not about the annotation files as a whole.
   - Almost every protein's term set changed. Only 16 of 5,569 detected proteins have the same propagated term set in 2016 and 2025. The mean per-protein Jaccard is 0.42.
 - **Even the planted genes move in and out.** Of the 16 detected Reactome cholesterol-biosynthesis proteins, 13–16 carry the GO term, depending on the release (all evidence codes; 11–16 without IEA).
   - ACAT2 has it only in 2020.
@@ -53,6 +54,8 @@ All lists were fixed before any release was read.
 5. **Background**: the list's universe (detected proteome or tested genes), restricted to members with at least one annotation in that release, as most ORA tools do. The list is restricted to the same members.
 6. **Test**: a one-sided hypergeometric test for every term with 10–500 annotated background members, all three GO aspects together. Benjamini-Hochberg runs over the tested terms, and a term is significant at FDR < 0.05.
 7. **Hybrid run**: reads the 2016 annotations through the 2025 ontology. Ids are mapped by the 2025 alternative ids, and terms obsolete by 2025 are dropped. 2016 → hybrid is then the change of ontology alone, and hybrid → 2025 the change of annotations alone.
+   - The split runs in one order only (ontology first) and the two parts do not add up to the total.
+   - Obsolete terms are not followed through `replaced_by`. A 2016 annotation that curators later moved to the replacement term is therefore counted under the annotation change.
 
 GSEA was not run. The issue asked for it "where applicable", and only the airway list has a ranking.
 
@@ -135,9 +138,10 @@ python3 enrich.py && python3 score.py > score.out && python3 figure.py
 ## Traps
 
 - **Report the GO release, not just the tool version.** The same tool on the same list gives a different answer with each release. Here 65 vs 84 terms for the up list, with only 26 in common.
-- **Electronic annotations carry some of the expected biology.** Without IEA, "response to glucocorticoid" is never significant for dexamethasone-induced genes. In the 2025 release, 99 of the 139 human proteins annotated to it (or to a descendant) have it only through IEA. Most of those rows are experimental annotations of orthologs in other species, transferred by Ensembl Compara (GO_REF:0000107). Dropping IEA is not automatically the stricter choice.
+- **Electronic annotations carry some of the expected biology.** Without IEA, "response to glucocorticoid" is never significant for dexamethasone-induced genes. In the 2025 release, 99 of the 139 human proteins annotated to it (or to a descendant) have it only through IEA. Most of those rows (117 of 123 IEA rows) cite GO_REF:0000107: experimental annotations of orthologs in other species, transferred by Ensembl Compara. These counts are not in `results/`; they come from `read_obo` and `read_gaf` in `go_ora.py` run on the 2025-10-10 files.
+  - The no-IEA result rests on small terms: GO:0051384 has 11–20 annotated genes in the background without IEA, of which 1–2 are in the list. Dropping IEA is not automatically the stricter choice.
 - **Term counts hide turnover.** The airway down list gives 311 terms in 2016 and 262 in 2025, but only 36% of them are shared. Seventeen of the 2016 terms no longer exist, for example "cellular divalent inorganic cation homeostasis".
-- **Identifiers have to be held fixed on purpose.** Here proteins are UniProt accessions and genes are mapped through one HGNC table. Matching by gene symbol would add symbol renames to the drift.
+- **Identifiers have to be held fixed on purpose.** Here proteins are UniProt accessions and genes are mapped through one HGNC table. Matching by gene symbol would add symbol renames to the drift. The HGNC table is from 2025, so a UniProt accession that was merged after 2016 can lose some of its 2016 annotations.
 - **A planted answer is not a guarantee.** The planted genes come from Reactome, not GO. Three of them lost the GO term between 2020 and 2023. The term was still found because the other 12–13 in each list kept it.
 
 ## Files

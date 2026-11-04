@@ -8,7 +8,7 @@ Gene lists, all fixed before any release is read:
                   reactome_cholesterol.tsv) plus 285 other detected proteins (seeds 101-105); the GO term
                   "cholesterol biosynthetic process" (GO:0006695) should be enriched
   airway_up, airway_down   genes up or down with dexamethasone in airway smooth-muscle cells (airway_de.R: DESeq2,
-                  padj < 0.05, |log2FC| >= 1); background: all 16,596 tested genes
+                  padj < 0.05, |log2FC| >= 1); background: the 13,195 tested genes with a UniProt accession
 Identifiers are held fixed: proteins by UniProt accession (the leading accession of each protein group), genes by
 Ensembl id, mapped to UniProt accessions with one HGNC table (2025-10-07). A gene carries a term if any of its
 accessions does.
