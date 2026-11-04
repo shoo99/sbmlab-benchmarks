@@ -81,6 +81,12 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 |---|---|---|
 | [microbiome-da-methods](microbiome-da-methods) | Issue [#18](https://github.com/shoo99/sbmlab-benchmarks/issues/18) (no post yet) | smokers 16S counts, 20 vs 20, changes planted on the absolute scale. Null: ANCOM-BC2's q-values give 23.5 false calls per repetition (32% of OTUs p < 0.05), all removed by its own sensitivity filter, which also removes nearly all true calls; MaAsLin2, LinDA, DESeq2 and Wilcoxon are calibrated (4.2–5.5%). Planted: DESeq2 finds 33% at FDP 0.11, others 2–10%. A bloom of the top OTU sends Wilcoxon-on-CLR to FDP 0.35 |
 
+### Genomics: Genome in a Bottle truth set
+
+| Folder | Post | What it shows |
+|---|---|---|
+| [variant-calling-giab](variant-calling-giab) | Issue [#14](https://github.com/shoo99/sbmlab-benchmarks/issues/14) (no post yet) | HG002 chr20, 35x, scored with hap.py against GIAB v4.2.1. SNP F1 0.992 for both bcftools and GATK HaplotypeCaller; indel F1 0.937 vs 0.992 (most bcftools indel errors are wrong genotypes). GATK hard filters lower SNP F1 (recall in low-mappability regions 0.87 to 0.72). DeepVariant pending a workstation run |
+
 ### Single-cell: known-answer benchmarks (real-data runs in progress)
 
 | Folder | Status | What it shows |

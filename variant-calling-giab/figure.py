@@ -1,0 +1,70 @@
+"""Figure for the HG002 chr20 benchmark, drawn from scores.csv (written by score.py).
+Usage: python3 figure.py   -> variant_calling_giab.png next to this script (needs matplotlib)
+  a, b  SNPs and indels at the highest coverage: errors (false negatives + false positives) per call set and region,
+        on a log scale
+  c, d  SNPs and indels, all benchmark regions: F1 at each coverage (15x is the 35x BAM downsampled)
+"""
+import csv
+from pathlib import Path
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
+
+HERE = Path(__file__).resolve().parent
+SETS = ["bcftools call -m (all calls)", "bcftools, QUAL >= 20", "GATK HaplotypeCaller (unfiltered)",
+        "GATK HaplotypeCaller + hard filters", "DeepVariant"]
+COLOUR = {"bcftools call -m (all calls)": "#86b6ef", "bcftools, QUAL >= 20": "#2a78d6",
+          "GATK HaplotypeCaller (unfiltered)": "#f4a582", "GATK HaplotypeCaller + hard filters": "#eb6834",
+          "DeepVariant": "#1baf7a"}
+REGIONS = ["not in any difficult region", "tandem repeats and homopolymers", "segmental duplications", "low mappability",
+           "all difficult regions", "all benchmark regions"]
+SHORT = {"not in any difficult region": "easy", "tandem repeats and homopolymers": "TR / homopolymers",
+         "segmental duplications": "segdups", "low mappability": "low mappability",
+         "all difficult regions": "all difficult", "all benchmark regions": "all"}
+INK, MUTED, GRID = "#0b0b0b", "#52514e", "#d9d8d4"
+
+rows_all = list(csv.DictReader(open(HERE / "scores.csv")))
+covs = sorted({int(r["dataset"].split("PCR-free ")[1].split("x")[0]) for r in rows_all if "PCR-free" in r["dataset"]})
+cov = covs[-1]
+sets = [s for s in SETS if any(r["tool"] == s for r in rows_all)]
+
+
+def val(s, vtype, region, metric, c=None):
+    for r in rows_all:
+        if (f"PCR-free {c or cov}x" in r["dataset"] and r["tool"] == s and r["setting"] == f"{vtype}s"
+                and r["subset"] == region and r["metric"] == metric):
+            return float(r["value"])
+    return None
+
+
+def style(ax, title, ylabel):
+    ax.set_title(title, fontsize=9, loc="left", color=INK)
+    ax.set_ylabel(ylabel, fontsize=8, color=MUTED)
+    ax.tick_params(labelsize=7, colors=MUTED)
+    ax.grid(axis="y", color=GRID, lw=0.6)
+    ax.set_axisbelow(True)
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.spines[["left", "bottom"]].set_color(GRID)
+
+
+fig, axs = plt.subplots(2, 2, figsize=(12, 8.2), gridspec_kw={"width_ratios": [5, 3]})
+w = 0.8 / len(sets)
+for ax, vtype, title in ((axs[0, 0], "SNP", "a  SNPs"), (axs[1, 0], "INDEL", "b  Indels")):
+    for k, s in enumerate(sets):
+        ys = [(val(s, vtype, g, "fn") or 0) + (val(s, vtype, g, "fp") or 0) for g in REGIONS]
+        ax.bar([i + (k - (len(sets) - 1) / 2) * w for i in range(len(REGIONS))], ys, w * 0.92, color=COLOUR[s], label=s)
+    ax.set_yscale("log")
+    ax.set_xticks(range(len(REGIONS)), [SHORT[g] for g in REGIONS], fontsize=7)
+    style(ax, f"{title}: errors (FN + FP) on chr20, HG002 {cov}x", "false negatives + false positives (log scale)")
+axs[0, 0].legend(fontsize=7, frameon=False, loc="upper left")
+for ax, vtype, title in ((axs[0, 1], "SNP", "c  SNPs"), (axs[1, 1], "INDEL", "d  Indels")):
+    for s in sets:
+        ys = [val(s, vtype, "all benchmark regions", "f1", c) for c in covs]
+        ax.plot(covs, ys, color=COLOUR[s], marker="o", ms=5, lw=2)
+    ax.set_xticks(covs, [f"{c}x" for c in covs])
+    ax.set_xlim(covs[0] - 4, covs[-1] + 4)
+    style(ax, f"{title}: F1 by coverage, all benchmark regions", "F1")
+fig.tight_layout()
+fig.savefig(HERE / "variant_calling_giab.png", dpi=150)
+print("wrote variant_calling_giab.png")

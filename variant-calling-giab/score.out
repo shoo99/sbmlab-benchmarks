@@ -1,0 +1,41 @@
+== GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)
+
+-- SNP: F1 (recall / precision) by region
+   call set                                                 all                  easy             difficult            TR/homopol               segdups                lowmap
+   bcftools call -m (all calls)            0.9920 (0.994/0.990)  0.9991 (1.000/0.999)  0.9528 (0.962/0.944)  0.9675 (0.988/0.948)  0.8603 (0.944/0.790)  0.8834 (0.863/0.904)
+   bcftools, QUAL >= 20                    0.9928 (0.993/0.992)  0.9994 (1.000/0.999)  0.9564 (0.958/0.955)  0.9748 (0.986/0.964)  0.8748 (0.942/0.817)  0.8829 (0.850/0.918)
+   GATK HaplotypeCaller (unfiltered)       0.9921 (0.994/0.990)  0.9987 (0.999/0.998)  0.9561 (0.964/0.948)  0.9885 (0.990/0.987)  0.8459 (0.945/0.766)  0.8672 (0.867/0.867)
+   GATK HaplotypeCaller + hard filters     0.9905 (0.986/0.995)  0.9983 (0.997/0.999)  0.9460 (0.923/0.970)  0.9875 (0.980/0.995)  0.8771 (0.924/0.835)  0.8053 (0.715/0.921)
+
+-- INDEL: F1 (recall / precision) by region
+   call set                                                 all                  easy             difficult            TR/homopol               segdups                lowmap
+   bcftools call -m (all calls)            0.9365 (0.931/0.942)  0.9825 (0.978/0.987)  0.9173 (0.910/0.925)  0.9160 (0.909/0.923)  0.9193 (0.923/0.916)  0.8301 (0.741/0.944)
+   bcftools, QUAL >= 20                    0.9349 (0.925/0.945)  0.9825 (0.977/0.988)  0.9150 (0.902/0.928)  0.9137 (0.902/0.926)  0.9258 (0.923/0.929)  0.8121 (0.709/0.950)
+   GATK HaplotypeCaller (unfiltered)       0.9923 (0.991/0.993)  0.9979 (0.998/0.998)  0.9899 (0.989/0.991)  0.9927 (0.991/0.995)  0.8893 (0.972/0.820)  0.8616 (0.861/0.863)
+   GATK HaplotypeCaller + hard filters     0.9927 (0.991/0.994)  0.9985 (0.998/0.999)  0.9902 (0.988/0.992)  0.9927 (0.991/0.995)  0.9029 (0.965/0.848)  0.8781 (0.861/0.896)
+
+-- run time on chr20 (4 threads; peak RSS of the largest process)
+   bcftools     wall    220 s   CPU     243 s   peak RSS    107 MB
+   gatk         wall   1045 s   CPU    3478 s   peak RSS   3071 MB
+
+== GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)
+
+-- SNP: F1 (recall / precision) by region
+   call set                                                 all                  easy             difficult            TR/homopol               segdups                lowmap
+   bcftools call -m (all calls)            0.9842 (0.982/0.987)  0.9923 (0.991/0.994)  0.9395 (0.933/0.946)  0.9440 (0.944/0.944)  0.8681 (0.921/0.821)  0.8676 (0.823/0.917)
+   bcftools, QUAL >= 20                    0.9813 (0.972/0.991)  0.9891 (0.982/0.996)  0.9375 (0.914/0.962)  0.9478 (0.928/0.969)  0.8795 (0.906/0.854)  0.8509 (0.780/0.935)
+   GATK HaplotypeCaller (unfiltered)       0.9843 (0.982/0.986)  0.9907 (0.990/0.992)  0.9488 (0.943/0.955)  0.9767 (0.973/0.980)  0.8680 (0.921/0.821)  0.8527 (0.820/0.888)
+   GATK HaplotypeCaller + hard filters     0.9767 (0.965/0.988)  0.9849 (0.977/0.993)  0.9302 (0.900/0.963)  0.9685 (0.955/0.982)  0.8730 (0.899/0.849)  0.7833 (0.690/0.905)
+
+-- INDEL: F1 (recall / precision) by region
+   call set                                                 all                  easy             difficult            TR/homopol               segdups                lowmap
+   bcftools call -m (all calls)            0.9172 (0.900/0.935)  0.9770 (0.970/0.984)  0.8918 (0.870/0.915)  0.8908 (0.870/0.913)  0.8852 (0.866/0.905)  0.7414 (0.633/0.895)
+   bcftools, QUAL >= 20                    0.9077 (0.878/0.940)  0.9751 (0.965/0.986)  0.8785 (0.841/0.920)  0.8769 (0.839/0.918)  0.8680 (0.831/0.908)  0.7230 (0.601/0.907)
+   GATK HaplotypeCaller (unfiltered)       0.9573 (0.943/0.972)  0.9842 (0.986/0.982)  0.9454 (0.925/0.967)  0.9465 (0.926/0.968)  0.9053 (0.930/0.882)  0.7878 (0.715/0.877)
+   GATK HaplotypeCaller + hard filters     0.9575 (0.943/0.972)  0.9848 (0.986/0.983)  0.9455 (0.925/0.967)  0.9466 (0.926/0.969)  0.9084 (0.930/0.888)  0.7878 (0.715/0.877)
+
+-- run time on chr20 (4 threads; peak RSS of the largest process)
+   bcftools     wall    126 s   CPU     149 s   peak RSS    108 MB
+   gatk         wall    733 s   CPU    2667 s   peak RSS   1623 MB
+
+wrote scores.csv (492 rows)

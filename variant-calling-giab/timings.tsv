@@ -1,0 +1,5 @@
+caller	coverage	wall_s	cpu_s	peak_rss_mb
+bcftools	35	220	243	107
+gatk	35	1045	3478	3071
+bcftools	15	126	149	108
+gatk	15	733	2667	1623
