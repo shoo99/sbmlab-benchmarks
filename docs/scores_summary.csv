@@ -694,3 +694,495 @@ scrna-pseudobulk-de,"simulation: 8 donors (4 vs 4), 10 repetitions",limma-voom (
 scrna-pseudobulk-de,"simulation: 8 donors (4 vs 4), 10 repetitions",limma-voom (pseudobulk),"edgeR 4.0.16; DESeq2 1.42.0; limma 3.58.1; R 4.3.3 (Wilcoxon rank-sum, Welch t)","planted 2-fold in 10%, no donor effect",BH 5% discoveries,false_discoveries_per_rep,8.2,10
 scrna-pseudobulk-de,"simulation: 8 donors (4 vs 4), 10 repetitions",limma-voom (pseudobulk),"edgeR 4.0.16; DESeq2 1.42.0; limma 3.58.1; R 4.3.3 (Wilcoxon rank-sum, Welch t)","planted 2-fold in 10%, no donor effect",changed genes,power_bh_0.05,0.9933,10
 scrna-pseudobulk-de,"simulation: 8 donors (4 vs 4), 10 repetitions",limma-voom (pseudobulk),"edgeR 4.0.16; DESeq2 1.42.0; limma 3.58.1; R 4.3.3 (Wilcoxon rank-sum, Welch t)","planted 2-fold in 10%, no donor effect",BH 5% discoveries,fdp_bh_0.05,0.0436,10
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,recall,0.99387,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,precision,0.99004,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,f1,0.99195,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,fn,437,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,fp,714,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,recall,0.99967,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,precision,0.99859,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,f1,0.99913,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,fn,20,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,fp,85,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,recall,0.96188,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,precision,0.94396,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,f1,0.95284,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,fn,417,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,fp,629,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,recall,0.98766,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,precision,0.94815,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,f1,0.9675,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,fn,49,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,fp,218,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,recall,0.94371,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,precision,0.7904,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,f1,0.86028,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,fn,85,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,fp,380,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,recall,0.86339,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,precision,0.90427,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,f1,0.88335,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,fn,372,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,fp,249,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,recall,0.99316,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,precision,0.9924,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,f1,0.99278,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,fn,488,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,fp,543,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,recall,0.99959,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,precision,0.99922,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,f1,0.9994,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,fn,25,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,fp,47,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,recall,0.95767,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,precision,0.95509,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,f1,0.95638,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,fn,463,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,fp,496,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,recall,0.98564,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,precision,0.96412,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,f1,0.97476,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,fn,57,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,fp,148,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,recall,0.94172,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,precision,0.81668,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,f1,0.87475,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,fn,88,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,fp,321,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,recall,0.85016,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,precision,0.91829,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,f1,0.88291,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,fn,408,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,fp,206,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,recall,0.99406,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,precision,0.99016,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,f1,0.9921,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,fn,424,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,fp,705,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,recall,0.99942,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,precision,0.99797,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,f1,0.99869,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,fn,35,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,fp,123,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,recall,0.96444,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,precision,0.94785,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,f1,0.95607,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,fn,389,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,fp,582,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,recall,0.99018,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,precision,0.98679,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,f1,0.98848,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fn,39,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fp,53,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,recall,0.94503,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,precision,0.76556,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,f1,0.84588,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,fn,83,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,fp,437,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,recall,0.86706,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,precision,0.86738,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,f1,0.86722,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,fn,362,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,fp,361,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,recall,0.98593,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,precision,0.99506,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,f1,0.99047,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,fn,1004,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,fp,349,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,recall,0.99735,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,precision,0.99934,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,f1,0.99834,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,fn,160,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,fp,40,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,recall,0.92285,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,precision,0.97038,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,f1,0.94601,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,fn,844,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,fp,309,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,recall,0.9801,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,precision,0.99492,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,f1,0.98746,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fn,79,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fp,20,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,recall,0.92384,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,precision,0.83483,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,f1,0.87708,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,fn,115,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,fp,276,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,recall,0.71539,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,precision,0.92104,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,f1,0.80529,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,fn,775,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,fp,167,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,recall,0.93061,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,precision,0.94239,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,f1,0.93646,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,fn,781,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,fp,675,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,recall,0.97845,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,precision,0.98661,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,f1,0.98251,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,fn,73,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,fp,45,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,recall,0.91002,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,precision,0.92471,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,f1,0.9173,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,fn,708,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,fp,629,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,recall,0.90945,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,precision,0.92273,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,f1,0.91604,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,fn,672,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,fp,613,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,recall,0.92253,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,precision,0.91608,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,f1,0.9193,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,fn,11,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,fp,12,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,recall,0.74051,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,precision,0.94444,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,f1,0.83013,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,fn,41,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,fp,7,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,recall,0.92493,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,precision,0.94511,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,f1,0.93491,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,fn,845,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,fp,638,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,recall,0.97727,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,precision,0.98778,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,f1,0.9825,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,fn,77,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,fp,41,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,recall,0.90239,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,precision,0.92791,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,f1,0.91497,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,fn,768,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,fp,596,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,recall,0.9019,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,precision,0.92588,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,f1,0.91373,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,fn,728,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,fp,582,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,recall,0.92253,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,precision,0.92908,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,f1,0.9258,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,fn,11,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,fp,10,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,recall,0.70886,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,precision,0.95041,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,f1,0.81205,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,fn,46,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,fp,6,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,recall,0.99138,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,precision,0.99314,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,f1,0.99226,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,fn,97,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,fp,80,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,recall,0.99793,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,precision,0.99793,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,f1,0.99793,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,fn,7,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,fp,7,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,recall,0.98856,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,precision,0.99118,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,f1,0.98987,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,fn,90,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,fp,73,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,recall,0.99057,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,precision,0.99476,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,f1,0.99266,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fn,70,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fp,41,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,recall,0.97183,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,precision,0.81977,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,f1,0.88935,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,fn,4,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,fp,31,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,recall,0.86076,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,precision,0.8625,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,f1,0.86163,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,fn,22,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,fp,22,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,recall,0.99129,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,precision,0.99408,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,f1,0.99268,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,fn,98,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,fp,69,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,recall,0.99793,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,precision,0.99911,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,f1,0.99852,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,fn,7,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,fp,3,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,recall,0.98843,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,precision,0.99202,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,f1,0.99022,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,fn,91,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,fp,66,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,recall,0.99057,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,precision,0.99488,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,f1,0.99272,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fn,70,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fp,40,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,recall,0.96479,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,precision,0.84849,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,f1,0.90291,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,fn,5,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,fp,25,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,recall,0.86076,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,precision,0.8961,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,f1,0.87808,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,fn,22,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,fp,16,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools,bcftools 1.25,"chr20, 4 threads",run time,wall_seconds,220,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools,bcftools 1.25,"chr20, 4 threads",run time,cpu_seconds,243,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",bcftools,bcftools 1.25,"chr20, 4 threads",run time,peak_rss_mb,107,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",gatk,GATK 4.6.2.0,"chr20, 4 threads",run time,wall_seconds,1045,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",gatk,GATK 4.6.2.0,"chr20, 4 threads",run time,cpu_seconds,3478,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)",gatk,GATK 4.6.2.0,"chr20, 4 threads",run time,peak_rss_mb,3071,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,recall,0.98173,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,precision,0.98675,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,f1,0.98424,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,fn,1303,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all benchmark regions,fp,941,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,recall,0.99058,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,precision,0.99404,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,f1,0.9923,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,fn,569,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,not in any difficult region,fp,359,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,recall,0.9329,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,precision,0.94625,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,f1,0.93953,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,fn,734,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,all difficult regions,fp,582,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,recall,0.94383,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,precision,0.9441,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,f1,0.94396,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,fn,223,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,tandem repeats and homopolymers,fp,224,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,recall,0.92119,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,precision,0.8208,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,f1,0.8681,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,fn,119,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,segmental duplications,fp,305,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,recall,0.82336,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,precision,0.91697,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,f1,0.86765,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,fn,481,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,SNPs,low mappability,fp,203,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,recall,0.97156,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,precision,0.99117,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,f1,0.98126,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,fn,2029,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all benchmark regions,fp,618,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,recall,0.982,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,precision,0.99622,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,f1,0.98906,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,fn,1087,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,not in any difficult region,fp,225,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,recall,0.91389,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,precision,0.96232,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,f1,0.93748,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,fn,942,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,all difficult regions,fp,393,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,recall,0.92771,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,precision,0.96873,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,f1,0.94777,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,fn,287,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,tandem repeats and homopolymers,fp,120,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,recall,0.90596,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,precision,0.85448,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,f1,0.87947,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,fn,142,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,segmental duplications,fp,234,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,recall,0.78039,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,precision,0.9353,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,f1,0.85085,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,fn,598,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,SNPs,low mappability,fp,147,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,recall,0.98242,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,precision,0.98613,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,f1,0.98427,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,fn,1254,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all benchmark regions,fp,986,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,recall,0.98957,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,precision,0.99177,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,f1,0.99067,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,fn,630,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,not in any difficult region,fp,496,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,recall,0.94296,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,precision,0.95474,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,f1,0.94881,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,fn,624,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,all difficult regions,fp,490,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,recall,0.9733,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,precision,0.98008,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,f1,0.97668,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fn,106,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fp,79,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,recall,0.92119,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,precision,0.82065,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,f1,0.86802,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,fn,119,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,segmental duplications,fp,304,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,recall,0.82042,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,precision,0.88756,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,f1,0.85267,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,fn,489,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,SNPs,low mappability,fp,283,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,recall,0.96532,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,precision,0.98832,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,f1,0.97668,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,fn,2474,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all benchmark regions,fp,814,71333
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,recall,0.9772,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,precision,0.9927,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,f1,0.98489,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,fn,1377,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,not in any difficult region,fp,434,60394
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,recall,0.89972,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,precision,0.9629,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,f1,0.93024,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,fn,1097,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,all difficult regions,fp,380,10939
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,recall,0.95516,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,precision,0.98223,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,f1,0.96851,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fn,178,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,tandem repeats and homopolymers,fp,69,3970
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,recall,0.89868,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,precision,0.84865,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,f1,0.87295,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,fn,153,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,segmental duplications,fp,242,1510
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,recall,0.69042,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,precision,0.90515,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,f1,0.78333,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,fn,843,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,SNPs,low mappability,fp,197,2723
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,recall,0.89979,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,precision,0.93524,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,f1,0.91717,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,fn,1128,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all benchmark regions,fp,736,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,recall,0.9696,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,precision,0.98443,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,f1,0.97696,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,fn,103,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,not in any difficult region,fp,52,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,recall,0.86972,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,precision,0.915,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,f1,0.89179,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,fn,1025,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,all difficult regions,fp,682,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,recall,0.86969,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,precision,0.91299,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,f1,0.89082,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,fn,967,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,tandem repeats and homopolymers,fp,663,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,recall,0.8662,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,precision,0.90511,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,f1,0.88523,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,fn,19,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,segmental duplications,fp,13,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,recall,0.63291,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,precision,0.89474,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,f1,0.74139,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,fn,58,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools call -m (all calls),bcftools 1.25,INDELs,low mappability,fp,12,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,recall,0.87793,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,precision,0.93951,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,f1,0.90768,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,fn,1374,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all benchmark regions,fp,669,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,recall,0.96458,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,precision,0.98583,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,f1,0.97509,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,fn,120,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,not in any difficult region,fp,47,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,recall,0.84062,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,precision,0.91991,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,f1,0.87848,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,fn,1254,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,all difficult regions,fp,620,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,recall,0.83937,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,precision,0.91801,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,f1,0.87693,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,fn,1192,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,tandem repeats and homopolymers,fp,602,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,recall,0.83099,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,precision,0.9084,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,f1,0.86797,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,fn,24,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,segmental duplications,fp,12,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,recall,0.60127,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,precision,0.90654,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,f1,0.723,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,fn,63,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)","bcftools, QUAL >= 20",bcftools 1.25,INDELs,low mappability,fp,10,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,recall,0.94341,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,precision,0.97155,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,f1,0.95727,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,fn,637,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all benchmark regions,fp,321,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,recall,0.98642,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,precision,0.98208,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,f1,0.98424,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,fn,46,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,not in any difficult region,fp,61,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,recall,0.92476,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,precision,0.96701,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,f1,0.94541,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,fn,592,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,all difficult regions,fp,260,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,recall,0.92562,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,precision,0.96832,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,f1,0.94649,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fn,552,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fp,236,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,recall,0.92958,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,precision,0.88235,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,f1,0.90535,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,fn,10,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,segmental duplications,fp,18,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,recall,0.71519,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,precision,0.87692,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,f1,0.78784,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,fn,45,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller (unfiltered),GATK 4.6.2.0,INDELs,low mappability,fp,16,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,recall,0.94341,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,precision,0.97207,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,f1,0.95753,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,fn,637,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all benchmark regions,fp,315,11256
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,recall,0.98642,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,precision,0.98323,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,f1,0.98482,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,fn,46,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,not in any difficult region,fp,57,3388
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,recall,0.92476,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,precision,0.96725,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,f1,0.94553,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,fn,592,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,all difficult regions,fp,258,7868
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,recall,0.92562,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,precision,0.96858,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,f1,0.94661,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fn,552,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,tandem repeats and homopolymers,fp,234,7421
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,recall,0.92958,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,precision,0.88816,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,f1,0.9084,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,fn,10,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,segmental duplications,fp,17,142
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,recall,0.71519,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,precision,0.87692,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,f1,0.78784,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,fn,45,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",GATK HaplotypeCaller + hard filters,GATK 4.6.2.0,INDELs,low mappability,fp,16,158
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools,bcftools 1.25,"chr20, 4 threads",run time,wall_seconds,126,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools,bcftools 1.25,"chr20, 4 threads",run time,cpu_seconds,149,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",bcftools,bcftools 1.25,"chr20, 4 threads",run time,peak_rss_mb,108,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",gatk,GATK 4.6.2.0,"chr20, 4 threads",run time,wall_seconds,733,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",gatk,GATK 4.6.2.0,"chr20, 4 threads",run time,cpu_seconds,2667,1
+variant-calling-giab,"GIAB HG002 chr20, NovaSeq PCR-free 15x, v4.2.1 benchmark (GRCh38)",gatk,GATK 4.6.2.0,"chr20, 4 threads",run time,peak_rss_mb,1623,1

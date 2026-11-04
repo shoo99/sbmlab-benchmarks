@@ -1,7 +1,8 @@
 """Figure for the HG002 chr20 benchmark, drawn from scores.csv (written by score.py).
 Usage: python3 figure.py   -> variant_calling_giab.png next to this script (needs matplotlib)
-  a, b  SNPs and indels: errors (false negatives + false positives) per call set and region, on a log scale
-  c     recall vs precision of indels in all benchmark regions and in difficult regions
+  a, b  SNPs and indels at the highest coverage: errors (false negatives + false positives) per call set and region,
+        on a log scale
+  c, d  SNPs and indels, all benchmark regions: F1 at each coverage (15x is the 35x BAM downsampled)
 """
 import csv
 from pathlib import Path
@@ -23,52 +24,47 @@ SHORT = {"not in any difficult region": "easy", "tandem repeats and homopolymers
          "all difficult regions": "all difficult", "all benchmark regions": "all"}
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#d9d8d4"
 
-rows = list(csv.DictReader(open(HERE / "scores.csv")))
-cov = max(int(r["dataset"].split("PCR-free ")[1].split("x")[0]) for r in rows if "PCR-free" in r["dataset"])
-rows = [r for r in rows if f"PCR-free {cov}x" in r["dataset"]]
-sets = [s for s in SETS if any(r["tool"] == s for r in rows)]
+rows_all = list(csv.DictReader(open(HERE / "scores.csv")))
+covs = sorted({int(r["dataset"].split("PCR-free ")[1].split("x")[0]) for r in rows_all if "PCR-free" in r["dataset"]})
+cov = covs[-1]
+sets = [s for s in SETS if any(r["tool"] == s for r in rows_all)]
 
 
-def val(s, vtype, region, metric):
-    for r in rows:
-        if r["tool"] == s and r["setting"] == f"{vtype}s" and r["subset"] == region and r["metric"] == metric:
+def val(s, vtype, region, metric, c=None):
+    for r in rows_all:
+        if (f"PCR-free {c or cov}x" in r["dataset"] and r["tool"] == s and r["setting"] == f"{vtype}s"
+                and r["subset"] == region and r["metric"] == metric):
             return float(r["value"])
     return None
 
 
-fig, axs = plt.subplots(1, 3, figsize=(14, 4.4), gridspec_kw={"width_ratios": [5, 5, 3.4]})
-w = 0.8 / len(sets)
-for ax, vtype, title in ((axs[0], "SNP", "a  SNPs"), (axs[1], "INDEL", "b  Indels")):
-    for k, s in enumerate(sets):
-        ys = [(val(s, vtype, g, "fn") or 0) + (val(s, vtype, g, "fp") or 0) for g in REGIONS]
-        ax.bar([i + (k - (len(sets) - 1) / 2) * w for i in range(len(REGIONS))], ys, w * 0.92, color=COLOUR[s], label=s)
-    ax.set_yscale("log")
-    ax.set_xticks(range(len(REGIONS)), [SHORT[g] for g in REGIONS], fontsize=7, rotation=20, ha="right")
-    ax.set_title(f"{title}: errors (FN + FP) on chr20, HG002 {cov}x", fontsize=9, loc="left", color=INK)
-    ax.set_ylabel("false negatives + false positives (log scale)", fontsize=8, color=MUTED)
+def style(ax, title, ylabel):
+    ax.set_title(title, fontsize=9, loc="left", color=INK)
+    ax.set_ylabel(ylabel, fontsize=8, color=MUTED)
     ax.tick_params(labelsize=7, colors=MUTED)
     ax.grid(axis="y", color=GRID, lw=0.6)
     ax.set_axisbelow(True)
     ax.spines[["top", "right"]].set_visible(False)
     ax.spines[["left", "bottom"]].set_color(GRID)
-axs[0].legend(fontsize=6.5, frameon=False, loc="upper left")
-ax = axs[2]
-for s in sets:
-    for region, marker in (("all benchmark regions", "o"), ("all difficult regions", "^")):
-        r, p = val(s, "INDEL", region, "recall"), val(s, "INDEL", region, "precision")
-        if r is not None and p is not None:
-            ax.scatter(r, p, s=46, marker=marker, color=COLOUR[s], edgecolor="white", linewidth=0.8, zorder=3)
-ax.scatter([], [], marker="o", color=MUTED, label="all benchmark regions")
-ax.scatter([], [], marker="^", color=MUTED, label="all difficult regions")
-ax.legend(fontsize=7, frameon=False, loc="lower left")
-ax.set_xlabel("recall", fontsize=8, color=MUTED)
-ax.set_ylabel("precision", fontsize=8, color=MUTED)
-ax.set_title("c  Indels: recall vs precision", fontsize=9, loc="left", color=INK)
-ax.tick_params(labelsize=7, colors=MUTED)
-ax.grid(color=GRID, lw=0.6)
-ax.set_axisbelow(True)
-ax.spines[["top", "right"]].set_visible(False)
-ax.spines[["left", "bottom"]].set_color(GRID)
+
+
+fig, axs = plt.subplots(2, 2, figsize=(12, 8.2), gridspec_kw={"width_ratios": [5, 3]})
+w = 0.8 / len(sets)
+for ax, vtype, title in ((axs[0, 0], "SNP", "a  SNPs"), (axs[1, 0], "INDEL", "b  Indels")):
+    for k, s in enumerate(sets):
+        ys = [(val(s, vtype, g, "fn") or 0) + (val(s, vtype, g, "fp") or 0) for g in REGIONS]
+        ax.bar([i + (k - (len(sets) - 1) / 2) * w for i in range(len(REGIONS))], ys, w * 0.92, color=COLOUR[s], label=s)
+    ax.set_yscale("log")
+    ax.set_xticks(range(len(REGIONS)), [SHORT[g] for g in REGIONS], fontsize=7)
+    style(ax, f"{title}: errors (FN + FP) on chr20, HG002 {cov}x", "false negatives + false positives (log scale)")
+axs[0, 0].legend(fontsize=7, frameon=False, loc="upper left")
+for ax, vtype, title in ((axs[0, 1], "SNP", "c  SNPs"), (axs[1, 1], "INDEL", "d  Indels")):
+    for s in sets:
+        ys = [val(s, vtype, "all benchmark regions", "f1", c) for c in covs]
+        ax.plot(covs, ys, color=COLOUR[s], marker="o", ms=5, lw=2)
+    ax.set_xticks(covs, [f"{c}x" for c in covs])
+    ax.set_xlim(covs[0] - 4, covs[-1] + 4)
+    style(ax, f"{title}: F1 by coverage, all benchmark regions", "F1")
 fig.tight_layout()
 fig.savefig(HERE / "variant_calling_giab.png", dpi=150)
 print("wrote variant_calling_giab.png")

@@ -106,6 +106,9 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   check_out db-api-monitor "python3 summarize.py" summarize.out
   same_file db-api-monitor/scores.csv
   run_ok db-api-monitor "python3 test/test_monitor.py"       # monitor.py against a local server
+  check_out variant-calling-giab "python3 score.py" score.out
+  same_file variant-calling-giab/scores.csv
+  run_ok variant-calling-giab "MPLBACKEND=Agg python3 figure.py"
   run_ok common "python3 tests/test_known_ratio.py"
   run_ok entrapment-fdr-hye "python3 test/test_synthetic.py"    # entrapment database, extraction and FDP estimates
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv

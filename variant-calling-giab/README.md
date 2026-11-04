@@ -1,4 +1,4 @@
-# Germline variant calling on GIAB HG002 chr20: bcftools vs GATK HaplotypeCaller (DeepVariant on a workstation) (2026-11-04)
+# Germline variant calling on GIAB HG002 chr20: bcftools vs GATK HaplotypeCaller (DeepVariant on a workstation; 2026-11-04)
 
 Tracking issue: [#14](https://github.com/shoo99/sbmlab-benchmarks/issues/14). No post yet.
 
@@ -8,6 +8,10 @@ How do the common germline small-variant callers compare against a curated truth
 - **On indels, GATK is far ahead**: F1 0.992 vs 0.937. Of 11,256 truth indels, bcftools misses 781 (GATK 97). Of bcftools' 675 false indel calls, 592 are the right allele with the wrong genotype (GATK: 80 false indel calls in all).
 - **GATK's recommended hard filters cost SNP recall.** SNP F1 drops from 0.9921 to 0.9905. The filters remove 356 false SNPs but also 580 true ones, mostly in low-mappability regions (recall 0.867 → 0.715, through the MQ < 40 filter). On indels the filters help slightly.
 - **Every caller is worst in segmental duplications and low-mappability regions.** There, SNP F1 is 0.81–0.88, against 0.998–0.999 in the easy regions. In segmental duplications the errors are mostly false positives: SNP precision is 0.77–0.84 at recall 0.92–0.95.
+- **At 15×, F1 drops and filtering hurts more.**
+  - SNP F1 falls to 0.984 for both callers. With hard filters it is 0.977; with QUAL ≥ 20 for bcftools, 0.981.
+  - Indel F1 falls to 0.957 for GATK and 0.917 for bcftools.
+  - Filters tuned for typical coverage remove more true calls when the coverage is lower.
 - **DeepVariant is not in these numbers yet.** The cloud environment could not run it, so `run.sh` has a DeepVariant step for a workstation (see *How to run*).
 
 ## Data
@@ -98,7 +102,7 @@ python3 score.py > score.out && python3 figure.py
 
 ## Results
 
-![Errors per call set and region for SNPs and indels, and indel recall vs precision](variant_calling_giab.png)
+![Errors per call set and region for SNPs and indels at 35x, and F1 at 15x vs 35x](variant_calling_giab.png)
 
 **35×, all benchmark regions**:
 
@@ -120,12 +124,23 @@ python3 score.py > score.out && python3 figure.py
 | Indel, GATK (unfiltered) | 0.998 | 0.990 | 0.993 | 0.889 | 0.862 |
 | Indel, GATK + hard filters | 0.999 | 0.990 | 0.993 | 0.903 | 0.878 |
 
+**15× (downsampled), all benchmark regions**:
+
+| Call set | SNP recall | SNP precision | SNP F1 | Indel recall | Indel precision | Indel F1 |
+|---|---|---|---|---|---|---|
+| bcftools call -m (all calls) | 0.982 | 0.987 | 0.9842 | 0.900 | 0.935 | 0.9172 |
+| bcftools, QUAL >= 20 | 0.972 | 0.991 | 0.9813 | 0.878 | 0.940 | 0.9077 |
+| GATK HaplotypeCaller (unfiltered) | 0.982 | 0.986 | 0.9843 | 0.943 | 0.972 | 0.9573 |
+| GATK HaplotypeCaller + hard filters | 0.965 | 0.988 | 0.9767 | 0.943 | 0.972 | 0.9575 |
+
 **Run time on chr20** (4 threads):
 
-| Caller | Wall time | CPU time | Peak memory of one process |
-|---|---|---|---|
-| bcftools | 3.7 min | 4.1 min | 107 MB |
-| GATK HaplotypeCaller | 17.4 min | 58 min | 3.1 GB |
+| Caller | Coverage | Wall time | CPU time | Peak memory of one process |
+|---|---|---|---|---|
+| bcftools | 35× | 3.7 min | 4.1 min | 107 MB |
+| bcftools | 15× | 2.1 min | 2.5 min | 108 MB |
+| GATK HaplotypeCaller | 35× | 17.4 min | 58 min | 3.1 GB |
+| GATK HaplotypeCaller | 15× | 12.2 min | 44 min | 1.6 GB |
 
 `bcftools mpileup` is single-threaded; `--threads` only speeds up compression. GATK ran as 4 processes, one per piece of chr20. `score.out` has every number, including the 15× run.
 
