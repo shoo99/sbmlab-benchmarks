@@ -1,0 +1,62 @@
+== unchanged gene lists (DIA-NN HYE human proteome; airway dexamethasone DE) vs GO releases 2016-2025
+   GO over-representation (hypergeometric, BH); FDR < 0.05; terms with 10-500 annotated background members
+
+-- all evidence codes
+   release      random: false terms  lists  planted found  median rank  chol. genes  airway up  airway down   glucocorticoid FDR (rank)
+   2016-01-01                     0      0         5 of 5            1      15 of 16         65          311                 0.207 (285)
+   2020-01-01                     2      1         5 of 5            1      16 of 16         80          321                  0.005 (16)
+   2023-01-01                     0      0         5 of 5            2      13 of 16         86          341                  0.027 (66)
+   2025-10-10                     0      0         5 of 5            5      14 of 16         84          262                  0.025 (49)
+
+   Jaccard of the significant terms with 2025-10-10 (planted: mean of 5 lists; obsolete terms by 2025)
+   release      planted  airway up  airway down  obsolete, up/down
+   2016-01-01     0.547      0.213        0.359           4 / 17
+   2020-01-01     0.435      0.414        0.462           5 / 23
+   2023-01-01     0.586      0.532        0.554           4 / 5
+
+   ontology vs annotations: 2016 annotations read through the 2025 ontology (hybrid)
+   list               terms 2016  hybrid  2025  Jaccard 2016-hybrid  hybrid-2025  2016-2025
+   planted lists (5)        15.4    14.0  19.8                0.834        0.582      0.547
+   airway up                65.0    59.0  84.0                0.557        0.254      0.213
+   airway down             311.0   305.0 262.0                0.651        0.393      0.359
+   random lists: 0 false terms with the hybrid
+
+   between releases, detected proteome: annotation of each protein and members of each tested term
+   releases                        gained  lost  unchanged  protein Jaccard  term Jaccard
+   2016-01-01 -> 2020-01-01            47    14      0.008            0.597         0.661
+   2020-01-01 -> 2023-01-01            24     3      0.028            0.738         0.747
+   2023-01-01 -> 2025-10-10            18     0      0.020            0.727         0.800
+   2016-01-01 -> 2025-10-10            73     1      0.003            0.422         0.512
+   2016-01-01 -> hybrid                 0     0      0.012            0.626         0.889
+   hybrid -> 2025-10-10                73     1      0.014            0.605         0.552
+
+-- without IEA
+   release      random: false terms  lists  planted found  median rank  chol. genes  airway up  airway down   glucocorticoid FDR (rank)
+   2016-01-01                     0      0         5 of 5            1      15 of 16         14          158                1.000 (1355)
+   2020-01-01                     2      1         5 of 5            1      16 of 16         20          142                 0.948 (932)
+   2023-01-01                     0      0         5 of 5            2      11 of 16         34          134                 0.858 (911)
+   2025-10-10                     0      0         5 of 5            1      14 of 16         25          131                 0.908 (940)
+
+   Jaccard of the significant terms with 2025-10-10 (planted: mean of 5 lists; obsolete terms by 2025)
+   release      planted  airway up  airway down  obsolete, up/down
+   2016-01-01     0.667      0.056        0.277           4 / 17
+   2020-01-01     0.489      0.286        0.424           3 / 11
+   2023-01-01     0.778      0.439        0.587           2 / 4
+
+   ontology vs annotations: 2016 annotations read through the 2025 ontology (hybrid)
+   list               terms 2016  hybrid  2025  Jaccard 2016-hybrid  hybrid-2025  2016-2025
+   planted lists (5)        14.6    12.8  15.6                0.824        0.789      0.667
+   airway up                14.0     6.0  25.0                0.267        0.107      0.056
+   airway down             158.0   152.0 131.0                0.527        0.329      0.277
+   random lists: 0 false terms with the hybrid
+
+   between releases, detected proteome: annotation of each protein and members of each tested term
+   releases                        gained  lost  unchanged  protein Jaccard  term Jaccard
+   2016-01-01 -> 2020-01-01           165    25      0.012            0.564         0.643
+   2020-01-01 -> 2023-01-01            64     9      0.046            0.730         0.754
+   2023-01-01 -> 2025-10-10            30     1      0.035            0.729         0.815
+   2016-01-01 -> 2025-10-10           228     4      0.004            0.394         0.484
+   2016-01-01 -> hybrid                 0     0      0.034            0.626         0.873
+   hybrid -> 2025-10-10               228     4      0.017            0.563         0.527
+
+wrote scores.csv (276 rows)

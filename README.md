@@ -43,7 +43,7 @@ Scripts, settings and result tables behind the measured posts on [sbmlab.com](ht
 
 Most proteomics folders use the same public three-species benchmark with known ratios, so every tool is scored against a right answer rather than against another tool.
 
-Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM, Linux tools in WSL2 (64 GB available) and DIA-NN natively on Windows. Paths inside scripts and logs (`/home/sysoft/...`, `C:\diann-hye\...`) are from that machine; change them to yours.
+Most folders ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM, Linux tools in WSL2 (64 GB available) and DIA-NN natively on Windows. Paths inside scripts and logs (`/home/sysoft/...`, `C:\diann-hye\...`) are from that machine; change them to yours. Folders that ran elsewhere, such as `multiome-integration-pairing` and `go-release-drift` (a cloud container, November 2026), say so in their README.
 
 ## Posts and folders
 
@@ -51,7 +51,7 @@ Everything ran in October 2026 on one workstation: an i9-14900K with 128 GB RAM,
 
 | Folder | Post | What it shows |
 |---|---|---|
-| [batch-correction-unbalanced](batch-correction-unbalanced) | Issue [#8](https://github.com/shoo99/sbmlab-benchmarks/issues/8) (no post yet) | Unbalanced batches, simulated null and bladderbatch fake labels. Share of null genes with p < 0.05 at 11:1 imbalance: ComBat with group protected 0.29, `removeBatchEffect` 0.28, batch in the limma model 0.05; BH 5% calls 61–62% false after protected correction vs 4% with batch in the model |
+| [batch-correction-unbalanced](batch-correction-unbalanced) | [Correct Batch Effects, Then Test?](https://sbmlab.com/blog/batch-correction-combat-unbalanced-design-false-positives) | Unbalanced batches, simulated null and bladderbatch fake labels. Share of null genes with p < 0.05 at 11:1 imbalance: ComBat with group protected 0.29, `removeBatchEffect` 0.28, batch in the limma model 0.05; BH 5% calls 61–62% false after protected correction vs 4% with batch in the model |
 | [random-signatures-tcga](random-signatures-tcga) | Issue [#11](https://github.com/shoo99/sbmlab-benchmarks/issues/11) (no post yet) | Simulated null marker: optimal cut-point with its naive log-rank p gives p < 0.05 in 44–49% of repetitions (corrected p 3–4%). TCGA PFI: random 50-gene sets reach Cox p < 0.05 in 57% (KIRC), 19% (COAD), 16% (BRCA), 15% (LUAD); 4–10% after adjusting for proliferation and stage |
 | [limma-3v3-sim](limma-3v3-sim) | [Three samples per group: t-test vs limma](https://sbmlab.com/blog/three-samples-per-group-t-test-vs-limma-omics) | At 3 vs 3: Mann–Whitney min p = 0.10; t-test power 16 / 46 / 78% at d = 1 / 2 / 3. Simulation (400 features, 40 true): with p < 0.05 & ≥ 2-fold, false share t-test 18% vs limma 26%; BH 5% survivors 6.9 vs 16.1 at the same 6% false share (pooled over runs; mean per-run FDP 4.2 vs 5.2%) |
 
@@ -94,6 +94,7 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 |---|---|---|
 | [scrna-doublets](scrna-doublets) | Pipeline tested on synthetic data in CI; workstation run pending (issue [#7](https://github.com/shoo99/sbmlab-benchmarks/issues/7)) | scDblFinder, scds, DoubletFinder and Scrublet against demuxlet doublets between donors (Kang 2018) and human + mouse doublets (10x hgmm_12k): AUPRC, recall and precision at the expected rate |
 | [scrna-pseudobulk-de](scrna-pseudobulk-de) | Simulation done; Kang 2018 run pending (issue [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6)) | 8 simulated donors, 4 vs 4, no real difference: cell-level Wilcoxon and t-test give p < 0.05 for 47% of genes (720 false BH calls per repetition); pseudobulk edgeR, DESeq2 and limma-voom 4.9–5.3% and none. With 10% of genes 2-fold, 78% of cell-level calls are false vs 4–6% for pseudobulk |
+| [multiome-integration-pairing](multiome-integration-pairing) | Done (issue [#16](https://github.com/shoo99/sbmlab-benchmarks/issues/16)); LIGER not run | 10x PBMC 10k Multiome with the RNA-ATAC pairing hidden: FOSCTTM 0.035 for GLUE, 0.062 for Seurat CCA, 0.119 for a naive gene-activity baseline; the true nucleus is the nearest for only 1.9% (GLUE); label transfer 0.94 vs 0.92, but the baseline reaches 0.83 overall while labelling no pDCs |
 
 ### Transcriptomics: known-ratio benchmark (SEQC/MAQC, in progress)
 
@@ -123,6 +124,7 @@ Kang, B. (2026). Scoring the downstream chain of small-n label-free proteomics a
 | [mrna-protein-wang2019](mrna-protein-wang2019) | [Proteomics vs genomics: mRNA vs protein](https://sbmlab.com/blog/proteomics-vs-genomics-differences) | Wang et al. 2019, 29 human tissues | mRNA explains ~29% of protein variation within a tissue; a gene's mRNA and protein track each other across tissues with median Spearman 0.35 |
 | [bioinfo-db-check](bioinfo-db-check) | [13 bioinformatics databases, tested](https://sbmlab.com/blog/top-10-bioinformatics-databases-every-researcher-should-know) | Live public APIs | One protein (SOD1) through 13 APIs: what each returns, speed, failures, release, licence |
 | [db-api-monitor](db-api-monitor) | Issue [#9](https://github.com/shoo99/sbmlab-benchmarks/issues/9) (no post yet) | The same 13 APIs, weekly from GitHub Actions | Uptime, latency, release changes and whether the documented example still works, accumulated every week (first run after merge); the 2026-10-13 Seoul evening stays as the local reference |
+| [go-release-drift](go-release-drift) | Issue [#19](https://github.com/shoo99/sbmlab-benchmarks/issues/19) (no post yet) | GO releases 2016-2025; DIA-NN HYE proteome; `airway` | The same lists against four GO releases: planted cholesterol terms found every time and random lists clean, but the dexamethasone-up list's significant terms overlap only 0.21 (Jaccard) between 2016 and 2025; "response to glucocorticoid" is missed with the 2016 annotations; annotations moved more than the ontology |
 | [deseq2-edger-limma-airway](deseq2-edger-limma-airway) | [DESeq2 vs edgeR vs limma](https://sbmlab.com/blog/deseq2-vs-edger-vs-limma-rna-seq-comparison) | Bioconductor `airway` | The design (pairing by cell line) changed the results more than the choice of tool |
 | [scrna-pbmc3k](scrna-pbmc3k) | [Single-cell RNA-seq on PBMC3k](https://sbmlab.com/blog/single-cell-rna-seq-analysis-complete-guide-2026) | 10x PBMC3k | Scanpy from QC to marker genes in ~23 s; two dependencies that are not installed by default |
 | [biomart-pig-mouse](biomart-pig-mouse) | [BioMart pig ↔ mouse orthologues](https://sbmlab.com/blog/biomart-pig-mouse-ortholog-mapping-tutorial-2026) | Ensembl 111 and 116 | 1:1 orthologue tables, and why biomaRt failed where a plain martservice query worked |
