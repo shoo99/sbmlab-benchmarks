@@ -8,6 +8,9 @@ Same endpoints as bioinfo-db-check/probe.py (human SOD1: UniProt P00441, NCBI Ge
   status      HTTP status, or error:<kind> (timeout, dns, connection, ...)
   seconds     wall-clock time of the main request
   release     release / version the API reports (empty when it reports none or the version request failed)
+  release_status  where the release came from: "header" or "body" of the main response, or the HTTP status of the
+              version request (a failed first try and its retry 3 s later are both shown, e.g. "403>200"); empty
+              when the API has no release source or the main request failed
   example_ok  1 if the response still holds the documented example (e.g. UniProt returns P00441), else 0
 Response bodies are never stored (some sources, e.g. KEGG, do not allow redistribution); only the fields above.
 User-Agent names the project, without a personal contact.
@@ -26,7 +29,7 @@ import urllib.request
 from pathlib import Path
 
 UA = "sbmlab-benchmarks-db-api-monitor/1.0 (+https://github.com/shoo99/sbmlab-benchmarks)"
-COLUMNS = ["date_utc", "runner", "db", "status", "seconds", "release", "example_ok"]
+COLUMNS = ["date_utc", "runner", "db", "status", "seconds", "release", "release_status", "example_ok"]
 PDB_Q = {"query": {"type": "terminal", "service": "text", "parameters": {
     "attribute": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession",
     "operator": "exact_match", "value": "P00441"}}, "return_type": "entry", "request_options": {"return_all_hits": True}}
@@ -104,6 +107,7 @@ def call(method, url, body, timeout=30):
 
 
 def check(endpoint, pause=1.0):
+    """Returns (status, seconds, release, release_status, example_ok) for one API."""
     name, method, url, body, example, release = endpoint
     status, sec, payload, hdr = call(method, url, body)
     ok = 0
@@ -112,21 +116,29 @@ def check(endpoint, pause=1.0):
             ok = int(bool(example(payload)))
         except Exception:  # noqa: BLE001 - a changed response shape is what example_ok reports
             ok = 0
-    rel = ""
+    rel, rel_status = "", ""
     if release and status == "200":
         kind, how = release
         try:
             if kind == "header":
+                rel_status = "header"
                 rel = hdr.get(how, "") or ""
             elif kind == "body":
+                rel_status = "body"
                 rel = how(payload)
             else:
                 time.sleep(pause)
                 s2, _, p2, _ = call("GET", kind, None)
+                tries = [s2]
+                if s2 != "200":                      # one retry, 3 s later (rate limits, transient errors)
+                    time.sleep(3 * pause)
+                    s2, _, p2, _ = call("GET", kind, None)
+                    tries.append(s2)
+                rel_status = ">".join(tries)
                 rel = how(p2) if s2 == "200" else ""
-        except Exception:  # noqa: BLE001
-            rel = ""
-    return status, sec, rel.strip()[:40], ok
+        except Exception as e:  # noqa: BLE001
+            rel, rel_status = "", rel_status or f"error:{type(e).__name__}"
+    return status, sec, rel.strip()[:40], rel_status, ok
 
 
 def main():
@@ -135,9 +147,10 @@ def main():
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     rows = []
     for ep in ENDPOINTS:
-        status, sec, rel, ok = check(ep)
-        rows.append([stamp, runner, ep[0], status, f"{sec:.3f}", rel, ok])
-        print(f"{ep[0]:<13} {status:<17} {sec:>7.2f} s  release {rel or '-':<12} example {'ok' if ok else 'FAILED'}", flush=True)
+        status, sec, rel, rel_status, ok = check(ep)
+        rows.append([stamp, runner, ep[0], status, f"{sec:.3f}", rel, rel_status, ok])
+        print(f"{ep[0]:<13} {status:<17} {sec:>7.2f} s  release {rel or '-':<12} ({rel_status or 'no source'})  "
+              f"example {'ok' if ok else 'FAILED'}", flush=True)
         time.sleep(1)
     new = not out.exists() or out.stat().st_size == 0
     with open(out, "a", newline="") as fh:

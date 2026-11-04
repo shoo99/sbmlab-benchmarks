@@ -24,6 +24,7 @@ Each is called **once per run**, 1 s apart. `monitor.py` appends one row per API
 | `status` | HTTP status, or `error:timeout` / `error:dns` / `error:connection` / ... |
 | `seconds` | wall-clock time of the main request |
 | `release` | release or version the API reports |
+| `release_status` | where the release came from: `header` or `body` of the main response, or the HTTP status of the version request. A failed try and its retry 3 s later are both shown, for example `403>200`. Empty when the API reports no release or the main request failed |
 | `example_ok` | 1 if the response still holds the documented example, else 0 |
 
 Where the release comes from:
@@ -38,7 +39,7 @@ Where the release comes from:
 | Reactome | `/data/database/version` |
 | KEGG | `/info/pathway` |
 
-Each of the five version requests is one small extra call. The other six APIs report no release this cheaply.
+Each of the five version requests is one small extra call. A version request that fails is tried once more, 3 s later. The other six APIs report no release this cheaply.
 
 **The documented example** is what `bioinfo-db-check` saw. UniProt must return P00441, Ensembl ENSG00000142168, NCBI Gene 6647, AlphaFold `AF-P00441-…`, and KEGG at least one `path:hsa` link. ClinVar, PDB, InterPro, QuickGO, STRING, Reactome, GEO and PRIDE must each return at least one hit. A response that is HTTP 200 but no longer holds the example counts as a broken example.
 
@@ -61,6 +62,10 @@ Each of the five version requests is one small extra call. The other six APIs re
 | `release_changes` | how often the reported release changed |
 
 Its printout, `summarize.out`, also lists the dates of release changes, of broken examples and of failed calls.
+
+It also separates the two ways a release can go missing:
+- the version request failed (a path or server problem)
+- the source answered but no release could be read from it (a parser problem)
 
 ## How it runs
 
@@ -85,6 +90,19 @@ Pending the first weekly runs. The local reference from `bioinfo-db-check` (2026
 | Ensembl | 6 of 10 calls | 8.1 s |
 | KEGG | 9 of 10 | 0.28 s |
 | PRIDE | 10 of 10 | 7.3 s |
+
+## Notes
+
+**2026-11-04, KEGG release missing in the first run.** The first weekly run (started by hand) recorded KEGG with HTTP 200 and the example intact, but with an empty release.
+
+- **The parser is not the cause.** On two saved `info/pathway` responses from 2026 in public repositories (for example `path  Release 118.0+/04-08, Apr 26`), it returns `118.0+`.
+- **So the version request (`/info/pathway`, 1 s after the main KEGG call) did not return HTTP 200.** That status was not recorded at the time, and this cloud environment cannot reach KEGG to check.
+- **What changed**:
+  - `monitor.py` now records the version request's status in a new `release_status` column. The 13 rows of the first run have it empty, which means "not recorded".
+  - A failed version request is retried once, 3 s later.
+  - `summarize.out` lists failed version requests and sources that answered without a readable release.
+
+  The next run shows which case it was.
 
 ## Files
 

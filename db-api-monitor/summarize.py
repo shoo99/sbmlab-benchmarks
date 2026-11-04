@@ -74,6 +74,17 @@ for runner in runners:
     print("   documented example broken (HTTP 200 but changed content):",
           "; ".join(f"{x['db']} {x['date_utc'][:10]}" for x in broken) or "none")
     print("   failed calls:", "; ".join(f"{x['db']} {x['date_utc'][:10]} {x['status']}" for x in failed) or "none")
+    # release diagnostics: the version request failed (a path or server problem) vs it answered 200 but no release
+    # could be read from it (a parser problem); rows written before release_status existed are skipped
+    rs = lambda x: x.get("release_status") or ""
+    vfail = [x for x in w if rs(x) not in ("", "header", "body") and not rs(x).endswith("200")]
+    retried = [x for x in w if ">" in rs(x) and rs(x).endswith("200")]
+    unparsed = [x for x in w if rs(x).endswith("200") or rs(x) in ("header", "body")]
+    unparsed = [x for x in unparsed if not x["release"]]
+    print("   version request failed:", "; ".join(f"{x['db']} {x['date_utc'][:10]} {rs(x)}" for x in vfail) or "none")
+    print("   version request needed a retry:", "; ".join(f"{x['db']} {x['date_utc'][:10]} {rs(x)}" for x in retried) or "none")
+    print("   release source answered but no release read:",
+          "; ".join(f"{x['db']} {x['date_utc'][:10]} ({rs(x)})" for x in unparsed) or "none")
 if not weekly:
     print("== no weekly checks yet (checks.csv has no rows); only the local reference below")
 

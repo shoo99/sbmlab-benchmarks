@@ -1,0 +1,5 @@
+dataset	tool	wall_s	cpu_s	peak_rss_mb
+D6300	kraken2 (k2_standard_08gb)	47	148	7897
+D6310	kraken2 (k2_standard_08gb)	178	514	7968
+D6300	kraken2 (k2_pluspf_08gb)	52	160	8320
+D6310	kraken2 (k2_pluspf_08gb)	178	512	8237

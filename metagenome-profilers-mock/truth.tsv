@@ -1,0 +1,21 @@
+dataset	taxid	species	kingdom	gdna_percent
+D6300	287	Pseudomonas aeruginosa	Bacteria	12
+D6300	562	Escherichia coli	Bacteria	12
+D6300	28901	Salmonella enterica	Bacteria	12
+D6300	1613	Limosilactobacillus fermentum	Bacteria	12
+D6300	1351	Enterococcus faecalis	Bacteria	12
+D6300	1280	Staphylococcus aureus	Bacteria	12
+D6300	1639	Listeria monocytogenes	Bacteria	12
+D6300	1423	Bacillus subtilis	Bacteria	12
+D6300	4932	Saccharomyces cerevisiae	Fungi	2
+D6300	5207	Cryptococcus neoformans	Fungi	2
+D6310	1639	Listeria monocytogenes	Bacteria	89.1
+D6310	287	Pseudomonas aeruginosa	Bacteria	8.9
+D6310	1423	Bacillus subtilis	Bacteria	0.89
+D6310	4932	Saccharomyces cerevisiae	Fungi	0.89
+D6310	562	Escherichia coli	Bacteria	0.089
+D6310	28901	Salmonella enterica	Bacteria	0.089
+D6310	1613	Limosilactobacillus fermentum	Bacteria	0.0089
+D6310	1351	Enterococcus faecalis	Bacteria	0.00089
+D6310	5207	Cryptococcus neoformans	Fungi	0.00089
+D6310	1280	Staphylococcus aureus	Bacteria	0.000089
