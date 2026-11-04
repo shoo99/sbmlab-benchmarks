@@ -28,7 +28,7 @@ jobs:
     name: Microbiome DA study (pinned conda environment)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Create the conda environment from the lock file
         # (the runner context is not available in job-level env, so the prefix is set here from $RUNNER_TEMP)
         run: |
