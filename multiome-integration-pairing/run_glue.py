@@ -7,7 +7,8 @@ trained on CPU (random seed 0). The ATAC cells get new names, so the model canno
 The cells and their RNA cell types are those of seurat_methods.R (work/cells.tsv).
 Scoring as in seurat_methods.R: FOSCTTM in both directions in the GLUE embedding, and labels from the majority of the
 15 nearest RNA cells. Writes results/glue.tsv and prints a summary.
-Usage: python run_glue.py [data_dir]     (needs scglue, torch, scanpy, h5py; about 20-60 min on 4 CPU threads)
+Usage: python run_glue.py [data_dir]     (needs scglue, torch, scanpy, h5py; 1-3 h on 4 CPU threads; a rerun resumes
+       from the last saved training stage in work/glue)
 """
 import sys
 import time
@@ -75,8 +76,37 @@ scglue.models.configure_dataset(atac, "NB", use_highly_variable=True, use_rep="X
 hv = guidance.subgraph(chain(rna.var.query("highly_variable").index, atac.var.query("highly_variable").index)).copy()
 print(f"   guidance graph: {guidance.number_of_nodes()} nodes, {guidance.number_of_edges()} edges; "
       f"{int(atac.var['highly_variable'].sum())} peaks linked to the variable genes; setup {time.time() - t0:.0f} s", flush=True)
-glue = scglue.models.fit_SCGLUE({"rna": rna, "atac": atac}, hv, init_kws={"random_seed": 0},
-                                fit_kws={"directory": str(work / "glue")})
+# The two training stages of scglue.models.fit_SCGLUE (pretraining, then fine-tuning with the discriminator and
+# balancing weights), written out so that each stage is saved and a rerun resumes from the last saved stage.
+# Each stage can take up to 152 epochs of about 35 s on 4 CPU threads.
+adatas = {"rna": rna, "atac": atac}
+gdir = work / "glue"
+pre_file, fine_file = gdir / "pretrain" / "pretrain.dill", gdir / "fine-tune" / "fine-tune.dill"
+if fine_file.exists():
+    glue = scglue.models.load_model(fine_file)
+    print(f"   loaded the fine-tuned model from {fine_file.relative_to(HERE)}", flush=True)
+else:
+    if pre_file.exists():
+        pretrain = scglue.models.load_model(pre_file)
+        print(f"   loaded the pretrained model from {pre_file.relative_to(HERE)}", flush=True)
+    else:
+        pretrain = scglue.models.SCGLUEModel(adatas, sorted(hv.nodes), random_seed=0, shared_batches=False)
+        pretrain.compile()
+        pretrain.fit(adatas, hv, align_burnin=np.inf, safe_burnin=False, directory=str(gdir / "pretrain"))
+        pretrain.save(pre_file)
+        print(f"   pretrained in {time.time() - t0:.0f} s", flush=True)
+    for k, a in adatas.items():
+        a.obsm["X_pretrain"] = pretrain.encode_data(k, a)
+    scglue.data.estimate_balancing_weight(rna, atac, use_rep="X_pretrain", key_added="balancing_weight")
+    for a in adatas.values():
+        scglue.data.get_dataset_config(a)["use_dsc_weight"] = "balancing_weight"
+        del a.obsm["X_pretrain"]
+    glue = scglue.models.SCGLUEModel(adatas, sorted(hv.nodes), random_seed=0)
+    glue.adopt_pretrained_model(pretrain)
+    glue.compile()
+    glue.random_seed += 1                      # as fit_SCGLUE: a different data order from pretraining
+    glue.fit(adatas, hv, directory=str(gdir / "fine-tune"))
+    glue.save(fine_file)
 R = glue.encode_data("rna", rna)
 A = glue.encode_data("atac", atac)
 print(f"   trained in {time.time() - t0:.0f} s; embedding {R.shape[1]} dimensions", flush=True)
