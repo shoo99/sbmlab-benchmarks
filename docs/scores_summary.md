@@ -135,7 +135,7 @@ Area: databases · Scored against: none (status, latency, reported release and w
 
 ## [go-release-drift](../go-release-drift)
 
-Area: networks-enrichment · Scored against: random lists of detected proteins (expected: no terms); planted Reactome cholesterol-biosynthesis proteins (expected: cholesterol biosynthetic process in every release) · [issue #19](https://github.com/shoo99/sbmlab-benchmarks/issues/19) (no post yet)
+Area: networks-enrichment · Scored against: random lists of detected proteins (expected: no terms); planted Reactome cholesterol-biosynthesis proteins (expected: cholesterol biosynthetic process in every release) · [post](https://sbmlab.com/blog/go-enrichment-gene-ontology-release-version-changes-results)
 
 **unchanged gene lists (DIA-NN HYE human proteome; airway dexamethasone DE) vs GO releases 2016-2025**
 

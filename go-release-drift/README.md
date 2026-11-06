@@ -1,6 +1,6 @@
 # The same gene lists, enriched with GO releases years apart (2026-11-04)
 
-Tracking issue: [#19](https://github.com/shoo99/sbmlab-benchmarks/issues/19). No post yet.
+Tracking issue: [#19](https://github.com/shoo99/sbmlab-benchmarks/issues/19). Post: [Same gene list, different GO enrichment](https://sbmlab.com/blog/go-enrichment-gene-ontology-release-version-changes-results) ([한국어](https://sbmlab.com/blog/go-enrichment-gene-ontology-release-version-changes-results-ko)).
 
 Wadi et al. (2016, *Nature Methods*) warned that outdated annotations change enrichment results. How much do they change for gene lists that stay exactly the same? Unchanged lists were run through the same over-representation analysis (ORA) against four Gene Ontology releases, from January 2016 to October 2025, with the identifiers and each list's universe held fixed. The background is the part of that universe annotated in each release, so its size and the number of tested terms change a little from release to release (Method, step 5).
 
