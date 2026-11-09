@@ -1,0 +1,71 @@
+== Kang 2018 control: 14619 cells in the matrix, 14619 matched to the demuxlet / cell-type table (100.0%)
+   demuxlet calls: ambs 706, doublet 1598, singlet 12315 
+   singlets: 12315 in 8 donors; cell types with >= 20 cells in every donor: B cells (1307), CD14+ Monocytes (2785), CD4 T cells (5161), CD8 T cells (1082), FCGR3A+ Monocytes (739)
+
+== B cells: 1307 cells, 2519 genes tested; 35 null splits, 10 planted (18 s)
+ scenario                  method   p05  false power   fdp
+     null        Wilcoxon (cells) 0.090 17.800    NA 1.000
+     null          t-test (cells) 0.089 15.857    NA 1.000
+     null   edgeR QL (pseudobulk) 0.040  0.314    NA 0.171
+     null     DESeq2 (pseudobulk) 0.015  0.229    NA 0.200
+     null limma-voom (pseudobulk) 0.049  0.229    NA 0.200
+  planted        Wilcoxon (cells) 0.088 42.300 0.619 0.210
+  planted          t-test (cells) 0.086 39.600 0.625 0.198
+  planted   edgeR QL (pseudobulk) 0.040  4.200 0.406 0.039
+  planted     DESeq2 (pseudobulk) 0.014  1.300 0.235 0.020
+  planted limma-voom (pseudobulk) 0.049  5.200 0.435 0.044
+
+== CD14+ Monocytes: 2785 cells, 2810 genes tested; 35 null splits, 10 planted (27 s)
+ scenario                  method   p05   false power   fdp
+     null        Wilcoxon (cells) 0.241 347.171    NA 1.000
+     null          t-test (cells) 0.227 317.743    NA 1.000
+     null   edgeR QL (pseudobulk) 0.046   0.200    NA 0.029
+     null     DESeq2 (pseudobulk) 0.032   1.200    NA 0.286
+     null limma-voom (pseudobulk) 0.046   0.200    NA 0.029
+  planted        Wilcoxon (cells) 0.245 375.100 0.901 0.583
+  planted          t-test (cells) 0.225 338.500 0.908 0.562
+  planted   edgeR QL (pseudobulk) 0.048   7.600 0.626 0.040
+  planted     DESeq2 (pseudobulk) 0.033  10.700 0.634 0.055
+  planted limma-voom (pseudobulk) 0.047   7.000 0.615 0.038
+
+== CD4 T cells: 5161 cells, 2256 genes tested; 35 null splits, 10 planted (36 s)
+ scenario                  method   p05   false power   fdp
+     null        Wilcoxon (cells) 0.233 271.429    NA 1.000
+     null          t-test (cells) 0.235 273.657    NA 1.000
+     null   edgeR QL (pseudobulk) 0.048   1.457    NA 0.143
+     null     DESeq2 (pseudobulk) 0.029   3.286    NA 0.429
+     null limma-voom (pseudobulk) 0.054   2.686    NA 0.200
+  planted        Wilcoxon (cells) 0.231 287.100 0.988 0.547
+  planted          t-test (cells) 0.234 294.400 0.989 0.552
+  planted   edgeR QL (pseudobulk) 0.034   3.800 0.898 0.018
+  planted     DESeq2 (pseudobulk) 0.019   4.000 0.843 0.020
+  planted limma-voom (pseudobulk) 0.038   5.100 0.895 0.024
+
+== CD8 T cells: 1082 cells, 2112 genes tested; 35 null splits, 10 planted (17 s)
+ scenario                  method   p05  false power   fdp
+     null        Wilcoxon (cells) 0.137 76.629    NA 1.000
+     null          t-test (cells) 0.128 68.543    NA 1.000
+     null   edgeR QL (pseudobulk) 0.042  0.829    NA 0.200
+     null     DESeq2 (pseudobulk) 0.015  0.714    NA 0.286
+     null limma-voom (pseudobulk) 0.056  0.943    NA 0.286
+  planted        Wilcoxon (cells) 0.126 85.600 0.471 0.452
+  planted          t-test (cells) 0.119 77.900 0.443 0.442
+  planted   edgeR QL (pseudobulk) 0.042  3.800 0.147 0.068
+  planted     DESeq2 (pseudobulk) 0.017  0.600 0.069 0.035
+  planted limma-voom (pseudobulk) 0.053  4.300 0.161 0.073
+
+== FCGR3A+ Monocytes: 739 cells, 3261 genes tested; 35 null splits, 10 planted (16 s)
+ scenario                  method   p05   false power   fdp
+     null        Wilcoxon (cells) 0.130  86.514    NA 1.000
+     null          t-test (cells) 0.127  81.029    NA 1.000
+     null   edgeR QL (pseudobulk) 0.043   0.429    NA 0.143
+     null     DESeq2 (pseudobulk) 0.022   0.800    NA 0.371
+     null limma-voom (pseudobulk) 0.050   0.229    NA 0.143
+  planted        Wilcoxon (cells) 0.127 107.600 0.470 0.407
+  planted          t-test (cells) 0.124 104.100 0.483 0.391
+  planted   edgeR QL (pseudobulk) 0.041   2.100 0.186 0.032
+  planted     DESeq2 (pseudobulk) 0.021   1.800 0.167 0.031
+  planted limma-voom (pseudobulk) 0.047   2.400 0.196 0.036
+
+wrote kang_metrics.csv: 1125 rows, and kang_versions.csv
+R version 4.3.3 (2024-02-29) | edgeR 4.0.16 | DESeq2 1.42.1 | limma 3.58.1

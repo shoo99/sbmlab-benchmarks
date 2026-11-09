@@ -1,3 +1,45 @@
-kang_metrics.csv not present yet (run download.sh and kang_study.R); scores.csv holds the simulation rows only
+Kang 2018 control PBMC, 8 donors split 4 vs 4
+p05: share of genes with p < 0.05 (null; expected 0.05); false: BH 5% discoveries per split (null, all false);
+any: share of splits with any BH discovery; power / fdp: planted 2-fold changes in 10% of genes, BH 5%
+
+== Kang 2018 control PBMC: B cells, 1307 cells, 2519 genes (35 null splits, 10 planted)
+                  method   p05  false   any power   fdp
+        Wilcoxon (cells) 0.090 17.800 1.000 0.619 0.210
+          t-test (cells) 0.089 15.857 1.000 0.625 0.198
+   edgeR QL (pseudobulk) 0.040  0.314 0.171 0.406 0.039
+     DESeq2 (pseudobulk) 0.015  0.229 0.200 0.235 0.020
+ limma-voom (pseudobulk) 0.049  0.229 0.200 0.435 0.044
+
+== Kang 2018 control PBMC: CD14+ Monocytes, 2785 cells, 2810 genes (35 null splits, 10 planted)
+                  method   p05   false   any power   fdp
+        Wilcoxon (cells) 0.241 347.171 1.000 0.901 0.583
+          t-test (cells) 0.227 317.743 1.000 0.908 0.562
+   edgeR QL (pseudobulk) 0.046   0.200 0.029 0.626 0.040
+     DESeq2 (pseudobulk) 0.032   1.200 0.286 0.634 0.055
+ limma-voom (pseudobulk) 0.046   0.200 0.029 0.615 0.038
+
+== Kang 2018 control PBMC: CD4 T cells, 5161 cells, 2256 genes (35 null splits, 10 planted)
+                  method   p05   false   any power   fdp
+        Wilcoxon (cells) 0.233 271.429 1.000 0.988 0.547
+          t-test (cells) 0.235 273.657 1.000 0.989 0.552
+   edgeR QL (pseudobulk) 0.048   1.457 0.143 0.898 0.018
+     DESeq2 (pseudobulk) 0.029   3.286 0.429 0.843 0.020
+ limma-voom (pseudobulk) 0.054   2.686 0.200 0.895 0.024
+
+== Kang 2018 control PBMC: CD8 T cells, 1082 cells, 2112 genes (35 null splits, 10 planted)
+                  method   p05  false   any power   fdp
+        Wilcoxon (cells) 0.137 76.629 1.000 0.471 0.452
+          t-test (cells) 0.128 68.543 1.000 0.443 0.442
+   edgeR QL (pseudobulk) 0.042  0.829 0.200 0.147 0.068
+     DESeq2 (pseudobulk) 0.015  0.714 0.286 0.069 0.035
+ limma-voom (pseudobulk) 0.056  0.943 0.286 0.161 0.073
+
+== Kang 2018 control PBMC: FCGR3A+ Monocytes, 739 cells, 3261 genes (35 null splits, 10 planted)
+                  method   p05  false   any power   fdp
+        Wilcoxon (cells) 0.130 86.514 1.000 0.470 0.407
+          t-test (cells) 0.127 81.029 1.000 0.483 0.391
+   edgeR QL (pseudobulk) 0.043  0.429 0.143 0.186 0.032
+     DESeq2 (pseudobulk) 0.022  0.800 0.371 0.167 0.031
+ limma-voom (pseudobulk) 0.050  0.229 0.143 0.196 0.036
 
 R version 4.3.3 (2024-02-29)

@@ -1,13 +1,13 @@
 # scRNA-seq: cell-level DE tests vs pseudobulk when donors differ (2026-11-04)
 
-Tracking issue: [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6). No post yet.
+Tracking issue: [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6). Post: [Single-cell differential expression between patients](https://sbmlab.com/blog/single-cell-differential-expression-pseudobulk-vs-cell-level-false-positives) ([한국어](https://sbmlab.com/blog/single-cell-differential-expression-pseudobulk-vs-cell-level-false-positives-ko)).
 
 The default tests in Seurat (`FindMarkers`) and Scanpy (`rank_genes_groups`) treat every cell as a replicate. When two groups of *people* are compared, cells from the same donor are not independent. A gene that varies between people then looks different between the groups, even when the groups do not differ. Squair et al. (2021, *Nat Commun* 12:5692) and Zimmerman et al. (2021, *Nat Commun* 12:738) showed this; pseudobulk tests, which sum each donor's cells first, avoid it.
 
 This folder has two parts:
 
 1. **Simulation**: the result is here, and CI re-runs it.
-2. **Kang et al. 2018 PBMC from 8 donors** (`kang_study.R`): the scripts are ready and tested on synthetic data in the same file format. The run needs the GEO download, which this repository's cloud environment cannot reach. Run it on a workstation (see *How to run*).
+2. **Kang et al. 2018 PBMC from 8 donors** (`kang_study.R`): run on the workstation on 2026-11-09 (results below); CI re-scores the bundled `kang_metrics.csv` and tests the script on synthetic data in the same file format.
 
 Simulation, 8 donors split 4 vs 4, donor-to-donor SD 0.25:
 
@@ -34,7 +34,7 @@ Simulation, 8 donors split 4 vs 4, donor-to-donor SD 0.25:
   - PBMC from 8 lupus patients, pooled and demultiplexed by genotype with demuxlet, so every cell has a donor and a doublet call
   - only the unstimulated (control) cells are used: demuxlet singlets with a cell-type label
   - cell types with at least 20 cells in every donor are used
-  - `download.sh` fetches about 110 MB into `data/`, which is not tracked
+  - `download.sh` downloads the GEO archive (about 110 MB) and keeps about 60 MB in `data/`, which is not tracked
 
 ## Truth
 
@@ -53,8 +53,8 @@ Simulation, 8 donors split 4 vs 4, donor-to-donor SD 0.25:
 
 | Method | Unit | Details |
 |---|---|---|
-| Wilcoxon (cells) | cell | rank-sum test on log1p(CP10k), the normal approximation of `wilcox.test(exact = FALSE)` (vectorised; identical p-values); the Seurat and Scanpy default |
-| t-test (cells) | cell | Welch t-test on log1p(CP10k) |
+| Wilcoxon (cells) | cell | rank-sum test on log1p(CP10k), the normal approximation of `wilcox.test(exact = FALSE)` (vectorised; identical p-values); the Seurat default |
+| t-test (cells) | cell | Welch t-test on log1p(CP10k); Scanpy's default method `'t-test'` is a Welch t-test |
 | MAST (cells) | cell | hurdle model `~ group + cellular detection rate`, LRT; only with `DE_MAST=1` and MAST installed (not an Ubuntu package; slow) |
 | edgeR QL (pseudobulk) | donor | counts summed per donor; TMM, `glmQLFit` / `glmQLFTest` |
 | DESeq2 (pseudobulk) | donor | counts summed per donor; Wald test |
@@ -126,7 +126,24 @@ Rscript score.R > score.out
 
 `sim_study.out` has every number, including discoveries per repetition.
 
-**Kang 2018**: pending the workstation run.
+**Kang 2018** (run 2026-11-09 on the workstation: R 4.3.3, edgeR 4.0.16, DESeq2 1.42.1, limma 3.58.1; `KANG_CORES=12`, 2 min).
+All 14,619 control barcodes matched the demuxlet table; 12,315 singlets in 8 donors; five cell types have at least 20 cells in every donor.
+Null rows are means over all 35 distinct 4 vs 4 splits of the same unstimulated donors; planted rows over 10 splits.
+
+![Kang 2018: share of null genes with p < 0.05, FDP and power of BH 5% calls, Wilcoxon on cells vs edgeR QL on pseudobulk, per cell type](scrna_pseudobulk_kang.png)
+
+| Cell type | Cells | Genes | p < 0.05, cells (Wilcoxon / t-test) | p < 0.05, pseudobulk (edgeR / DESeq2 / limma) | False BH calls per split, Wilcoxon | False BH calls per split, pseudobulk | Planted FDP, Wilcoxon | Planted FDP, pseudobulk | Planted power, Wilcoxon | Planted power, pseudobulk |
+|---|---|---|---|---|---|---|---|---|---|---|
+| CD4 T cells | 5,161 | 2,256 | **0.233** / 0.235 | 0.048 / 0.029 / 0.054 | **271.4** | 1.5-3.3 | **0.55** | 0.02 | 0.99 | 0.84-0.90 |
+| CD14+ Monocytes | 2,785 | 2,810 | **0.241** / 0.227 | 0.046 / 0.032 / 0.046 | **347.2** | 0.2-1.2 | **0.58** | 0.04-0.06 | 0.90 | 0.61-0.63 |
+| B cells | 1,307 | 2,519 | 0.090 / 0.089 | 0.040 / 0.015 / 0.049 | 17.8 | 0.2-0.3 | 0.21 | 0.02-0.04 | 0.62 | 0.23-0.43 |
+| CD8 T cells | 1,082 | 2,112 | 0.137 / 0.128 | 0.042 / 0.015 / 0.056 | 76.6 | 0.7-0.9 | 0.45 | 0.04-0.07 | 0.47 | 0.07-0.16 |
+| FCGR3A+ Monocytes | 739 | 3,261 | 0.130 / 0.127 | 0.043 / 0.022 / 0.050 | 86.5 | 0.2-0.8 | 0.41 | 0.03-0.04 | 0.47 | 0.17-0.20 |
+
+- **Real donors behave like the simulation.** With no difference between the groups, the cell-level tests give p < 0.05 for 9-24% of genes and 16-347 BH 5% discoveries per split, all false. Pseudobulk stays at 1.5-5.6% and at most 3.3 false calls per split.
+- **The inflation is largest where there are most cells.** CD4 T cells (5,161 cells) and CD14+ monocytes (2,785) are the worst. B cells (1,307) are milder than CD8 T cells (1,082), so cell count is not the only driver; how much the donors differ also varies by cell type.
+- **Planted changes:** cell-level calls are 20-58% false; pseudobulk 2-7%. Pseudobulk power is lower, and in the smallest cell types (CD8 T, FCGR3A+ monocytes) it finds 7-20% of the changed genes.
+- **DESeq2 on pseudobulk is conservative here too** (1.5-3.2% p < 0.05 under the null).
 
 ## Traps
 
@@ -143,7 +160,8 @@ Rscript score.R > score.out
 | `de_methods.R` | the DE tests and per-repetition summaries (shared) |
 | `sim_study.R`, `sim_study.out`, `sim_scores.csv` | simulation with donor effects |
 | `download.sh` | fetches GSE96583 batch 2 (Kang et al. 2018) |
-| `kang_study.R` | null donor splits and planted changes in Kang control PBMC (workstation) |
+| `kang_study.R`, `kang_study.out`, `kang_metrics.csv`, `kang_versions.csv` | null donor splits and planted changes in Kang control PBMC (workstation run 2026-11-09) |
 | `score.R`, `score.out`, `scores.csv` | scoring from the bundled tables (standard columns) |
-| `figure.py`, `scrna_pseudobulk_de.png` | figure from `scores.csv` |
+| `figure.py`, `scrna_pseudobulk_de.png` | simulation figure from `scores.csv` |
+| `figure_kang.py`, `scrna_pseudobulk_kang.png` | Kang figure from `kang_metrics.csv` |
 | `test/test_kang_format.R` | known-answer test of `kang_study.R` on synthetic data in the GEO file layout (CI) |
