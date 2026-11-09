@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 SERIES = {"Wilcoxon (cells)": "#eb6834", "edgeR QL (pseudobulk)": "#2a78d6"}
-LEGEND = {"Wilcoxon (cells)": "Wilcoxon on cells (Seurat / Scanpy default)", "edgeR QL (pseudobulk)": "edgeR QL on pseudobulk"}
+LEGEND = {"Wilcoxon (cells)": "Wilcoxon on cells (Seurat default)", "edgeR QL (pseudobulk)": "edgeR QL on pseudobulk"}
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#d9d8d4"
 TYPES = ["CD4 T cells", "CD14+ Monocytes", "B cells", "CD8 T cells", "FCGR3A+ Monocytes"]
 LABEL = {"CD4 T cells": "CD4 T", "CD14+ Monocytes": "CD14+\nmono", "B cells": "B", "CD8 T cells": "CD8 T", "FCGR3A+ Monocytes": "FCGR3A+\nmono"}

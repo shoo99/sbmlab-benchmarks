@@ -1,6 +1,6 @@
 # scRNA-seq: cell-level DE tests vs pseudobulk when donors differ (2026-11-04)
 
-Tracking issue: [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6). No post yet.
+Tracking issue: [#6](https://github.com/shoo99/sbmlab-benchmarks/issues/6). Post: [Single-cell differential expression between patients](https://sbmlab.com/blog/single-cell-differential-expression-pseudobulk-vs-cell-level-false-positives) ([한국어](https://sbmlab.com/blog/single-cell-differential-expression-pseudobulk-vs-cell-level-false-positives-ko)).
 
 The default tests in Seurat (`FindMarkers`) and Scanpy (`rank_genes_groups`) treat every cell as a replicate. When two groups of *people* are compared, cells from the same donor are not independent. A gene that varies between people then looks different between the groups, even when the groups do not differ. Squair et al. (2021, *Nat Commun* 12:5692) and Zimmerman et al. (2021, *Nat Commun* 12:738) showed this; pseudobulk tests, which sum each donor's cells first, avoid it.
 
@@ -34,7 +34,7 @@ Simulation, 8 donors split 4 vs 4, donor-to-donor SD 0.25:
   - PBMC from 8 lupus patients, pooled and demultiplexed by genotype with demuxlet, so every cell has a donor and a doublet call
   - only the unstimulated (control) cells are used: demuxlet singlets with a cell-type label
   - cell types with at least 20 cells in every donor are used
-  - `download.sh` fetches about 110 MB into `data/`, which is not tracked
+  - `download.sh` downloads the GEO archive (about 110 MB) and keeps about 60 MB in `data/`, which is not tracked
 
 ## Truth
 
@@ -53,8 +53,8 @@ Simulation, 8 donors split 4 vs 4, donor-to-donor SD 0.25:
 
 | Method | Unit | Details |
 |---|---|---|
-| Wilcoxon (cells) | cell | rank-sum test on log1p(CP10k), the normal approximation of `wilcox.test(exact = FALSE)` (vectorised; identical p-values); the Seurat and Scanpy default |
-| t-test (cells) | cell | Welch t-test on log1p(CP10k) |
+| Wilcoxon (cells) | cell | rank-sum test on log1p(CP10k), the normal approximation of `wilcox.test(exact = FALSE)` (vectorised; identical p-values); the Seurat default |
+| t-test (cells) | cell | Welch t-test on log1p(CP10k); Scanpy's default method `'t-test'` is a Welch t-test |
 | MAST (cells) | cell | hurdle model `~ group + cellular detection rate`, LRT; only with `DE_MAST=1` and MAST installed (not an Ubuntu package; slow) |
 | edgeR QL (pseudobulk) | donor | counts summed per donor; TMM, `glmQLFit` / `glmQLFTest` |
 | DESeq2 (pseudobulk) | donor | counts summed per donor; Wald test |

@@ -3,8 +3,8 @@
 ##
 ## Cell-level tests treat every cell as a replicate (what Seurat's FindMarkers and Scanpy's rank_genes_groups do
 ## by default); they run on log-normalised expression, log1p(counts / cell total * 10,000):
-##   Wilcoxon   rank-sum test, the normal approximation of wilcox.test(exact = FALSE) (the Seurat / Scanpy default)
-##   t-test     Welch t-test per gene
+##   Wilcoxon   rank-sum test, the normal approximation of wilcox.test(exact = FALSE) (the Seurat default)
+##   t-test     Welch t-test per gene (Scanpy's default method 't-test' is a Welch t-test)
 ##   MAST       hurdle model ~ group + cellular detection rate, LRT on group (only when MAST is installed and
 ##              DE_MAST=1; it is slow and not an Ubuntu package)
 ## Pseudobulk tests sum the counts of each donor's cells, so the donor is the replicate:

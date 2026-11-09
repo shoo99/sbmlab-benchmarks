@@ -342,7 +342,7 @@ Area: statistics · Scored against: null by construction (simulated marker; surv
 
 ## [scrna-pseudobulk-de](../scrna-pseudobulk-de)
 
-Area: single-cell · Scored against: null donor splits (4 vs 4; every call false) and planted 2-fold changes in 10% of genes (binomial thinning on real data) · [issue #6](https://github.com/shoo99/sbmlab-benchmarks/issues/6) (no post yet)
+Area: single-cell · Scored against: null donor splits (4 vs 4; every call false) and planted 2-fold changes in 10% of genes (binomial thinning on real data) · [post](https://sbmlab.com/blog/single-cell-differential-expression-pseudobulk-vs-cell-level-false-positives)
 
 **simulation: 8 donors (4 vs 4), 10 repetitions**
 
