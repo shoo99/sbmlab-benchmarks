@@ -103,6 +103,7 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok microbiome-da-methods "MPLBACKEND=Agg python3 figure.py"
   run_ok random-signatures-tcga "MPLBACKEND=Agg python3 figure.py"
   run_ok scrna-pseudobulk-de "MPLBACKEND=Agg python3 figure.py"
+  run_ok scrna-pseudobulk-de "MPLBACKEND=Agg python3 figure_kang.py"
   check_out db-api-monitor "python3 summarize.py" summarize.out
   same_file db-api-monitor/scores.csv
   run_ok db-api-monitor "python3 test/test_monitor.py"       # monitor.py against a local server
