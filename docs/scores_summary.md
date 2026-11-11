@@ -97,23 +97,23 @@ Area: statistics · Scored against: null (no group effect; fake labels within ba
 
 Area: databases · Scored against: none (status, latency, reported release and whether the documented example still works, over time) · [issue #9](https://github.com/shoo99/sbmlab-benchmarks/issues/9) (no post yet)
 
-**weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-04 (2 runs)**
+**weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-11 (3 runs)**
 
 | Tool | uptime_share (main endpoint (human SOD1 example)) | example_ok_share (main endpoint (human SOD1 example)) | median_seconds (main endpoint (human SOD1 example)) | p95_seconds (main endpoint (human SOD1 example)) | release_changes (main endpoint (human SOD1 example)) |
 |---|---|---|---|---|---|
-| UniProt | 1.0 | 1.0 | 9.707 | 16.738 | 0 |
+| UniProt | 1.0 | 1.0 | 2.676 | 16.738 | 1 |
 | Ensembl | 0.0 | 0.0 |  |  |  |
-| NCBI Gene | 1.0 | 1.0 | 0.1 | 0.155 |  |
-| ClinVar | 1.0 | 1.0 | 0.065 | 0.09 |  |
-| RCSB PDB | 1.0 | 1.0 | 0.119 | 0.179 |  |
-| AlphaFold DB | 1.0 | 1.0 | 0.302 | 0.35 | 0 |
-| InterPro | 1.0 | 1.0 | 0.972 | 1.162 | 0 |
-| QuickGO | 1.0 | 1.0 | 0.417 | 0.511 |  |
-| STRING | 1.0 | 1.0 | 0.332 | 0.378 | 0 |
-| Reactome | 1.0 | 1.0 | 0.931 | 1.008 | 0 |
-| KEGG | 1.0 | 1.0 | 1.012 | 1.124 |  |
-| GEO | 1.0 | 1.0 | 0.156 | 0.265 |  |
-| PRIDE | 1.0 | 1.0 | 1.341 | 1.665 |  |
+| NCBI Gene | 1.0 | 1.0 | 0.053 | 0.155 |  |
+| ClinVar | 1.0 | 1.0 | 0.09 | 0.368 |  |
+| RCSB PDB | 1.0 | 1.0 | 0.06 | 0.179 |  |
+| AlphaFold DB | 1.0 | 1.0 | 0.304 | 0.35 | 0 |
+| InterPro | 1.0 | 1.0 | 0.781 | 1.162 | 1 |
+| QuickGO | 1.0 | 1.0 | 0.329 | 0.511 |  |
+| STRING | 1.0 | 1.0 | 0.285 | 0.378 | 0 |
+| Reactome | 1.0 | 1.0 | 0.854 | 1.008 | 0 |
+| KEGG | 1.0 | 1.0 | 1.124 | 1.355 |  |
+| GEO | 1.0 | 1.0 | 0.047 | 0.265 |  |
+| PRIDE | 1.0 | 1.0 | 1.665 | 24.74 |  |
 
 **bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls**
 
