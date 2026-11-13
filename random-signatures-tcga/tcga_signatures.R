@@ -1,4 +1,4 @@
-## Random gene signatures and survival in TCGA (issue #11, part 2; Venet, Dumont, Molina & Detours 2011)
+## Random gene signatures and survival in TCGA (issue #11, part 2; Venet, Dumont & Detours 2011)
 ##
 ## For each cohort, every signature score (the mean z-score of its genes) is tested for association with survival:
 ## the four analyses of survival_tests.R, plus Cox models adjusted for proliferation, and for proliferation and stage.

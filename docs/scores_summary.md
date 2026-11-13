@@ -235,7 +235,7 @@ Area: multi-omics · Scored against: the true RNA-ATAC pairing of each nucleus (
 
 ## [random-signatures-tcga](../random-signatures-tcga)
 
-Area: statistics · Scored against: null by construction (simulated marker; survival labels permuted) and planted hazard ratios in the simulation · [issue #11](https://github.com/shoo99/sbmlab-benchmarks/issues/11) (no post yet)
+Area: statistics · Scored against: null by construction (simulated marker; survival labels permuted) and planted hazard ratios in the simulation · [post](https://sbmlab.com/blog/random-gene-signatures-survival-optimal-cutpoint-tcga)
 
 **simulation: n = 100, 1000 repetitions**
 
