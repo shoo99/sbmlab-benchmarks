@@ -1,6 +1,6 @@
 # Random gene signatures and survival in TCGA; optimal cut-point inflation (2026-11-04)
 
-Tracking issue: [#11](https://github.com/shoo99/sbmlab-benchmarks/issues/11). No post yet.
+Tracking issue: [#11](https://github.com/shoo99/sbmlab-benchmarks/issues/11). Post: [Random Gene Signatures 'Predict' Survival in TCGA](https://sbmlab.com/blog/random-gene-signatures-survival-optimal-cutpoint-tcga) (2026-11-13; [Korean](https://sbmlab.com/blog/random-gene-signatures-survival-optimal-cutpoint-tcga-ko)).
 
 Venet et al. (2011, *PLoS Comput Biol* 7:e1002240) found that most random gene sets were associated with breast cancer outcome, and that the effect ran through proliferation. This folder asks two questions. How often does a random gene set "predict" survival in TCGA today? And how much does picking the "optimal" cut-point inflate a survival p-value?
 

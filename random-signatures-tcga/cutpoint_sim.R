@@ -8,14 +8,14 @@
 ##                                    log-rank p of that split as if the cut-point had been fixed in advance
 ##   optimal cut-point, corrected p   the same search, with the p-value of the maximally selected statistic
 ##                                    (maxstat, pmethod = "Lau92": Lausen & Schumacher 1992)
-## Scenarios. Exponential survival (rate 0.1 per year), uniform censoring over 0-10 years (about 40% events).
+## Scenarios. Exponential survival (rate 0.1 per year), uniform censoring over 0-10 years (about 37% events; 42% in the threshold setting).
 ##   null       the marker is independent of survival, so every p < 0.05 is false (expected share 0.05)
 ##   linear     log hazard ratio rises linearly with the marker: HR 1.25 per SD
 ##   threshold  the top 25% of the marker have HR 2, the rest HR 1
 ## Besides p-values, the hazard ratio of the high vs the low group (folded so that it is >= 1) shows how much the
 ## optimal split also inflates the effect size under the null (truth: 1).
 ##
-## Usage: Rscript cutpoint_sim.R > cutpoint_sim.out   (about 2 min; also writes sim_scores.csv)
+## Usage: Rscript cutpoint_sim.R > cutpoint_sim.out   (under a minute; also writes sim_scores.csv)
 ## Seeds: set.seed(2026 + scenario number) before each scenario, so scenarios do not depend on each other.
 suppressPackageStartupMessages({ library(survival); library(maxstat) })
 options(width = 120)
