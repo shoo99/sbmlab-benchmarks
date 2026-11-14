@@ -119,10 +119,10 @@ Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14, with the foreign (Ar
 - **Protein groups: three of the six searches are estimated above 1%.**
   - FragPipe has 52 entrapment groups among 7,913 (2.09%). MaxQuant has 23 among 5,481 (1.33%). DIA-NN with MBR off has 37 among 8,558 (1.37%).
   - No lower bound reaches 1% (at most 0.66%), so none is a certain failure.
-  - FragPipe's per-experiment protein lists add up to exactly its combined list (Philosopher filters protein groups once, on `combined.prot.xml`). The 2.09% is therefore not an effect of taking the union over experiments.
+  - FragPipe's per-experiment protein lists add up to exactly its combined list (Philosopher filters each experiment against the same `combined.prot.xml`). The 2.09% is therefore not an effect of taking the union over experiments.
 - **MBR transfers are not where the errors are.**
   - MaxQuant copied 60,189 identifications between runs, 52 of them entrapment (0.30%). FragPipe copied 78,227, 88 of them entrapment (0.39%).
-  - That is 1.6 and 2.6 times the per-run rate with MBR off (0.19% and 0.15%), and still well below 1%.
+  - That is 1.6 and 2.5 times the per-run rate with MBR off (0.19% and 0.15%), and still well below 1%.
   - MaxQuant and FragPipe give the same experiment-wide counts with MBR on and off. Their MBR copies identifications into other runs for quantification; the identification lists come from the same search.
 - **DIA-NN with MBR on has fewer entrapment hits than with MBR off** at every level (precursors 100 against 189). A likely reason: MBR on re-searches all runs with a library built from the first pass, so an entrapment precursor must survive that pass to be searched again.
 - **The larger database costs identifications**, measured against the target-only searches:
