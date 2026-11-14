@@ -45,6 +45,17 @@ Following Wen et al. (2025, *Nat Methods*). At a threshold, let N_T be the targe
 
 **Thresholds**: DIA-NN reports q-values for precursors and protein groups, so `extract.py` counts at q ≤ 0.001, 0.005, 0.01, 0.02 and 0.05, as far as the report reaches. MaxQuant and FragPipe write only what passes their FDR, so their counts are "as reported" at 1%; MaxQuant protein groups also use the `Q-value` column.
 
+**Per-run levels** (added 2026-11-14): the precursor, peptide and protein levels count each identification once for the whole experiment. Match-between-runs adds no sequence to that list; it copies identifications into runs where the precursor had no MS/MS. So those levels cannot show what MBR does, and for MaxQuant they come out identical with MBR on and off. Two levels count per run instead:
+
+| Level | DIA-NN | MaxQuant | FragPipe |
+|---|---|---|---|
+| `precursor_run` | report rows (run, precursor) at their run-level `Q.Value` | `evidence.txt` rows (raw file, modified sequence, charge), MS/MS and MBR | `combined_ion.tsv` (sample, modified sequence, charge) with match type MS/MS, MBR or MBC |
+| `precursor_run_mbr` | not available: DIA-NN does not mark transfers | transfers only: `Type` MULTI-MATCH, which MaxQuant 2.8 writes as an empty `Type` (with a `Match time difference` and no MS/MS) | match type MBR |
+
+- MULTI-MATCH-NOVERIFY rows (MaxQuant) and `unmatched` ions (FragPipe) are left out.
+- **MBC** is IonQuant's label for ions quantified in a run without MS/MS there and not by MBR. IonQuant does not document it; it is counted in `precursor_run`, not as a transfer.
+- r for both levels is the peptide ratio.
+
 ## How to run (workstation)
 
 1. **Databases**:
@@ -84,6 +95,7 @@ Following Wen et al. (2025, *Nat Methods*). At a threshold, let N_T be the targe
 - the foreign builder drops planted shared proteins and leaves no shared peptide
 - the shuffled copies keep length, composition and cleavage sites
 - the DIA-NN, MaxQuant and FragPipe readers count planted target and entrapment hits exactly, leaving out decoys and contaminants
+- the per-run levels count planted MS/MS and MBR identifications per run exactly, and transfers leave the experiment-wide counts unchanged
 - `score.py`'s estimates equal the formulas
 
 ## Results

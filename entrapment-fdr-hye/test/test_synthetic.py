@@ -9,6 +9,9 @@
    in evidence and peptides, the older Reverse column in proteinGroups) and contaminants (not
    counted), a peptide shared by a target and an entrapment protein (counted as target), and a target-only search
    for the targets lost. extract.py's counts and score.py's estimates must equal the planted values exactly.
+3. Per-run levels: DIA-NN rows per run at their run-level q; MaxQuant evidence with a second run of MBR transfers
+   (MaxQuant 2.8's empty Type, and MULTI-MATCH) plus a MULTI-MATCH-NOVERIFY row that is left out; FragPipe
+   combined_ion.tsv with MS/MS, MBR, MBC and unmatched ions. Transfers must not change the experiment-wide counts.
 Usage: python3 test/test_synthetic.py
 """
 import csv
@@ -129,9 +132,14 @@ with tempfile.TemporaryDirectory() as tmp:
     write_tsv(t / "diann_base" / "report.tsv", hdr, base_rows)
     # MaxQuant: reported identifications only
     mq = t / "mq" / "combined" / "txt"
-    write_tsv(mq / "evidence.txt", ["Modified sequence", "Charge", "Proteins", "Decoy", "Potential contaminant", "Type"],
-              [[f"_{p}_", 2, ";".join(pr), "+" if k == "decoy" else "", "+" if k == "contaminant" else "", "MULTI-MSMS"]
-               for k, p, pr, q in planted])
+    flag = lambda k: ["+" if k == "decoy" else "", "+" if k == "contaminant" else ""]
+    mbr_types = ["", "MULTI-MATCH"]                       # MaxQuant 2.8 leaves Type empty for MBR transfers
+    write_tsv(mq / "evidence.txt", ["Raw file", "Modified sequence", "Charge", "Proteins", "Decoy", "Potential contaminant",
+                                    "Type", "Match time difference"],
+              [["R1", f"_{p}_", 2, ";".join(pr), *flag(k), "MULTI-MSMS", ""] for k, p, pr, q in planted]
+              + [["R2", f"_{p}_", 2, ";".join(pr), *flag(k), mbr_types[i % 2], "0.01"] for i, (k, p, pr, q) in enumerate(planted[:100])]
+              + [["R3", f"_{p}_", 2, ";".join(pr), *flag(k), "MULTI-MATCH-NOVERIFY", "0.01"] for k, p, pr, q in planted[:5]])
+    mq_mbr = (sum(k == "target" for k, *_ in planted[:100]), sum(k == "entrapment" for k, *_ in planted[:100]))
     write_tsv(mq / "peptides.txt", ["Sequence", "Proteins", "Decoy", "Potential contaminant"],
               [[p, ";".join(pr), "+" if k == "decoy" else "", "+" if k == "contaminant" else ""] for k, p, pr, q in planted])
     write_tsv(mq / "proteinGroups.txt", ["Protein IDs", "Q-value", "Reverse", "Potential contaminant", "Only identified by site"],
@@ -143,6 +151,12 @@ with tempfile.TemporaryDirectory() as tmp:
                   [[p, "", 2, pr[0], ", ".join(pr[1:])] for k, p, pr, q in part])
         write_tsv(d / "peptide.tsv", ["Peptide", "Protein", "Mapped Proteins"], [[p, pr[0], ", ".join(pr[1:])] for k, p, pr, q in part])
         write_tsv(d / "protein.tsv", ["Protein", "Indistinguishable Proteins"], [[pr[0], ", ".join(pr[1:])] for k, p, pr, q in part])
+    match = ["MBR", "MBC", "unmatched"]
+    write_tsv(t / "fp" / "combined_ion.tsv", ["Peptide Sequence", "Modified Sequence", "Charge", "Protein", "Mapped Proteins",
+                                              "S1 Match Type", "S2 Match Type"],
+              [[p, "", 2, pr[0], ", ".join(pr[1:]), "MS/MS", match[i % 3]] for i, (k, p, pr, q) in enumerate(planted)])
+    kinds_by = lambda m: (sum(k == "target" for i, (k, *_) in enumerate(planted) if match[i % 3] in m),
+                          sum(k == "entrapment" for i, (k, *_) in enumerate(planted) if match[i % 3] in m))
     write_tsv(t / "searches.tsv", ["search", "engine", "version", "mbr", "result", "baseline", "entrapment"],
               [["DIA-NN synthetic", "diann", "DIA-NN test", "on", "diann/report.tsv", "diann_base/report.tsv", "db/entrapment_info.json"],
                ["MaxQuant synthetic", "maxquant", "MaxQuant test", "off", "mq/combined/txt", "", "db/entrapment_info.json"],
@@ -171,6 +185,24 @@ with tempfile.TemporaryDirectory() as tmp:
           (int(c["n_target"]), int(c["n_entrapment"])) == groups(";".join, 0.01))
     c = get("FragPipe synthetic", "protein", "reported")
     check(f"FragPipe proteins: {groups(lambda pr: pr[0])}", (int(c["n_target"]), int(c["n_entrapment"])) == groups(lambda pr: pr[0]))
+
+    for g in grid:
+        rq = lambda q: min(0.05, q * 1.5) <= g
+        w = (2 * sum(k == "target" and rq(q) for k, _, _, q in planted), 2 * sum(k == "entrapment" and rq(q) for k, _, _, q in planted))
+        c = get("DIA-NN synthetic", "precursor_run", str(g))
+        check(f"DIA-NN per-run precursors at run-level q <= {g}: {w}", (int(c["n_target"]), int(c["n_entrapment"])) == w)
+    check("DIA-NN: no transfer level (DIA-NN does not mark transfers)",
+          not any(c["search"] == "DIA-NN synthetic" and c["level"] == "precursor_run_mbr" for c in counts))
+    c = get("MaxQuant synthetic", "precursor_run", "reported")
+    w = (n_t_all + mq_mbr[0], n_e_all + mq_mbr[1])
+    check(f"MaxQuant per-run precursors: MS/MS + MBR = {w}, NOVERIFY left out", (int(c["n_target"]), int(c["n_entrapment"])) == w)
+    c = get("MaxQuant synthetic", "precursor_run_mbr", "reported")
+    check(f"MaxQuant transfers (empty Type and MULTI-MATCH): {mq_mbr}", (int(c["n_target"]), int(c["n_entrapment"])) == mq_mbr)
+    c = get("FragPipe synthetic", "precursor_run", "reported")
+    w = tuple(a + b for a, b in zip((n_t_all, n_e_all), kinds_by(("MBR", "MBC"))))
+    check(f"FragPipe per-run ions: MS/MS + MBR + MBC = {w}, unmatched left out", (int(c["n_target"]), int(c["n_entrapment"])) == w)
+    c = get("FragPipe synthetic", "precursor_run_mbr", "reported")
+    check(f"FragPipe transfers (MBR): {kinds_by(('MBR',))}", (int(c["n_target"]), int(c["n_entrapment"])) == kinds_by(("MBR",)))
 
     scores = list(csv.DictReader(open(t / "out" / "scores.csv")))
     sv = lambda tool, sub, setting, metric: float(next(r["value"] for r in scores if r["tool"] == tool and r["subset"] == sub

@@ -16,6 +16,15 @@ Levels and q-values
             protein groups when the column is there)
   fragpipe  precursor (psm.tsv: modified peptide + charge), peptide (peptide.tsv), protein (protein.tsv), all folders
             below result; Philosopher filters at its FDR, so the threshold is "reported"
+Per-run levels (an identification per run, so that match-between-runs shows: it copies identifications into runs
+where the precursor had no MS/MS, and adds no new sequence to the experiment-wide levels above)
+  precursor_run      diann: report rows (Run, Precursor.Id) at their run-level Q.Value; maxquant: evidence.txt rows
+                     (Raw file, modified sequence, charge), MS/MS and MBR; fragpipe: combined_ion.tsv (sample, modified
+                     sequence, charge) whose "<sample> Match Type" is MS/MS, MBR or MBC (IonQuant writes MBC for ions
+                     quantified without MS/MS in that run and not by MBR; "unmatched" is left out)
+  precursor_run_mbr  only the transferred ones: maxquant evidence rows of type MULTI-MATCH (MaxQuant 2.8 leaves Type
+                     empty for these; they have a Match time difference and no MS/MS); fragpipe Match Type MBR.
+                     DIA-NN does not mark transfers. Written only when the search has any.
 An identification is entrapment when every protein it maps to is an entrapment protein (accession contains ENTRAP_),
 decoy (rev_ / REV__ / DECOY) or contaminant (CON__ / contam_) when all its proteins are; otherwise target. Decoys and
 contaminants are not counted.
@@ -70,27 +79,33 @@ def read_diann(path):
         rows = (dict(zip(r.index, ("" if v is None else str(v) for v in r.values))) for _, r in pd.read_parquet(path).iterrows())
     else:
         rows = rows_tsv(path)
-    prec, pep, prot = {}, {}, {}
+    prec, pep, prot, run = {}, {}, {}, {}
     for r in rows:
         if r.get("Decoy", "0") not in ("0", "", "0.0", "False"):
             continue
         pids = split_proteins(r.get("Protein.Ids", ""))
         q = float(r["Global.Q.Value"]) if r.get("Global.Q.Value") else float(r["Q.Value"])
         best(prec, r["Precursor.Id"], q, pids)
+        best(run, (r["Run"], r["Precursor.Id"]), float(r["Q.Value"]), pids)
         best(pep, r["Stripped.Sequence"], q, pids)
         pq = r.get("Global.PG.Q.Value") or r.get("PG.Q.Value")
         best(prot, r["Protein.Group"], float(pq) if pq else None, split_proteins(r["Protein.Group"]))
-    return {"precursor": prec, "peptide": pep, "protein": prot}
+    return {"precursor": prec, "peptide": pep, "protein": prot, "precursor_run": run}
 
 
 def read_maxquant(folder):
     folder = Path(folder)
     # MaxQuant 2.8 names the decoy column "Decoy"; older versions "Reverse"
     keep = lambda r: "+" not in (r.get("Reverse", ""), r.get("Decoy", ""), r.get("Potential contaminant", ""))
-    prec, pep, prot = {}, {}, {}
+    prec, pep, prot, run, mbr = {}, {}, {}, {}, {}
     for r in rows_tsv(folder / "evidence.txt"):
         if keep(r) and r.get("Type", "") != "MULTI-MATCH-NOVERIFY":
-            best(prec, (r["Modified sequence"], r["Charge"]), None, split_proteins(r["Proteins"]))
+            pids = split_proteins(r["Proteins"])
+            best(prec, (r["Modified sequence"], r["Charge"]), None, pids)
+            key = (r.get("Raw file", ""), r["Modified sequence"], r["Charge"])
+            best(run, key, None, pids)
+            if r.get("Type", "") == "MULTI-MATCH" or (r.get("Type", "") == "" and r.get("Match time difference", "")):
+                best(mbr, key, None, pids)
     for r in rows_tsv(folder / "peptides.txt"):
         if keep(r):
             best(pep, r["Sequence"], None, split_proteins(r["Proteins"]))
@@ -98,12 +113,12 @@ def read_maxquant(folder):
         if keep(r) and r.get("Only identified by site", "") != "+":
             q = r.get("Q-value")
             best(prot, r["Protein IDs"], float(q) if q not in (None, "") else None, split_proteins(r["Protein IDs"]))
-    return {"precursor": prec, "peptide": pep, "protein": prot}
+    return with_runs({"precursor": prec, "peptide": pep, "protein": prot}, run, mbr)
 
 
 def read_fragpipe(folder):
     folder = Path(folder)
-    prec, pep, prot = {}, {}, {}
+    prec, pep, prot, run, mbr = {}, {}, {}, {}, {}
     mapped = lambda r, col: [r[col]] + split_proteins(r.get("Mapped Proteins", ""))
     for f in sorted(folder.rglob("psm.tsv")):
         for r in rows_tsv(f):
@@ -114,7 +129,23 @@ def read_fragpipe(folder):
     for f in sorted(folder.rglob("protein.tsv")):
         for r in rows_tsv(f):
             best(prot, r["Protein"], None, [r["Protein"]] + split_proteins(r.get("Indistinguishable Proteins", "")))
-    return {"precursor": prec, "peptide": pep, "protein": prot}
+    for f in sorted(folder.rglob("combined_ion.tsv")):
+        for r in rows_tsv(f):
+            for col in (c for c in r if c.endswith(" Match Type")):
+                if r[col] in ("MS/MS", "MBR", "MBC"):
+                    key = (col[:-len(" Match Type")], r.get("Modified Sequence") or r["Peptide Sequence"], r["Charge"])
+                    best(run, key, None, mapped(r, "Protein"))
+                    if r[col] == "MBR":
+                        best(mbr, key, None, mapped(r, "Protein"))
+    return with_runs({"precursor": prec, "peptide": pep, "protein": prot}, run, mbr)
+
+
+def with_runs(levels, run, mbr):
+    if run:
+        levels["precursor_run"] = run
+    if mbr:
+        levels["precursor_run_mbr"] = mbr
+    return levels
 
 
 READERS = {"diann": read_diann, "maxquant": read_maxquant, "fragpipe": read_fragpipe}
@@ -154,7 +185,7 @@ def main():
         for level, by_t in res.items():
             r = info["r_proteins"] if level == "protein" else info["r_peptides"]
             for t, (nt, ne) in by_t.items():
-                nb = bl[level].get(t, (None, None))[0] if bl else None
+                nb = bl.get(level, {}).get(t, (None, None))[0] if bl else None
                 out_rows.append([s["search"], s["engine"], s.get("version", ""), s["mbr"], level, t, nt, ne,
                                  "" if nb is None else nb, r])
                 print(f"{s['search']:<45} {level:<9} q<={t!s:<8} target {nt:>7}  entrapment {ne:>6}"
