@@ -1,6 +1,6 @@
 # True FDR of MaxQuant, FragPipe and DIA-NN measured with an entrapment database (2026-11-04)
 
-Tracking issue: [#5](https://github.com/shoo99/sbmlab-benchmarks/issues/5). No post yet.
+Tracking issue: [#5](https://github.com/shoo99/sbmlab-benchmarks/issues/5). Post: [Is 1% FDR Really 1%? I Hid 14,567 Arabidopsis Proteins in MaxQuant, FragPipe and DIA-NN Searches](https://sbmlab.com/blog/entrapment-fdr-maxquant-fragpipe-diann-1-percent-measured-2026) (2026-11-14; [Korean](https://sbmlab.com/blog/entrapment-fdr-maxquant-fragpipe-diann-1-percent-measured-2026-ko)).
 
 At a nominal 1% FDR, how many identifications are actually false? This folder answers it at the precursor, peptide and protein level, with MBR off and on. The method: search the PXD028735 HYE runs against the human / yeast / *E. coli* database **plus proteins that cannot be in the sample**. Any hit on those entrapment proteins is known to be false.
 
