@@ -135,7 +135,7 @@ Area: databases · Scored against: none (status, latency, reported release and w
 
 ## [entrapment-fdr-hye](../entrapment-fdr-hye)
 
-Area: proteomics · Scored against: entrapment hits (Arabidopsis proteins without shared tryptic peptides, or shuffled targets) are false by construction · [issue #5](https://github.com/shoo99/sbmlab-benchmarks/issues/5) (no post yet)
+Area: proteomics · Scored against: entrapment hits (Arabidopsis proteins without shared tryptic peptides, or shuffled targets) are false by construction · [post](https://sbmlab.com/blog/entrapment-fdr-maxquant-fragpipe-diann-1-percent-measured-2026)
 
 **PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065**
 
