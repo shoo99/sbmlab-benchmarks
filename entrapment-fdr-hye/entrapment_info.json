@@ -1,0 +1,14 @@
+{
+ "mode": "foreign",
+ "source": "db/arabidopsis.fasta",
+ "seed": 5,
+ "target_proteins": 31695,
+ "entrapment_proteins": 14567,
+ "dropped_proteins": 1854,
+ "target_peptides": 679734,
+ "entrapment_peptides": 276282,
+ "shared_peptides": 0,
+ "r_proteins": 0.4596,
+ "r_peptides": 0.4065,
+ "peptide_rule": "trypsin (K/R, not before P), no missed cleavage, 7-30 aa, I = L"
+}

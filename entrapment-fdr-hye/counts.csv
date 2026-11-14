@@ -1,0 +1,67 @@
+search,engine,version,mbr,level,threshold,n_target,n_entrapment,n_baseline_target,r
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.001,70153,17,81767,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.005,94284,96,104086,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.01,102341,189,111842,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.02,109730,375,119622,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.05,115584,597,126251,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.001,64190,16,73082,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.005,81907,95,89617,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.01,87969,188,95463,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.02,93877,374,101543,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.05,97868,596,106124,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.001,7925,6,8502,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.005,8315,28,8898,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.01,8521,37,9092,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.02,8766,67,9389,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.05,9183,154,9904,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.001,358694,75,413497,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.005,448314,405,501177,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.01,479573,787,534639,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.02,479573,787,534639,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.05,479573,787,534639,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.001,60564,9,72009,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.005,92330,46,101635,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.01,98556,100,107425,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.02,100973,133,110608,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.05,102032,158,111479,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.001,57606,9,66803,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.005,80527,45,87887,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.01,84842,99,91791,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.02,86765,132,94374,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.05,87675,157,95119,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.001,7275,1,7895,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.005,7796,11,8447,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.01,8026,22,8736,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.02,8329,42,9037,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.05,8971,135,9675,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.001,348583,46,407609,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.005,505263,262,560614,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.01,549328,488,605193,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.02,549328,488,605193,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.05,549328,488,605193,0.4065
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,precursor,reported,48943,37,50694,0.4065
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,peptide,reported,40492,33,41968,0.4065
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.001,4909,3,4710,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.005,5215,10,5292,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.01,5458,23,5610,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.02,5458,23,5610,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.05,5458,23,5610,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,precursor_run,reported,186972,102,193250,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor,reported,48943,37,51000,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,peptide,reported,40492,33,42187,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.001,4909,3,4870,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.005,5215,10,5308,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.01,5458,23,5628,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.02,5458,23,5628,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.05,5458,23,5628,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor_run,reported,240637,146,249400,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor_run_mbr,reported,60137,52,61249,0.4065
+"FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,precursor,reported,80897,60,81863,0.4065
+"FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,peptide,reported,65494,57,66309,0.4065
+"FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,protein,reported,7861,52,7937,0.4596
+"FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,precursor_run,reported,323262,144,326942,0.4065
+"FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,precursor,reported,80897,60,81863,0.4065
+"FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,peptide,reported,65494,57,66309,0.4065
+"FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,protein,reported,7861,52,7937,0.4596
+"FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,precursor_run,reported,401401,232,405673,0.4065
+"FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,precursor_run_mbr,reported,78139,88,78731,0.4065
