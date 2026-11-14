@@ -102,6 +102,8 @@ Following Wen et al. (2025, *Nat Methods*). At a threshold, let N_T be the targe
 
 Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14, with the foreign (Arabidopsis) entrapment: 14,567 entrapment proteins next to 31,695 targets (1,854 Arabidopsis proteins dropped for sharing a tryptic peptide), r = 0.4065 for peptides and 0.4596 for proteins. Target-only searches: DIA-NN MBR on and off from `diann-hye`, MaxQuant MBR off from `maxquant-hye`, FragPipe MBR on from `fragpipe-hye`, and MaxQuant MBR on and FragPipe MBR off run here. Every search used the settings of those folders; only the database changed.
 
+![Entrapment estimates of the false discovery proportion per search and level at a nominal 1% FDR](entrapment_fdr_hye.png)
+
 **At the nominal 1%** (DIA-NN q ≤ 0.01; MaxQuant and FragPipe as reported), `fdp_combined` with `fdp_lower` in brackets:
 
 | Search | Precursors | Peptides | Protein groups | Per run | MBR transfers only |
@@ -159,4 +161,5 @@ Bundled: `counts.csv` (from `extract.py`), `entrapment_info.json`, `score.out` a
 | `searches.example.tsv` | manifest template for `extract.py` |
 | `extract.py` | target and entrapment counts per search, level and threshold → `counts.csv` |
 | `score.py` | FDP estimates and targets lost → `scores.csv` |
+| `figure.py` | `entrapment_fdr_hye.png` from `scores.csv` |
 | `test/test_synthetic.py` | known-answer test of the three scripts (CI) |
