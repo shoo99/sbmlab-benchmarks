@@ -446,7 +446,7 @@ Area: single-cell · Scored against: null donor splits (4 vs 4; every call false
 
 ## [variant-calling-giab](../variant-calling-giab)
 
-Area: genomics · Scored against: GIAB HG002 v4.2.1 benchmark VCF and regions (GRCh38), with GIAB v3.3 stratifications · [issue #14](https://github.com/shoo99/sbmlab-benchmarks/issues/14) (no post yet)
+Area: genomics · Scored against: GIAB HG002 v4.2.1 benchmark VCF and regions (GRCh38), with GIAB v3.3 stratifications · [post](https://sbmlab.com/blog/variant-calling-bcftools-vs-gatk-giab-hg002-benchmark)
 
 **GIAB HG002 chr20, NovaSeq PCR-free 35x, v4.2.1 benchmark (GRCh38)**
 

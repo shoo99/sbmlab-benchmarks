@@ -86,7 +86,7 @@ Human 65% in both conditions, yeast 30 → 15%, *E. coli* 5 → 20%, so the true
 
 | Folder | Post | What it shows |
 |---|---|---|
-| [variant-calling-giab](variant-calling-giab) | Issue [#14](https://github.com/shoo99/sbmlab-benchmarks/issues/14) (no post yet) | HG002 chr20, 35x, scored with hap.py against GIAB v4.2.1. SNP F1 0.992 for both bcftools and GATK HaplotypeCaller; indel F1 0.937 vs 0.992 (most bcftools indel errors are wrong genotypes). GATK hard filters lower SNP F1 (recall in low-mappability regions 0.87 to 0.72). DeepVariant pending a workstation run |
+| [variant-calling-giab](variant-calling-giab) | [bcftools vs GATK HaplotypeCaller, Scored Against GIAB HG002](https://sbmlab.com/blog/variant-calling-bcftools-vs-gatk-giab-hg002-benchmark) | HG002 chr20, 35x, scored with hap.py against GIAB v4.2.1. SNP F1 0.992 for both bcftools and GATK HaplotypeCaller; indel F1 0.937 vs 0.992 (most bcftools indel errors are wrong genotypes). GATK hard filters lower SNP F1 (recall in low-mappability regions 0.87 to 0.72). DeepVariant pending a workstation run |
 
 ### Single-cell: known-answer benchmarks (real-data runs in progress)
 
