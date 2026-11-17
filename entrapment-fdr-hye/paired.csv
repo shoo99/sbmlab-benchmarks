@@ -1,0 +1,13 @@
+search,engine,mbr,level,r,n_target,n_entrapment,n_E_ge_s_gt_T,n_E_gt_T_ge_s,n_ties,n_unpaired,fdp_paired,fdp_paired_ties,fdp_lower,fdp_combined
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,off,peptide,1.0425,91574,325,190,10,0,0,0.00582,0.00582,0.00354,0.00693
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,off,protein,0.9926,8743,66,24,0,0,0,0.01022,0.01022,0.00749,0.01504
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,on,peptide,1.0425,89160,178,106,3,0,0,0.00325,0.00325,0.00199,0.0039
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,on,protein,0.9926,8181,59,18,0,0,0,0.00934,0.00934,0.00716,0.01437
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,off,peptide,1.0425,38997,68,55,6,0,0,0.00346,0.00346,0.00174,0.00341
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,off,protein,0.9926,5341,48,29,1,0,0,0.01466,0.01466,0.00891,0.01788
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,on,peptide,1.0425,38997,68,55,6,0,0,0.00346,0.00346,0.00174,0.00341
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,on,protein,0.9926,5341,48,29,1,0,0,0.01466,0.01466,0.00891,0.01788
+"FragPipe LFQ-MBR, MBR off (shuffled entrapment)",fragpipe,off,peptide,1.0425,64574,95,57,6,0,0,0.00254,0.00254,0.00147,0.00288
+"FragPipe LFQ-MBR, MBR off (shuffled entrapment)",fragpipe,off,protein,0.9926,7699,86,41,0,0,0,0.01631,0.01631,0.01105,0.02218
+"FragPipe LFQ-MBR, MBR on (shuffled entrapment)",fragpipe,on,peptide,1.0425,64574,95,57,6,0,0,0.00254,0.00254,0.00147,0.00288
+"FragPipe LFQ-MBR, MBR on (shuffled entrapment)",fragpipe,on,protein,0.9926,7699,86,41,0,0,0,0.01631,0.01631,0.01105,0.02218

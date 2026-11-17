@@ -122,6 +122,7 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok go-release-drift "python3 test/test_go_ora.py"       # OBO/GAF readers, propagation, hypergeometric tail, BH
   run_ok common "python3 tests/test_known_ratio.py"
   run_ok entrapment-fdr-hye "python3 test/test_synthetic.py"    # entrapment database, extraction and FDP estimates
+  run_ok entrapment-fdr-hye "python3 test/test_paired.py"       # paired estimate (shuffled entrapment), three engines
   check_out entrapment-fdr-hye "python3 score.py" score.out    # FDP estimates from the workstation counts
   same_file entrapment-fdr-hye/scores.csv
   run_ok entrapment-fdr-hye "MPLBACKEND=Agg python3 figure.py"

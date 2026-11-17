@@ -34,7 +34,7 @@ Following Wen et al. (2025, *Nat Methods*). At a threshold, let N_T be the targe
 | `fdp_combined` | N_E (1 + 1/r) / (N_T + N_E) | the combined estimate: false target hits are expected at about N_E / r |
 
 - **Reading them**: a tool controls its FDR if `fdp_combined` stays at or below the nominal level. A `fdp_lower` above the nominal level shows a failure for certain.
-- **Paired estimator**: the paired estimator of Wen et al. needs scores of non-discovered candidates and a paired (shuffled) database. It is not implemented.
+- **Paired estimator** (`paired.py`, shuffled entrapment only): FDP* = (N_E + N_{E≥s>T} + 2 N_{E>T≥s}) / (N_T + N_E) (Wen et al., Eq. 4). Each entrapment peptide is paired with the target peptide at the same position in the protein it was shuffled from; N_{E≥s>T} counts discovered entrapment whose paired target was not discovered, N_{E>T≥s} those whose discovered paired target scored worse. It needs r = 1 and gives a tighter upper bound than `fdp_combined`. Scores of non-discovered targets are not needed: a paired target that was not discovered counts in N_{E≥s>T}. Protein level pairs ENTRAP_X with X. Scores: DIA-NN −PEP (−PG.PEP for proteins), MaxQuant −PEP (peptides) and Score (protein groups), FragPipe Probability (Protein Probability). `fdp_paired_ties` counts equal scores as E > T.
 - **Cost of the larger database**: `share_targets_lost` = 1 − N_T / (targets of the same search against the target database alone).
 
 **Classification**:
@@ -91,7 +91,7 @@ Following Wen et al. (2025, *Nat Methods*). At a threshold, let N_T be the targe
 
 4. **Bundle**: `counts.csv`, `db/entrapment_info.json` (copied next to the scripts), `score.out` and `scores.csv`. Note r and the entrapment source in this README. Then switch `ci` to `reproduce` with a `score.py` re-run in `ci/reproduce.sh`.
 
-**CI** runs `test/test_synthetic.py`. It takes under a second and checks 35 known answers:
+**CI** runs `test/test_synthetic.py`. It takes under a second and checks 35 known answers (and `test/test_paired.py` 21 more):
 - the foreign builder drops planted shared proteins and leaves no shared peptide
 - the shuffled copies keep length, composition and cleavage sites
 - the DIA-NN, MaxQuant and FragPipe readers count planted target and entrapment hits exactly, leaving out decoys and contaminants
@@ -141,6 +141,28 @@ Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14, with the foreign (Ar
 
 Bundled: `counts.csv` (from `extract.py`), `entrapment_info.json`, `score.out` and `scores.csv`. The search outputs are not bundled. CI re-runs `score.py` from `counts.csv` and compares `score.out` and `scores.csv` byte for byte.
 
+### Second entrapment: shuffled targets (r ≈ 1) and the paired estimate (2026-11-17/18)
+
+The same six searches were repeated with the other entrapment: one shuffled copy of every target (`make_db.sh shuffle`, seed 5; 31,461 entrapment proteins, 234 dropped for colliding with a target peptide; r = 1.0425 for peptides, 0.9926 for proteins). Everything else was unchanged, and the target-only searches are the same. The rows are in `counts.csv`, `score.out` and `scores.csv` with « (shuffled entrapment) » in the search name; `entrapment_info_shuffle.json` describes the database.
+
+At the nominal 1%, combined estimate with the lower bound in brackets, and the paired estimate (`paired.csv`, `paired.out`):
+
+| Search | Peptides: combined (lower) | Peptides: paired | Protein groups: combined (lower) | Protein groups: paired |
+|---|---|---|---|---|
+| DIA-NN 2.3.2, MBR off | 0.69% (0.35%) | 0.58% | 1.50% (0.75%) | 1.02% |
+| DIA-NN 2.3.2, MBR on | 0.39% (0.20%) | 0.32% | 1.44% (0.72%) | **0.93%** |
+| MaxQuant 2.8.1 | 0.34% (0.17%) | 0.35% | 1.79% (0.89%) | 1.47% |
+| FragPipe 24.0 | 0.29% (0.15%) | 0.25% | 2.22% (**1.11%**) | 1.63% |
+
+- **The two entrapments agree.** Precursor and peptide estimates are within a few hundredths of a percent of the Arabidopsis run, although r differs 2.5-fold (0.41 vs 1.04).
+- **FragPipe's protein-level FDR is not controlled.** With the shuffled entrapment its lower bound is 1.11%, above the nominal 1%, so this is a failure for certain, not an estimate.
+- **MaxQuant's protein groups are probably above 1%** (paired 1.47%, lower bound 0.89%). DIA-NN with MBR off is borderline (paired 1.02%), and with MBR on its paired upper bound is 0.93%, which supports control.
+- **MBR transfers stay low**: MaxQuant 89 of 59,899 (combined 0.29%), FragPipe 110 of 79,736 (0.27%).
+- The paired estimate needs r = 1; with r = 1.04 here, the combined estimate can come out marginally below the paired one (MaxQuant peptides 0.34% vs 0.35%). No pair was missing and no scores tied at 1%.
+- Run times: DIA-NN library 33 min, MBR on 14 h 4 min (alongside MaxQuant), MBR off 4 min 45 s; MaxQuant 9 h 29 min (MBR on) and 6 h 31 min (MBR off); FragPipe 37 min (MBR on, alongside the DIA-NN library) and 17 min.
+
+CI runs `test/test_paired.py` (21 known answers for the three engines at both levels); `paired.csv` itself needs the search outputs and is bundled, not re-run.
+
 ## Traps
 
 - **The size ratio r matters more than it looks.**
@@ -162,4 +184,6 @@ Bundled: `counts.csv` (from `extract.py`), `entrapment_info.json`, `score.out` a
 | `extract.py` | target and entrapment counts per search, level and threshold → `counts.csv` |
 | `score.py` | FDP estimates and targets lost → `scores.csv` |
 | `figure.py` | `entrapment_fdr_hye.png` from `scores.csv` |
+| `paired.py` | paired estimate (shuffled entrapment) → `paired.csv` |
+| `test/test_paired.py` | known-answer test of `paired.py` (CI) |
 | `test/test_synthetic.py` | known-answer test of the three scripts (CI) |
