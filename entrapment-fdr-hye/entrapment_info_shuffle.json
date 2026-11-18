@@ -1,0 +1,14 @@
+{
+ "mode": "shuffle",
+ "source": "1 shuffled copies",
+ "seed": 5,
+ "target_proteins": 31695,
+ "entrapment_proteins": 31461,
+ "dropped_proteins": 234,
+ "target_peptides": 679734,
+ "entrapment_peptides": 708643,
+ "shared_peptides": 0,
+ "r_proteins": 0.9926,
+ "r_peptides": 1.0425,
+ "peptide_rule": "trypsin (K/R, not before P), no missed cleavage, 7-30 aa, I = L"
+}

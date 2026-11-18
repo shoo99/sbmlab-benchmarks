@@ -1,0 +1,13 @@
+DIA-NN library-free, MBR off (shuffled entra peptide T  91574 E  325 E>=s>T  190 E>T>=s  10 ties   0 unp  0  lower 0.0035 paired 0.0058 (ties 0.0058) combined 0.0069
+DIA-NN library-free, MBR off (shuffled entra protein T   8743 E   66 E>=s>T   24 E>T>=s   0 ties   0 unp  0  lower 0.0075 paired 0.0102 (ties 0.0102) combined 0.0150
+DIA-NN library-free, MBR on (shuffled entrap peptide T  89160 E  178 E>=s>T  106 E>T>=s   3 ties   0 unp  0  lower 0.0020 paired 0.0032 (ties 0.0032) combined 0.0039
+DIA-NN library-free, MBR on (shuffled entrap protein T   8181 E   59 E>=s>T   18 E>T>=s   0 ties   0 unp  0  lower 0.0072 paired 0.0093 (ties 0.0093) combined 0.0144
+MaxQuant, MBR off (shuffled entrapment)      peptide T  38997 E   68 E>=s>T   55 E>T>=s   6 ties   0 unp  0  lower 0.0017 paired 0.0035 (ties 0.0035) combined 0.0034
+MaxQuant, MBR off (shuffled entrapment)      protein T   5341 E   48 E>=s>T   29 E>T>=s   1 ties   0 unp  0  lower 0.0089 paired 0.0147 (ties 0.0147) combined 0.0179
+MaxQuant, MBR on (shuffled entrapment)       peptide T  38997 E   68 E>=s>T   55 E>T>=s   6 ties   0 unp  0  lower 0.0017 paired 0.0035 (ties 0.0035) combined 0.0034
+MaxQuant, MBR on (shuffled entrapment)       protein T   5341 E   48 E>=s>T   29 E>T>=s   1 ties   0 unp  0  lower 0.0089 paired 0.0147 (ties 0.0147) combined 0.0179
+FragPipe LFQ-MBR, MBR off (shuffled entrapme peptide T  64574 E   95 E>=s>T   57 E>T>=s   6 ties   0 unp  0  lower 0.0015 paired 0.0025 (ties 0.0025) combined 0.0029
+FragPipe LFQ-MBR, MBR off (shuffled entrapme protein T   7699 E   86 E>=s>T   41 E>T>=s   0 ties   0 unp  0  lower 0.0111 paired 0.0163 (ties 0.0163) combined 0.0222
+FragPipe LFQ-MBR, MBR on (shuffled entrapmen peptide T  64574 E   95 E>=s>T   57 E>T>=s   6 ties   0 unp  0  lower 0.0015 paired 0.0025 (ties 0.0025) combined 0.0029
+FragPipe LFQ-MBR, MBR on (shuffled entrapmen protein T   7699 E   86 E>=s>T   41 E>T>=s   0 ties   0 unp  0  lower 0.0111 paired 0.0163 (ties 0.0163) combined 0.0222
+wrote paired.csv: 12 rows
