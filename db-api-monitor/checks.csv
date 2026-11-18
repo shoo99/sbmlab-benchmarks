@@ -38,3 +38,16 @@ date_utc,runner,db,status,seconds,release,release_status,example_ok
 2026-11-11T09:45Z,github-actions ubuntu-24.04,KEGG,200,1.355,,200,1
 2026-11-11T09:45Z,github-actions ubuntu-24.04,GEO,200,0.042,,,1
 2026-11-11T09:45Z,github-actions ubuntu-24.04,PRIDE,200,24.740,,,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,UniProt,200,0.650,2026_04,header,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,Ensembl,200,12.244,116,200,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,NCBI Gene,200,0.046,,,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,ClinVar,200,0.418,,,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,RCSB PDB,200,0.094,,,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,AlphaFold DB,200,0.089,6,body,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,InterPro,200,0.423,111.0,200,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,QuickGO,200,0.348,,,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,STRING,200,0.165,12.5,200,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,Reactome,200,0.672,98,200,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,KEGG,200,1.174,,200,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,GEO,200,1.622,,,1
+2026-11-18T10:32Z,github-actions ubuntu-24.04,PRIDE,200,0.936,,,1
