@@ -1,0 +1,82 @@
+search                                        level     q         targets  entrap      r fdp_lower  fdp_comb   lost
+DIA-NN Orbitrap DIA, MBR off                  precursor 0.001       81145      21  0.406    0.0003    0.0009 -0.012
+DIA-NN Orbitrap DIA, MBR off                  precursor 0.005       96781      87  0.406    0.0009    0.0031 -0.004
+DIA-NN Orbitrap DIA, MBR off                  precursor 0.01       102270     164  0.406    0.0016    0.0055  0.005
+DIA-NN Orbitrap DIA, MBR off                  precursor 0.02       108209     303  0.406    0.0028    0.0097  0.009
+DIA-NN Orbitrap DIA, MBR off                  precursor 0.05       111895     430  0.406    0.0038    0.0132  0.019
+DIA-NN Orbitrap DIA, MBR off                  peptide   0.001       68873      21  0.406    0.0003    0.0010 -0.008
+DIA-NN Orbitrap DIA, MBR off                  peptide   0.005       80726      87  0.406    0.0011    0.0037 -0.003
+DIA-NN Orbitrap DIA, MBR off                  peptide   0.01        85011     164  0.406    0.0019    0.0067  0.006
+DIA-NN Orbitrap DIA, MBR off                  peptide   0.02        89620     302  0.406    0.0034    0.0116  0.010
+DIA-NN Orbitrap DIA, MBR off                  peptide   0.05        91696     427  0.406    0.0046    0.0160  0.021
+DIA-NN Orbitrap DIA, MBR off                  protein   0.001        8426       3   0.46    0.0004    0.0011  0.014
+DIA-NN Orbitrap DIA, MBR off                  protein   0.005        8857      14   0.46    0.0016    0.0050  0.021
+DIA-NN Orbitrap DIA, MBR off                  protein   0.01         9111      26   0.46    0.0029    0.0090  0.018
+DIA-NN Orbitrap DIA, MBR off                  protein   0.02         9342      53   0.46    0.0056    0.0179  0.018
+DIA-NN Orbitrap DIA, MBR off                  protein   0.05         9733     123   0.46    0.0125    0.0396  0.025
+DIA-NN Orbitrap DIA, MBR off                  precursor_run 0.001      365708      77  0.406    0.0002    0.0007 -0.019
+DIA-NN Orbitrap DIA, MBR off                  precursor_run 0.005      427426     334  0.406    0.0008    0.0027 -0.000
+DIA-NN Orbitrap DIA, MBR off                  precursor_run 0.01       451117     632  0.406    0.0014    0.0048  0.008
+DIA-NN Orbitrap DIA, MBR off                  precursor_run 0.02       451117     632  0.406    0.0014    0.0048  0.008
+DIA-NN Orbitrap DIA, MBR off                  precursor_run 0.05       451117     632  0.406    0.0014    0.0048  0.008
+DIA-NN Orbitrap DIA, MBR on                   precursor 0.001       76862      14  0.406    0.0002    0.0006  0.010
+DIA-NN Orbitrap DIA, MBR on                   precursor 0.005       94397      55  0.406    0.0006    0.0020 -0.008
+DIA-NN Orbitrap DIA, MBR on                   precursor 0.01        98933      97  0.406    0.0010    0.0034 -0.002
+DIA-NN Orbitrap DIA, MBR on                   precursor 0.02       100579     113  0.406    0.0011    0.0039  0.003
+DIA-NN Orbitrap DIA, MBR on                   precursor 0.05       101805     129  0.406    0.0013    0.0044  0.005
+DIA-NN Orbitrap DIA, MBR on                   peptide   0.001       65768      14  0.406    0.0002    0.0007  0.005
+DIA-NN Orbitrap DIA, MBR on                   peptide   0.005       78688      55  0.406    0.0007    0.0024 -0.007
+DIA-NN Orbitrap DIA, MBR on                   peptide   0.01        82270      97  0.406    0.0012    0.0041 -0.001
+DIA-NN Orbitrap DIA, MBR on                   peptide   0.02        83566     113  0.406    0.0014    0.0047  0.004
+DIA-NN Orbitrap DIA, MBR on                   peptide   0.05        84610     129  0.406    0.0015    0.0053  0.005
+DIA-NN Orbitrap DIA, MBR on                   protein   0.001        8135       2   0.46    0.0003    0.0008  0.012
+DIA-NN Orbitrap DIA, MBR on                   protein   0.005        8681      15   0.46    0.0017    0.0055  0.012
+DIA-NN Orbitrap DIA, MBR on                   protein   0.01         8870      30   0.46    0.0034    0.0107  0.013
+DIA-NN Orbitrap DIA, MBR on                   protein   0.02         9151      49   0.46    0.0053    0.0169  0.015
+DIA-NN Orbitrap DIA, MBR on                   protein   0.05         9591     116   0.46    0.0120    0.0379  0.025
+DIA-NN Orbitrap DIA, MBR on                   precursor_run 0.001      372861      64  0.406    0.0002    0.0006 -0.042
+DIA-NN Orbitrap DIA, MBR on                   precursor_run 0.005      460049     246  0.406    0.0005    0.0019 -0.011
+DIA-NN Orbitrap DIA, MBR on                   precursor_run 0.01       492539     422  0.406    0.0009    0.0030 -0.015
+DIA-NN Orbitrap DIA, MBR on                   precursor_run 0.02       492539     422  0.406    0.0009    0.0030 -0.015
+DIA-NN Orbitrap DIA, MBR on                   precursor_run 0.05       492539     422  0.406    0.0009    0.0030 -0.015
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor 0.001       78943      37   1.04    0.0005    0.0009  0.015
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor 0.005       94928     169   1.04    0.0018    0.0035  0.015
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor 0.01       100378     319   1.04    0.0032    0.0062  0.024
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor 0.02       106328     606   1.04    0.0057    0.0111  0.026
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor 0.05       110096     821   1.04    0.0074    0.0145  0.035
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) peptide   0.001       67189      37   1.04    0.0006    0.0011  0.017
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) peptide   0.005       79333     169   1.04    0.0021    0.0042  0.014
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) peptide   0.01        83572     319   1.04    0.0038    0.0075  0.023
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) peptide   0.02        88233     604   1.04    0.0068    0.0133  0.025
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) peptide   0.05        90408     819   1.04    0.0090    0.0176  0.035
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) protein   0.001        8249       5  0.993    0.0006    0.0012  0.035
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) protein   0.005        8655      16  0.993    0.0019    0.0037  0.043
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) protein   0.01         8921      52  0.993    0.0058    0.0116  0.038
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) protein   0.02         9138     109  0.993    0.0118    0.0237  0.039
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) protein   0.05         9516     233  0.993    0.0239    0.0480  0.046
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor_run 0.001      357345     152   1.04    0.0004    0.0008  0.004
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor_run 0.005      420653     649   1.04    0.0015    0.0030  0.015
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor_run 0.01       444401    1204   1.04    0.0027    0.0053  0.023
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor_run 0.02       444401    1204   1.04    0.0027    0.0053  0.023
+DIA-NN Orbitrap DIA, MBR off (shuffled entrapment) precursor_run 0.05       444401    1204   1.04    0.0027    0.0053  0.023
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor 0.001       73137      18   1.04    0.0003    0.0005  0.058
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor 0.005       92862     119   1.04    0.0013    0.0025  0.008
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor 0.01        97103     177   1.04    0.0018    0.0036  0.017
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor 0.02        98782     214   1.04    0.0022    0.0042  0.021
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor 0.05       100024     264   1.04    0.0026    0.0052  0.022
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) peptide   0.001       63043      18   1.04    0.0003    0.0006  0.047
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) peptide   0.005       77649     119   1.04    0.0015    0.0030  0.006
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) peptide   0.01        80805     177   1.04    0.0022    0.0043  0.017
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) peptide   0.02        82195     214   1.04    0.0026    0.0051  0.021
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) peptide   0.05        83258     264   1.04    0.0032    0.0062  0.021
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) protein   0.001        7870       4  0.993    0.0005    0.0010  0.044
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) protein   0.005        8345      20  0.993    0.0024    0.0048  0.050
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) protein   0.01         8618      58  0.993    0.0067    0.0134  0.041
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) protein   0.02         8942     119  0.993    0.0131    0.0264  0.037
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) protein   0.05         9311     221  0.993    0.0232    0.0465  0.053
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor_run 0.001      351036     109   1.04    0.0003    0.0006  0.019
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor_run 0.005      452899     467   1.04    0.0010    0.0020  0.004
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor_run 0.01       484022     823   1.04    0.0017    0.0033  0.003
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor_run 0.02       484022     823   1.04    0.0017    0.0033  0.003
+DIA-NN Orbitrap DIA, MBR on (shuffled entrapment) precursor_run 0.05       484022     823   1.04    0.0017    0.0033  0.003
+wrote scores.csv (400 rows)

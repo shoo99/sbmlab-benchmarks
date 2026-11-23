@@ -1,0 +1,17 @@
+search,engine,version,mbr,entrapment,n_target_groups,n_entrapment_groups,entrapment_1pep,entrapment_2pep,entrapment_3pep_plus,share_entrapment_1pep,target_1pep,share_target_1pep,n_0pep,n_no_global_pep
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,foreign,8532,40,22,16,2,0.55,429,0.0503,0,109
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,foreign,7985,16,13,3,0,0.8125,368,0.0461,0,64
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,foreign,5454,24,19,5,0,0.7917,573,0.1051,0,
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,foreign,5454,24,19,5,0,0.7917,573,0.1051,0,
+"FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,foreign,7861,52,47,5,0,0.9038,1099,0.1398,0,
+"FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,foreign,7861,52,47,5,0,0.9038,1099,0.1398,0,
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,shuffle,8684,62,33,25,4,0.5323,428,0.0493,0,104
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,shuffle,8205,59,49,9,1,0.8305,366,0.0446,0,51
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,shuffle,5346,47,33,13,1,0.7021,520,0.0973,0,
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,shuffle,5346,47,33,13,1,0.7021,520,0.0973,0,
+"FragPipe LFQ-MBR, MBR off (shuffled entrapment)",fragpipe,FragPipe 24.0,off,shuffle,7699,86,77,7,2,0.8953,1029,0.1337,0,
+"FragPipe LFQ-MBR, MBR on (shuffled entrapment)",fragpipe,FragPipe 24.0,on,shuffle,7699,86,77,7,2,0.8953,1029,0.1337,0,
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,foreign,9111,26,19,7,0,0.7308,651,0.0715,0,48
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,foreign,8870,30,29,1,0,0.9667,737,0.0831,0,18
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,shuffle,8921,52,34,15,3,0.6538,613,0.0687,0,79
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,shuffle,8618,58,49,7,2,0.8448,639,0.0741,0,28

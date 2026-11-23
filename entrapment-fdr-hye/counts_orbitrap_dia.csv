@@ -1,0 +1,81 @@
+search,engine,version,mbr,level,threshold,n_target,n_entrapment,n_baseline_target,r
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.001,81145,21,80154,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.005,96781,87,96402,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.01,102270,164,102813,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.02,108209,303,109221,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.05,111895,430,114069,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.001,68873,21,68332,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.005,80726,87,80470,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.01,85011,164,85524,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.02,89620,302,90513,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.05,91696,427,93669,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,protein,0.001,8426,3,8549,0.4596
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,protein,0.005,8857,14,9043,0.4596
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,protein,0.01,9111,26,9276,0.4596
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,protein,0.02,9342,53,9511,0.4596
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,protein,0.05,9733,123,9978,0.4596
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.001,365708,77,358886,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.005,427426,334,427238,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.01,451117,632,454798,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.02,451117,632,454798,0.4065
+"DIA-NN Orbitrap DIA, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.05,451117,632,454798,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.001,76862,14,77641,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.005,94397,55,93635,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.01,98933,97,98765,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.02,100579,113,100925,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.05,101805,129,102303,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.001,65768,14,66125,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.005,78688,55,78139,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.01,82270,97,82186,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.02,83566,113,83911,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.05,84610,129,85074,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,protein,0.001,8135,2,8233,0.4596
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,protein,0.005,8681,15,8785,0.4596
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,protein,0.01,8870,30,8982,0.4596
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,protein,0.02,9151,49,9287,0.4596
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,protein,0.05,9591,116,9833,0.4596
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.001,372861,64,357953,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.005,460049,246,454804,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.01,492539,422,485502,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.02,492539,422,485502,0.4065
+"DIA-NN Orbitrap DIA, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.05,492539,422,485502,0.4065
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.001,78943,37,80154,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.005,94928,169,96402,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.01,100378,319,102813,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.02,106328,606,109221,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.05,110096,821,114069,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.001,67189,37,68332,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.005,79333,169,80470,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.01,83572,319,85524,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.02,88233,604,90513,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.05,90408,819,93669,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.001,8249,5,8549,0.9926
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.005,8655,16,9043,0.9926
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.01,8921,52,9276,0.9926
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.02,9138,109,9511,0.9926
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.05,9516,233,9978,0.9926
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.001,357345,152,358886,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.005,420653,649,427238,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.01,444401,1204,454798,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.02,444401,1204,454798,1.0425
+"DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.05,444401,1204,454798,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.001,73137,18,77641,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.005,92862,119,93635,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.01,97103,177,98765,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.02,98782,214,100925,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.05,100024,264,102303,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.001,63043,18,66125,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.005,77649,119,78139,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.01,80805,177,82186,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.02,82195,214,83911,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.05,83258,264,85074,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.001,7870,4,8233,0.9926
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.005,8345,20,8785,0.9926
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.01,8618,58,8982,0.9926
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.02,8942,119,9287,0.9926
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.05,9311,221,9833,0.9926
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.001,351036,109,357953,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.005,452899,467,454804,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.01,484022,823,485502,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.02,484022,823,485502,1.0425
+"DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.05,484022,823,485502,1.0425
