@@ -479,9 +479,9 @@
   "expr": 0.289
  },
  "detected_vs_all": {
-  "detected_broad_pct": 92.0,
+  "detected_broad_pct": 91.9,
   "all_broad_pct": 45.4,
-  "detected_median_mean_ntpm": 35.87578772802653,
+  "detected_median_mean_ntpm": 35.84394693200664,
   "all_median_mean_ntpm": 8.325373134328357
  },
  "hpa_zip_member_date": "2023-05-24",

@@ -12,7 +12,7 @@ b = ax.boxplot(data, positions=pos, widths=0.8, patch_artist=True, showfliers=Fa
 for p, col in zip(b["boxes"], cols): p.set_facecolor(col); p.set_alpha(0.75)
 for s, t, col in sp: ax.axhline(t, ls="--", lw=1, color=col)
 ax.set_xticks([1, 5, 9]); ax.set_xticklabels([l for _, l in tools])
-ax.set_ylabel("log2(B/A)"); ax.set_title("Same 3,866 proteins quantified by all three tools (dashed = true ratio)")
+ax.set_ylabel("log2(B/A)"); ax.set_title(f"Same {len(d):,} proteins quantified by all three tools (dashed = true ratio)")
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(color=c, alpha=0.75, label=f"{s} (truth {t:+d})") for s, t, c in sp], loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=3, frameon=False)
 fig.tight_layout(); fig.savefig(out, dpi=130); print("saved", out)

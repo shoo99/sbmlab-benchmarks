@@ -1,37 +1,51 @@
 Warning:  we couldn't map to STRING 0% of your identifiersdetected background, GO/KEGG FDR<0.05:
-   category                                   description number_of_genes
-     <char>                                        <char>           <int>
-1:  Process                   Sterol biosynthetic process              12
-2:  Process              Cholesterol biosynthetic process              11
-3:  Process                 Cholesterol metabolic process              13
-4:  Process                  Steroid biosynthetic process              13
-5:  Process                     Steroid metabolic process              16
-6:  Process               Isoprenoid biosynthetic process               7
-7:  Process Organic hydroxy compound biosynthetic process              13
-8:     KEGG               Terpenoid backbone biosynthesis               9
-9:     KEGG                          Steroid biosynthesis               6
-       fdr
-     <num>
-1: 0.00035
-2: 0.00041
-3: 0.00220
-4: 0.00370
-5: 0.00830
-6: 0.04440
-7: 0.04960
-8: 0.00025
-9: 0.00520
-genome background, GO/KEGG FDR<0.05: 110 ; of which mention sterol/cholesterol/lipid: 7 
-genome background: rank of first sterol/cholesterol term: 21 of 110 
+    category                                   description number_of_genes
+      <char>                                        <char>           <int>
+ 1:  Process                   Sterol biosynthetic process              14
+ 2:  Process                  Steroid biosynthetic process              17
+ 3:  Process              Cholesterol biosynthetic process              12
+ 4:  Process                      Sterol metabolic process              15
+ 5:  Process           Secondary alcohol metabolic process              15
+ 6:  Process                 Cholesterol metabolic process              14
+ 7:  Process                     Steroid metabolic process              18
+ 8:  Process                    Lipid biosynthetic process              27
+ 9:  Process Organic hydroxy compound biosynthetic process              16
+10:  Process                  Alcohol biosynthetic process              13
+11:  Process                       Lipid metabolic process              39
+12:  Process           Small molecule biosynthetic process              26
+13:  Process                     Alcohol metabolic process              19
+14:     KEGG                          Steroid biosynthesis               7
+15:     KEGG               Terpenoid backbone biosynthesis               7
+16:     KEGG                            Metabolic pathways              52
+         fdr
+       <num>
+ 1: 9.08e-06
+ 2: 1.67e-05
+ 3: 5.52e-05
+ 4: 1.70e-04
+ 5: 3.70e-04
+ 6: 4.10e-04
+ 7: 7.00e-04
+ 8: 7.00e-04
+ 9: 9.80e-04
+10: 2.10e-03
+11: 5.80e-03
+12: 1.03e-02
+13: 1.92e-02
+14: 1.90e-03
+15: 7.80e-03
+16: 4.02e-02
+genome background, GO/KEGG FDR<0.05: 111 ; of which mention sterol/cholesterol/lipid: 11 
+genome background: rank of first sterol/cholesterol term: 15 of 111 
      rank  category                              description      fdr
     <int>    <char>                                   <char>    <num>
- 1:     1 Component                                  Cytosol 2.59e-17
- 2:     2 Component       Intracellular anatomical structure 2.25e-16
- 3:     3 Component                                Cytoplasm 6.67e-14
- 4:     4 Component                  Intracellular organelle 1.57e-13
- 5:     5 Component                                Organelle 3.12e-13
- 6:     6 Component Intracellular membrane-bounded organelle 3.72e-13
- 7:     7 Component               Membrane-bounded organelle 5.52e-13
- 8:     8 Component            Intracellular organelle lumen 7.91e-12
- 9:     9   Process               Cellular metabolic process 1.19e-10
-10:    10   Process                        Metabolic process 7.09e-10
+ 1:     1 Component       Intracellular anatomical structure 2.02e-19
+ 2:     2 Component                                  Cytosol 1.44e-18
+ 3:     3 Component                                Cytoplasm 2.07e-13
+ 4:     4 Component                  Intracellular organelle 1.66e-12
+ 5:     5 Component Intracellular membrane-bounded organelle 1.66e-12
+ 6:     6   Process                        Metabolic process 2.34e-12
+ 7:     7   Process               Cellular metabolic process 2.34e-12
+ 8:     8   Process      Organic substance metabolic process 2.34e-12
+ 9:     9   Process                     Biosynthetic process 2.12e-11
+10:    10   Process                Primary metabolic process 2.12e-11
