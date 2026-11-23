@@ -3,7 +3,7 @@
 Usage: python3 docs/make_summaries.py
 Writes:
   docs/catalog.md          every folder by area: data, what it is scored against, tools, post, CI status
-  docs/scores_summary.csv  all scores.csv rows in the standard columns
+  docs/scores_summary.csv  all scores.csv rows in the standard columns (and scores_<name>.csv files in those columns)
   docs/scores_summary.md   one section per folder with a scores.csv: its metrics by tool and setting
 CI re-runs this script and fails if the committed pages differ, so they always match catalog.csv and the scores.
 It also fails if a scores.csv breaks the standard header, has an empty value or names another folder.
@@ -48,7 +48,16 @@ for area in sorted({r["area"] for r in catalog}):
 (DOCS / "catalog.md").write_text("\n".join(out))
 
 # ---- docs/scores_summary.csv and .md
+def standard(p):
+    with open(p, newline="") as fh:
+        return next(csv.reader(fh), None) == COLUMNS
+
+
+# scores.csv, plus scores_<name>.csv files in the standard columns (extra result sets of a folder, e.g.
+# entrapment-fdr-hye/scores_orbitrap_dia.csv); other scores_*.csv files are folder-specific tables and are skipped
 files = sorted(p for p in ROOT.glob("*/scores.csv") if p.parent.name in by_folder)
+files = sorted(files + [p for p in ROOT.glob("*/scores_*.csv") if p.parent.name in by_folder and standard(p)])
+folders = list(OrderedDict.fromkeys(f.parent.name for f in files))
 rows, errors = [], []
 for f in files:
     with open(f, newline="") as fh:
@@ -71,10 +80,9 @@ with open(DOCS / "scores_summary.csv", "w", newline="") as fh:
     w.writerows(rows)
 
 out = ["# Scores across folders", "", GENERATED, "",
-       f"{len(rows)} rows from the {len(files)} folders that write a `scores.csv`. "
+       f"{len(rows)} rows from the {len(folders)} folders that write a `scores.csv`. "
        "All rows in one table: [`scores_summary.csv`](scores_summary.csv). Folder index: [catalog](catalog.md).", ""]
-for f in files:
-    folder = f.parent.name
+for folder in folders:
     c = by_folder[folder]
     fr = [r for r in rows if r["folder"] == folder]
     out += [f"## [{folder}](../{folder})", "",
@@ -93,4 +101,4 @@ for f in files:
         out.append("")
 (DOCS / "scores_summary.md").write_text("\n".join(out))
 print(f"wrote docs/catalog.md ({len(catalog)} folders), docs/scores_summary.csv ({len(rows)} rows), "
-      f"docs/scores_summary.md ({len(files)} folders)")
+      f"docs/scores_summary.md ({len(folders)} folders)")

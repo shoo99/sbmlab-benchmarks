@@ -1,0 +1,5 @@
+DIA-NN Orbitrap DIA, MBR off (shuffled entra peptide T  83572 E  319 E>=s>T  209 E>T>=s   6 ties   0 unp  0  lower 0.0038 paired 0.0064 (ties 0.0064) combined 0.0075
+DIA-NN Orbitrap DIA, MBR off (shuffled entra protein T   8921 E   52 E>=s>T   15 E>T>=s   0 ties   1 unp  0  lower 0.0058 paired 0.0075 (ties 0.0077) combined 0.0116
+DIA-NN Orbitrap DIA, MBR on (shuffled entrap peptide T  80805 E  177 E>=s>T  114 E>T>=s   5 ties   0 unp  0  lower 0.0022 paired 0.0037 (ties 0.0037) combined 0.0043
+DIA-NN Orbitrap DIA, MBR on (shuffled entrap protein T   8618 E   58 E>=s>T   21 E>T>=s   1 ties   0 unp  0  lower 0.0067 paired 0.0093 (ties 0.0093) combined 0.0134
+wrote paired.csv: 4 rows

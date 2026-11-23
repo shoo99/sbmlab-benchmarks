@@ -125,6 +125,10 @@ if [ "$GROUP" = python ] || [ "$GROUP" = all ]; then
   run_ok entrapment-fdr-hye "python3 test/test_paired.py"       # paired estimate (shuffled entrapment), three engines
   check_out entrapment-fdr-hye "python3 score.py" score.out    # FDP estimates from the workstation counts
   same_file entrapment-fdr-hye/scores.csv
+  run_ok entrapment-fdr-hye "python3 test/test_single_peptide.py"  # protein groups by number of peptides, three engines
+  # DIA-NN on the Orbitrap DIA runs: score.py writes scores.csv into the given folder, renamed to the bundled name
+  check_out entrapment-fdr-hye "python3 score.py counts_orbitrap_dia.csv orbitrap_dia && mv orbitrap_dia/scores.csv scores_orbitrap_dia.csv && rmdir orbitrap_dia" score_orbitrap_dia.out
+  same_file entrapment-fdr-hye/scores_orbitrap_dia.csv
   run_ok entrapment-fdr-hye "MPLBACKEND=Agg python3 figure.py"
   run_ok docs "python3 make_summaries.py"            # index pages must match catalog.csv and every scores.csv
   same_file docs/catalog.md

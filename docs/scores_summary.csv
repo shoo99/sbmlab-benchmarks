@@ -991,6 +991,406 @@ entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.
 entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","FragPipe LFQ-MBR, MBR on (shuffled entrapment)",FragPipe 24.0,MBR on; as reported,precursor_run_mbr,fdp_lower,0.00138,79736
 entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","FragPipe LFQ-MBR, MBR on (shuffled entrapment)",FragPipe 24.0,MBR on; as reported,precursor_run_mbr,fdp_combined,0.0027,79736
 entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","FragPipe LFQ-MBR, MBR on (shuffled entrapment)",FragPipe 24.0,MBR on; as reported,precursor_run_mbr,share_targets_lost,-0.0114,79736
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,n_target,81145,81166
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,n_entrapment,21,81166
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,fdp_lower,0.00026,81166
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,fdp_combined,0.0009,81166
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,share_targets_lost,-0.0124,81166
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,n_target,96781,96868
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,n_entrapment,87,96868
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,fdp_lower,0.0009,96868
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,fdp_combined,0.00311,96868
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,share_targets_lost,-0.0039,96868
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,n_target,102270,102434
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,n_entrapment,164,102434
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,fdp_lower,0.0016,102434
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,fdp_combined,0.00554,102434
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,share_targets_lost,0.0053,102434
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,n_target,108209,108512
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,n_entrapment,303,108512
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,fdp_lower,0.00279,108512
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,fdp_combined,0.00966,108512
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,share_targets_lost,0.0093,108512
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,n_target,111895,112325
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,n_entrapment,430,112325
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,fdp_lower,0.00383,112325
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,fdp_combined,0.01325,112325
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,share_targets_lost,0.0191,112325
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,n_target,68873,68894
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,n_entrapment,21,68894
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,fdp_lower,0.0003,68894
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,fdp_combined,0.00105,68894
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,share_targets_lost,-0.0079,68894
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,n_target,80726,80813
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,n_entrapment,87,80813
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,fdp_lower,0.00108,80813
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,fdp_combined,0.00372,80813
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,share_targets_lost,-0.0032,80813
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,n_target,85011,85175
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,n_entrapment,164,85175
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,fdp_lower,0.00193,85175
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,fdp_combined,0.00666,85175
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,share_targets_lost,0.006,85175
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,n_target,89620,89922
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,n_entrapment,302,89922
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,fdp_lower,0.00336,89922
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,fdp_combined,0.01162,89922
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,share_targets_lost,0.0099,89922
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,n_target,91696,92123
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,n_entrapment,427,92123
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,fdp_lower,0.00464,92123
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,fdp_combined,0.01604,92123
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,share_targets_lost,0.0211,92123
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,n_target,8426,8429
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,n_entrapment,3,8429
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,fdp_lower,0.00036,8429
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,fdp_combined,0.00113,8429
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,share_targets_lost,0.0144,8429
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,n_target,8857,8871
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,n_entrapment,14,8871
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,fdp_lower,0.00158,8871
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,fdp_combined,0.00501,8871
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,share_targets_lost,0.0206,8871
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,n_target,9111,9137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,n_entrapment,26,9137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,fdp_lower,0.00285,9137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,fdp_combined,0.00904,9137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,share_targets_lost,0.0178,9137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,n_target,9342,9395
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,n_entrapment,53,9395
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,fdp_lower,0.00564,9395
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,fdp_combined,0.01792,9395
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,share_targets_lost,0.0178,9395
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,n_target,9733,9856
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,n_entrapment,123,9856
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,fdp_lower,0.01248,9856
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,fdp_combined,0.03963,9856
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,share_targets_lost,0.0246,9856
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,n_target,365708,365785
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,n_entrapment,77,365785
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,fdp_lower,0.00021,365785
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,fdp_combined,0.00073,365785
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,share_targets_lost,-0.019,365785
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,n_target,427426,427760
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,n_entrapment,334,427760
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,fdp_lower,0.00078,427760
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,fdp_combined,0.0027,427760
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,share_targets_lost,-0.0004,427760
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,n_target,451117,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,n_entrapment,632,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,fdp_lower,0.0014,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,fdp_combined,0.00484,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,share_targets_lost,0.0081,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,n_target,451117,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,n_entrapment,632,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,fdp_lower,0.0014,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,fdp_combined,0.00484,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,share_targets_lost,0.0081,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,n_target,451117,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,n_entrapment,632,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,fdp_lower,0.0014,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,fdp_combined,0.00484,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR off",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,share_targets_lost,0.0081,451749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,n_target,76862,76876
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,n_entrapment,14,76876
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,fdp_lower,0.00018,76876
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,fdp_combined,0.00063,76876
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,share_targets_lost,0.01,76876
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,n_target,94397,94452
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,n_entrapment,55,94452
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,fdp_lower,0.00058,94452
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,fdp_combined,0.00201,94452
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,share_targets_lost,-0.0081,94452
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,n_target,98933,99030
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,n_entrapment,97,99030
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,fdp_lower,0.00098,99030
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,fdp_combined,0.00339,99030
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,share_targets_lost,-0.0017,99030
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,n_target,100579,100692
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,n_entrapment,113,100692
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,fdp_lower,0.00112,100692
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,fdp_combined,0.00388,100692
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,share_targets_lost,0.0034,100692
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,n_target,101805,101934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,n_entrapment,129,101934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,fdp_lower,0.00127,101934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,fdp_combined,0.00438,101934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,share_targets_lost,0.0049,101934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,n_target,65768,65782
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,n_entrapment,14,65782
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,fdp_lower,0.00021,65782
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,fdp_combined,0.00074,65782
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,share_targets_lost,0.0054,65782
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,n_target,78688,78743
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,n_entrapment,55,78743
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,fdp_lower,0.0007,78743
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,fdp_combined,0.00242,78743
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,share_targets_lost,-0.007,78743
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,n_target,82270,82367
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,n_entrapment,97,82367
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,fdp_lower,0.00118,82367
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,fdp_combined,0.00407,82367
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,share_targets_lost,-0.001,82367
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,n_target,83566,83679
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,n_entrapment,113,83679
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,fdp_lower,0.00135,83679
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,fdp_combined,0.00467,83679
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,share_targets_lost,0.0041,83679
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,n_target,84610,84739
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,n_entrapment,129,84739
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,fdp_lower,0.00152,84739
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,fdp_combined,0.00527,84739
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,share_targets_lost,0.0055,84739
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,n_target,8135,8137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,n_entrapment,2,8137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,fdp_lower,0.00025,8137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,fdp_combined,0.00078,8137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,share_targets_lost,0.0119,8137
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,n_target,8681,8696
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,n_entrapment,15,8696
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,fdp_lower,0.00172,8696
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,fdp_combined,0.00548,8696
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,share_targets_lost,0.0118,8696
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,n_target,8870,8900
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,n_entrapment,30,8900
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,fdp_lower,0.00337,8900
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,fdp_combined,0.0107,8900
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,share_targets_lost,0.0125,8900
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,n_target,9151,9200
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,n_entrapment,49,9200
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,fdp_lower,0.00533,9200
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,fdp_combined,0.01691,9200
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,share_targets_lost,0.0146,9200
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,n_target,9591,9707
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,n_entrapment,116,9707
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,fdp_lower,0.01195,9707
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,fdp_combined,0.03795,9707
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4596","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,share_targets_lost,0.0246,9707
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,n_target,372861,372925
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,n_entrapment,64,372925
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,fdp_lower,0.00017,372925
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,fdp_combined,0.00059,372925
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,share_targets_lost,-0.0416,372925
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,n_target,460049,460295
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,n_entrapment,246,460295
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,fdp_lower,0.00053,460295
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,fdp_combined,0.00185,460295
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,share_targets_lost,-0.0115,460295
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,n_target,492539,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,n_entrapment,422,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,fdp_lower,0.00086,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,fdp_combined,0.00296,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,share_targets_lost,-0.0145,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,n_target,492539,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,n_entrapment,422,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,fdp_lower,0.00086,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,fdp_combined,0.00296,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,share_targets_lost,-0.0145,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,n_target,492539,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,n_entrapment,422,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,fdp_lower,0.00086,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,fdp_combined,0.00296,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.4065","DIA-NN Orbitrap DIA, MBR on",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,share_targets_lost,-0.0145,492961
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,n_target,78943,78980
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,n_entrapment,37,78980
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,fdp_lower,0.00047,78980
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,fdp_combined,0.00092,78980
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor,share_targets_lost,0.0151,78980
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,n_target,94928,95097
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,n_entrapment,169,95097
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,fdp_lower,0.00178,95097
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,fdp_combined,0.00348,95097
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor,share_targets_lost,0.0153,95097
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,n_target,100378,100697
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,n_entrapment,319,100697
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,fdp_lower,0.00317,100697
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,fdp_combined,0.00621,100697
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor,share_targets_lost,0.0237,100697
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,n_target,106328,106934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,n_entrapment,606,106934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,fdp_lower,0.00567,106934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,fdp_combined,0.0111,106934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor,share_targets_lost,0.0265,106934
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,n_target,110096,110917
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,n_entrapment,821,110917
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,fdp_lower,0.0074,110917
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,fdp_combined,0.0145,110917
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor,share_targets_lost,0.0348,110917
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,n_target,67189,67226
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,n_entrapment,37,67226
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,fdp_lower,0.00055,67226
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,fdp_combined,0.00108,67226
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,peptide,share_targets_lost,0.0167,67226
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,n_target,79333,79502
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,n_entrapment,169,79502
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,fdp_lower,0.00213,79502
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,fdp_combined,0.00416,79502
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,peptide,share_targets_lost,0.0141,79502
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,n_target,83572,83891
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,n_entrapment,319,83891
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,fdp_lower,0.0038,83891
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,fdp_combined,0.00745,83891
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,peptide,share_targets_lost,0.0228,83891
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,n_target,88233,88837
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,n_entrapment,604,88837
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,fdp_lower,0.0068,88837
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,fdp_combined,0.01332,88837
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,peptide,share_targets_lost,0.0252,88837
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,n_target,90408,91227
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,n_entrapment,819,91227
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,fdp_lower,0.00898,91227
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,fdp_combined,0.01759,91227
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,peptide,share_targets_lost,0.0348,91227
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,n_target,8249,8254
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,n_entrapment,5,8254
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,fdp_lower,0.00061,8254
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,fdp_combined,0.00122,8254
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,protein,share_targets_lost,0.0351,8254
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,n_target,8655,8671
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,n_entrapment,16,8671
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,fdp_lower,0.00185,8671
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,fdp_combined,0.0037,8671
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,protein,share_targets_lost,0.0429,8671
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,n_target,8921,8973
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,n_entrapment,52,8973
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,fdp_lower,0.0058,8973
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,fdp_combined,0.01163,8973
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,protein,share_targets_lost,0.0383,8973
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,n_target,9138,9247
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,n_entrapment,109,9247
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,fdp_lower,0.01179,9247
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,fdp_combined,0.02366,9247
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,protein,share_targets_lost,0.0392,9247
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,n_target,9516,9749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,n_entrapment,233,9749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,fdp_lower,0.0239,9749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,fdp_combined,0.04798,9749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,protein,share_targets_lost,0.0463,9749
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,n_target,357345,357497
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,n_entrapment,152,357497
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,fdp_lower,0.00043,357497
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,fdp_combined,0.00083,357497
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.001,precursor_run,share_targets_lost,0.0043,357497
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,n_target,420653,421302
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,n_entrapment,649,421302
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,fdp_lower,0.00154,421302
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,fdp_combined,0.00302,421302
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.005,precursor_run,share_targets_lost,0.0154,421302
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,n_target,444401,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,n_entrapment,1204,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,fdp_lower,0.0027,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,fdp_combined,0.00529,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.01,precursor_run,share_targets_lost,0.0229,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,n_target,444401,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,n_entrapment,1204,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,fdp_lower,0.0027,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,fdp_combined,0.00529,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.02,precursor_run,share_targets_lost,0.0229,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,n_target,444401,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,n_entrapment,1204,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,fdp_lower,0.0027,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,fdp_combined,0.00529,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR off (shuffled entrapment)",DIA-NN 2.3.2,MBR off; q <= 0.05,precursor_run,share_targets_lost,0.0229,445605
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,n_target,73137,73155
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,n_entrapment,18,73155
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,fdp_lower,0.00025,73155
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,fdp_combined,0.00048,73155
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor,share_targets_lost,0.058,73155
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,n_target,92862,92981
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,n_entrapment,119,92981
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,fdp_lower,0.00128,92981
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,fdp_combined,0.00251,92981
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor,share_targets_lost,0.0083,92981
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,n_target,97103,97280
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,n_entrapment,177,97280
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,fdp_lower,0.00182,97280
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,fdp_combined,0.00356,97280
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor,share_targets_lost,0.0168,97280
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,n_target,98782,98996
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,n_entrapment,214,98996
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,fdp_lower,0.00216,98996
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,fdp_combined,0.00424,98996
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor,share_targets_lost,0.0212,98996
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,n_target,100024,100288
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,n_entrapment,264,100288
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,fdp_lower,0.00263,100288
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,fdp_combined,0.00516,100288
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor,share_targets_lost,0.0223,100288
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,n_target,63043,63061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,n_entrapment,18,63061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,fdp_lower,0.00029,63061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,fdp_combined,0.00056,63061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,peptide,share_targets_lost,0.0466,63061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,n_target,77649,77768
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,n_entrapment,119,77768
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,fdp_lower,0.00153,77768
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,fdp_combined,0.003,77768
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,peptide,share_targets_lost,0.0063,77768
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,n_target,80805,80982
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,n_entrapment,177,80982
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,fdp_lower,0.00219,80982
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,fdp_combined,0.00428,80982
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,peptide,share_targets_lost,0.0168,80982
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,n_target,82195,82409
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,n_entrapment,214,82409
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,fdp_lower,0.0026,82409
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,fdp_combined,0.00509,82409
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,peptide,share_targets_lost,0.0205,82409
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,n_target,83258,83522
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,n_entrapment,264,83522
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,fdp_lower,0.00316,83522
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,fdp_combined,0.00619,83522
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,peptide,share_targets_lost,0.0213,83522
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,n_target,7870,7874
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,n_entrapment,4,7874
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,fdp_lower,0.00051,7874
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,fdp_combined,0.00102,7874
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,protein,share_targets_lost,0.0441,7874
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,n_target,8345,8365
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,n_entrapment,20,8365
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,fdp_lower,0.00239,8365
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,fdp_combined,0.0048,8365
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,protein,share_targets_lost,0.0501,8365
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,n_target,8618,8676
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,n_entrapment,58,8676
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,fdp_lower,0.00669,8676
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,fdp_combined,0.01342,8676
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,protein,share_targets_lost,0.0405,8676
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,n_target,8942,9061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,n_entrapment,119,9061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,fdp_lower,0.01313,9061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,fdp_combined,0.02636,9061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,protein,share_targets_lost,0.0371,9061
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,n_target,9311,9532
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,n_entrapment,221,9532
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,fdp_lower,0.02319,9532
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,fdp_combined,0.04654,9532
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 0.9926","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,protein,share_targets_lost,0.0531,9532
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,n_target,351036,351145
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,n_entrapment,109,351145
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,fdp_lower,0.00031,351145
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,fdp_combined,0.00061,351145
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.001,precursor_run,share_targets_lost,0.0193,351145
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,n_target,452899,453366
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,n_entrapment,467,453366
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,fdp_lower,0.00103,453366
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,fdp_combined,0.00202,453366
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.005,precursor_run,share_targets_lost,0.0042,453366
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,n_target,484022,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,n_entrapment,823,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,fdp_lower,0.0017,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,fdp_combined,0.00333,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.01,precursor_run,share_targets_lost,0.003,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,n_target,484022,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,n_entrapment,823,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,fdp_lower,0.0017,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,fdp_combined,0.00333,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.02,precursor_run,share_targets_lost,0.003,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,n_target,484022,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,n_entrapment,823,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,fdp_lower,0.0017,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,fdp_combined,0.00333,484845
+entrapment-fdr-hye,"PXD028735 HYE (6 runs), target + entrapment database, r = 1.0425","DIA-NN Orbitrap DIA, MBR on (shuffled entrapment)",DIA-NN 2.3.2,MBR on; q <= 0.05,precursor_run,share_targets_lost,0.003,484845
 go-release-drift,unchanged gene lists (DIA-NN HYE human proteome; airway dexamethasone DE) vs GO releases 2016-2025,"GO over-representation (hypergeometric, BH)",GO 2016-01-01,all evidence codes,random lists (20),false_terms,0,20
 go-release-drift,unchanged gene lists (DIA-NN HYE human proteome; airway dexamethasone DE) vs GO releases 2016-2025,"GO over-representation (hypergeometric, BH)",GO 2016-01-01,all evidence codes,random lists (20),lists_with_false_terms,0,20
 go-release-drift,unchanged gene lists (DIA-NN HYE human proteome; airway dexamethasone DE) vs GO releases 2016-2025,"GO over-representation (hypergeometric, BH)",GO 2016-01-01,all evidence codes,planted lists (5),planted_recovery,1.0,5
