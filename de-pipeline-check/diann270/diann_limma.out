@@ -1,14 +1,14 @@
 Warning message:
-Partial NA coefficients for 192 probe(s) 
-1002 significant (602 up, 400 down) out of 8905 tested
-minimal pipeline (no filter): tested 8905 | called 1002 | human (false) 10 | yeast down 392/2622 | E. coli up 596/643 | wrong direction 4 | false share 1.4%
+Partial NA coefficients for 220 probe(s) 
+1149 significant (583 up, 566 down) out of 8727 tested
+minimal pipeline (no filter): tested 8727 | called 1149 | human (false) 12 | yeast down 562/2552 | E. coli up 573/614 | wrong direction 2 | false share 1.2%
 Note: yeast truth is -1, so a |logFC| > 1 cutoff sits exactly at the true yeast change.
-with per-group filter (2 of 3): tested 8712 | called 925 | human (false) 6 | yeast down 339/2533 | E. coli up 578/605 | wrong direction 2 | false share 0.9%
-per-group filter, |logFC| > 0.5: tested 8712 | called 2903 | human (false) 65 | yeast down 2248/2533 | E. coli up 588/605 | wrong direction 2 | false share 2.3%
+with per-group filter (2 of 3): tested 8506 | called 1157 | human (false) 7 | yeast down 604/2466 | E. coli up 545/571 | wrong direction 1 | false share 0.7%
+per-group filter, |logFC| > 0.5: tested 8506 | called 2772 | human (false) 66 | yeast down 2152/2466 | E. coli up 552/571 | wrong direction 2 | false share 2.5%
 
-median logFC after the post's median normalization: human 0.173, yeast -0.879, E. coli 2.084
-median logFC without re-normalizing (DIA-NN's own normalization): human -0.007, yeast -1.058, E. coli 1.905
-per-group filter, no re-normalization, |logFC| > 1: tested 8712 | called 2251 | human (false) 3 | yeast down 1690/2533 | E. coli up 556/605 | wrong direction 2 | false share 0.2%
-per-group filter, no re-normalization, |logFC| > 0.5: tested 8712 | called 2895 | human (false) 19 | yeast down 2299/2533 | E. coli up 575/605 | wrong direction 2 | false share 0.7%
-per-group filter, extra normalization, adj.P only: tested 8712 | called 6218 | human (false) 3320 | yeast down 2298/2533 | E. coli up 592/605 | wrong direction 8 | false share 53.5%
-per-group filter, no re-normalization, adj.P only: tested 8712 | called 3066 | human (false) 173 | yeast down 2314/2533 | E. coli up 577/605 | wrong direction 2 | false share 5.7%
+median logFC after the post's median normalization: human 0.171, yeast -0.914, E. coli 2.183
+median logFC without re-normalizing (DIA-NN's own normalization): human -0.006, yeast -1.092, E. coli 2.006
+per-group filter, no re-normalization, |logFC| > 1: tested 8506 | called 2259 | human (false) 5 | yeast down 1727/2466 | E. coli up 526/571 | wrong direction 1 | false share 0.3%
+per-group filter, no re-normalization, |logFC| > 0.5: tested 8506 | called 2755 | human (false) 30 | yeast down 2183/2466 | E. coli up 540/571 | wrong direction 2 | false share 1.2%
+per-group filter, extra normalization, adj.P only: tested 8506 | called 5651 | human (false) 2898 | yeast down 2194/2466 | E. coli up 554/571 | wrong direction 5 | false share 51.4%
+per-group filter, no re-normalization, adj.P only: tested 8506 | called 2899 | human (false) 159 | yeast down 2197/2466 | E. coli up 541/571 | wrong direction 2 | false share 5.6%

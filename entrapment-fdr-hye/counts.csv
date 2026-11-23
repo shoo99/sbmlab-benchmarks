@@ -1,61 +1,61 @@
 search,engine,version,mbr,level,threshold,n_target,n_entrapment,n_baseline_target,r
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.001,70153,17,81767,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.005,94284,96,104086,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.01,102341,189,111842,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.02,109730,375,119622,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.05,115584,597,126251,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.001,64190,16,73082,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.005,81907,95,89617,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.01,87969,188,95463,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.02,93877,374,101543,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.05,97868,596,106124,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.001,7925,6,8502,0.4596
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.005,8315,28,8898,0.4596
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.01,8521,37,9092,0.4596
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.02,8766,67,9389,0.4596
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.05,9183,154,9904,0.4596
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.001,358694,75,413497,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.005,448314,405,501177,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.01,479573,787,534639,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.02,479573,787,534639,0.4065
-"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.05,479573,787,534639,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.001,60564,9,72009,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.005,92330,46,101635,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.01,98556,100,107425,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.02,100973,133,110608,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.05,102032,158,111479,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.001,57606,9,66803,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.005,80527,45,87887,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.01,84842,99,91791,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.02,86765,132,94374,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.05,87675,157,95119,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.001,7275,1,7895,0.4596
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.005,7796,11,8447,0.4596
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.01,8026,22,8736,0.4596
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.02,8329,42,9037,0.4596
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.05,8971,135,9675,0.4596
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.001,348583,46,407609,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.005,505263,262,560614,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.01,549328,488,605193,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.02,549328,488,605193,0.4065
-"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.05,549328,488,605193,0.4065
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,precursor,reported,48943,37,50694,0.4065
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,peptide,reported,40492,33,41968,0.4065
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.001,4909,3,4710,0.4596
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.005,5215,10,5292,0.4596
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.01,5458,23,5610,0.4596
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.02,5458,23,5610,0.4596
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.05,5458,23,5610,0.4596
-"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,precursor_run,reported,186972,102,193250,0.4065
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor,reported,48943,37,51000,0.4065
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,peptide,reported,40492,33,42187,0.4065
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.001,4909,3,4870,0.4596
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.005,5215,10,5308,0.4596
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.01,5458,23,5628,0.4596
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.02,5458,23,5628,0.4596
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.05,5458,23,5628,0.4596
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor_run,reported,240637,146,249400,0.4065
-"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor_run_mbr,reported,60137,52,61249,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.001,70744,14,81524,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.005,94148,88,102918,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.01,102291,183,111322,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.02,109617,353,118834,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor,0.05,115523,595,125394,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.001,64573,13,72528,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.005,81822,87,88510,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.01,87948,182,94952,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.02,93706,352,100755,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,peptide,0.05,97803,594,105321,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.001,7923,6,8447,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.005,8315,23,8807,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.01,8532,40,9054,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.02,8754,65,9373,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,protein,0.05,9162,152,9788,0.4596
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.001,360638,75,406331,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.005,447900,374,498469,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.01,479476,772,530696,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.02,479476,772,530696,0.4065
+"DIA-NN library-free, MBR off",diann,DIA-NN 2.3.2,off,precursor_run,0.05,479476,772,530696,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.001,63374,9,71522,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.005,92796,52,100774,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.01,97939,87,107282,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.02,101044,127,109969,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor,0.05,101939,148,110928,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.001,59846,9,66205,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.005,80642,51,87091,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.01,84291,86,91695,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.02,86824,126,93746,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,peptide,0.05,87611,147,94585,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.001,7279,2,7968,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.005,7809,12,8474,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.01,7985,16,8759,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.02,8338,47,9075,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,protein,0.05,8878,127,9610,0.4596
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.001,352230,40,400098,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.005,505425,244,557179,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.01,549005,472,601238,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.02,549005,472,601238,0.4065
+"DIA-NN library-free, MBR on",diann,DIA-NN 2.3.2,on,precursor_run,0.05,549005,472,601238,0.4065
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,precursor,reported,48882,39,51041,0.4065
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,peptide,reported,40399,35,42240,0.4065
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.001,4764,3,4771,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.005,5245,11,5324,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.01,5454,24,5628,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.02,5454,24,5628,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,protein,0.05,5454,24,5628,0.4596
+"MaxQuant, MBR off",maxquant,MaxQuant 2.8.1.0,off,precursor_run,reported,186641,113,194957,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor,reported,48882,39,51041,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,peptide,reported,40399,35,42240,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.001,4764,3,4771,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.005,5245,11,5324,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.01,5454,24,5628,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.02,5454,24,5628,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,protein,0.05,5454,24,5628,0.4596
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor_run,reported,240498,157,249508,0.4065
+"MaxQuant, MBR on",maxquant,MaxQuant 2.8.1.0,on,precursor_run_mbr,reported,60319,54,61426,0.4065
 "FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,precursor,reported,80897,60,81863,0.4065
 "FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,peptide,reported,65494,57,66309,0.4065
 "FragPipe LFQ-MBR, MBR off",fragpipe,FragPipe 24.0,off,protein,reported,7861,52,7937,0.4596
@@ -65,63 +65,63 @@ search,engine,version,mbr,level,threshold,n_target,n_entrapment,n_baseline_targe
 "FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,protein,reported,7861,52,7937,0.4596
 "FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,precursor_run,reported,401401,232,405673,0.4065
 "FragPipe LFQ-MBR, MBR on",fragpipe,FragPipe 24.0,on,precursor_run_mbr,reported,78139,88,78731,0.4065
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.001,80123,46,81767,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.005,100455,182,104086,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.01,107338,327,111842,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.02,113890,700,119622,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.05,119311,1148,126251,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.001,71969,46,73082,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.005,86384,180,89617,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.01,91574,325,95463,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.02,96588,698,101543,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.05,100062,1146,106124,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.001,8032,9,8502,0.9926
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.005,8466,37,8898,0.9926
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.01,8743,66,9092,0.9926
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.02,8936,118,9389,0.9926
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.05,9302,250,9904,0.9926
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.001,404217,146,413497,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.005,485138,738,501177,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.01,511659,1493,534639,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.02,511659,1493,534639,1.0425
-"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.05,511659,1493,534639,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.001,63950,16,72009,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.005,97971,106,101635,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.01,104368,179,107425,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.02,106123,203,110608,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.05,107012,244,111479,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.001,60908,16,66803,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.005,84802,105,87887,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.01,89160,178,91791,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.02,90492,202,94374,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.05,91265,243,95119,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.001,7461,4,7895,0.9926
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.005,7907,18,8447,0.9926
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.01,8181,59,8736,0.9926
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.02,8455,89,9037,0.9926
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.05,8974,197,9675,0.9926
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.001,400109,98,407609,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.005,546476,478,560614,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.01,588071,751,605193,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.02,588071,751,605193,1.0425
-"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.05,588071,751,605193,1.0425
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,precursor,reported,47313,73,50694,1.0425
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,peptide,reported,38997,68,41968,1.0425
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.001,4859,10,4710,0.9926
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.005,5142,31,5292,0.9926
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.01,5341,48,5610,0.9926
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.02,5341,48,5610,0.9926
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.05,5341,48,5610,0.9926
-"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,precursor_run,reported,180108,201,193250,1.0425
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,precursor,reported,47313,73,51000,1.0425
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,peptide,reported,38997,68,42187,1.0425
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.001,4859,10,4870,0.9926
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.005,5142,31,5308,0.9926
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.01,5341,48,5628,0.9926
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.02,5341,48,5628,0.9926
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.05,5341,48,5628,0.9926
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,precursor_run,reported,233656,282,249400,1.0425
-"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,precursor_run_mbr,reported,59810,89,61249,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.001,79572,46,81524,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.005,100262,185,102918,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.01,107093,344,111322,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.02,113750,714,118834,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor,0.05,118864,1163,125394,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.001,71608,46,72528,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.005,86337,184,88510,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.01,91348,342,94952,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.02,96430,712,100755,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,peptide,0.05,99648,1161,105321,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.001,8034,11,8447,0.9926
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.005,8454,38,8807,0.9926
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.01,8684,62,9054,0.9926
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.02,8955,129,9373,0.9926
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,protein,0.05,9315,249,9788,0.9926
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.001,406559,159,406331,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.005,482847,747,498469,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.01,508739,1513,530696,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.02,508739,1513,530696,1.0425
+"DIA-NN library-free, MBR off (shuffled entrapment)",diann,DIA-NN 2.3.2,off,precursor_run,0.05,508739,1513,530696,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.001,68696,24,71522,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.005,98386,112,100774,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.01,103987,170,107282,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.02,106044,220,109969,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor,0.05,106755,257,110928,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.001,65308,24,66205,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.005,85353,111,87091,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.01,88782,169,91695,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.02,90399,219,93746,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,peptide,0.05,91019,256,94585,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.001,7494,5,7968,0.9926
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.005,7953,17,8474,0.9926
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.01,8205,59,8759,0.9926
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.02,8509,100,9075,0.9926
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,protein,0.05,8952,201,9610,0.9926
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.001,405029,112,400098,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.005,548966,501,557179,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.01,587753,784,601238,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.02,587753,784,601238,1.0425
+"DIA-NN library-free, MBR on (shuffled entrapment)",diann,DIA-NN 2.3.2,on,precursor_run,0.05,587753,784,601238,1.0425
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,precursor,reported,47212,78,51041,1.0425
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,peptide,reported,38924,73,42240,1.0425
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.001,4862,9,4771,0.9926
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.005,5130,32,5324,0.9926
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.01,5346,47,5628,0.9926
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.02,5346,47,5628,0.9926
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,protein,0.05,5346,47,5628,0.9926
+"MaxQuant, MBR off (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,off,precursor_run,reported,179496,210,194957,1.0425
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,precursor,reported,47212,78,51041,1.0425
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,peptide,reported,38924,73,42240,1.0425
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.001,4862,9,4771,0.9926
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.005,5130,32,5324,0.9926
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.01,5346,47,5628,0.9926
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.02,5346,47,5628,0.9926
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,protein,0.05,5346,47,5628,0.9926
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,precursor_run,reported,233293,296,249508,1.0425
+"MaxQuant, MBR on (shuffled entrapment)",maxquant,MaxQuant 2.8.1.0,on,precursor_run_mbr,reported,60016,98,61426,1.0425
 "FragPipe LFQ-MBR, MBR off (shuffled entrapment)",fragpipe,FragPipe 24.0,off,precursor,reported,79805,100,81863,1.0425
 "FragPipe LFQ-MBR, MBR off (shuffled entrapment)",fragpipe,FragPipe 24.0,off,peptide,reported,64574,95,66309,1.0425
 "FragPipe LFQ-MBR, MBR off (shuffled entrapment)",fragpipe,FragPipe 24.0,off,protein,reported,7699,86,7937,0.9926

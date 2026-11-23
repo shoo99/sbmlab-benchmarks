@@ -1,61 +1,61 @@
 search                                        level     q         targets  entrap      r fdp_lower  fdp_comb   lost
-DIA-NN library-free, MBR off                  precursor 0.001       70153      17  0.406    0.0002    0.0008  0.142
-DIA-NN library-free, MBR off                  precursor 0.005       94284      96  0.406    0.0010    0.0035  0.094
-DIA-NN library-free, MBR off                  precursor 0.01       102341     189  0.406    0.0018    0.0064  0.085
-DIA-NN library-free, MBR off                  precursor 0.02       109730     375  0.406    0.0034    0.0118  0.083
-DIA-NN library-free, MBR off                  precursor 0.05       115584     597  0.406    0.0051    0.0178  0.085
-DIA-NN library-free, MBR off                  peptide   0.001       64190      16  0.406    0.0003    0.0009  0.122
-DIA-NN library-free, MBR off                  peptide   0.005       81907      95  0.406    0.0012    0.0040  0.086
-DIA-NN library-free, MBR off                  peptide   0.01        87969     188  0.406    0.0021    0.0074  0.079
-DIA-NN library-free, MBR off                  peptide   0.02        93877     374  0.406    0.0040    0.0137  0.075
-DIA-NN library-free, MBR off                  peptide   0.05        97868     596  0.406    0.0060    0.0209  0.078
-DIA-NN library-free, MBR off                  protein   0.001        7925       6   0.46    0.0008    0.0024  0.068
-DIA-NN library-free, MBR off                  protein   0.005        8315      28   0.46    0.0034    0.0107  0.066
-DIA-NN library-free, MBR off                  protein   0.01         8521      37   0.46    0.0043    0.0137  0.063
-DIA-NN library-free, MBR off                  protein   0.02         8766      67   0.46    0.0076    0.0241  0.066
-DIA-NN library-free, MBR off                  protein   0.05         9183     154   0.46    0.0165    0.0524  0.073
-DIA-NN library-free, MBR off                  precursor_run 0.001      358694      75  0.406    0.0002    0.0007  0.133
-DIA-NN library-free, MBR off                  precursor_run 0.005      448314     405  0.406    0.0009    0.0031  0.105
-DIA-NN library-free, MBR off                  precursor_run 0.01       479573     787  0.406    0.0016    0.0057  0.103
-DIA-NN library-free, MBR off                  precursor_run 0.02       479573     787  0.406    0.0016    0.0057  0.103
-DIA-NN library-free, MBR off                  precursor_run 0.05       479573     787  0.406    0.0016    0.0057  0.103
-DIA-NN library-free, MBR on                   precursor 0.001       60564       9  0.406    0.0001    0.0005  0.159
-DIA-NN library-free, MBR on                   precursor 0.005       92330      46  0.406    0.0005    0.0017  0.092
-DIA-NN library-free, MBR on                   precursor 0.01        98556     100  0.406    0.0010    0.0035  0.083
-DIA-NN library-free, MBR on                   precursor 0.02       100973     133  0.406    0.0013    0.0046  0.087
-DIA-NN library-free, MBR on                   precursor 0.05       102032     158  0.406    0.0015    0.0053  0.085
-DIA-NN library-free, MBR on                   peptide   0.001       57606       9  0.406    0.0002    0.0005  0.138
-DIA-NN library-free, MBR on                   peptide   0.005       80527      45  0.406    0.0006    0.0019  0.084
-DIA-NN library-free, MBR on                   peptide   0.01        84842      99  0.406    0.0012    0.0040  0.076
-DIA-NN library-free, MBR on                   peptide   0.02        86765     132  0.406    0.0015    0.0053  0.081
-DIA-NN library-free, MBR on                   peptide   0.05        87675     157  0.406    0.0018    0.0062  0.078
-DIA-NN library-free, MBR on                   protein   0.001        7275       1   0.46    0.0001    0.0004  0.079
-DIA-NN library-free, MBR on                   protein   0.005        7796      11   0.46    0.0014    0.0045  0.077
-DIA-NN library-free, MBR on                   protein   0.01         8026      22   0.46    0.0027    0.0087  0.081
-DIA-NN library-free, MBR on                   protein   0.02         8329      42   0.46    0.0050    0.0159  0.078
-DIA-NN library-free, MBR on                   protein   0.05         8971     135   0.46    0.0148    0.0471  0.073
-DIA-NN library-free, MBR on                   precursor_run 0.001      348583      46  0.406    0.0001    0.0005  0.145
-DIA-NN library-free, MBR on                   precursor_run 0.005      505263     262  0.406    0.0005    0.0018  0.099
-DIA-NN library-free, MBR on                   precursor_run 0.01       549328     488  0.406    0.0009    0.0031  0.092
-DIA-NN library-free, MBR on                   precursor_run 0.02       549328     488  0.406    0.0009    0.0031  0.092
-DIA-NN library-free, MBR on                   precursor_run 0.05       549328     488  0.406    0.0009    0.0031  0.092
-MaxQuant, MBR off                             precursor reported    48943      37  0.406    0.0008    0.0026  0.035
-MaxQuant, MBR off                             peptide   reported    40492      33  0.406    0.0008    0.0028  0.035
-MaxQuant, MBR off                             protein   0.001        4909       3   0.46    0.0006    0.0019 -0.042
-MaxQuant, MBR off                             protein   0.005        5215      10   0.46    0.0019    0.0061  0.015
-MaxQuant, MBR off                             protein   0.01         5458      23   0.46    0.0042    0.0133  0.027
-MaxQuant, MBR off                             protein   0.02         5458      23   0.46    0.0042    0.0133  0.027
-MaxQuant, MBR off                             protein   0.05         5458      23   0.46    0.0042    0.0133  0.027
-MaxQuant, MBR off                             precursor_run reported   186972     102  0.406    0.0006    0.0019  0.033
-MaxQuant, MBR on                              precursor reported    48943      37  0.406    0.0008    0.0026  0.040
-MaxQuant, MBR on                              peptide   reported    40492      33  0.406    0.0008    0.0028  0.040
-MaxQuant, MBR on                              protein   0.001        4909       3   0.46    0.0006    0.0019 -0.008
-MaxQuant, MBR on                              protein   0.005        5215      10   0.46    0.0019    0.0061  0.018
-MaxQuant, MBR on                              protein   0.01         5458      23   0.46    0.0042    0.0133  0.030
-MaxQuant, MBR on                              protein   0.02         5458      23   0.46    0.0042    0.0133  0.030
-MaxQuant, MBR on                              protein   0.05         5458      23   0.46    0.0042    0.0133  0.030
-MaxQuant, MBR on                              precursor_run reported   240637     146  0.406    0.0006    0.0021  0.035
-MaxQuant, MBR on                              precursor_run_mbr reported    60137      52  0.406    0.0009    0.0030  0.018
+DIA-NN library-free, MBR off                  precursor 0.001       70744      14  0.406    0.0002    0.0007  0.132
+DIA-NN library-free, MBR off                  precursor 0.005       94148      88  0.406    0.0009    0.0032  0.085
+DIA-NN library-free, MBR off                  precursor 0.01       102291     183  0.406    0.0018    0.0062  0.081
+DIA-NN library-free, MBR off                  precursor 0.02       109617     353  0.406    0.0032    0.0111  0.078
+DIA-NN library-free, MBR off                  precursor 0.05       115523     595  0.406    0.0051    0.0177  0.079
+DIA-NN library-free, MBR off                  peptide   0.001       64573      13  0.406    0.0002    0.0007  0.110
+DIA-NN library-free, MBR off                  peptide   0.005       81822      87  0.406    0.0011    0.0037  0.076
+DIA-NN library-free, MBR off                  peptide   0.01        87948     182  0.406    0.0021    0.0072  0.074
+DIA-NN library-free, MBR off                  peptide   0.02        93706     352  0.406    0.0037    0.0129  0.070
+DIA-NN library-free, MBR off                  peptide   0.05        97803     594  0.406    0.0060    0.0209  0.071
+DIA-NN library-free, MBR off                  protein   0.001        7923       6   0.46    0.0008    0.0024  0.062
+DIA-NN library-free, MBR off                  protein   0.005        8315      23   0.46    0.0028    0.0088  0.056
+DIA-NN library-free, MBR off                  protein   0.01         8532      40   0.46    0.0047    0.0148  0.058
+DIA-NN library-free, MBR off                  protein   0.02         8754      65   0.46    0.0074    0.0234  0.066
+DIA-NN library-free, MBR off                  protein   0.05         9162     152   0.46    0.0163    0.0518  0.064
+DIA-NN library-free, MBR off                  precursor_run 0.001      360638      75  0.406    0.0002    0.0007  0.113
+DIA-NN library-free, MBR off                  precursor_run 0.005      447900     374  0.406    0.0008    0.0029  0.101
+DIA-NN library-free, MBR off                  precursor_run 0.01       479476     772  0.406    0.0016    0.0056  0.097
+DIA-NN library-free, MBR off                  precursor_run 0.02       479476     772  0.406    0.0016    0.0056  0.097
+DIA-NN library-free, MBR off                  precursor_run 0.05       479476     772  0.406    0.0016    0.0056  0.097
+DIA-NN library-free, MBR on                   precursor 0.001       63374       9  0.406    0.0001    0.0005  0.114
+DIA-NN library-free, MBR on                   precursor 0.005       92796      52  0.406    0.0006    0.0019  0.079
+DIA-NN library-free, MBR on                   precursor 0.01        97939      87  0.406    0.0009    0.0031  0.087
+DIA-NN library-free, MBR on                   precursor 0.02       101044     127  0.406    0.0013    0.0043  0.081
+DIA-NN library-free, MBR on                   precursor 0.05       101939     148  0.406    0.0014    0.0050  0.081
+DIA-NN library-free, MBR on                   peptide   0.001       59846       9  0.406    0.0001    0.0005  0.096
+DIA-NN library-free, MBR on                   peptide   0.005       80642      51  0.406    0.0006    0.0022  0.074
+DIA-NN library-free, MBR on                   peptide   0.01        84291      86  0.406    0.0010    0.0035  0.081
+DIA-NN library-free, MBR on                   peptide   0.02        86824     126  0.406    0.0014    0.0050  0.074
+DIA-NN library-free, MBR on                   peptide   0.05        87611     147  0.406    0.0017    0.0058  0.074
+DIA-NN library-free, MBR on                   protein   0.001        7279       2   0.46    0.0003    0.0009  0.086
+DIA-NN library-free, MBR on                   protein   0.005        7809      12   0.46    0.0015    0.0049  0.079
+DIA-NN library-free, MBR on                   protein   0.01         7985      16   0.46    0.0020    0.0063  0.088
+DIA-NN library-free, MBR on                   protein   0.02         8338      47   0.46    0.0056    0.0178  0.081
+DIA-NN library-free, MBR on                   protein   0.05         8878     127   0.46    0.0141    0.0448  0.076
+DIA-NN library-free, MBR on                   precursor_run 0.001      352230      40  0.406    0.0001    0.0004  0.120
+DIA-NN library-free, MBR on                   precursor_run 0.005      505425     244  0.406    0.0005    0.0017  0.093
+DIA-NN library-free, MBR on                   precursor_run 0.01       549005     472  0.406    0.0009    0.0030  0.087
+DIA-NN library-free, MBR on                   precursor_run 0.02       549005     472  0.406    0.0009    0.0030  0.087
+DIA-NN library-free, MBR on                   precursor_run 0.05       549005     472  0.406    0.0009    0.0030  0.087
+MaxQuant, MBR off                             precursor reported    48882      39  0.406    0.0008    0.0028  0.042
+MaxQuant, MBR off                             peptide   reported    40399      35  0.406    0.0009    0.0030  0.044
+MaxQuant, MBR off                             protein   0.001        4764       3   0.46    0.0006    0.0020  0.002
+MaxQuant, MBR off                             protein   0.005        5245      11   0.46    0.0021    0.0066  0.015
+MaxQuant, MBR off                             protein   0.01         5454      24   0.46    0.0044    0.0139  0.031
+MaxQuant, MBR off                             protein   0.02         5454      24   0.46    0.0044    0.0139  0.031
+MaxQuant, MBR off                             protein   0.05         5454      24   0.46    0.0044    0.0139  0.031
+MaxQuant, MBR off                             precursor_run reported   186641     113  0.406    0.0006    0.0021  0.043
+MaxQuant, MBR on                              precursor reported    48882      39  0.406    0.0008    0.0028  0.042
+MaxQuant, MBR on                              peptide   reported    40399      35  0.406    0.0009    0.0030  0.044
+MaxQuant, MBR on                              protein   0.001        4764       3   0.46    0.0006    0.0020  0.002
+MaxQuant, MBR on                              protein   0.005        5245      11   0.46    0.0021    0.0066  0.015
+MaxQuant, MBR on                              protein   0.01         5454      24   0.46    0.0044    0.0139  0.031
+MaxQuant, MBR on                              protein   0.02         5454      24   0.46    0.0044    0.0139  0.031
+MaxQuant, MBR on                              protein   0.05         5454      24   0.46    0.0044    0.0139  0.031
+MaxQuant, MBR on                              precursor_run reported   240498     157  0.406    0.0006    0.0023  0.036
+MaxQuant, MBR on                              precursor_run_mbr reported    60319      54  0.406    0.0009    0.0031  0.018
 FragPipe LFQ-MBR, MBR off                     precursor reported    80897      60  0.406    0.0007    0.0026  0.012
 FragPipe LFQ-MBR, MBR off                     peptide   reported    65494      57  0.406    0.0009    0.0030  0.012
 FragPipe LFQ-MBR, MBR off                     protein   reported     7861      52   0.46    0.0066    0.0209  0.010
@@ -65,63 +65,63 @@ FragPipe LFQ-MBR, MBR on                      peptide   reported    65494      5
 FragPipe LFQ-MBR, MBR on                      protein   reported     7861      52   0.46    0.0066    0.0209  0.010
 FragPipe LFQ-MBR, MBR on                      precursor_run reported   401401     232  0.406    0.0006    0.0020  0.011
 FragPipe LFQ-MBR, MBR on                      precursor_run_mbr reported    78139      88  0.406    0.0011    0.0039  0.007
-DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.001       80123      46   1.04    0.0006    0.0011  0.020
-DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.005      100455     182   1.04    0.0018    0.0035  0.035
-DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.01       107338     327   1.04    0.0030    0.0060  0.040
-DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.02       113890     700   1.04    0.0061    0.0120  0.048
-DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.05       119311    1148   1.04    0.0095    0.0187  0.055
-DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.001       71969      46   1.04    0.0006    0.0013  0.015
-DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.005       86384     180   1.04    0.0021    0.0041  0.036
-DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.01        91574     325   1.04    0.0035    0.0069  0.041
-DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.02        96588     698   1.04    0.0072    0.0141  0.049
-DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.05       100062    1146   1.04    0.0113    0.0222  0.057
-DIA-NN library-free, MBR off (shuffled entrapment) protein   0.001        8032       9  0.993    0.0011    0.0022  0.055
-DIA-NN library-free, MBR off (shuffled entrapment) protein   0.005        8466      37  0.993    0.0043    0.0087  0.049
-DIA-NN library-free, MBR off (shuffled entrapment) protein   0.01         8743      66  0.993    0.0075    0.0150  0.038
-DIA-NN library-free, MBR off (shuffled entrapment) protein   0.02         8936     118  0.993    0.0130    0.0262  0.048
-DIA-NN library-free, MBR off (shuffled entrapment) protein   0.05         9302     250  0.993    0.0262    0.0525  0.061
-DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.001      404217     146   1.04    0.0004    0.0007  0.022
-DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.005      485138     738   1.04    0.0015    0.0030  0.032
-DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.01       511659    1493   1.04    0.0029    0.0057  0.043
-DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.02       511659    1493   1.04    0.0029    0.0057  0.043
-DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.05       511659    1493   1.04    0.0029    0.0057  0.043
-DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.001       63950      16   1.04    0.0003    0.0005  0.112
-DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.005       97971     106   1.04    0.0011    0.0021  0.036
-DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.01       104368     179   1.04    0.0017    0.0034  0.029
-DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.02       106123     203   1.04    0.0019    0.0037  0.041
-DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.05       107012     244   1.04    0.0023    0.0045  0.040
-DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.001       60908      16   1.04    0.0003    0.0005  0.088
-DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.005       84802     105   1.04    0.0012    0.0024  0.035
-DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.01        89160     178   1.04    0.0020    0.0039  0.029
-DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.02        90492     202   1.04    0.0022    0.0044  0.041
-DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.05        91265     243   1.04    0.0027    0.0052  0.041
-DIA-NN library-free, MBR on (shuffled entrapment) protein   0.001        7461       4  0.993    0.0005    0.0011  0.055
-DIA-NN library-free, MBR on (shuffled entrapment) protein   0.005        7907      18  0.993    0.0023    0.0046  0.064
-DIA-NN library-free, MBR on (shuffled entrapment) protein   0.01         8181      59  0.993    0.0072    0.0144  0.064
-DIA-NN library-free, MBR on (shuffled entrapment) protein   0.02         8455      89  0.993    0.0104    0.0209  0.064
-DIA-NN library-free, MBR on (shuffled entrapment) protein   0.05         8974     197  0.993    0.0215    0.0431  0.072
-DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.001      400109      98   1.04    0.0002    0.0005  0.018
-DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.005      546476     478   1.04    0.0009    0.0017  0.025
-DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.01       588071     751   1.04    0.0013    0.0025  0.028
-DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.02       588071     751   1.04    0.0013    0.0025  0.028
-DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.05       588071     751   1.04    0.0013    0.0025  0.028
-MaxQuant, MBR off (shuffled entrapment)       precursor reported    47313      73   1.04    0.0015    0.0030  0.067
-MaxQuant, MBR off (shuffled entrapment)       peptide   reported    38997      68   1.04    0.0017    0.0034  0.071
-MaxQuant, MBR off (shuffled entrapment)       protein   0.001        4859      10  0.993    0.0021    0.0041 -0.032
-MaxQuant, MBR off (shuffled entrapment)       protein   0.005        5142      31  0.993    0.0060    0.0120  0.028
-MaxQuant, MBR off (shuffled entrapment)       protein   0.01         5341      48  0.993    0.0089    0.0179  0.048
-MaxQuant, MBR off (shuffled entrapment)       protein   0.02         5341      48  0.993    0.0089    0.0179  0.048
-MaxQuant, MBR off (shuffled entrapment)       protein   0.05         5341      48  0.993    0.0089    0.0179  0.048
-MaxQuant, MBR off (shuffled entrapment)       precursor_run reported   180108     201   1.04    0.0011    0.0022  0.068
-MaxQuant, MBR on (shuffled entrapment)        precursor reported    47313      73   1.04    0.0015    0.0030  0.072
-MaxQuant, MBR on (shuffled entrapment)        peptide   reported    38997      68   1.04    0.0017    0.0034  0.076
-MaxQuant, MBR on (shuffled entrapment)        protein   0.001        4859      10  0.993    0.0021    0.0041  0.002
-MaxQuant, MBR on (shuffled entrapment)        protein   0.005        5142      31  0.993    0.0060    0.0120  0.031
-MaxQuant, MBR on (shuffled entrapment)        protein   0.01         5341      48  0.993    0.0089    0.0179  0.051
-MaxQuant, MBR on (shuffled entrapment)        protein   0.02         5341      48  0.993    0.0089    0.0179  0.051
-MaxQuant, MBR on (shuffled entrapment)        protein   0.05         5341      48  0.993    0.0089    0.0179  0.051
-MaxQuant, MBR on (shuffled entrapment)        precursor_run reported   233656     282   1.04    0.0012    0.0024  0.063
-MaxQuant, MBR on (shuffled entrapment)        precursor_run_mbr reported    59810      89   1.04    0.0015    0.0029  0.024
+DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.001       79572      46   1.04    0.0006    0.0011  0.024
+DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.005      100262     185   1.04    0.0018    0.0036  0.026
+DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.01       107093     344   1.04    0.0032    0.0063  0.038
+DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.02       113750     714   1.04    0.0062    0.0122  0.043
+DIA-NN library-free, MBR off (shuffled entrapment) precursor 0.05       118864    1163   1.04    0.0097    0.0190  0.052
+DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.001       71608      46   1.04    0.0006    0.0013  0.013
+DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.005       86337     184   1.04    0.0021    0.0042  0.025
+DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.01        91348     342   1.04    0.0037    0.0073  0.038
+DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.02        96430     712   1.04    0.0073    0.0144  0.043
+DIA-NN library-free, MBR off (shuffled entrapment) peptide   0.05        99648    1161   1.04    0.0115    0.0226  0.054
+DIA-NN library-free, MBR off (shuffled entrapment) protein   0.001        8034      11  0.993    0.0014    0.0027  0.049
+DIA-NN library-free, MBR off (shuffled entrapment) protein   0.005        8454      38  0.993    0.0045    0.0090  0.040
+DIA-NN library-free, MBR off (shuffled entrapment) protein   0.01         8684      62  0.993    0.0071    0.0142  0.041
+DIA-NN library-free, MBR off (shuffled entrapment) protein   0.02         8955     129  0.993    0.0142    0.0285  0.045
+DIA-NN library-free, MBR off (shuffled entrapment) protein   0.05         9315     249  0.993    0.0260    0.0523  0.048
+DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.001      406559     159   1.04    0.0004    0.0008 -0.001
+DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.005      482847     747   1.04    0.0015    0.0030  0.031
+DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.01       508739    1513   1.04    0.0030    0.0058  0.041
+DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.02       508739    1513   1.04    0.0030    0.0058  0.041
+DIA-NN library-free, MBR off (shuffled entrapment) precursor_run 0.05       508739    1513   1.04    0.0030    0.0058  0.041
+DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.001       68696      24   1.04    0.0003    0.0007  0.040
+DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.005       98386     112   1.04    0.0011    0.0022  0.024
+DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.01       103987     170   1.04    0.0016    0.0032  0.031
+DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.02       106044     220   1.04    0.0021    0.0041  0.036
+DIA-NN library-free, MBR on (shuffled entrapment) precursor 0.05       106755     257   1.04    0.0024    0.0047  0.038
+DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.001       65308      24   1.04    0.0004    0.0007  0.013
+DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.005       85353     111   1.04    0.0013    0.0025  0.020
+DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.01        88782     169   1.04    0.0019    0.0037  0.032
+DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.02        90399     219   1.04    0.0024    0.0047  0.036
+DIA-NN library-free, MBR on (shuffled entrapment) peptide   0.05        91019     256   1.04    0.0028    0.0055  0.038
+DIA-NN library-free, MBR on (shuffled entrapment) protein   0.001        7494       5  0.993    0.0007    0.0013  0.059
+DIA-NN library-free, MBR on (shuffled entrapment) protein   0.005        7953      17  0.993    0.0021    0.0043  0.061
+DIA-NN library-free, MBR on (shuffled entrapment) protein   0.01         8205      59  0.993    0.0071    0.0143  0.063
+DIA-NN library-free, MBR on (shuffled entrapment) protein   0.02         8509     100  0.993    0.0116    0.0233  0.062
+DIA-NN library-free, MBR on (shuffled entrapment) protein   0.05         8952     201  0.993    0.0220    0.0441  0.069
+DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.001      405029     112   1.04    0.0003    0.0005 -0.012
+DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.005      548966     501   1.04    0.0009    0.0018  0.015
+DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.01       587753     784   1.04    0.0013    0.0026  0.022
+DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.02       587753     784   1.04    0.0013    0.0026  0.022
+DIA-NN library-free, MBR on (shuffled entrapment) precursor_run 0.05       587753     784   1.04    0.0013    0.0026  0.022
+MaxQuant, MBR off (shuffled entrapment)       precursor reported    47212      78   1.04    0.0016    0.0032  0.075
+MaxQuant, MBR off (shuffled entrapment)       peptide   reported    38924      73   1.04    0.0019    0.0037  0.079
+MaxQuant, MBR off (shuffled entrapment)       protein   0.001        4862       9  0.993    0.0019    0.0037 -0.019
+MaxQuant, MBR off (shuffled entrapment)       protein   0.005        5130      32  0.993    0.0062    0.0124  0.036
+MaxQuant, MBR off (shuffled entrapment)       protein   0.01         5346      47  0.993    0.0087    0.0175  0.050
+MaxQuant, MBR off (shuffled entrapment)       protein   0.02         5346      47  0.993    0.0087    0.0175  0.050
+MaxQuant, MBR off (shuffled entrapment)       protein   0.05         5346      47  0.993    0.0087    0.0175  0.050
+MaxQuant, MBR off (shuffled entrapment)       precursor_run reported   179496     210   1.04    0.0012    0.0023  0.079
+MaxQuant, MBR on (shuffled entrapment)        precursor reported    47212      78   1.04    0.0016    0.0032  0.075
+MaxQuant, MBR on (shuffled entrapment)        peptide   reported    38924      73   1.04    0.0019    0.0037  0.079
+MaxQuant, MBR on (shuffled entrapment)        protein   0.001        4862       9  0.993    0.0019    0.0037 -0.019
+MaxQuant, MBR on (shuffled entrapment)        protein   0.005        5130      32  0.993    0.0062    0.0124  0.036
+MaxQuant, MBR on (shuffled entrapment)        protein   0.01         5346      47  0.993    0.0087    0.0175  0.050
+MaxQuant, MBR on (shuffled entrapment)        protein   0.02         5346      47  0.993    0.0087    0.0175  0.050
+MaxQuant, MBR on (shuffled entrapment)        protein   0.05         5346      47  0.993    0.0087    0.0175  0.050
+MaxQuant, MBR on (shuffled entrapment)        precursor_run reported   233293     296   1.04    0.0013    0.0025  0.065
+MaxQuant, MBR on (shuffled entrapment)        precursor_run_mbr reported    60016      98   1.04    0.0016    0.0032  0.023
 FragPipe LFQ-MBR, MBR off (shuffled entrapment) precursor reported    79805     100   1.04    0.0013    0.0024  0.025
 FragPipe LFQ-MBR, MBR off (shuffled entrapment) peptide   reported    64574      95   1.04    0.0015    0.0029  0.026
 FragPipe LFQ-MBR, MBR off (shuffled entrapment) protein   reported     7699      86  0.993    0.0111    0.0222  0.030

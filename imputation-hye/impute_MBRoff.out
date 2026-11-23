@@ -1,35 +1,38 @@
 
-==== MBRoff | filter: >=2 of 3 in BOTH groups | proteins 3079 (human 2346, yeast 656, E. coli 77) | missing cells 2.8% ====
+==== MBRoff | filter: >=2 of 3 in BOTH groups | proteins 3104 (human 2365, yeast 664, E. coli 75) | missing cells 2.8% ====
 method   | testable | E.coli median lfc | yeast median lfc | within ±0.5 H/Y/E | changed found | human FP | wrong dir | FDP
-none     |     3079 |              2.10 |            -0.98 | 100/ 97/ 74 % |   701 of   733 |       12 |         0 |  1.7%
-MinDet   |     3079 |              2.22 |            -1.00 |  97/ 93/ 70 % |   636 of   733 |       10 |         0 |  1.5%
-[1] 0.1793956
-MinProb  |     3079 |              2.22 |            -1.00 |  97/ 92/ 69 % |   638 of   733 |        8 |         0 |  1.2%
-Perseus  |     3079 |              2.23 |            -1.00 |  95/ 91/ 68 % |   618 of   733 |       10 |         0 |  1.6%
-QRILC    |     3079 |              2.23 |            -1.01 |  91/ 84/ 62 % |   586 of   733 |        6 |         0 |  1.0%
-Cluster size 3079 broken into 2180 899 
-Cluster size 2180 broken into 1421 759 
-Done cluster 1421 
+none     |     3104 |              2.10 |            -0.98 | 100/ 96/ 75 % |   709 of   739 |       11 |         0 |  1.5%
+MinDet   |     3104 |              2.21 |            -1.00 |  97/ 92/ 69 % |   646 of   739 |        8 |         0 |  1.2%
+[1] 0.1798789
+MinProb  |     3104 |              2.18 |            -1.00 |  97/ 92/ 69 % |   644 of   739 |        8 |         0 |  1.2%
+Perseus  |     3104 |              2.22 |            -1.01 |  95/ 91/ 68 % |   642 of   739 |        5 |         0 |  0.8%
+QRILC    |     3104 |              2.22 |            -1.01 |  91/ 84/ 63 % |   596 of   739 |        3 |         0 |  0.5%
+Cluster size 3104 broken into 2680 424 
+Cluster size 2680 broken into 1094 1586 
+Done cluster 1094 
+Cluster size 1586 broken into 759 827 
 Done cluster 759 
-Done cluster 2180 
-Done cluster 899 
-kNN      |     3079 |              2.10 |            -0.98 | 100/ 97/ 74 % |   701 of   733 |        9 |         0 |  1.3%
+Done cluster 827 
+Done cluster 1586 
+Done cluster 2680 
+Done cluster 424 
+kNN      |     3104 |              2.10 |            -0.98 | 100/ 96/ 75 % |   707 of   739 |        7 |         0 |  1.0%
 
-==== MBRoff | filter: >=2 of 3 in EITHER group | proteins 3843 (human 2680, yeast 932, E. coli 231) | missing cells 12.6% ====
+==== MBRoff | filter: >=2 of 3 in EITHER group | proteins 3867 (human 2684, yeast 951, E. coli 232) | missing cells 12.6% ====
 method   | testable | E.coli median lfc | yeast median lfc | within ±0.5 H/Y/E | changed found | human FP | wrong dir | FDP
-none     |     3079 |              2.10 |            -0.98 | 100/ 97/ 74 % |   701 of   733 |       12 |         0 |  1.7%
-MinDet   |     3843 |              2.03 |            -1.02 |  91/ 80/ 43 % |   853 of  1163 |       29 |         1 |  3.4%
-[1] 0.1818704
-MinProb  |     3843 |              2.05 |            -1.01 |  91/ 79/ 44 % |   854 of  1163 |       29 |         1 |  3.4%
-Perseus  |     3843 |              2.11 |            -1.04 |  87/ 76/ 45 % |   807 of  1163 |       30 |         1 |  3.7%
-QRILC    |     3843 |              2.47 |            -1.07 |  82/ 68/ 37 % |   775 of  1163 |       27 |         0 |  3.4%
-Cluster size 3843 broken into 2922 921 
-Cluster size 2922 broken into 1546 1376 
-Cluster size 1546 broken into 261 1285 
-Done cluster 261 
-Done cluster 1285 
-Done cluster 1546 
-Done cluster 1376 
-Done cluster 2922 
-Done cluster 921 
-kNN      |     3843 |              0.02 |            -0.91 |  98/ 75/ 28 % |   755 of  1163 |       30 |        23 |  6.6%
+none     |     3104 |              2.10 |            -0.98 | 100/ 96/ 75 % |   709 of   739 |       11 |         0 |  1.5%
+MinDet   |     3867 |              2.01 |            -1.01 |  91/ 79/ 44 % |   867 of  1183 |       27 |         1 |  3.1%
+[1] 0.1821748
+MinProb  |     3867 |              2.02 |            -1.01 |  91/ 79/ 44 % |   868 of  1183 |       28 |         1 |  3.2%
+Perseus  |     3867 |              2.15 |            -1.04 |  88/ 76/ 45 % |   818 of  1183 |       30 |         0 |  3.5%
+QRILC    |     3867 |              2.53 |            -1.08 |  83/ 67/ 36 % |   783 of  1183 |       29 |         0 |  3.6%
+Cluster size 3867 broken into 2982 885 
+Cluster size 2982 broken into 1539 1443 
+Cluster size 1539 broken into 58 1481 
+Done cluster 58 
+Done cluster 1481 
+Done cluster 1539 
+Done cluster 1443 
+Done cluster 2982 
+Done cluster 885 
+kNN      |     3867 |              0.00 |            -0.90 |  98/ 73/ 28 % |   743 of  1183 |       24 |        15 |  5.0%

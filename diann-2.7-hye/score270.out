@@ -1,18 +1,18 @@
-pg_matrix (MBR, DIA-NN default filter): 9097 protein groups, 0 species-ambiguous, 97.1% cells with a value; human median -0.007
-MBR pass, Q<=0.01 & PG.Q<=0.01: 9373 protein groups, 0 species-ambiguous, 94.8% cells with a value; human median -0.007
+pg_matrix (MBR, DIA-NN default filter): 8947 protein groups, 0 species-ambiguous, 96.4% cells with a value; human median -0.006
+MBR pass, Q<=0.01 & PG.Q<=0.01: 9185 protein groups, 0 species-ambiguous, 94.0% cells with a value; human median -0.006
                                       set species     n median   IQR within_0.5
                                    <char>  <char> <int>  <num> <num>      <num>
-1: pg_matrix (MBR, DIA-NN default filter)   Human  5574 -0.007 0.082      0.987
-2: pg_matrix (MBR, DIA-NN default filter)   Yeast  2533 -1.058 0.180      0.952
-3: pg_matrix (MBR, DIA-NN default filter)   Ecoli   605  1.905 0.530      0.765
-4:         MBR pass, Q<=0.01 & PG.Q<=0.01   Human  5582 -0.007 0.082      0.986
-5:         MBR pass, Q<=0.01 & PG.Q<=0.01   Yeast  2510 -1.059 0.177      0.956
-6:         MBR pass, Q<=0.01 & PG.Q<=0.01   Ecoli   604  1.905 0.534      0.765
+1: pg_matrix (MBR, DIA-NN default filter)   Human  5469 -0.006 0.091      0.977
+2: pg_matrix (MBR, DIA-NN default filter)   Yeast  2466 -1.092 0.199      0.937
+3: pg_matrix (MBR, DIA-NN default filter)   Ecoli   571  2.006 0.556      0.783
+4:         MBR pass, Q<=0.01 & PG.Q<=0.01   Human  5450 -0.006 0.090      0.978
+5:         MBR pass, Q<=0.01 & PG.Q<=0.01   Yeast  2442 -1.094 0.195      0.941
+6:         MBR pass, Q<=0.01 & PG.Q<=0.01   Ecoli   561  2.013 0.537      0.793
    within_0.5_centred
                 <num>
-1:              0.987
-2:              0.951
-3:              0.767
-4:              0.986
-5:              0.956
-6:              0.767
+1:              0.977
+2:              0.937
+3:              0.785
+4:              0.978
+5:              0.941
+6:              0.795

@@ -1,13 +1,13 @@
 data,filter,method,testable,correct,of,human_fp,wrong_dir,calls,fdp
-MBRoff,>=2 of 3 in BOTH groups,none,3079,701,733,12,0,713,1.7
-MBRoff,>=2 of 3 in BOTH groups,MinDet,3079,636,733,10,0,646,1.5
-MBRoff,>=2 of 3 in BOTH groups,MinProb,3079,638,733,8,0,646,1.2
-MBRoff,>=2 of 3 in BOTH groups,Perseus,3079,618,733,10,0,628,1.6
-MBRoff,>=2 of 3 in BOTH groups,QRILC,3079,586,733,6,0,592,1
-MBRoff,>=2 of 3 in BOTH groups,kNN,3079,701,733,9,0,710,1.3
-MBRoff,>=2 of 3 in EITHER group,none,3079,701,733,12,0,713,1.7
-MBRoff,>=2 of 3 in EITHER group,MinDet,3843,853,1163,29,1,883,3.4
-MBRoff,>=2 of 3 in EITHER group,MinProb,3843,854,1163,29,1,884,3.4
-MBRoff,>=2 of 3 in EITHER group,Perseus,3843,807,1163,30,1,838,3.7
-MBRoff,>=2 of 3 in EITHER group,QRILC,3843,775,1163,27,0,802,3.4
-MBRoff,>=2 of 3 in EITHER group,kNN,3843,755,1163,30,23,808,6.6
+MBRoff,>=2 of 3 in BOTH groups,none,3104,709,739,11,0,720,1.5
+MBRoff,>=2 of 3 in BOTH groups,MinDet,3104,646,739,8,0,654,1.2
+MBRoff,>=2 of 3 in BOTH groups,MinProb,3104,644,739,8,0,652,1.2
+MBRoff,>=2 of 3 in BOTH groups,Perseus,3104,642,739,5,0,647,0.8
+MBRoff,>=2 of 3 in BOTH groups,QRILC,3104,596,739,3,0,599,0.5
+MBRoff,>=2 of 3 in BOTH groups,kNN,3104,707,739,7,0,714,1
+MBRoff,>=2 of 3 in EITHER group,none,3104,709,739,11,0,720,1.5
+MBRoff,>=2 of 3 in EITHER group,MinDet,3867,867,1183,27,1,895,3.1
+MBRoff,>=2 of 3 in EITHER group,MinProb,3867,868,1183,28,1,897,3.2
+MBRoff,>=2 of 3 in EITHER group,Perseus,3867,818,1183,30,0,848,3.5
+MBRoff,>=2 of 3 in EITHER group,QRILC,3867,783,1183,29,0,812,3.6
+MBRoff,>=2 of 3 in EITHER group,kNN,3867,743,1183,24,15,782,5

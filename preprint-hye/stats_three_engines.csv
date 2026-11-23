@@ -1,16 +1,16 @@
 engine,norm,test,fc_min,n_tested,n_human,n_changed,human_median_lfc,true_calls,true_calls_right_sign,false_calls,false_up,FDP
-MaxQuant 2.8.1 (LFQ),none,t,0,3532,2626,906,0.145,507,507,68,68,11.8
-MaxQuant 2.8.1 (LFQ),none,t,0.5,3532,2626,906,0.145,503,503,2,2,0.4
-MaxQuant 2.8.1 (LFQ),none,limma,0,3532,2626,906,0.145,891,891,104,100,10.5
-MaxQuant 2.8.1 (LFQ),none,limma,0.5,3532,2626,906,0.145,877,877,10,10,1.1
-MaxQuant 2.8.1 (LFQ),none,DEqMS,0,3532,2626,906,0.145,893,893,284,282,24.1
-MaxQuant 2.8.1 (LFQ),none,DEqMS,0.5,3532,2626,906,0.145,880,880,13,13,1.5
-MaxQuant 2.8.1 (LFQ),median,t,0,3532,2626,906,0.109,498,498,35,35,6.6
-MaxQuant 2.8.1 (LFQ),median,t,0.5,3532,2626,906,0.109,494,494,1,1,0.2
-MaxQuant 2.8.1 (LFQ),median,limma,0,3532,2626,906,0.109,895,895,53,48,5.6
-MaxQuant 2.8.1 (LFQ),median,limma,0.5,3532,2626,906,0.109,883,883,7,7,0.8
-MaxQuant 2.8.1 (LFQ),median,DEqMS,0,3532,2626,906,0.109,899,899,104,102,10.4
-MaxQuant 2.8.1 (LFQ),median,DEqMS,0.5,3532,2626,906,0.109,887,887,8,8,0.9
+MaxQuant 2.8.1 (LFQ),none,t,0,3531,2626,905,0.144,508,508,67,67,11.7
+MaxQuant 2.8.1 (LFQ),none,t,0.5,3531,2626,905,0.144,504,504,2,2,0.4
+MaxQuant 2.8.1 (LFQ),none,limma,0,3531,2626,905,0.144,889,889,101,97,10.2
+MaxQuant 2.8.1 (LFQ),none,limma,0.5,3531,2626,905,0.144,873,873,10,10,1.1
+MaxQuant 2.8.1 (LFQ),none,DEqMS,0,3531,2626,905,0.144,891,891,275,273,23.6
+MaxQuant 2.8.1 (LFQ),none,DEqMS,0.5,3531,2626,905,0.144,877,877,13,13,1.5
+MaxQuant 2.8.1 (LFQ),median,t,0,3531,2626,905,0.11,508,508,36,36,6.6
+MaxQuant 2.8.1 (LFQ),median,t,0.5,3531,2626,905,0.11,504,504,1,1,0.2
+MaxQuant 2.8.1 (LFQ),median,limma,0,3531,2626,905,0.11,893,893,55,50,5.8
+MaxQuant 2.8.1 (LFQ),median,limma,0.5,3531,2626,905,0.11,881,881,8,8,0.9
+MaxQuant 2.8.1 (LFQ),median,DEqMS,0,3531,2626,905,0.11,895,895,112,110,11.1
+MaxQuant 2.8.1 (LFQ),median,DEqMS,0.5,3531,2626,905,0.11,884,884,9,9,1
 FragPipe 24 (MaxLFQ),none,t,0,6226,4321,1905,0.014,928,928,15,11,1.6
 FragPipe 24 (MaxLFQ),none,t,0.5,6226,4321,1905,0.014,927,927,7,4,0.7
 FragPipe 24 (MaxLFQ),none,limma,0,6226,4321,1905,0.014,1629,1623,43,21,2.6
@@ -23,15 +23,15 @@ FragPipe 24 (MaxLFQ),median,limma,0,6226,4321,1905,0.13,1574,1570,105,91,6.3
 FragPipe 24 (MaxLFQ),median,limma,0.5,6226,4321,1905,0.13,1564,1560,54,43,3.3
 FragPipe 24 (MaxLFQ),median,DEqMS,0,6226,4321,1905,0.13,1567,1565,165,155,9.5
 FragPipe 24 (MaxLFQ),median,DEqMS,0.5,6226,4321,1905,0.13,1565,1563,48,38,3
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,t,0,7747,5262,2485,-0.01,2178,2178,106,32,4.6
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,t,0.5,7747,5262,2485,-0.01,2169,2169,5,0,0.2
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,limma,0,7747,5262,2485,-0.01,2415,2415,167,58,6.5
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,limma,0.5,7747,5262,2485,-0.01,2399,2399,21,6,0.9
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,DEqMS,0,7747,5262,2485,-0.01,2425,2425,188,48,7.2
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,DEqMS,0.5,7747,5262,2485,-0.01,2409,2409,22,6,0.9
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,t,0,7747,5262,2485,0.19,2234,2231,2695,2689,54.7
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,t,0.5,7747,5262,2485,0.19,2205,2205,32,28,1.4
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,limma,0,7747,5262,2485,0.19,2414,2411,3461,3443,58.9
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,limma,0.5,7747,5262,2485,0.19,2365,2365,56,52,2.3
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,DEqMS,0,7747,5262,2485,0.19,2421,2419,3439,3424,58.7
-"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,DEqMS,0.5,7747,5262,2485,0.19,2373,2373,62,58,2.5
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,t,0,7716,5230,2486,-0.004,2186,2186,97,42,4.2
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,t,0.5,7716,5230,2486,-0.004,2178,2178,9,3,0.4
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,limma,0,7716,5230,2486,-0.004,2408,2408,159,57,6.2
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,limma,0.5,7716,5230,2486,-0.004,2392,2392,16,5,0.7
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,DEqMS,0,7716,5230,2486,-0.004,2420,2420,176,58,6.8
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",none,DEqMS,0.5,7716,5230,2486,-0.004,2406,2406,17,5,0.7
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,t,0,7716,5230,2486,0.185,2233,2231,2554,2547,53.4
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,t,0.5,7716,5230,2486,0.185,2211,2211,32,29,1.4
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,limma,0,7716,5230,2486,0.185,2401,2399,3387,3371,58.5
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,limma,0.5,7716,5230,2486,0.185,2358,2358,53,49,2.2
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,DEqMS,0,7716,5230,2486,0.185,2415,2413,3376,3363,58.3
+"DIA-NN 2.3.2 (pg_matrix, SWATH)",median,DEqMS,0.5,7716,5230,2486,0.185,2369,2369,59,55,2.4

@@ -1,104 +1,104 @@
-/tmp/claude-1000/-home-sysoft/ecf2de24-4f4a-4781-bb20-c40cb58cce01/scratchpad/av/lib/python3.12/site-packages/directlfq/utils.py:19: UserWarning: Dependency 'dask' not installed. If you want to use its functionality, install directlfq with the 'dask' extra. Falling back to non-dask based processing.
+/home/sysoft/dda-clean/rescore/venv-dlfq/lib/python3.12/site-packages/directlfq/utils.py:19: UserWarning: Dependency 'dask' not installed. If you want to use its functionality, install directlfq with the 'dask' extra. Falling back to non-dask based processing.
   warnings.warn("Dependency 'dask' not installed. If you want to use its functionality, install directlfq with the 'dask' extra. Falling back to non-dask based processing.")
-2026-10-17 08:21:12,609 - root - INFO - Some numpy arrays derived from pandas will be copied.
-2026-10-17 08:21:12,609 - directlfq.lfq_manager - INFO - Starting directLFQ analysis.
-2026-10-17 08:21:15,813 - directlfq.lfq_manager - INFO - Performing sample normalization.
-2026-10-17 08:21:18,391 - directlfq.lfq_manager - INFO - Estimating lfq intensities.
-2026-10-17 08:21:18,534 - directlfq.protein_intensity_estimation - INFO - 9010 lfq-groups total
-/tmp/claude-1000/-home-sysoft/ecf2de24-4f4a-4781-bb20-c40cb58cce01/scratchpad/av/lib/python3.12/site-packages/multiprocess/popen_fork.py:66: DeprecationWarning: This process (pid=275543) is multi-threaded, use of fork() may lead to deadlocks in the child.
+2026-11-21 12:36:34,896 - root - INFO - Some numpy arrays derived from pandas will be copied.
+2026-11-21 12:36:34,896 - directlfq.lfq_manager - INFO - Starting directLFQ analysis.
+2026-11-21 12:36:36,974 - directlfq.lfq_manager - INFO - Performing sample normalization.
+2026-11-21 12:36:39,289 - directlfq.lfq_manager - INFO - Estimating lfq intensities.
+2026-11-21 12:36:39,411 - directlfq.protein_intensity_estimation - INFO - 9036 lfq-groups total
+/home/sysoft/dda-clean/rescore/venv-dlfq/lib/python3.12/site-packages/multiprocess/popen_fork.py:66: DeprecationWarning: This process (pid=91145) is multi-threaded, use of fork() may lead to deadlocks in the child.
   self.pid = os.fork()
-2026-10-17 08:21:26,096 - directlfq.protein_intensity_estimation - INFO - using 8 processes
-2026-10-17 08:21:26,488 - directlfq.protein_intensity_estimation - INFO - lfq-object 0
-2026-10-17 08:21:28,190 - directlfq.protein_intensity_estimation - INFO - lfq-object 300
-2026-10-17 08:21:29,561 - directlfq.protein_intensity_estimation - INFO - lfq-object 1700
-2026-10-17 08:21:30,306 - directlfq.protein_intensity_estimation - INFO - lfq-object 600
-2026-10-17 08:21:31,036 - directlfq.protein_intensity_estimation - INFO - lfq-object 2000
-2026-10-17 08:21:31,992 - directlfq.protein_intensity_estimation - INFO - lfq-object 900
-2026-10-17 08:21:32,685 - directlfq.protein_intensity_estimation - INFO - lfq-object 1500
-2026-10-17 08:21:33,652 - directlfq.protein_intensity_estimation - INFO - lfq-object 1200
-2026-10-17 08:21:33,702 - directlfq.protein_intensity_estimation - INFO - lfq-object 100
-2026-10-17 08:21:37,041 - directlfq.protein_intensity_estimation - INFO - lfq-object 400
-2026-10-17 08:21:37,461 - directlfq.protein_intensity_estimation - INFO - lfq-object 1800
-2026-10-17 08:21:37,894 - directlfq.protein_intensity_estimation - INFO - lfq-object 700
-2026-10-17 08:21:38,589 - directlfq.protein_intensity_estimation - INFO - lfq-object 2100
-2026-10-17 08:21:38,613 - directlfq.protein_intensity_estimation - INFO - lfq-object 1600
-2026-10-17 08:21:38,774 - directlfq.protein_intensity_estimation - INFO - lfq-object 1300
-2026-10-17 08:21:39,985 - directlfq.protein_intensity_estimation - INFO - lfq-object 1000
-2026-10-17 08:21:40,680 - directlfq.protein_intensity_estimation - INFO - lfq-object 200
-2026-10-17 08:21:44,210 - directlfq.protein_intensity_estimation - INFO - lfq-object 1400
-2026-10-17 08:21:43,018 - directlfq.protein_intensity_estimation - INFO - lfq-object 500
-2026-10-17 08:21:43,295 - directlfq.protein_intensity_estimation - INFO - lfq-object 800
-2026-10-17 08:21:43,449 - directlfq.protein_intensity_estimation - INFO - lfq-object 1900
-2026-10-17 08:21:43,709 - directlfq.protein_intensity_estimation - INFO - lfq-object 2200
-2026-10-17 08:21:45,967 - directlfq.protein_intensity_estimation - INFO - lfq-object 2300
-2026-10-17 08:21:46,340 - directlfq.protein_intensity_estimation - INFO - lfq-object 1100
-2026-10-17 08:21:49,273 - directlfq.protein_intensity_estimation - INFO - lfq-object 3400
-2026-10-17 08:21:49,681 - directlfq.protein_intensity_estimation - INFO - lfq-object 2600
-2026-10-17 08:21:50,408 - directlfq.protein_intensity_estimation - INFO - lfq-object 2900
-2026-10-17 08:21:51,479 - directlfq.protein_intensity_estimation - INFO - lfq-object 3700
-2026-10-17 08:21:52,937 - directlfq.protein_intensity_estimation - INFO - lfq-object 3200
-2026-10-17 08:21:53,736 - directlfq.protein_intensity_estimation - INFO - lfq-object 4000
-2026-10-17 08:21:53,829 - directlfq.protein_intensity_estimation - INFO - lfq-object 2400
-2026-10-17 08:21:54,864 - directlfq.protein_intensity_estimation - INFO - lfq-object 4300
-2026-10-17 08:21:55,078 - directlfq.protein_intensity_estimation - INFO - lfq-object 3500
-2026-10-17 08:21:56,526 - directlfq.protein_intensity_estimation - INFO - lfq-object 2700
-2026-10-17 08:21:56,967 - directlfq.protein_intensity_estimation - INFO - lfq-object 3000
-2026-10-17 08:21:57,650 - directlfq.protein_intensity_estimation - INFO - lfq-object 3800
-2026-10-17 08:21:59,304 - directlfq.protein_intensity_estimation - INFO - lfq-object 3300
-2026-10-17 08:22:00,607 - directlfq.protein_intensity_estimation - INFO - lfq-object 4100
-2026-10-17 08:22:01,500 - directlfq.protein_intensity_estimation - INFO - lfq-object 2500
-2026-10-17 08:22:01,945 - directlfq.protein_intensity_estimation - INFO - lfq-object 4400
-2026-10-17 08:22:02,292 - directlfq.protein_intensity_estimation - INFO - lfq-object 3100
-2026-10-17 08:22:02,565 - directlfq.protein_intensity_estimation - INFO - lfq-object 3600
-2026-10-17 08:22:03,660 - directlfq.protein_intensity_estimation - INFO - lfq-object 2800
-2026-10-17 08:22:05,175 - directlfq.protein_intensity_estimation - INFO - lfq-object 4800
-2026-10-17 08:22:05,921 - directlfq.protein_intensity_estimation - INFO - lfq-object 3900
-2026-10-17 08:22:06,473 - directlfq.protein_intensity_estimation - INFO - lfq-object 4200
-2026-10-17 08:22:06,565 - directlfq.protein_intensity_estimation - INFO - lfq-object 5100
-2026-10-17 08:22:08,399 - directlfq.protein_intensity_estimation - INFO - lfq-object 4600
-2026-10-17 08:22:08,871 - directlfq.protein_intensity_estimation - INFO - lfq-object 5400
-2026-10-17 08:22:09,213 - directlfq.protein_intensity_estimation - INFO - lfq-object 4500
-2026-10-17 08:22:10,550 - directlfq.protein_intensity_estimation - INFO - lfq-object 4900
-2026-10-17 08:22:11,881 - directlfq.protein_intensity_estimation - INFO - lfq-object 6500
-2026-10-17 08:22:12,722 - directlfq.protein_intensity_estimation - INFO - lfq-object 5200
-2026-10-17 08:22:13,454 - directlfq.protein_intensity_estimation - INFO - lfq-object 5700
-2026-10-17 08:22:14,358 - directlfq.protein_intensity_estimation - INFO - lfq-object 6000
-2026-10-17 08:22:14,813 - directlfq.protein_intensity_estimation - INFO - lfq-object 5500
-2026-10-17 08:22:13,452 - directlfq.protein_intensity_estimation - INFO - lfq-object 4700
-2026-10-17 08:22:15,183 - directlfq.protein_intensity_estimation - INFO - lfq-object 5000
-2026-10-17 08:22:15,594 - directlfq.protein_intensity_estimation - INFO - lfq-object 6300
-2026-10-17 08:22:17,287 - directlfq.protein_intensity_estimation - INFO - lfq-object 5300
-2026-10-17 08:22:17,801 - directlfq.protein_intensity_estimation - INFO - lfq-object 6600
-2026-10-17 08:22:18,640 - directlfq.protein_intensity_estimation - INFO - lfq-object 6100
-2026-10-17 08:22:22,452 - directlfq.protein_intensity_estimation - INFO - lfq-object 5600
-2026-10-17 08:22:23,093 - directlfq.protein_intensity_estimation - INFO - lfq-object 5800
-2026-10-17 08:22:23,121 - directlfq.protein_intensity_estimation - INFO - lfq-object 6800
-2026-10-17 08:22:23,818 - directlfq.protein_intensity_estimation - INFO - lfq-object 6400
-2026-10-17 08:22:25,721 - directlfq.protein_intensity_estimation - INFO - lfq-object 6700
-2026-10-17 08:22:26,902 - directlfq.protein_intensity_estimation - INFO - lfq-object 6200
-2026-10-17 08:22:27,869 - directlfq.protein_intensity_estimation - INFO - lfq-object 7100
-2026-10-17 08:22:28,049 - directlfq.protein_intensity_estimation - INFO - lfq-object 7900
-2026-10-17 08:22:28,239 - directlfq.protein_intensity_estimation - INFO - lfq-object 7400
-2026-10-17 08:22:30,689 - directlfq.protein_intensity_estimation - INFO - lfq-object 6900
-2026-10-17 08:22:32,797 - directlfq.protein_intensity_estimation - INFO - lfq-object 8200
-2026-10-17 08:22:33,326 - directlfq.protein_intensity_estimation - INFO - lfq-object 5900
-2026-10-17 08:22:33,471 - directlfq.protein_intensity_estimation - INFO - lfq-object 7700
-2026-10-17 08:22:35,484 - directlfq.protein_intensity_estimation - INFO - lfq-object 8500
-2026-10-17 08:22:35,864 - directlfq.protein_intensity_estimation - INFO - lfq-object 7200
-2026-10-17 08:22:36,637 - directlfq.protein_intensity_estimation - INFO - lfq-object 8000
-2026-10-17 08:22:37,324 - directlfq.protein_intensity_estimation - INFO - lfq-object 7500
-2026-10-17 08:22:38,042 - directlfq.protein_intensity_estimation - INFO - lfq-object 7000
-2026-10-17 08:22:41,286 - directlfq.protein_intensity_estimation - INFO - lfq-object 7800
-2026-10-17 08:22:41,850 - directlfq.protein_intensity_estimation - INFO - lfq-object 8800
-2026-10-17 08:22:42,161 - directlfq.protein_intensity_estimation - INFO - lfq-object 8300
-2026-10-17 08:22:43,481 - directlfq.protein_intensity_estimation - INFO - lfq-object 7300
-2026-10-17 08:22:44,268 - directlfq.protein_intensity_estimation - INFO - lfq-object 8600
-2026-10-17 08:22:44,540 - directlfq.protein_intensity_estimation - INFO - lfq-object 8100
-2026-10-17 08:22:44,062 - directlfq.protein_intensity_estimation - INFO - lfq-object 7600
-2026-10-17 08:22:47,426 - directlfq.protein_intensity_estimation - INFO - lfq-object 8400
-2026-10-17 08:22:48,372 - directlfq.protein_intensity_estimation - INFO - lfq-object 8900
-2026-10-17 08:22:50,198 - directlfq.protein_intensity_estimation - INFO - lfq-object 8700
-2026-10-17 08:22:55,523 - directlfq.protein_intensity_estimation - INFO - lfq-object 9000
-2026-10-17 08:22:59,420 - directlfq.lfq_manager - INFO - Could not add additional columns to protein table, printing without additional columns.
-2026-10-17 08:22:59,420 - directlfq.lfq_manager - INFO - Writing results files.
-2026-10-17 08:23:10,670 - directlfq.lfq_manager - INFO - Analysis finished!
+2026-11-21 12:36:47,096 - directlfq.protein_intensity_estimation - INFO - using 8 processes
+2026-11-21 12:36:47,508 - directlfq.protein_intensity_estimation - INFO - lfq-object 0
+2026-11-21 12:36:48,823 - directlfq.protein_intensity_estimation - INFO - lfq-object 300
+2026-11-21 12:36:50,052 - directlfq.protein_intensity_estimation - INFO - lfq-object 1700
+2026-11-21 12:36:51,047 - directlfq.protein_intensity_estimation - INFO - lfq-object 600
+2026-11-21 12:36:51,462 - directlfq.protein_intensity_estimation - INFO - lfq-object 2000
+2026-11-21 12:36:52,667 - directlfq.protein_intensity_estimation - INFO - lfq-object 900
+2026-11-21 12:36:53,080 - directlfq.protein_intensity_estimation - INFO - lfq-object 1500
+2026-11-21 12:36:53,605 - directlfq.protein_intensity_estimation - INFO - lfq-object 1200
+2026-11-21 12:36:53,739 - directlfq.protein_intensity_estimation - INFO - lfq-object 100
+2026-11-21 12:36:56,198 - directlfq.protein_intensity_estimation - INFO - lfq-object 400
+2026-11-21 12:36:56,677 - directlfq.protein_intensity_estimation - INFO - lfq-object 1800
+2026-11-21 12:36:57,560 - directlfq.protein_intensity_estimation - INFO - lfq-object 700
+2026-11-21 12:36:57,701 - directlfq.protein_intensity_estimation - INFO - lfq-object 1600
+2026-11-21 12:36:57,755 - directlfq.protein_intensity_estimation - INFO - lfq-object 2100
+2026-11-21 12:36:57,989 - directlfq.protein_intensity_estimation - INFO - lfq-object 1300
+2026-11-21 12:36:59,018 - directlfq.protein_intensity_estimation - INFO - lfq-object 1000
+2026-11-21 12:36:59,720 - directlfq.protein_intensity_estimation - INFO - lfq-object 200
+2026-11-21 12:37:02,607 - directlfq.protein_intensity_estimation - INFO - lfq-object 1400
+2026-11-21 12:37:02,921 - directlfq.protein_intensity_estimation - INFO - lfq-object 500
+2026-11-21 12:37:03,489 - directlfq.protein_intensity_estimation - INFO - lfq-object 1900
+2026-11-21 12:37:04,053 - directlfq.protein_intensity_estimation - INFO - lfq-object 800
+2026-11-21 12:37:04,284 - directlfq.protein_intensity_estimation - INFO - lfq-object 2200
+2026-11-21 12:37:05,464 - directlfq.protein_intensity_estimation - INFO - lfq-object 2300
+2026-11-21 12:37:06,265 - directlfq.protein_intensity_estimation - INFO - lfq-object 1100
+2026-11-21 12:37:07,633 - directlfq.protein_intensity_estimation - INFO - lfq-object 3400
+2026-11-21 12:37:08,176 - directlfq.protein_intensity_estimation - INFO - lfq-object 2600
+2026-11-21 12:37:09,173 - directlfq.protein_intensity_estimation - INFO - lfq-object 2900
+2026-11-21 12:37:10,043 - directlfq.protein_intensity_estimation - INFO - lfq-object 3700
+2026-11-21 12:37:11,821 - directlfq.protein_intensity_estimation - INFO - lfq-object 3200
+2026-11-21 12:37:11,848 - directlfq.protein_intensity_estimation - INFO - lfq-object 4000
+2026-11-21 12:37:12,456 - directlfq.protein_intensity_estimation - INFO - lfq-object 3500
+2026-11-21 12:37:12,590 - directlfq.protein_intensity_estimation - INFO - lfq-object 2400
+2026-11-21 12:37:12,875 - directlfq.protein_intensity_estimation - INFO - lfq-object 4300
+2026-11-21 12:37:13,867 - directlfq.protein_intensity_estimation - INFO - lfq-object 2700
+2026-11-21 12:37:14,746 - directlfq.protein_intensity_estimation - INFO - lfq-object 3000
+2026-11-21 12:37:15,185 - directlfq.protein_intensity_estimation - INFO - lfq-object 3800
+2026-11-21 12:37:16,743 - directlfq.protein_intensity_estimation - INFO - lfq-object 3300
+2026-11-21 12:37:18,838 - directlfq.protein_intensity_estimation - INFO - lfq-object 4100
+2026-11-21 12:37:19,441 - directlfq.protein_intensity_estimation - INFO - lfq-object 3600
+2026-11-21 12:37:19,587 - directlfq.protein_intensity_estimation - INFO - lfq-object 2500
+2026-11-21 12:37:19,643 - directlfq.protein_intensity_estimation - INFO - lfq-object 4400
+2026-11-21 12:37:20,277 - directlfq.protein_intensity_estimation - INFO - lfq-object 3100
+2026-11-21 12:37:20,633 - directlfq.protein_intensity_estimation - INFO - lfq-object 2800
+2026-11-21 12:37:22,785 - directlfq.protein_intensity_estimation - INFO - lfq-object 3900
+2026-11-21 12:37:23,671 - directlfq.protein_intensity_estimation - INFO - lfq-object 5100
+2026-11-21 12:37:23,767 - directlfq.protein_intensity_estimation - INFO - lfq-object 4200
+2026-11-21 12:37:25,216 - directlfq.protein_intensity_estimation - INFO - lfq-object 4600
+2026-11-21 12:37:25,234 - directlfq.protein_intensity_estimation - INFO - lfq-object 5400
+2026-11-21 12:37:25,466 - directlfq.protein_intensity_estimation - INFO - lfq-object 4500
+2026-11-21 12:37:26,909 - directlfq.protein_intensity_estimation - INFO - lfq-object 4900
+2026-11-21 12:37:27,462 - directlfq.protein_intensity_estimation - INFO - lfq-object 5700
+2026-11-21 12:37:28,605 - directlfq.protein_intensity_estimation - INFO - lfq-object 5200
+2026-11-21 12:37:29,456 - directlfq.protein_intensity_estimation - INFO - lfq-object 6000
+2026-11-21 12:37:29,636 - directlfq.protein_intensity_estimation - INFO - lfq-object 5500
+2026-11-21 12:37:30,907 - directlfq.protein_intensity_estimation - INFO - lfq-object 4700
+2026-11-21 12:37:31,418 - directlfq.protein_intensity_estimation - INFO - lfq-object 6300
+2026-11-21 12:37:31,861 - directlfq.protein_intensity_estimation - INFO - lfq-object 5000
+2026-11-21 12:37:33,454 - directlfq.protein_intensity_estimation - INFO - lfq-object 5300
+2026-11-21 12:37:33,993 - directlfq.protein_intensity_estimation - INFO - lfq-object 6600
+2026-11-21 12:37:34,143 - directlfq.protein_intensity_estimation - INFO - lfq-object 6100
+2026-11-21 12:37:35,945 - directlfq.protein_intensity_estimation - INFO - lfq-object 5800
+2026-11-21 12:37:36,791 - directlfq.protein_intensity_estimation - INFO - lfq-object 5600
+2026-11-21 12:37:36,806 - directlfq.protein_intensity_estimation - INFO - lfq-object 6400
+2026-11-21 12:37:37,173 - directlfq.protein_intensity_estimation - INFO - lfq-object 4800
+2026-11-21 12:37:37,504 - directlfq.protein_intensity_estimation - INFO - lfq-object 6800
+2026-11-21 12:37:39,914 - directlfq.protein_intensity_estimation - INFO - lfq-object 6700
+2026-11-21 12:37:40,018 - directlfq.protein_intensity_estimation - INFO - lfq-object 7100
+2026-11-21 12:37:40,092 - directlfq.protein_intensity_estimation - INFO - lfq-object 6200
+2026-11-21 12:37:40,761 - directlfq.protein_intensity_estimation - INFO - lfq-object 7400
+2026-11-21 12:37:42,857 - directlfq.protein_intensity_estimation - INFO - lfq-object 5900
+2026-11-21 12:37:42,987 - directlfq.protein_intensity_estimation - INFO - lfq-object 6500
+2026-11-21 12:37:43,109 - directlfq.protein_intensity_estimation - INFO - lfq-object 6900
+2026-11-21 12:37:44,817 - directlfq.protein_intensity_estimation - INFO - lfq-object 7700
+2026-11-21 12:37:45,929 - directlfq.protein_intensity_estimation - INFO - lfq-object 8500
+2026-11-21 12:37:46,412 - directlfq.protein_intensity_estimation - INFO - lfq-object 7200
+2026-11-21 12:37:46,632 - directlfq.protein_intensity_estimation - INFO - lfq-object 7500
+2026-11-21 12:37:46,739 - directlfq.protein_intensity_estimation - INFO - lfq-object 8000
+2026-11-21 12:37:48,034 - directlfq.protein_intensity_estimation - INFO - lfq-object 8800
+2026-11-21 12:37:48,331 - directlfq.protein_intensity_estimation - INFO - lfq-object 7000
+2026-11-21 12:37:49,791 - directlfq.protein_intensity_estimation - INFO - lfq-object 8300
+2026-11-21 12:37:50,475 - directlfq.protein_intensity_estimation - INFO - lfq-object 7800
+2026-11-21 12:37:52,249 - directlfq.protein_intensity_estimation - INFO - lfq-object 7300
+2026-11-21 12:37:52,933 - directlfq.protein_intensity_estimation - INFO - lfq-object 8600
+2026-11-21 12:37:52,969 - directlfq.protein_intensity_estimation - INFO - lfq-object 8100
+2026-11-21 12:37:53,703 - directlfq.protein_intensity_estimation - INFO - lfq-object 7600
+2026-11-21 12:37:54,552 - directlfq.protein_intensity_estimation - INFO - lfq-object 8900
+2026-11-21 12:37:56,196 - directlfq.protein_intensity_estimation - INFO - lfq-object 8400
+2026-11-21 12:37:57,000 - directlfq.protein_intensity_estimation - INFO - lfq-object 7900
+2026-11-21 12:37:58,776 - directlfq.protein_intensity_estimation - INFO - lfq-object 8700
+2026-11-21 12:37:58,834 - directlfq.protein_intensity_estimation - INFO - lfq-object 8200
+2026-11-21 12:38:00,266 - directlfq.protein_intensity_estimation - INFO - lfq-object 9000
+2026-11-21 12:38:05,592 - directlfq.lfq_manager - INFO - Could not add additional columns to protein table, printing without additional columns.
+2026-11-21 12:38:05,593 - directlfq.lfq_manager - INFO - Writing results files.
+2026-11-21 12:38:14,471 - directlfq.lfq_manager - INFO - Analysis finished!

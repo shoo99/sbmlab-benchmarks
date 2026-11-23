@@ -2,7 +2,7 @@ Concatenating secondary ids...
 
 Removing low intensities...
 
-# proteins = 9518, # samples = 6
+# proteins = 9527, # samples = 6
 5%
 10%
 15%
@@ -45,4 +45,4 @@ Completed.
 95%
 100%
 Completed.
-proteins: 9518 
+proteins: 9527 

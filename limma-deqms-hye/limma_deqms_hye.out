@@ -1,20 +1,20 @@
-proteins tested: 3532 
+proteins tested: 3531 
 
 Ecoli Human Yeast 
-  108  2626   798 
+  108  2626   797 
 
 == adj.p < 0.05, |log2FC| >= 0.0 ==
-Welch t   : called  575 | true (yeast+E.coli)  507 of  906 (56%) | false (human)  68 | FDP 11.8% | single-peptide among calls 0 
-limma     : called  995 | true (yeast+E.coli)  891 of  906 (98%) | false (human) 104 | FDP 10.5% | single-peptide among calls 4 
-DEqMS     : called 1177 | true (yeast+E.coli)  893 of  906 (99%) | false (human) 284 | FDP 24.1% | single-peptide among calls 3 
+Welch t   : called  575 | true (yeast+E.coli)  508 of  905 (56%) | false (human)  67 | FDP 11.7% | single-peptide among calls 0 
+limma     : called  990 | true (yeast+E.coli)  889 of  905 (98%) | false (human) 101 | FDP 10.2% | single-peptide among calls 5 
+DEqMS     : called 1166 | true (yeast+E.coli)  891 of  905 (98%) | false (human) 275 | FDP 23.6% | single-peptide among calls 4 
 
 == adj.p < 0.05, |log2FC| >= 0.5 ==
-Welch t   : called  505 | true (yeast+E.coli)  503 of  906 (56%) | false (human)   2 | FDP 0.4% | single-peptide among calls 0 
-limma     : called  887 | true (yeast+E.coli)  877 of  906 (97%) | false (human)  10 | FDP 1.1% | single-peptide among calls 3 
-DEqMS     : called  893 | true (yeast+E.coli)  880 of  906 (97%) | false (human)  13 | FDP 1.5% | single-peptide among calls 3 
+Welch t   : called  506 | true (yeast+E.coli)  504 of  905 (56%) | false (human)   2 | FDP 0.4% | single-peptide among calls 0 
+limma     : called  883 | true (yeast+E.coli)  873 of  905 (96%) | false (human)  10 | FDP 1.1% | single-peptide among calls 4 
+DEqMS     : called  890 | true (yeast+E.coli)  877 of  905 (97%) | false (human)  13 | FDP 1.5% | single-peptide among calls 4 
 
-single-peptide proteins tested: 7 
-human median log2FC: 0.145  IQR: 0.079 0.214 
-adj_t human calls 68  median |lfc| 0.22  share with lfc>0: 1 
-adj_limma human calls 104  median |lfc| 0.34  share with lfc>0: 0.96 
-adj_deqms human calls 284  median |lfc| 0.26  share with lfc>0: 0.99 
+single-peptide proteins tested: 8 
+human median log2FC: 0.144  IQR: 0.08 0.213 
+adj_t human calls 67  median |lfc| 0.22  share with lfc>0: 1 
+adj_limma human calls 101  median |lfc| 0.35  share with lfc>0: 0.96 
+adj_deqms human calls 275  median |lfc| 0.26  share with lfc>0: 0.99 
