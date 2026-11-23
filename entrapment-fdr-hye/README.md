@@ -1,13 +1,15 @@
 # True FDR of MaxQuant, FragPipe and DIA-NN measured with an entrapment database (2026-11-04)
 
-Tracking issue: [#5](https://github.com/shoo99/sbmlab-benchmarks/issues/5). No post yet.
+Tracking issue: [#5](https://github.com/shoo99/sbmlab-benchmarks/issues/5). Post: [Is 1% FDR Really 1%?](https://sbmlab.com/blog/entrapment-fdr-maxquant-fragpipe-diann-1-percent-measured-2026).
 
 At a nominal 1% FDR, how many identifications are actually false? This folder answers it at the precursor, peptide and protein level, with MBR off and on. The method: search the PXD028735 HYE runs against the human / yeast / *E. coli* database **plus proteins that cannot be in the sample**. Any hit on those entrapment proteins is known to be false.
 
-**Status: ready for a workstation run.**
+**2026-11-23: re-run on verified raw files.** The first PRIDE downloads had short server error messages written into some raw files (Orbitrap: 2 of 6 files, one damaged spectrum each; SWATH: 5 of 6 `.wiff.scan` files, 14 damaged spectra). All 12 entrapment searches and the four DIA-NN and MaxQuant target-only searches were re-run on verified copies with the same settings and databases. FragPipe's outputs came out byte-identical, so its numbers are unchanged. Main changes at 1%: DIA-NN protein groups with the Arabidopsis entrapment 1.37% → 1.48% (MBR off) and 0.87% → 0.63% (MBR on); with the shuffled entrapment, the paired protein-group estimate 1.02% → 0.97% for DIA-NN MBR off and 1.47% → 1.41% for MaxQuant.
+
+**Status: searched and scored on a workstation** (results below).
 
 - The database builder, the extraction from all three engines' outputs and the FDP estimates are tested on synthetic data in CI.
-- The searches themselves need the raw files (30 GB for SWATH, 22 GB for Orbitrap) and hours of CPU. That is beyond this repository's cloud environment, so there are no real-data numbers yet.
+- The searches themselves need the raw files (30 GB for SWATH, 22 GB for Orbitrap) and hours of CPU, so they ran on a workstation and only their counts are bundled.
 
 ## Data
 
@@ -100,7 +102,7 @@ Following Wen et al. (2025, *Nat Methods*). At a threshold, let N_T be the targe
 
 ## Results
 
-Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14, with the foreign (Arabidopsis) entrapment: 14,567 entrapment proteins next to 31,695 targets (1,854 Arabidopsis proteins dropped for sharing a tryptic peptide), r = 0.4065 for peptides and 0.4596 for proteins. Target-only searches: DIA-NN MBR on and off from `diann-hye`, MaxQuant MBR off from `maxquant-hye`, FragPipe MBR on from `fragpipe-hye`, and MaxQuant MBR on and FragPipe MBR off run here. Every search used the settings of those folders; only the database changed.
+Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14 (re-run on 2026-11-23, see the note at the top), with the foreign (Arabidopsis) entrapment: 14,567 entrapment proteins next to 31,695 targets (1,854 Arabidopsis proteins dropped for sharing a tryptic peptide), r = 0.4065 for peptides and 0.4596 for proteins. Target-only searches: DIA-NN and MaxQuant MBR on and off, re-run here on 2026-11-23 (the first runs took DIA-NN from `diann-hye` and MaxQuant MBR off from `maxquant-hye`), FragPipe MBR on from `fragpipe-hye`, and FragPipe MBR off run here. Every search used the settings of those folders; only the database changed.
 
 ![Entrapment estimates of the false discovery proportion per search and level at a nominal 1% FDR](entrapment_fdr_hye.png)
 
@@ -108,26 +110,26 @@ Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14, with the foreign (Ar
 
 | Search | Precursors | Peptides | Protein groups | Per run | MBR transfers only |
 |---|---|---|---|---|---|
-| DIA-NN 2.3.2, MBR off | 0.64% (0.18%) | 0.74% (0.21%) | **1.37%** (0.43%) | 0.57% (0.16%) | not marked |
-| DIA-NN 2.3.2, MBR on | 0.35% (0.10%) | 0.40% (0.12%) | 0.87% (0.27%) | 0.31% (0.09%) | not marked |
-| MaxQuant 2.8.1, MBR off | 0.26% (0.08%) | 0.28% (0.08%) | **1.33%** (0.42%) | 0.19% (0.06%) | none |
-| MaxQuant 2.8.1, MBR on | 0.26% (0.08%) | 0.28% (0.08%) | **1.33%** (0.42%) | 0.21% (0.06%) | 0.30% (0.09%) |
+| DIA-NN 2.3.2, MBR off | 0.62% (0.18%) | 0.72% (0.21%) | **1.48%** (0.47%) | 0.56% (0.16%) | not marked |
+| DIA-NN 2.3.2, MBR on | 0.31% (0.09%) | 0.35% (0.10%) | 0.63% (0.20%) | 0.30% (0.09%) | not marked |
+| MaxQuant 2.8.1, MBR off | 0.28% (0.08%) | 0.30% (0.09%) | **1.39%** (0.44%) | 0.21% (0.06%) | none |
+| MaxQuant 2.8.1, MBR on | 0.28% (0.08%) | 0.30% (0.09%) | **1.39%** (0.44%) | 0.23% (0.06%) | 0.31% (0.09%) |
 | FragPipe 24.0, MBR off | 0.26% (0.07%) | 0.30% (0.09%) | **2.09%** (0.66%) | 0.15% (0.05%) | none |
 | FragPipe 24.0, MBR on | 0.26% (0.07%) | 0.30% (0.09%) | **2.09%** (0.66%) | 0.20% (0.06%) | 0.39% (0.11%) |
 
-- **Precursors and peptides: every engine stays within 1%**, at 0.26–0.74% estimated.
+- **Precursors and peptides: every engine stays within 1%**, at 0.26–0.72% estimated.
 - **Protein groups: three of the six searches are estimated above 1%.**
-  - FragPipe has 52 entrapment groups among 7,913 (2.09%). MaxQuant has 23 among 5,481 (1.33%). DIA-NN with MBR off has 37 among 8,558 (1.37%).
+  - FragPipe has 52 entrapment groups among 7,913 (2.09%). MaxQuant has 24 among 5,478 (1.39%). DIA-NN with MBR off has 40 among 8,572 (1.48%).
   - No lower bound reaches 1% (at most 0.66%), so none is a certain failure.
   - FragPipe's per-experiment protein lists add up to exactly its combined list (Philosopher filters each experiment against the same `combined.prot.xml`). The 2.09% is therefore not an effect of taking the union over experiments.
 - **MBR transfers are not where the errors are.**
-  - MaxQuant copied 60,189 identifications between runs, 52 of them entrapment (0.30%). FragPipe copied 78,227, 88 of them entrapment (0.39%).
-  - That is 1.6 and 2.5 times the per-run rate with MBR off (0.19% and 0.15%), and still well below 1%.
+  - MaxQuant copied 60,373 identifications between runs, 54 of them entrapment (0.31%). FragPipe copied 78,227, 88 of them entrapment (0.39%).
+  - That is 1.5 and 2.5 times the per-run rate with MBR off (0.21% and 0.15%), and still well below 1%.
   - MaxQuant and FragPipe give the same experiment-wide counts with MBR on and off. Their MBR copies identifications into other runs for quantification; the identification lists come from the same search.
-- **DIA-NN with MBR on has fewer entrapment hits than with MBR off** at every level (precursors 100 against 189). A likely reason: MBR on re-searches all runs with a library built from the first pass, so an entrapment precursor must survive that pass to be searched again.
+- **DIA-NN with MBR on has fewer entrapment hits than with MBR off** at every level (precursors 87 against 183). A likely reason: MBR on re-searches all runs with a library built from the first pass, so an entrapment precursor must survive that pass to be searched again.
 - **The larger database costs identifications**, measured against the target-only searches:
-  - DIA-NN: 8.3–8.5% of its precursors (9–10% per run)
-  - MaxQuant: 3.5–4.0%
+  - DIA-NN: 8.1–8.7% of its precursors (9–10% per run)
+  - MaxQuant: 4.2%
   - FragPipe: 1.2%
 
   The entrapment adds 41% more peptides to score against.
@@ -139,6 +141,8 @@ Run on a workstation (WSL2, 32 cores) on 2026-11-13 and 14, with the foreign (Ar
 | MaxQuant (16 threads): entrapment MBR on (alongside DIA-NN), MBR off, target-only MBR on | 10 h 40 min, 5 h 42 min, 5 h 54 min |
 | FragPipe (8 threads): three searches | 14–16.5 min each |
 
+These run times are from the original runs of 2026-11-13 and 14; the 2026-11-23 re-run used the same settings.
+
 Bundled: `counts.csv` (from `extract.py`), `entrapment_info.json`, `score.out` and `scores.csv`. The search outputs are not bundled. CI re-runs `score.py` from `counts.csv` and compares `score.out` and `scores.csv` byte for byte.
 
 ### Second entrapment: shuffled targets (r ≈ 1) and the paired estimate (2026-11-17/18)
@@ -149,17 +153,17 @@ At the nominal 1%, combined estimate with the lower bound in brackets, and the p
 
 | Search | Peptides: combined (lower) | Peptides: paired | Protein groups: combined (lower) | Protein groups: paired |
 |---|---|---|---|---|
-| DIA-NN 2.3.2, MBR off | 0.69% (0.35%) | 0.58% | 1.50% (0.75%) | 1.02% |
-| DIA-NN 2.3.2, MBR on | 0.39% (0.20%) | 0.32% | 1.44% (0.72%) | **0.93%** |
-| MaxQuant 2.8.1 | 0.34% (0.17%) | 0.35% | 1.79% (0.89%) | 1.47% |
+| DIA-NN 2.3.2, MBR off | 0.73% (0.37%) | 0.62% | 1.42% (0.71%) | **0.97%** |
+| DIA-NN 2.3.2, MBR on | 0.37% (0.19%) | 0.31% | 1.43% (0.71%) | **0.93%** |
+| MaxQuant 2.8.1 | 0.37% (0.19%) | 0.36% | 1.75% (0.87%) | 1.41% |
 | FragPipe 24.0 | 0.29% (0.15%) | 0.25% | 2.22% (**1.11%**) | 1.63% |
 
 - **The two entrapments agree.** Precursor and peptide estimates are within a few hundredths of a percent of the Arabidopsis run, although r differs 2.5-fold (0.41 vs 1.04).
 - **FragPipe's protein-level FDR is not controlled.** With the shuffled entrapment its lower bound is 1.11%, above the nominal 1%, so this is a failure for certain, not an estimate.
-- **MaxQuant's protein groups are probably above 1%** (paired 1.47%, lower bound 0.89%). DIA-NN with MBR off is borderline (paired 1.02%), and with MBR on its paired upper bound is 0.93%, which supports control.
-- **MBR transfers stay low**: MaxQuant 89 of 59,899 (combined 0.29%), FragPipe 110 of 79,736 (0.27%).
-- The paired estimate needs r = 1; with r = 1.04 here, the combined estimate can come out marginally below the paired one (MaxQuant peptides 0.34% vs 0.35%). No pair was missing and no scores tied at 1%.
-- Run times: DIA-NN library 33 min, MBR on 14 h 4 min (alongside MaxQuant), MBR off 4 min 45 s; MaxQuant 9 h 29 min (MBR on) and 6 h 31 min (MBR off); FragPipe 37 min (MBR on, alongside the DIA-NN library) and 17 min.
+- **MaxQuant's protein groups are probably above 1%** (paired 1.41%, lower bound 0.87%). DIA-NN's paired upper bounds are 0.97% with MBR off (just under 1%, a small margin) and 0.93% with MBR on, which supports control in both.
+- **MBR transfers stay low**: MaxQuant 98 of 60,114 (combined 0.32%), FragPipe 110 of 79,736 (0.27%).
+- The paired estimate needs r = 1; with r = 1.04 here, the combined estimate can come out close to or marginally below the paired one (closest here: MaxQuant peptides, combined 0.37% and paired 0.36%). No pair was missing and no scores tied at 1%.
+- Run times (original runs of 2026-11-17/18; the re-run used the same settings): DIA-NN library 33 min, MBR on 14 h 4 min (alongside MaxQuant), MBR off 4 min 45 s; MaxQuant 9 h 29 min (MBR on) and 6 h 31 min (MBR off); FragPipe 37 min (MBR on, alongside the DIA-NN library) and 17 min.
 
 CI runs `test/test_paired.py` (21 known answers for the three engines at both levels); `paired.csv` itself needs the search outputs and is bundled, not re-run.
 

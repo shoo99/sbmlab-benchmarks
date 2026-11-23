@@ -141,18 +141,18 @@ Area: proteomics · Scored against: entrapment hits (Arabidopsis proteins withou
 
 | Tool | Setting | n_target (precursor) | n_entrapment (precursor) | fdp_lower (precursor) | fdp_combined (precursor) | share_targets_lost (precursor) | n_target (peptide) | n_entrapment (peptide) | fdp_lower (peptide) | fdp_combined (peptide) | share_targets_lost (peptide) | n_target (precursor_run) | n_entrapment (precursor_run) | fdp_lower (precursor_run) | fdp_combined (precursor_run) | share_targets_lost (precursor_run) | n_target (precursor_run_mbr) | n_entrapment (precursor_run_mbr) | fdp_lower (precursor_run_mbr) | fdp_combined (precursor_run_mbr) | share_targets_lost (precursor_run_mbr) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| DIA-NN library-free, MBR off | MBR off; q <= 0.001 | 70153 | 17 | 0.00024 | 0.00084 | 0.142 | 64190 | 16 | 0.00025 | 0.00086 | 0.1217 | 358694 | 75 | 0.00021 | 0.00072 | 0.1325 |  |  |  |  |  |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.005 | 94284 | 96 | 0.00102 | 0.00352 | 0.0942 | 81907 | 95 | 0.00116 | 0.00401 | 0.086 | 448314 | 405 | 0.0009 | 0.00312 | 0.1055 |  |  |  |  |  |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.01 | 102341 | 189 | 0.00184 | 0.00638 | 0.085 | 87969 | 188 | 0.00213 | 0.00738 | 0.0785 | 479573 | 787 | 0.00164 | 0.00567 | 0.103 |  |  |  |  |  |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.02 | 109730 | 375 | 0.00341 | 0.01178 | 0.0827 | 93877 | 374 | 0.00397 | 0.01373 | 0.0755 | 479573 | 787 | 0.00164 | 0.00567 | 0.103 |  |  |  |  |  |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.05 | 115584 | 597 | 0.00514 | 0.01778 | 0.0845 | 97868 | 596 | 0.00605 | 0.02094 | 0.0778 | 479573 | 787 | 0.00164 | 0.00567 | 0.103 |  |  |  |  |  |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.001 | 60564 | 9 | 0.00015 | 0.00051 | 0.1589 | 57606 | 9 | 0.00016 | 0.00054 | 0.1377 | 348583 | 46 | 0.00013 | 0.00046 | 0.1448 |  |  |  |  |  |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.005 | 92330 | 46 | 0.0005 | 0.00172 | 0.0916 | 80527 | 45 | 0.00056 | 0.00193 | 0.0837 | 505263 | 262 | 0.00052 | 0.00179 | 0.0987 |  |  |  |  |  |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.01 | 98556 | 100 | 0.00101 | 0.00351 | 0.0826 | 84842 | 99 | 0.00117 | 0.00403 | 0.0757 | 549328 | 488 | 0.00089 | 0.00307 | 0.0923 |  |  |  |  |  |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.02 | 100973 | 133 | 0.00132 | 0.00455 | 0.0871 | 86765 | 132 | 0.00152 | 0.00526 | 0.0806 | 549328 | 488 | 0.00089 | 0.00307 | 0.0923 |  |  |  |  |  |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.05 | 102032 | 158 | 0.00155 | 0.00535 | 0.0847 | 87675 | 157 | 0.00179 | 0.00618 | 0.0783 | 549328 | 488 | 0.00089 | 0.00307 | 0.0923 |  |  |  |  |  |
-| MaxQuant, MBR off | MBR off; as reported | 48943 | 37 | 0.00076 | 0.00261 | 0.0345 | 40492 | 33 | 0.00081 | 0.00282 | 0.0352 | 186972 | 102 | 0.00055 | 0.00189 | 0.0325 |  |  |  |  |  |
-| MaxQuant, MBR on | MBR on; as reported | 48943 | 37 | 0.00076 | 0.00261 | 0.0403 | 40492 | 33 | 0.00081 | 0.00282 | 0.0402 | 240637 | 146 | 0.00061 | 0.0021 | 0.0351 | 60137 | 52 | 0.00086 | 0.00299 | 0.0182 |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.001 | 70744 | 14 | 0.0002 | 0.00068 | 0.1322 | 64573 | 13 | 0.0002 | 0.0007 | 0.1097 | 360638 | 75 | 0.00021 | 0.00072 | 0.1125 |  |  |  |  |  |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.005 | 94148 | 88 | 0.00093 | 0.00323 | 0.0852 | 81822 | 87 | 0.00106 | 0.00368 | 0.0756 | 447900 | 374 | 0.00083 | 0.00289 | 0.1014 |  |  |  |  |  |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.01 | 102291 | 183 | 0.00179 | 0.00618 | 0.0811 | 87948 | 182 | 0.00207 | 0.00715 | 0.0738 | 479476 | 772 | 0.00161 | 0.00556 | 0.0965 |  |  |  |  |  |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.02 | 109617 | 353 | 0.00321 | 0.01111 | 0.0776 | 93706 | 352 | 0.00374 | 0.01295 | 0.07 | 479476 | 772 | 0.00161 | 0.00556 | 0.0965 |  |  |  |  |  |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.05 | 115523 | 595 | 0.00512 | 0.01773 | 0.0787 | 97803 | 594 | 0.00604 | 0.02089 | 0.0714 | 479476 | 772 | 0.00161 | 0.00556 | 0.0965 |  |  |  |  |  |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.001 | 63374 | 9 | 0.00014 | 0.00049 | 0.1139 | 59846 | 9 | 0.00015 | 0.00052 | 0.0961 | 352230 | 40 | 0.00011 | 0.00039 | 0.1196 |  |  |  |  |  |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.005 | 92796 | 52 | 0.00056 | 0.00194 | 0.0792 | 80642 | 51 | 0.00063 | 0.00219 | 0.074 | 505425 | 244 | 0.00048 | 0.00167 | 0.0929 |  |  |  |  |  |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.01 | 97939 | 87 | 0.00089 | 0.00307 | 0.0871 | 84291 | 86 | 0.00102 | 0.00353 | 0.0807 | 549005 | 472 | 0.00086 | 0.00297 | 0.0869 |  |  |  |  |  |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.02 | 101044 | 127 | 0.00126 | 0.00434 | 0.0812 | 86824 | 126 | 0.00145 | 0.00501 | 0.0738 | 549005 | 472 | 0.00086 | 0.00297 | 0.0869 |  |  |  |  |  |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.05 | 101939 | 148 | 0.00145 | 0.00502 | 0.081 | 87611 | 147 | 0.00168 | 0.0058 | 0.0737 | 549005 | 472 | 0.00086 | 0.00297 | 0.0869 |  |  |  |  |  |
+| MaxQuant, MBR off | MBR off; as reported | 48882 | 39 | 0.0008 | 0.00276 | 0.0423 | 40399 | 35 | 0.00087 | 0.003 | 0.0436 | 186641 | 113 | 0.00061 | 0.00209 | 0.0427 |  |  |  |  |  |
+| MaxQuant, MBR on | MBR on; as reported | 48882 | 39 | 0.0008 | 0.00276 | 0.0423 | 40399 | 35 | 0.00087 | 0.003 | 0.0436 | 240498 | 157 | 0.00065 | 0.00226 | 0.0361 | 60319 | 54 | 0.00089 | 0.00309 | 0.018 |
 | FragPipe LFQ-MBR, MBR off | MBR off; as reported | 80897 | 60 | 0.00074 | 0.00256 | 0.0118 | 65494 | 57 | 0.00087 | 0.00301 | 0.0123 | 323262 | 144 | 0.00045 | 0.00154 | 0.0113 |  |  |  |  |  |
 | FragPipe LFQ-MBR, MBR on | MBR on; as reported | 80897 | 60 | 0.00074 | 0.00256 | 0.0118 | 65494 | 57 | 0.00087 | 0.00301 | 0.0123 | 401401 | 232 | 0.00058 | 0.002 | 0.0105 | 78139 | 88 | 0.00112 | 0.00389 | 0.0075 |
 
@@ -160,26 +160,26 @@ Area: proteomics · Scored against: entrapment hits (Arabidopsis proteins withou
 
 | Tool | Setting | n_target (protein) | n_entrapment (protein) | fdp_lower (protein) | fdp_combined (protein) | share_targets_lost (protein) |
 |---|---|---|---|---|---|---|
-| DIA-NN library-free, MBR off | MBR off; q <= 0.001 | 7925 | 6 | 0.00076 | 0.0024 | 0.0679 |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.005 | 8315 | 28 | 0.00336 | 0.01066 | 0.0655 |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.01 | 8521 | 37 | 0.00432 | 0.01373 | 0.0628 |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.02 | 8766 | 67 | 0.00759 | 0.02409 | 0.0664 |
-| DIA-NN library-free, MBR off | MBR off; q <= 0.05 | 9183 | 154 | 0.01649 | 0.05238 | 0.0728 |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.001 | 7275 | 1 | 0.00014 | 0.00044 | 0.0785 |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.005 | 7796 | 11 | 0.00141 | 0.00447 | 0.0771 |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.01 | 8026 | 22 | 0.00273 | 0.00868 | 0.0813 |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.02 | 8329 | 42 | 0.00502 | 0.01593 | 0.0783 |
-| DIA-NN library-free, MBR on | MBR on; q <= 0.05 | 8971 | 135 | 0.01483 | 0.04708 | 0.0728 |
-| MaxQuant, MBR off | MBR off; q <= 0.001 | 4909 | 3 | 0.00061 | 0.00194 | -0.0423 |
-| MaxQuant, MBR off | MBR off; q <= 0.005 | 5215 | 10 | 0.00191 | 0.00608 | 0.0146 |
-| MaxQuant, MBR off | MBR off; q <= 0.01 | 5458 | 23 | 0.0042 | 0.01333 | 0.0271 |
-| MaxQuant, MBR off | MBR off; q <= 0.02 | 5458 | 23 | 0.0042 | 0.01333 | 0.0271 |
-| MaxQuant, MBR off | MBR off; q <= 0.05 | 5458 | 23 | 0.0042 | 0.01333 | 0.0271 |
-| MaxQuant, MBR on | MBR on; q <= 0.001 | 4909 | 3 | 0.00061 | 0.00194 | -0.008 |
-| MaxQuant, MBR on | MBR on; q <= 0.005 | 5215 | 10 | 0.00191 | 0.00608 | 0.0175 |
-| MaxQuant, MBR on | MBR on; q <= 0.01 | 5458 | 23 | 0.0042 | 0.01333 | 0.0302 |
-| MaxQuant, MBR on | MBR on; q <= 0.02 | 5458 | 23 | 0.0042 | 0.01333 | 0.0302 |
-| MaxQuant, MBR on | MBR on; q <= 0.05 | 5458 | 23 | 0.0042 | 0.01333 | 0.0302 |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.001 | 7923 | 6 | 0.00076 | 0.0024 | 0.062 |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.005 | 8315 | 23 | 0.00276 | 0.00876 | 0.0559 |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.01 | 8532 | 40 | 0.00467 | 0.01482 | 0.0577 |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.02 | 8754 | 65 | 0.00737 | 0.02341 | 0.066 |
+| DIA-NN library-free, MBR off | MBR off; q <= 0.05 | 9162 | 152 | 0.01632 | 0.05183 | 0.064 |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.001 | 7279 | 2 | 0.00027 | 0.00087 | 0.0865 |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.005 | 7809 | 12 | 0.00153 | 0.00487 | 0.0785 |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.01 | 7985 | 16 | 0.002 | 0.00635 | 0.0884 |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.02 | 8338 | 47 | 0.00561 | 0.0178 | 0.0812 |
+| DIA-NN library-free, MBR on | MBR on; q <= 0.05 | 8878 | 127 | 0.0141 | 0.04479 | 0.0762 |
+| MaxQuant, MBR off | MBR off; q <= 0.001 | 4764 | 3 | 0.00063 | 0.002 | 0.0015 |
+| MaxQuant, MBR off | MBR off; q <= 0.005 | 5245 | 11 | 0.00209 | 0.00665 | 0.0148 |
+| MaxQuant, MBR off | MBR off; q <= 0.01 | 5454 | 24 | 0.00438 | 0.01391 | 0.0309 |
+| MaxQuant, MBR off | MBR off; q <= 0.02 | 5454 | 24 | 0.00438 | 0.01391 | 0.0309 |
+| MaxQuant, MBR off | MBR off; q <= 0.05 | 5454 | 24 | 0.00438 | 0.01391 | 0.0309 |
+| MaxQuant, MBR on | MBR on; q <= 0.001 | 4764 | 3 | 0.00063 | 0.002 | 0.0015 |
+| MaxQuant, MBR on | MBR on; q <= 0.005 | 5245 | 11 | 0.00209 | 0.00665 | 0.0148 |
+| MaxQuant, MBR on | MBR on; q <= 0.01 | 5454 | 24 | 0.00438 | 0.01391 | 0.0309 |
+| MaxQuant, MBR on | MBR on; q <= 0.02 | 5454 | 24 | 0.00438 | 0.01391 | 0.0309 |
+| MaxQuant, MBR on | MBR on; q <= 0.05 | 5454 | 24 | 0.00438 | 0.01391 | 0.0309 |
 | FragPipe LFQ-MBR, MBR off | MBR off; as reported | 7861 | 52 | 0.00657 | 0.02087 | 0.0096 |
 | FragPipe LFQ-MBR, MBR on | MBR on; as reported | 7861 | 52 | 0.00657 | 0.02087 | 0.0096 |
 
@@ -187,18 +187,18 @@ Area: proteomics · Scored against: entrapment hits (Arabidopsis proteins withou
 
 | Tool | Setting | n_target (precursor) | n_entrapment (precursor) | fdp_lower (precursor) | fdp_combined (precursor) | share_targets_lost (precursor) | n_target (peptide) | n_entrapment (peptide) | fdp_lower (peptide) | fdp_combined (peptide) | share_targets_lost (peptide) | n_target (precursor_run) | n_entrapment (precursor_run) | fdp_lower (precursor_run) | fdp_combined (precursor_run) | share_targets_lost (precursor_run) | n_target (precursor_run_mbr) | n_entrapment (precursor_run_mbr) | fdp_lower (precursor_run_mbr) | fdp_combined (precursor_run_mbr) | share_targets_lost (precursor_run_mbr) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.001 | 80123 | 46 | 0.00057 | 0.00112 | 0.0201 | 71969 | 46 | 0.00064 | 0.00125 | 0.0152 | 404217 | 146 | 0.00036 | 0.00071 | 0.0224 |  |  |  |  |  |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.005 | 100455 | 182 | 0.00181 | 0.00354 | 0.0349 | 86384 | 180 | 0.00208 | 0.00407 | 0.0361 | 485138 | 738 | 0.00152 | 0.00298 | 0.032 |  |  |  |  |  |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.01 | 107338 | 327 | 0.00304 | 0.00595 | 0.0403 | 91574 | 325 | 0.00354 | 0.00693 | 0.0407 | 511659 | 1493 | 0.00291 | 0.0057 | 0.043 |  |  |  |  |  |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.02 | 113890 | 700 | 0.00611 | 0.01197 | 0.0479 | 96588 | 698 | 0.00717 | 0.01406 | 0.0488 | 511659 | 1493 | 0.00291 | 0.0057 | 0.043 |  |  |  |  |  |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.05 | 119311 | 1148 | 0.00953 | 0.01867 | 0.055 | 100062 | 1146 | 0.01132 | 0.02218 | 0.0571 | 511659 | 1493 | 0.00291 | 0.0057 | 0.043 |  |  |  |  |  |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.001 | 63950 | 16 | 0.00025 | 0.00049 | 0.1119 | 60908 | 16 | 0.00026 | 0.00051 | 0.0882 | 400109 | 98 | 0.00024 | 0.00048 | 0.0184 |  |  |  |  |  |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.005 | 97971 | 106 | 0.00108 | 0.00212 | 0.0361 | 84802 | 105 | 0.00124 | 0.00242 | 0.0351 | 546476 | 478 | 0.00087 | 0.00171 | 0.0252 |  |  |  |  |  |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.01 | 104368 | 179 | 0.00171 | 0.00335 | 0.0285 | 89160 | 178 | 0.00199 | 0.0039 | 0.0287 | 588071 | 751 | 0.00128 | 0.0025 | 0.0283 |  |  |  |  |  |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.02 | 106123 | 203 | 0.00191 | 0.00374 | 0.0405 | 90492 | 202 | 0.00223 | 0.00436 | 0.0411 | 588071 | 751 | 0.00128 | 0.0025 | 0.0283 |  |  |  |  |  |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.05 | 107012 | 244 | 0.00227 | 0.00446 | 0.0401 | 91265 | 243 | 0.00266 | 0.0052 | 0.0405 | 588071 | 751 | 0.00128 | 0.0025 | 0.0283 |  |  |  |  |  |
-| MaxQuant, MBR off (shuffled entrapment) | MBR off; as reported | 47313 | 73 | 0.00154 | 0.00302 | 0.0667 | 38997 | 68 | 0.00174 | 0.00341 | 0.0708 | 180108 | 201 | 0.00111 | 0.00218 | 0.068 |  |  |  |  |  |
-| MaxQuant, MBR on (shuffled entrapment) | MBR on; as reported | 47313 | 73 | 0.00154 | 0.00302 | 0.0723 | 38997 | 68 | 0.00174 | 0.00341 | 0.0756 | 233656 | 282 | 0.00121 | 0.00236 | 0.0631 | 59810 | 89 | 0.00149 | 0.00291 | 0.0235 |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.001 | 79572 | 46 | 0.00058 | 0.00113 | 0.0239 | 71608 | 46 | 0.00064 | 0.00126 | 0.0127 | 406559 | 159 | 0.00039 | 0.00077 | -0.0006 |  |  |  |  |  |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.005 | 100262 | 185 | 0.00184 | 0.00361 | 0.0258 | 86337 | 184 | 0.00213 | 0.00417 | 0.0246 | 482847 | 747 | 0.00154 | 0.00303 | 0.0313 |  |  |  |  |  |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.01 | 107093 | 344 | 0.0032 | 0.00627 | 0.038 | 91348 | 342 | 0.00373 | 0.00731 | 0.038 | 508739 | 1513 | 0.00297 | 0.00581 | 0.0414 |  |  |  |  |  |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.02 | 113750 | 714 | 0.00624 | 0.01222 | 0.0428 | 96430 | 712 | 0.00733 | 0.01436 | 0.0429 | 508739 | 1513 | 0.00297 | 0.00581 | 0.0414 |  |  |  |  |  |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.05 | 118864 | 1163 | 0.00969 | 0.01898 | 0.0521 | 99648 | 1161 | 0.01152 | 0.02256 | 0.0539 | 508739 | 1513 | 0.00297 | 0.00581 | 0.0414 |  |  |  |  |  |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.001 | 68696 | 24 | 0.00035 | 0.00068 | 0.0395 | 65308 | 24 | 0.00037 | 0.00072 | 0.0135 | 405029 | 112 | 0.00028 | 0.00054 | -0.0123 |  |  |  |  |  |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.005 | 98386 | 112 | 0.00114 | 0.00223 | 0.0237 | 85353 | 111 | 0.0013 | 0.00254 | 0.02 | 548966 | 501 | 0.00091 | 0.00179 | 0.0147 |  |  |  |  |  |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.01 | 103987 | 170 | 0.00163 | 0.0032 | 0.0307 | 88782 | 169 | 0.0019 | 0.00372 | 0.0318 | 587753 | 784 | 0.00133 | 0.00261 | 0.0224 |  |  |  |  |  |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.02 | 106044 | 220 | 0.00207 | 0.00406 | 0.0357 | 90399 | 219 | 0.00242 | 0.00473 | 0.0357 | 587753 | 784 | 0.00133 | 0.00261 | 0.0224 |  |  |  |  |  |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.05 | 106755 | 257 | 0.0024 | 0.00471 | 0.0376 | 91019 | 256 | 0.0028 | 0.0055 | 0.0377 | 587753 | 784 | 0.00133 | 0.00261 | 0.0224 |  |  |  |  |  |
+| MaxQuant, MBR off (shuffled entrapment) | MBR off; as reported | 47212 | 78 | 0.00165 | 0.00323 | 0.075 | 38924 | 73 | 0.00187 | 0.00367 | 0.0785 | 179496 | 210 | 0.00117 | 0.00229 | 0.0793 |  |  |  |  |  |
+| MaxQuant, MBR on (shuffled entrapment) | MBR on; as reported | 47212 | 78 | 0.00165 | 0.00323 | 0.075 | 38924 | 73 | 0.00187 | 0.00367 | 0.0785 | 233293 | 296 | 0.00127 | 0.00248 | 0.065 | 60016 | 98 | 0.00163 | 0.00319 | 0.023 |
 | FragPipe LFQ-MBR, MBR off (shuffled entrapment) | MBR off; as reported | 79805 | 100 | 0.00125 | 0.00245 | 0.0251 | 64574 | 95 | 0.00147 | 0.00288 | 0.0262 | 318946 | 278 | 0.00087 | 0.00171 | 0.0245 |  |  |  |  |  |
 | FragPipe LFQ-MBR, MBR on (shuffled entrapment) | MBR on; as reported | 79805 | 100 | 0.00125 | 0.00245 | 0.0251 | 64574 | 95 | 0.00147 | 0.00288 | 0.0262 | 398572 | 388 | 0.00097 | 0.00191 | 0.0175 | 79626 | 110 | 0.00138 | 0.0027 | -0.0114 |
 
@@ -206,26 +206,26 @@ Area: proteomics · Scored against: entrapment hits (Arabidopsis proteins withou
 
 | Tool | Setting | n_target (protein) | n_entrapment (protein) | fdp_lower (protein) | fdp_combined (protein) | share_targets_lost (protein) |
 |---|---|---|---|---|---|---|
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.001 | 8032 | 9 | 0.00112 | 0.00225 | 0.0553 |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.005 | 8466 | 37 | 0.00435 | 0.00874 | 0.0486 |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.01 | 8743 | 66 | 0.00749 | 0.01504 | 0.0384 |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.02 | 8936 | 118 | 0.01303 | 0.02616 | 0.0482 |
-| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.05 | 9302 | 250 | 0.02617 | 0.05254 | 0.0608 |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.001 | 7461 | 4 | 0.00054 | 0.00108 | 0.055 |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.005 | 7907 | 18 | 0.00227 | 0.00456 | 0.0639 |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.01 | 8181 | 59 | 0.00716 | 0.01437 | 0.0635 |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.02 | 8455 | 89 | 0.01042 | 0.02091 | 0.0644 |
-| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.05 | 8974 | 197 | 0.02148 | 0.04312 | 0.0725 |
-| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.001 | 4859 | 10 | 0.00205 | 0.00412 | -0.0316 |
-| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.005 | 5142 | 31 | 0.00599 | 0.01203 | 0.0283 |
-| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.01 | 5341 | 48 | 0.00891 | 0.01788 | 0.048 |
-| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.02 | 5341 | 48 | 0.00891 | 0.01788 | 0.048 |
-| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.05 | 5341 | 48 | 0.00891 | 0.01788 | 0.048 |
-| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.001 | 4859 | 10 | 0.00205 | 0.00412 | 0.0023 |
-| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.005 | 5142 | 31 | 0.00599 | 0.01203 | 0.0313 |
-| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.01 | 5341 | 48 | 0.00891 | 0.01788 | 0.051 |
-| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.02 | 5341 | 48 | 0.00891 | 0.01788 | 0.051 |
-| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.05 | 5341 | 48 | 0.00891 | 0.01788 | 0.051 |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.001 | 8034 | 11 | 0.00137 | 0.00274 | 0.0489 |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.005 | 8454 | 38 | 0.00447 | 0.00898 | 0.0401 |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.01 | 8684 | 62 | 0.00709 | 0.01423 | 0.0409 |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.02 | 8955 | 129 | 0.0142 | 0.02851 | 0.0446 |
+| DIA-NN library-free, MBR off (shuffled entrapment) | MBR off; q <= 0.05 | 9315 | 249 | 0.02604 | 0.05226 | 0.0483 |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.001 | 7494 | 5 | 0.00067 | 0.00134 | 0.0595 |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.005 | 7953 | 17 | 0.00213 | 0.00428 | 0.0615 |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.01 | 8205 | 59 | 0.00714 | 0.01433 | 0.0632 |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.02 | 8509 | 100 | 0.01162 | 0.02332 | 0.0624 |
+| DIA-NN library-free, MBR on (shuffled entrapment) | MBR on; q <= 0.05 | 8952 | 201 | 0.02196 | 0.04408 | 0.0685 |
+| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.001 | 4862 | 9 | 0.00185 | 0.00371 | -0.0191 |
+| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.005 | 5130 | 32 | 0.0062 | 0.01244 | 0.0364 |
+| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.01 | 5346 | 47 | 0.00872 | 0.01749 | 0.0501 |
+| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.02 | 5346 | 47 | 0.00872 | 0.01749 | 0.0501 |
+| MaxQuant, MBR off (shuffled entrapment) | MBR off; q <= 0.05 | 5346 | 47 | 0.00872 | 0.01749 | 0.0501 |
+| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.001 | 4862 | 9 | 0.00185 | 0.00371 | -0.0191 |
+| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.005 | 5130 | 32 | 0.0062 | 0.01244 | 0.0364 |
+| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.01 | 5346 | 47 | 0.00872 | 0.01749 | 0.0501 |
+| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.02 | 5346 | 47 | 0.00872 | 0.01749 | 0.0501 |
+| MaxQuant, MBR on (shuffled entrapment) | MBR on; q <= 0.05 | 5346 | 47 | 0.00872 | 0.01749 | 0.0501 |
 | FragPipe LFQ-MBR, MBR off (shuffled entrapment) | MBR off; as reported | 7699 | 86 | 0.01105 | 0.02218 | 0.03 |
 | FragPipe LFQ-MBR, MBR on (shuffled entrapment) | MBR on; as reported | 7699 | 86 | 0.01105 | 0.02218 | 0.03 |
 

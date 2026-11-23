@@ -2,6 +2,8 @@
 
 Post: [Proteomics CV: what replicate CVs look like in MaxQuant, FragPipe and DIA-NN](https://sbmlab.com/blog/proteomics-cv-replicates-maxquant-fragpipe-diann-measured-2026)
 
+**2026-11-23: re-run on verified raw files.** The downloader had written ~200-byte server error messages into some raw files (one spot each in Orbitrap A_Alpha_01 and A_Gamma_01; 14 spots in 5 of the 6 SWATH `.wiff.scan` files). Clean copies were downloaded, all three engines were re-run with the same settings, and every output here was regenerated. FragPipe came out identical. Median CV, all proteins: MaxQuant LFQ 8.1% → 8.0%, MaxQuant raw Intensity 20.9% → 21.0%, DIA-NN unchanged at 4.5% (proteins 8,983 → 8,939, protein-condition CVs 16,402 → 16,292).
+
 Data: PRIDE PXD028735 (Van Puyvelde et al. 2022), conditions A and B, preparations Alpha/Beta/Gamma, injection 01 each.
 Engine outputs are the ones from the `maxquant-hye`, `fragpipe-hye` and `diann-hye` folders (MBR on). Input paths at the top of `cv_hye.R` point to the local result files; change them to yours.
 
