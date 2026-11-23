@@ -49,7 +49,7 @@ for j, s in enumerate(SP):
 bp = axs[2].boxplot(data, positions=pos, widths=0.7, showfliers=False, patch_artist=True, medianprops={"color": "k", "lw": 0.8})
 for p, c in zip(bp["boxes"], cols): p.set_facecolor(c); p.set_alpha(0.8)
 axs[2].set_xticks([1, 5, 9], [f"{SPL[s]}\n(n={int((common['species'] == s).sum())})" for s in SP])
-axs[2].set_ylabel("log2(B/A)"); axs[2].set_title("The 3,866 proteins all three quantified\n(dashed line = true ratio)")
+axs[2].set_ylabel("log2(B/A)"); axs[2].set_title(f"The {len(common):,} proteins all three quantified\n(dashed line = true ratio)")
 mins = {"MaxQuant": 61.6, "FragPipe": 9.3 + 4.0, "DIA-NN": 377 + 11}
 axs[3].barh(ENG, [mins[e] for e in ENG], color=[COL[e] for e in ENG], hatch=[HATCH.get(e, "") for e in ENG], edgecolor="white"); axs[3].set_xlim(0, 450)
 axs[3].set_xlabel("wall time, minutes"); axs[3].set_title("Run time (6 runs)")

@@ -1,134 +1,134 @@
-random 1 {'seed': 1, 's400_genome': {'edges': 381, 'expected': 313, 'p': 0.0001}, 's400_bg': {'edges': 381, 'expected': 366, 'p': 0.221}, 's700_genome': {'edges': 106, 'expected': 96, 'p': 0.1745}, 's700_bg': {'edges': 106, 'expected': 103, 'p': 0.3903}} None None
-random 2 {'seed': 2, 's400_genome': {'edges': 549, 'expected': 406, 'p': 1.01e-11}, 's400_bg': {'edges': 549, 'expected': 547, 'p': 0.4752}, 's700_genome': {'edges': 179, 'expected': 133, 'p': 9.93e-05}, 's700_bg': {'edges': 179, 'expected': 183, 'p': 0.6339}} None None
-random 3 {'seed': 3, 's400_genome': {'edges': 580, 'expected': 450, 'p': 2.37e-09}, 's400_bg': {'edges': 580, 'expected': 589, 'p': 0.6474}, 's700_genome': {'edges': 193, 'expected': 151, 'p': 0.00057}, 's700_bg': {'edges': 193, 'expected': 196, 'p': 0.602}} None None
-random 4 {'seed': 4, 's400_genome': {'edges': 538, 'expected': 415, 'p': 4.77e-09}, 's400_bg': {'edges': 538, 'expected': 532, 'p': 0.4081}, 's700_genome': {'edges': 182, 'expected': 147, 'p': 0.0029}, 's700_bg': {'edges': 182, 'expected': 189, 'p': 0.7097}} None None
-random 5 {'seed': 5, 's400_genome': {'edges': 550, 'expected': 393, 'p': 4.3e-14}, 's400_bg': {'edges': 550, 'expected': 561, 'p': 0.6812}, 's700_genome': {'edges': 137, 'expected': 94, 'p': 1.58e-05}, 's700_bg': {'edges': 137, 'expected': 132, 'p': 0.3411}} None None
-random 6 {'seed': 6, 's400_genome': {'edges': 556, 'expected': 455, 'p': 2.39e-06}, 's400_bg': {'edges': 556, 'expected': 558, 'p': 0.5458}, 's700_genome': {'edges': 153, 'expected': 118, 'p': 0.0012}, 's700_bg': {'edges': 153, 'expected': 155, 'p': 0.5762}} None None
-random 7 {'seed': 7, 's400_genome': {'edges': 323, 'expected': 261, 'p': 0.00013}, 's400_bg': {'edges': 323, 'expected': 336, 'p': 0.7661}, 's700_genome': {'edges': 100, 'expected': 84, 'p': 0.0499}, 's700_bg': {'edges': 100, 'expected': 111, 'p': 0.8724}} None None
-random 8 {'seed': 8, 's400_genome': {'edges': 433, 'expected': 314, 'p': 1.36e-10}, 's400_bg': {'edges': 433, 'expected': 418, 'p': 0.2358}, 's700_genome': {'edges': 153, 'expected': 102, 'p': 1.95e-06}, 's700_bg': {'edges': 153, 'expected': 143, 'p': 0.2224}} None None
-random 9 {'seed': 9, 's400_genome': {'edges': 495, 'expected': 399, 'p': 1.76e-06}, 's400_bg': {'edges': 495, 'expected': 496, 'p': 0.5153}, 's700_genome': {'edges': 148, 'expected': 118, 'p': 0.0042}, 's700_bg': {'edges': 148, 'expected': 144, 'p': 0.3682}} None None
-random 10 {'seed': 10, 's400_genome': {'edges': 451, 'expected': 321, 'p': 4.52e-12}, 's400_bg': {'edges': 451, 'expected': 447, 'p': 0.4329}, 's700_genome': {'edges': 93, 'expected': 81, 'p': 0.1093}, 's700_bg': {'edges': 93, 'expected': 104, 'p': 0.8765}} None None
-random 11 {'seed': 11, 's400_genome': {'edges': 464, 'expected': 349, 'p': 2.39e-09}, 's400_bg': {'edges': 464, 'expected': 440, 'p': 0.1326}, 's700_genome': {'edges': 116, 'expected': 96, 'p': 0.028}, 's700_bg': {'edges': 116, 'expected': 116, 'p': 0.5124}} None None
-random 12 {'seed': 12, 's400_genome': {'edges': 427, 'expected': 368, 'p': 0.0014}, 's400_bg': {'edges': 427, 'expected': 424, 'p': 0.4453}, 's700_genome': {'edges': 126, 'expected': 122, 'p': 0.3613}, 's700_bg': {'edges': 126, 'expected': 144, 'p': 0.9452}} None None
-random 13 {'seed': 13, 's400_genome': {'edges': 430, 'expected': 327, 'p': 2.84e-08}, 's400_bg': {'edges': 430, 'expected': 431, 'p': 0.5352}, 's700_genome': {'edges': 138, 'expected': 100, 'p': 0.00017}, 's700_bg': {'edges': 138, 'expected': 131, 'p': 0.2862}} None None
-random 14 {'seed': 14, 's400_genome': {'edges': 490, 'expected': 383, 'p': 9.98e-08}, 's400_bg': {'edges': 490, 'expected': 497, 'p': 0.6218}, 's700_genome': {'edges': 148, 'expected': 118, 'p': 0.0047}, 's700_bg': {'edges': 148, 'expected': 153, 'p': 0.6551}} None None
-random 15 {'seed': 15, 's400_genome': {'edges': 467, 'expected': 333, 'p': 2.23e-12}, 's400_bg': {'edges': 467, 'expected': 449, 'p': 0.209}, 's700_genome': {'edges': 170, 'expected': 108, 'p': 2.67e-08}, 's700_bg': {'edges': 170, 'expected': 151, 'p': 0.0665}} None None
-random 16 {'seed': 16, 's400_genome': {'edges': 603, 'expected': 471, 'p': 2.89e-09}, 's400_bg': {'edges': 603, 'expected': 584, 'p': 0.2153}, 's700_genome': {'edges': 176, 'expected': 135, 'p': 0.00041}, 's700_bg': {'edges': 176, 'expected': 161, 'p': 0.1355}} None None
-random 17 {'seed': 17, 's400_genome': {'edges': 483, 'expected': 379, 'p': 1.65e-07}, 's400_bg': {'edges': 483, 'expected': 491, 'p': 0.6481}, 's700_genome': {'edges': 169, 'expected': 130, 'p': 0.00063}, 's700_bg': {'edges': 169, 'expected': 168, 'p': 0.4765}} None None
-random 18 {'seed': 18, 's400_genome': {'edges': 458, 'expected': 352, 'p': 3.63e-08}, 's400_bg': {'edges': 458, 'expected': 470, 'p': 0.7227}, 's700_genome': {'edges': 114, 'expected': 92, 'p': 0.0153}, 's700_bg': {'edges': 114, 'expected': 127, 'p': 0.8785}} None None
-random 19 {'seed': 19, 's400_genome': {'edges': 571, 'expected': 391, 'p': 9.02e-18}, 's400_bg': {'edges': 571, 'expected': 548, 'p': 0.1677}, 's700_genome': {'edges': 183, 'expected': 128, 'p': 3.52e-06}, 's700_bg': {'edges': 183, 'expected': 177, 'p': 0.3349}} None None
-random 20 {'seed': 20, 's400_genome': {'edges': 416, 'expected': 326, 'p': 9.26e-07}, 's400_bg': {'edges': 416, 'expected': 414, 'p': 0.4665}, 's700_genome': {'edges': 136, 'expected': 91, 'p': 6.87e-06}, 's700_bg': {'edges': 136, 'expected': 121, 'p': 0.0912}} None None
-planted 1 {'seed': 1, 's400_genome': {'edges': 522, 'expected': 332, 'p': 4.98e-22}, 's400_bg': {'edges': 522, 'expected': 409, 'p': 4.31e-08}, 's700_genome': {'edges': 205, 'expected': 101, 'p': 1.07e-19}, 's700_bg': {'edges': 205, 'expected': 121, 'p': 2.61e-12}} 4 9
-planted 2 {'seed': 2, 's400_genome': {'edges': 416, 'expected': 271, 'p': 2.07e-16}, 's400_bg': {'edges': 416, 'expected': 324, 'p': 5.43e-07}, 's700_genome': {'edges': 186, 'expected': 92, 'p': 3.67e-18}, 's700_bg': {'edges': 186, 'expected': 110, 'p': 2.22e-11}} 7 10
-planted 3 {'seed': 3, 's400_genome': {'edges': 487, 'expected': 307, 'p': 1.99e-21}, 's400_bg': {'edges': 487, 'expected': 376, 'p': 2.56e-08}, 's700_genome': {'edges': 218, 'expected': 107, 'p': 2.17e-21}, 's700_bg': {'edges': 218, 'expected': 126, 'p': 8.4e-14}} 4 8
-planted 4 {'seed': 4, 's400_genome': {'edges': 571, 'expected': 369, 'p': 1.24e-22}, 's400_bg': {'edges': 571, 'expected': 491, 'p': 0.00021}, 's700_genome': {'edges': 211, 'expected': 106, 'p': 2.41e-19}, 's700_bg': {'edges': 211, 'expected': 138, 'p': 4.96e-09}} 1 8
-planted 5 {'seed': 5, 's400_genome': {'edges': 503, 'expected': 296, 'p': 5.72e-28}, 's400_bg': {'edges': 503, 'expected': 380, 'p': 1.2e-09}, 's700_genome': {'edges': 187, 'expected': 89, 'p': 1.73e-19}, 's700_bg': {'edges': 187, 'expected': 122, 'p': 2.27e-08}} 6 8
-planted 6 {'seed': 6, 's400_genome': {'edges': 475, 'expected': 295, 'p': 2.99e-22}, 's400_bg': {'edges': 475, 'expected': 379, 'p': 1.1e-06}, 's700_genome': {'edges': 196, 'expected': 97, 'p': 5.73e-19}, 's700_bg': {'edges': 196, 'expected': 125, 'p': 3.38e-09}} 5 9
-planted 7 {'seed': 7, 's400_genome': {'edges': 468, 'expected': 327, 'p': 1.55e-13}, 's400_bg': {'edges': 468, 'expected': 406, 'p': 0.0015}, 's700_genome': {'edges': 195, 'expected': 105, 'p': 2.34e-15}, 's700_bg': {'edges': 195, 'expected': 125, 'p': 3.71e-09}} 5 9
-planted 8 {'seed': 8, 's400_genome': {'edges': 504, 'expected': 303, 'p': 4.94e-26}, 's400_bg': {'edges': 504, 'expected': 401, 'p': 3.99e-07}, 's700_genome': {'edges': 209, 'expected': 94, 'p': 2.09e-24}, 's700_bg': {'edges': 209, 'expected': 125, 'p': 6.24e-12}} 2 8
-planted 9 {'seed': 9, 's400_genome': {'edges': 578, 'expected': 347, 'p': 5.14e-30}, 's400_bg': {'edges': 578, 'expected': 460, 'p': 7.57e-08}, 's700_genome': {'edges': 246, 'expected': 118, 'p': 7.63e-25}, 's700_bg': {'edges': 246, 'expected': 156, 'p': 1.68e-11}} 1 8
-planted 10 {'seed': 10, 's400_genome': {'edges': 515, 'expected': 354, 'p': 5.79e-16}, 's400_bg': {'edges': 515, 'expected': 442, 'p': 0.00035}, 's700_genome': {'edges': 199, 'expected': 117, 'p': 3.71e-12}, 's700_bg': {'edges': 199, 'expected': 140, 'p': 1.58e-06}} 5 10
-planted 11 {'seed': 11, 's400_genome': {'edges': 633, 'expected': 398, 'p': 1.36e-27}, 's400_bg': {'edges': 633, 'expected': 507, 'p': 4.18e-08}, 's700_genome': {'edges': 256, 'expected': 124, 'p': 3.74e-25}, 's700_bg': {'edges': 256, 'expected': 160, 'p': 2.11e-12}} 0 8
-planted 12 {'seed': 12, 's400_genome': {'edges': 470, 'expected': 308, 'p': 7.47e-18}, 's400_bg': {'edges': 470, 'expected': 413, 'p': 0.003}, 's700_genome': {'edges': 188, 'expected': 95, 'p': 2.35e-17}, 's700_bg': {'edges': 188, 'expected': 124, 'p': 6.64e-08}} 3 10
-planted 13 {'seed': 13, 's400_genome': {'edges': 422, 'expected': 248, 'p': 8.52e-24}, 's400_bg': {'edges': 422, 'expected': 328, 'p': 3.82e-07}, 's700_genome': {'edges': 163, 'expected': 71, 'p': 1.12e-20}, 's700_bg': {'edges': 163, 'expected': 92, 'p': 1.18e-11}} 6 10
-planted 14 {'seed': 14, 's400_genome': {'edges': 429, 'expected': 281, 'p': 1.41e-16}, 's400_bg': {'edges': 429, 'expected': 331, 'p': 1.31e-07}, 's700_genome': {'edges': 184, 'expected': 91, 'p': 1.03e-17}, 's700_bg': {'edges': 184, 'expected': 101, 'p': 7.21e-14}} 4 8
-planted 15 {'seed': 15, 's400_genome': {'edges': 413, 'expected': 259, 'p': 6.68e-19}, 's400_bg': {'edges': 413, 'expected': 316, 'p': 1.01e-07}, 's700_genome': {'edges': 181, 'expected': 82, 'p': 5.18e-21}, 's700_bg': {'edges': 181, 'expected': 103, 'p': 2.43e-12}} 7 10
-planted 16 {'seed': 16, 's400_genome': {'edges': 519, 'expected': 338, 'p': 5.04e-20}, 's400_bg': {'edges': 519, 'expected': 430, 'p': 1.59e-05}, 's700_genome': {'edges': 215, 'expected': 110, 'p': 8.2e-19}, 's700_bg': {'edges': 215, 'expected': 140, 'p': 2.47e-09}} 6 8
-planted 17 {'seed': 17, 's400_genome': {'edges': 515, 'expected': 332, 'p': 1.04e-20}, 's400_bg': {'edges': 515, 'expected': 431, 'p': 4.18e-05}, 's700_genome': {'edges': 219, 'expected': 98, 'p': 1.06e-25}, 's700_bg': {'edges': 219, 'expected': 123, 'p': 2.97e-15}} 4 9
-planted 18 {'seed': 18, 's400_genome': {'edges': 560, 'expected': 341, 'p': 1.25e-27}, 's400_bg': {'edges': 560, 'expected': 453, 'p': 6.81e-07}, 's700_genome': {'edges': 224, 'expected': 111, 'p': 2.7e-21}, 's700_bg': {'edges': 224, 'expected': 145, 'p': 9.53e-10}} 2 9
-planted 19 {'seed': 19, 's400_genome': {'edges': 476, 'expected': 298, 'p': 1.44e-21}, 's400_bg': {'edges': 476, 'expected': 367, 'p': 3.41e-08}, 's700_genome': {'edges': 220, 'expected': 107, 'p': 5.72e-22}, 's700_bg': {'edges': 220, 'expected': 140, 'p': 3.05e-10}} 4 9
-planted 20 {'seed': 20, 's400_genome': {'edges': 465, 'expected': 287, 'p': 2.72e-22}, 's400_bg': {'edges': 465, 'expected': 338, 'p': 3.89e-11}, 's700_genome': {'edges': 189, 'expected': 89, 'p': 2.04e-20}, 's700_bg': {'edges': 189, 'expected': 105, 'p': 9.29e-14}} 7 10
+random 1 {'seed': 1, 's400_genome': {'edges': 352, 'expected': 290, 'p': 0.00023}, 's400_bg': {'edges': 352, 'expected': 350, 'p': 0.456}, 's700_genome': {'edges': 107, 'expected': 82, 'p': 0.0052}, 's700_bg': {'edges': 107, 'expected': 99, 'p': 0.2131}} None None
+random 2 {'seed': 2, 's400_genome': {'edges': 349, 'expected': 263, 'p': 2.43e-07}, 's400_bg': {'edges': 349, 'expected': 327, 'p': 0.1129}, 's700_genome': {'edges': 109, 'expected': 78, 'p': 0.00057}, 's700_bg': {'edges': 109, 'expected': 94, 'p': 0.0711}} None None
+random 3 {'seed': 3, 's400_genome': {'edges': 436, 'expected': 326, 'p': 3.81e-09}, 's400_bg': {'edges': 436, 'expected': 422, 'p': 0.2529}, 's700_genome': {'edges': 134, 'expected': 111, 'p': 0.018}, 's700_bg': {'edges': 134, 'expected': 140, 'p': 0.7123}} None None
+random 4 {'seed': 4, 's400_genome': {'edges': 374, 'expected': 290, 'p': 1.42e-06}, 's400_bg': {'edges': 374, 'expected': 373, 'p': 0.4926}, 's700_genome': {'edges': 99, 'expected': 84, 'p': 0.0559}, 's700_bg': {'edges': 99, 'expected': 107, 'p': 0.7873}} None None
+random 5 {'seed': 5, 's400_genome': {'edges': 476, 'expected': 373, 'p': 1.71e-07}, 's400_bg': {'edges': 476, 'expected': 478, 'p': 0.549}, 's700_genome': {'edges': 149, 'expected': 123, 'p': 0.0132}, 's700_bg': {'edges': 149, 'expected': 155, 'p': 0.6898}} None None
+random 6 {'seed': 6, 's400_genome': {'edges': 493, 'expected': 370, 'p': 7.14e-10}, 's400_bg': {'edges': 493, 'expected': 485, 'p': 0.3571}, 's700_genome': {'edges': 148, 'expected': 128, 'p': 0.0454}, 's700_bg': {'edges': 148, 'expected': 167, 'p': 0.9345}} None None
+random 7 {'seed': 7, 's400_genome': {'edges': 534, 'expected': 443, 'p': 1.52e-05}, 's400_bg': {'edges': 534, 'expected': 526, 'p': 0.3681}, 's700_genome': {'edges': 154, 'expected': 119, 'p': 0.0013}, 's700_bg': {'edges': 154, 'expected': 149, 'p': 0.3527}} None None
+random 8 {'seed': 8, 's400_genome': {'edges': 453, 'expected': 363, 'p': 3.22e-06}, 's400_bg': {'edges': 453, 'expected': 464, 'p': 0.7007}, 's700_genome': {'edges': 122, 'expected': 114, 'p': 0.2523}, 's700_bg': {'edges': 122, 'expected': 146, 'p': 0.9824}} None None
+random 9 {'seed': 9, 's400_genome': {'edges': 360, 'expected': 271, 'p': 1.72e-07}, 's400_bg': {'edges': 360, 'expected': 358, 'p': 0.4563}, 's700_genome': {'edges': 100, 'expected': 73, 'p': 0.0015}, 's700_bg': {'edges': 100, 'expected': 92, 'p': 0.2011}} None None
+random 10 {'seed': 10, 's400_genome': {'edges': 585, 'expected': 432, 'p': 1.47e-12}, 's400_bg': {'edges': 585, 'expected': 555, 'p': 0.1026}, 's700_genome': {'edges': 193, 'expected': 144, 'p': 5.77e-05}, 's700_bg': {'edges': 193, 'expected': 189, 'p': 0.4026}} None None
+random 11 {'seed': 11, 's400_genome': {'edges': 475, 'expected': 355, 'p': 6.67e-10}, 's400_bg': {'edges': 475, 'expected': 500, 'p': 0.8759}, 's700_genome': {'edges': 149, 'expected': 106, 'p': 5.27e-05}, 's700_bg': {'edges': 149, 'expected': 153, 'p': 0.6298}} None None
+random 12 {'seed': 12, 's400_genome': {'edges': 411, 'expected': 318, 'p': 2.99e-07}, 's400_bg': {'edges': 411, 'expected': 395, 'p': 0.2184}, 's700_genome': {'edges': 124, 'expected': 111, 'p': 0.1264}, 's700_bg': {'edges': 124, 'expected': 138, 'p': 0.894}} None None
+random 13 {'seed': 13, 's400_genome': {'edges': 437, 'expected': 325, 'p': 1.87e-09}, 's400_bg': {'edges': 437, 'expected': 414, 'p': 0.1387}, 's700_genome': {'edges': 105, 'expected': 88, 'p': 0.043}, 's700_bg': {'edges': 105, 'expected': 112, 'p': 0.7504}} None None
+random 14 {'seed': 14, 's400_genome': {'edges': 481, 'expected': 394, 'p': 1.36e-05}, 's400_bg': {'edges': 481, 'expected': 487, 'p': 0.612}, 's700_genome': {'edges': 139, 'expected': 107, 'p': 0.0019}, 's700_bg': {'edges': 139, 'expected': 139, 'p': 0.5083}} None None
+random 15 {'seed': 15, 's400_genome': {'edges': 573, 'expected': 418, 'p': 4.49e-13}, 's400_bg': {'edges': 573, 'expected': 553, 'p': 0.2027}, 's700_genome': {'edges': 178, 'expected': 139, 'p': 0.00084}, 's700_bg': {'edges': 178, 'expected': 188, 'p': 0.7865}} None None
+random 16 {'seed': 16, 's400_genome': {'edges': 345, 'expected': 293, 'p': 0.0018}, 's400_bg': {'edges': 345, 'expected': 340, 'p': 0.4003}, 's700_genome': {'edges': 99, 'expected': 88, 'p': 0.1328}, 's700_bg': {'edges': 99, 'expected': 105, 'p': 0.7309}} None None
+random 17 {'seed': 17, 's400_genome': {'edges': 449, 'expected': 360, 'p': 3.74e-06}, 's400_bg': {'edges': 449, 'expected': 453, 'p': 0.5723}, 's700_genome': {'edges': 165, 'expected': 124, 'p': 0.00027}, 's700_bg': {'edges': 165, 'expected': 163, 'p': 0.4433}} None None
+random 18 {'seed': 18, 's400_genome': {'edges': 545, 'expected': 396, 'p': 7.15e-13}, 's400_bg': {'edges': 545, 'expected': 531, 'p': 0.282}, 's700_genome': {'edges': 163, 'expected': 130, 'p': 0.003}, 's700_bg': {'edges': 163, 'expected': 173, 'p': 0.7936}} None None
+random 19 {'seed': 19, 's400_genome': {'edges': 402, 'expected': 344, 'p': 0.0011}, 's400_bg': {'edges': 402, 'expected': 403, 'p': 0.519}, 's700_genome': {'edges': 115, 'expected': 89, 'p': 0.0054}, 's700_bg': {'edges': 115, 'expected': 110, 'p': 0.344}} None None
+random 20 {'seed': 20, 's400_genome': {'edges': 406, 'expected': 308, 'p': 6.63e-08}, 's400_bg': {'edges': 406, 'expected': 399, 'p': 0.3679}, 's700_genome': {'edges': 122, 'expected': 87, 'p': 0.00019}, 's700_bg': {'edges': 122, 'expected': 112, 'p': 0.1746}} None None
+planted 1 {'seed': 1, 's400_genome': {'edges': 439, 'expected': 313, 'p': 1.17e-11}, 's400_bg': {'edges': 439, 'expected': 348, 'p': 1.58e-06}, 's700_genome': {'edges': 182, 'expected': 96, 'p': 5.42e-15}, 's700_bg': {'edges': 182, 'expected': 107, 'p': 3.19e-11}} 9 10
+planted 2 {'seed': 2, 's400_genome': {'edges': 521, 'expected': 333, 'p': 9.61e-22}, 's400_bg': {'edges': 521, 'expected': 421, 'p': 1.53e-06}, 's700_genome': {'edges': 184, 'expected': 95, 'p': 4.45e-16}, 's700_bg': {'edges': 184, 'expected': 118, 'p': 1.07e-08}} 1 9
+planted 3 {'seed': 3, 's400_genome': {'edges': 456, 'expected': 291, 'p': 3.17e-19}, 's400_bg': {'edges': 456, 'expected': 372, 'p': 1.29e-05}, 's700_genome': {'edges': 187, 'expected': 91, 'p': 1.09e-18}, 's700_bg': {'edges': 187, 'expected': 114, 'p': 2.34e-10}} 7 10
+planted 4 {'seed': 4, 's400_genome': {'edges': 490, 'expected': 305, 'p': 1.54e-22}, 's400_bg': {'edges': 490, 'expected': 400, 'p': 6.8e-06}, 's700_genome': {'edges': 197, 'expected': 94, 'p': 1.27e-20}, 's700_bg': {'edges': 197, 'expected': 120, 'p': 9.29e-11}} 4 9
+planted 5 {'seed': 5, 's400_genome': {'edges': 477, 'expected': 289, 'p': 2.43e-24}, 's400_bg': {'edges': 477, 'expected': 353, 'p': 2.27e-10}, 's700_genome': {'edges': 197, 'expected': 88, 'p': 2.04e-23}, 's700_bg': {'edges': 197, 'expected': 104, 'p': 2.73e-16}} 5 10
+planted 6 {'seed': 6, 's400_genome': {'edges': 504, 'expected': 319, 'p': 1.01e-21}, 's400_bg': {'edges': 504, 'expected': 404, 'p': 1.02e-06}, 's700_genome': {'edges': 190, 'expected': 99, 'p': 4.67e-16}, 's700_bg': {'edges': 190, 'expected': 122, 'p': 6.7e-09}} 4 9
+planted 7 {'seed': 7, 's400_genome': {'edges': 548, 'expected': 377, 'p': 8.47e-17}, 's400_bg': {'edges': 548, 'expected': 472, 'p': 0.00034}, 's700_genome': {'edges': 233, 'expected': 116, 'p': 7.13e-22}, 's700_bg': {'edges': 233, 'expected': 146, 'p': 1.71e-11}} 3 8
+planted 8 {'seed': 8, 's400_genome': {'edges': 578, 'expected': 347, 'p': 9.84e-30}, 's400_bg': {'edges': 578, 'expected': 448, 'p': 2.29e-09}, 's700_genome': {'edges': 243, 'expected': 125, 'p': 7.27e-21}, 's700_bg': {'edges': 243, 'expected': 161, 'p': 1.22e-09}} 1 7
+planted 9 {'seed': 9, 's400_genome': {'edges': 546, 'expected': 368, 'p': 3.36e-18}, 's400_bg': {'edges': 546, 'expected': 443, 'p': 1.35e-06}, 's700_genome': {'edges': 220, 'expected': 109, 'p': 4.12e-21}, 's700_bg': {'edges': 220, 'expected': 128, 'p': 9.61e-14}} 2 10
+planted 10 {'seed': 10, 's400_genome': {'edges': 500, 'expected': 326, 'p': 3.14e-19}, 's400_bg': {'edges': 500, 'expected': 420, 'p': 7.86e-05}, 's700_genome': {'edges': 177, 'expected': 93, 'p': 4.15e-15}, 's700_bg': {'edges': 177, 'expected': 116, 'p': 7.98e-08}} 4 10
+planted 11 {'seed': 11, 's400_genome': {'edges': 636, 'expected': 401, 'p': 2.08e-27}, 's400_bg': {'edges': 636, 'expected': 520, 'p': 5.36e-07}, 's700_genome': {'edges': 240, 'expected': 119, 'p': 1.97e-22}, 's700_bg': {'edges': 240, 'expected': 164, 'p': 1.45e-08}} 0 9
+planted 12 {'seed': 12, 's400_genome': {'edges': 476, 'expected': 319, 'p': 1.41e-16}, 's400_bg': {'edges': 476, 'expected': 380, 'p': 1.26e-06}, 's700_genome': {'edges': 209, 'expected': 122, 'p': 6.46e-13}, 's700_bg': {'edges': 209, 'expected': 142, 'p': 8.33e-08}} 6 8
+planted 13 {'seed': 13, 's400_genome': {'edges': 667, 'expected': 469, 'p': 5.09e-18}, 's400_bg': {'edges': 667, 'expected': 586, 'p': 0.00058}, 's700_genome': {'edges': 246, 'expected': 155, 'p': 1.02e-11}, 's700_bg': {'edges': 246, 'expected': 184, 'p': 8.95e-06}} 0 8
+planted 14 {'seed': 14, 's400_genome': {'edges': 365, 'expected': 263, 'p': 1.58e-09}, 's400_bg': {'edges': 365, 'expected': 313, 'p': 0.0022}, 's700_genome': {'edges': 146, 'expected': 76, 'p': 5.78e-13}, 's700_bg': {'edges': 146, 'expected': 86, 'p': 2.02e-09}} 8 10
+planted 15 {'seed': 15, 's400_genome': {'edges': 557, 'expected': 356, 'p': 4.41e-23}, 's400_bg': {'edges': 557, 'expected': 485, 'p': 0.00074}, 's700_genome': {'edges': 213, 'expected': 125, 'p': 5.2e-13}, 's700_bg': {'edges': 213, 'expected': 165, 'p': 0.00017}} 1 9
+planted 16 {'seed': 16, 's400_genome': {'edges': 474, 'expected': 299, 'p': 5.53e-21}, 's400_bg': {'edges': 474, 'expected': 322, 'p': 1.24e-15}, 's700_genome': {'edges': 186, 'expected': 85, 'p': 2.03e-21}, 's700_bg': {'edges': 186, 'expected': 96, 'p': 2.08e-16}} 6 10
+planted 17 {'seed': 17, 's400_genome': {'edges': 576, 'expected': 360, 'p': 7.77e-26}, 's400_bg': {'edges': 576, 'expected': 446, 'p': 2.06e-09}, 's700_genome': {'edges': 226, 'expected': 120, 'p': 3.55e-18}, 's700_bg': {'edges': 226, 'expected': 150, 'p': 3.91e-09}} 4 9
+planted 18 {'seed': 18, 's400_genome': {'edges': 410, 'expected': 245, 'p': 6.02e-22}, 's400_bg': {'edges': 410, 'expected': 298, 'p': 4.39e-10}, 's700_genome': {'edges': 168, 'expected': 75, 'p': 2e-20}, 's700_bg': {'edges': 168, 'expected': 90, 'p': 2.15e-13}} 9 9
+planted 19 {'seed': 19, 's400_genome': {'edges': 552, 'expected': 351, 'p': 2.46e-23}, 's400_bg': {'edges': 552, 'expected': 448, 'p': 1.2e-06}, 's700_genome': {'edges': 190, 'expected': 107, 'p': 3.6e-13}, 's700_bg': {'edges': 190, 'expected': 133, 'p': 1.76e-06}} 6 9
+planted 20 {'seed': 20, 's400_genome': {'edges': 439, 'expected': 307, 'p': 9.92e-13}, 's400_bg': {'edges': 439, 'expected': 362, 'p': 4.8e-05}, 's700_genome': {'edges': 177, 'expected': 88, 'p': 6.68e-17}, 's700_bg': {'edges': 177, 'expected': 105, 'p': 9.79e-11}} 8 10
 {
  "random": {
   "s400_genome": {
    "n_p_lt_0.05": 20,
-   "median_p": 1.6585e-08,
-   "median_obs_over_exp": 1.29
+   "median_p": 2.075e-07,
+   "median_obs_over_exp": 1.31
   },
   "s400_bg": {
    "n_p_lt_0.05": 0,
-   "median_p": 0.47085,
-   "median_obs_over_exp": 1.0
+   "median_p": 0.3842,
+   "median_obs_over_exp": 1.01
   },
   "s700_genome": {
-   "n_p_lt_0.05": 17,
-   "median_p": 0.000915,
+   "n_p_lt_0.05": 16,
+   "median_p": 0.0040999999999999995,
    "median_obs_over_exp": 1.29
   },
   "s700_bg": {
    "n_p_lt_0.05": 0,
-   "median_p": 0.49444999999999995,
-   "median_obs_over_exp": 1.0
+   "median_p": 0.6597999999999999,
+   "median_obs_over_exp": 0.97
   }
  },
  "planted": {
   "s400_genome": {
    "n_p_lt_0.05": 20,
-   "median_p": 9.69e-22,
-   "median_obs_over_exp": 1.59
+   "median_p": 3.27e-21,
+   "median_obs_over_exp": 1.57
   },
   "s400_bg": {
    "n_p_lt_0.05": 20,
-   "median_p": 3.905e-07,
-   "median_obs_over_exp": 1.26
+   "median_p": 1.44e-06,
+   "median_obs_over_exp": 1.23
   },
   "s700_genome": {
    "n_p_lt_0.05": 20,
-   "median_p": 6.37e-20,
-   "median_obs_over_exp": 2.03
+   "median_p": 3.5175e-17,
+   "median_obs_over_exp": 1.94
   },
   "s700_bg": {
    "n_p_lt_0.05": 20,
-   "median_p": 1.95e-11,
-   "median_obs_over_exp": 1.59
+   "median_p": 1.62e-09,
+   "median_obs_over_exp": 1.58
   }
  },
  "planted_chol_in_top10": {
   "400": [
-   4,
+   9,
+   1,
    7,
    4,
-   1,
-   6,
    5,
-   5,
-   2,
-   1,
-   5,
-   0,
+   4,
    3,
-   6,
-   4,
-   7,
-   6,
-   4,
+   1,
    2,
    4,
-   7
+   0,
+   6,
+   0,
+   8,
+   1,
+   6,
+   4,
+   9,
+   6,
+   8
   ],
   "700": [
+   10,
    9,
    10,
-   8,
-   8,
-   8,
    9,
+   10,
    9,
    8,
-   8,
-   10,
-   8,
+   7,
    10,
    10,
+   9,
+   8,
    8,
    10,
-   8,
+   9,
+   10,
    9,
    9,
    9,
    10
   ]
  },
- "random_top3_hub_median_pubs_400": 340.0,
- "random_list_median_pubs": NaN
+ "random_top3_hub_median_pubs_400": 353.0,
+ "random_list_median_pubs": 110.5
 }
