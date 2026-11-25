@@ -1,62 +1,62 @@
 folder,dataset,tool,version,setting,subset,metric,value,n
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,1.686,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,16.738,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,1,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,0.25,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,0.25,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,12.244,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,12.244,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.05,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.155,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.229,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.418,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.077,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.179,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.279,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.35,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.699,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.162,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,1,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.339,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.511,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.225,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.378,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.805,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.008,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,1.149,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.355,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.156,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.622,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,1.341,4
-db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,24.74,4
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.819,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,16.738,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",UniProt,release 2026_04,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,1,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,0.4,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,0.4,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,6.635,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,12.244,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Ensembl,release 116,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.053,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",NCBI Gene,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.155,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.099,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",ClinVar,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.418,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.094,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",RCSB PDB,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.179,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.304,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.373,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",AlphaFold DB,release 6,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.616,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.162,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",InterPro,release 111.0,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,1,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.348,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",QuickGO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.511,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.285,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,0.378,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",STRING,release 12.5,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.763,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.008,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",Reactome,release 98,"one call per run, weekly",main endpoint (human SOD1 example),release_changes,0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,1.135,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",KEGG,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.355,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,0.126,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",GEO,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,1.622,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),uptime_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),example_ok_share,1.0,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),median_seconds,1.086,5
+db-api-monitor,"weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)",PRIDE,not reported,"one call per run, weekly",main endpoint (human SOD1 example),p95_seconds,24.74,5
 db-api-monitor,"bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls",UniProt,as of 2026-10-13,"5 calls 1 s apart, twice",main endpoint (human SOD1 example),uptime_share,1.0,10
 db-api-monitor,"bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls",UniProt,as of 2026-10-13,"5 calls 1 s apart, twice",main endpoint (human SOD1 example),median_seconds,3.303,10
 db-api-monitor,"bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls",UniProt,as of 2026-10-13,"5 calls 1 s apart, twice",main endpoint (human SOD1 example),p95_seconds,4.887,10

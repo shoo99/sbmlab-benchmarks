@@ -97,23 +97,23 @@ Area: statistics · Scored against: null (no group effect; fake labels within ba
 
 Area: databases · Scored against: none (status, latency, reported release and whether the documented example still works, over time) · [issue #9](https://github.com/shoo99/sbmlab-benchmarks/issues/9) (no post yet)
 
-**weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-18 (4 runs)**
+**weekly checks, github-actions ubuntu-24.04, 2026-11-04 to 2026-11-25 (5 runs)**
 
 | Tool | uptime_share (main endpoint (human SOD1 example)) | example_ok_share (main endpoint (human SOD1 example)) | median_seconds (main endpoint (human SOD1 example)) | p95_seconds (main endpoint (human SOD1 example)) | release_changes (main endpoint (human SOD1 example)) |
 |---|---|---|---|---|---|
-| UniProt | 1.0 | 1.0 | 1.686 | 16.738 | 1 |
-| Ensembl | 0.25 | 0.25 | 12.244 | 12.244 | 0 |
-| NCBI Gene | 1.0 | 1.0 | 0.05 | 0.155 |  |
-| ClinVar | 1.0 | 1.0 | 0.229 | 0.418 |  |
-| RCSB PDB | 1.0 | 1.0 | 0.077 | 0.179 |  |
-| AlphaFold DB | 1.0 | 1.0 | 0.279 | 0.35 | 0 |
-| InterPro | 1.0 | 1.0 | 0.699 | 1.162 | 1 |
-| QuickGO | 1.0 | 1.0 | 0.339 | 0.511 |  |
-| STRING | 1.0 | 1.0 | 0.225 | 0.378 | 0 |
-| Reactome | 1.0 | 1.0 | 0.805 | 1.008 | 0 |
-| KEGG | 1.0 | 1.0 | 1.149 | 1.355 |  |
-| GEO | 1.0 | 1.0 | 0.156 | 1.622 |  |
-| PRIDE | 1.0 | 1.0 | 1.341 | 24.74 |  |
+| UniProt | 1.0 | 1.0 | 0.819 | 16.738 | 1 |
+| Ensembl | 0.4 | 0.4 | 6.635 | 12.244 | 0 |
+| NCBI Gene | 1.0 | 1.0 | 0.053 | 0.155 |  |
+| ClinVar | 1.0 | 1.0 | 0.099 | 0.418 |  |
+| RCSB PDB | 1.0 | 1.0 | 0.094 | 0.179 |  |
+| AlphaFold DB | 1.0 | 1.0 | 0.304 | 0.373 | 0 |
+| InterPro | 1.0 | 1.0 | 0.616 | 1.162 | 1 |
+| QuickGO | 1.0 | 1.0 | 0.348 | 0.511 |  |
+| STRING | 1.0 | 1.0 | 0.285 | 0.378 | 0 |
+| Reactome | 1.0 | 1.0 | 0.763 | 1.008 | 0 |
+| KEGG | 1.0 | 1.0 | 1.135 | 1.355 |  |
+| GEO | 1.0 | 1.0 | 0.126 | 1.622 |  |
+| PRIDE | 1.0 | 1.0 | 1.086 | 24.74 |  |
 
 **bioinfo-db-check reference: 2026-10-13 ~23:00 KST, home network in Seoul, 2 rounds x 5 calls**
 
